@@ -1,12 +1,20 @@
-.tyc-header {
-    font-family: 'Nunito';
+.header-principal {
+    font-family: 'Nunito', sans-serif;
     font-size: 16px;
+    background: #BB9526;
     display: flex;
-    padding: 8px;
-    background-color: #dddddd;
+    min-height: 56px;
+    padding: 0 3%;
 }
 
-.tyc-header .item-left {
+.header-principal .logo {
+    height: 56px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.header-principal .item-left {
     display: flex;
     margin-left: 0;
     margin-right: auto;
@@ -14,10 +22,9 @@
     font-size: 30px;
 }
 
-.tyc-header .item-right {
-    display: flex;
-    margin-left: auto;
-    margin-right: 0;
+.header-principal .item-right {
+    display: inline-flex;
+    padding: 5px;
 }
 
 .btn1-fondooscuro {
@@ -29,7 +36,6 @@
     padding: 10px;
     border-radius: 5px;
     font-family: 'Lora';
-    margin-right: 10px;
 }
 
 .h1 {
