@@ -9,7 +9,8 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Nunito&family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Nunito&family=Oswald&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- RESET CSS -->
@@ -37,10 +38,10 @@
             <div class="signup-card-body">
                 <form>
                     <h1>Validar Codigo</h1>
-                    <div class="input-container input-default input-email">
-                        <input type="email" placeholder="Código" required/>
+                    <div class="input-container input-default input-code">
+                        <input id="txt-codigo" type="email" placeholder="Código"/>
                     </div>
-                    <button class="btn1-fondoclaro" type="button" id="btn-recuperar">Validar</button>
+                    <button class="btn1-fondoclaro" type="button" id="btn-account-form">Validar</button>
                 </form>
             </div>
         </div>
@@ -49,5 +50,7 @@
         &#169; TeamFiji 2021
     </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/servicio-validar-codigo.js"></script>
 
 </html>
