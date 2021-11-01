@@ -19,8 +19,30 @@ h1 {
     padding: 5px 5px;
     font-size: 16px;
 }
+.input-short {
+    border-bottom: 1px solid #333;
+    border-radius: 4px;
+    padding: 5px 5px;
+    font-size: 16px;
+    width: 50%;
+}
 
-.input-default ::placeholder {
+.input-short select {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    font-size: 16px;
+    outline: none;
+    color: #fff;
+    font-family: 'Lora';
+    width: 100%;
+}
+
+.dual-inputs {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+::placeholder {
     font-size: 16px;
     color: #666
 }
@@ -30,7 +52,16 @@ h1 {
     font-size: 16px;
 }
 
-.input-default input {
+.input-default input{
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    font-size: 16px;
+    outline: none;
+    color: #fff;
+    font-family: 'Lora';
+}
+
+.input-short input {
     background-color: rgba(0, 0, 0, 0);
     border: 0;
     font-size: 16px;
@@ -42,6 +73,7 @@ h1 {
 .input-error {
     border: 2px solid #950F11;
 }
+
 
 /* Botones */
 
