@@ -154,9 +154,8 @@ h1 {
 textarea {
     outline: none;
     resize: none;
-    width: 80%;
+    width: 100%;
     height: 200px;
-    margin: 20px;
   }
 
 .btn1-fondoclaro {
