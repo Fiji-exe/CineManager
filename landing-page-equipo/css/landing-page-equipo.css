@@ -1,0 +1,23 @@
+.section-left {
+    margin-bottom: auto;
+}
+
+.section-right {
+    margin-bottom: auto;
+}
+
+.section-right .img-container {
+    width: 60%;
+    background-color: #e993db;
+    padding-bottom: -100px;
+}
+
+.section-right .img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.section-right .section-right-subsection {
+    display: flex;
+    justify-content: space-between;
+}
