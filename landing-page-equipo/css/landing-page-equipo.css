@@ -6,10 +6,31 @@
     margin-bottom: auto;
 }
 
+@keyframes anim-transition {
+    0% {
+        background-color: #ff00d4;
+    }
+    25% {
+        background-color: #ffffff;
+    }
+    50% {
+        background-color: #00ffff;
+    }
+    75% {
+        background-color: #ffffff;
+    }
+    100% {
+        background-color: #ff00d4;
+    }
+}
+
 .section-right .img-container {
-    width: 60%;
-    background-color: #e993db;
-    padding-bottom: -100px;
+    width: 80%;
+    background-color: #ff00d4;
+    box-shadow: inset 0px 0px 0px 3px black;
+    animation-name: anim-transition;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
 }
 
 .section-right .img-container img {
@@ -20,4 +41,5 @@
 .section-right .section-right-subsection {
     display: flex;
     justify-content: space-between;
+    padding-right: 10%;
 }
