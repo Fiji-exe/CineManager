@@ -1,0 +1,41 @@
+    .header-principal {
+        font-family: 'Nunito', sans-serif;
+        font-size: 16px;
+        background: #BB9526;
+        display: flex;
+        min-height: 56px;
+        padding: 0 3%;
+    }
+    
+    .header-principal .logo {
+        height: 56px;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .header-principal .item-left {
+        display: flex;
+        margin-left: 0;
+        margin-right: auto;
+        font-family: 'Nunito';
+        font-size: 30px;
+    }
+    
+    .header-principal .item-right {
+        display: inline-flex;
+        padding: 5px;
+    }
+    
+    .btn1-fondooscuro {
+        background: #BAC1CA;
+        border: 2px solid #BAC1CA;
+        color: #070F1A;
+        cursor: pointer;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 5px;
+        font-family: 'Lora';
+    }
+    
+    .
