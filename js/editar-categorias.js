@@ -1,8 +1,9 @@
 'use strict';
 
-const botonForm = document.querySelector('#btn-guardar');
+const botonAdd = document.querySelector('#btn-add');
+const botonRemove = document.querySelector('#btn-remove');
 
-const inputArea = document.querySelector('#txt-terminos');
+const inputArea = document.querySelector('#txt-categoria');
 
 
 const validar = () => {
@@ -16,7 +17,7 @@ const validar = () => {
         Swal.fire({
             'icon': 'warning',
             'title': 'La informacion intruducida es invalida',
-            'text': 'Los terminos y condiciones no pueden estar vacios.',
+            'text': 'Categoria no puede estar vacio.',
             'confirmButtonText': 'Entendido'
         });
 
@@ -34,4 +35,5 @@ const validar = () => {
 };
 
 
-botonForm.addEventListener('click', validar);
+botonAdd.addEventListener('click', validar);
+botonRemove.addEventListener('click', validar);
