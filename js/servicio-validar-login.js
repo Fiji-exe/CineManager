@@ -25,13 +25,11 @@ const validar = () => {
     }
 
     //Condicion para validar la contraseña (SOLO VALIDA SI EXISTE)
-    if (inputPassword !== null) {
-        if (inputPassword.value == '') {
-            error = true;
-            document.querySelector(".input-password").classList.add("input-error");
-        } else {
-            document.querySelector(".input-password").classList.remove("input-error");
-        }
+    if (inputPassword.value == '') {
+        error = true;
+        document.querySelector(".input-password").classList.add("input-error");
+    } else {
+        document.querySelector(".input-password").classList.remove("input-error");
     }
 
 
@@ -39,21 +37,13 @@ const validar = () => {
         Swal.fire({
             'icon': 'warning',
             'title': 'La informacion intruducida es invalida',
-            'text': 'Por favor revise los campos resaltados.',
+            'text': 'Por favor complete los campos resaltados.',
             'confirmButtonText': 'Entendido'
         });
 
-    } /* else {
-        Swal.fire({
-            'icon': 'success',
-            'title': 'Se ha enviado un correo de recuperacion a la siguiente direccion:',
-            'text': inputCorreo.value,
-            'confirmButtonText': 'Entendido'
-        }).then(() => {
-            // Redireccionamos al dashboard luego de darle click al botón del sweet alert
-            // window.location.href = 'dashboard.html';
-        });
-    } */
+    } else {
+
+    }
 
 };
 
