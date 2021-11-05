@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Nunito&family=Oswald&display=swap" rel="stylesheet">
+
+    <!-- RESET CSS -->
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <!-- GENERAL CSS -->
+    <link rel="stylesheet" href="../css/general.css" type="text/css">
+    <link rel="stylesheet" href="../css/configuracion-de-usuario.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <title>Cine Manager</title>
+</head>
+
+<body>
+    <nav class="header-principal">
+        <div class="logo">
+            <img src="../imgs/logo.png" alt="imagen">
+        </div>
+
+        <div class="item-left">
+            Cine Manager
+        </div>
+        <div class="item-right">
+            <button class="btn1-fondooscuro">Menú Principal</button>
+        </div>
+        <div class="item-right">
+            <button class="btn1-fondooscuro">Salir</button>
+        </div>
+    </nav>
+    <h1>Ver o Editar Perfil</h1>
+
+    <div class="contenedor-izq">
+        <div class="foto-perfil">
+            <img src="../imgs/profile.png" alt="Foto de perfil">
+            <button class="btn1-fondooscuro">Cargar imagen</button>
+        </div>
+
+    </div>
+
+    <div class="contenedor-centro">
+        <div class="input-box">Nombre
+            <input type="text" placeholder="Primer nombre" id="txt-nombre1">
+            <input type="text" placeholder="Segundo nombre" id="txt-nombre2">
+        </div>
+
+        <div class="input-box">Apellido
+            <input type="text" placeholder="Primer apellido" id="txt-apellido1">
+            <input type="text" placeholder="Segundo apellido" id="txt-apellido2">
+        </div>
+        <div class="input-box-compuesto">Identificación
+            <form>
+                <select>  
+                <option value = "cedula"> Cédula   
+                </option>  
+                <option value = "residencia"> Cédula de residencia   
+                </option>  
+                <option value = "dimex"> DIMEX  
+                </option>  
+                </select>
+            </form>
+        </div>
+        <input type="text" placeholder="Cédula" id="num-cedula">
+    </div>
+    <div class="input-box">Correo electrónico
+        <input type="text" placeholder="user@example.com" id="txt-email">
+
+    </div>
+
+    <div class="contenedor-izq">
+        <div class="input-box">Fecha de nacimiento
+            <form action="">
+                <input type="date" id="birthday" name="birthday">
+            </form>
+
+            <div class="input-box">Cambiar contraseña
+                <input type="text" placeholder="Contraseña actual" id="txt-contraseña-actual">
+                <input type="text" placeholder="Nueva contraseña" id="txt-nueva-contraseña">
+                <input type="text" placeholder="Confirmar contraseña" id="txt-confirmar-contraseña">
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

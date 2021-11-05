@@ -1,0 +1,48 @@
+.header-principal .item-left {
+    display: flex;
+    margin-left: 0;
+    margin-right: auto;
+    font-family: 'Nunito';
+    font-size: 30px;
+}
+
+.header-principal .item-right {
+    display: inline-flex;
+    padding: 5px;
+}
+
+h1 {
+    font-family: "Oswald";
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2%;
+}
+
+.contenedor-izq {
+    display: flex;
+    align-items: center;
+    width: 4px;
+    padding: 1%;
+}
+
+.contenedor-izq img {
+    max-width: 300px;
+    margin: 3px;
+}
+
+.contenedor-centro {
+    display: flex;
+    align-self: center;
+}
+
+.contenedor-izq {
+    display: flex;
+}
+
+.input-box {
+    display: flex;
+}
+
+.input-box-compuesto {
+    display: flex;
+}
