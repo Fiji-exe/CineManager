@@ -65,14 +65,18 @@
         background: black;
         /**/
         animation-name: anim-card-gradient-transition;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
     }
     
     .section-left .card .text-container p {
         /**/
-        vertical-align: middle;
-        text-align: center;
+        margin-left: 40px;
+    }
+    
+    .section-left .card .text-container h1 {
+        /**/
+        margin-left: 10px;
     }
     
     @keyframes anim-card-gradient-transition {
@@ -96,6 +100,7 @@
     
     .section-right {
         padding-top: 2%;
+        padding-left: 2%;
     }
     
     @keyframes anim-logo-gradient-transition {
@@ -122,7 +127,7 @@
         background-color: #ff00d4;
         box-shadow: inset 0px 0px 0px 4px black;
         animation-name: anim-logo-gradient-transition;
-        animation-duration: 30s;
+        animation-duration: 20s;
         animation-iteration-count: infinite;
     }
     
@@ -134,23 +139,24 @@
     .section-right .section-right-subsection {
         display: flex;
         justify-content: space-between;
+        padding-left: 10%;
         padding-right: 10%;
     }
     
     .section-right div h1 {
-        font-size: 2rem;
-        justify-content: center;
-        align-items: center;
+        font-size: 3rem;
         font-family: 'Zen Kurenaido', sans-serif;
         color: #ffffff;
-        margin-bottom: 2%;
+        margin-bottom: 10%;
     }
     
-    .section-right div p {
-        padding: 0%;
-        margin: 0%;
-        font-size: 1.5rem;
+    .section-right .section-right-subsection div a {
+        /**/
         font-family: 'Poppins', sans-serif;
-        color: #ffffff;
-        margin-bottom: 5%;
+        font-size: 1.5rem;
+        text-decoration: none;
+        background: transparent;
+        color: #00ffff;
+        border-bottom: 1px solid #00ffff;
+        /**/
     }
