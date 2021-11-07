@@ -1,5 +1,17 @@
+select {
+    margin: 0% 0% 3% 2%;
+    font-family: 'Nunito';
+    font-size: 22px;
+}
+
+.input-filtros {
+    font-family: 'Nunito';
+    font-size: 20px;
+}
+
 .tabla-uno {
     background: #FFFFFF;
+    margin: 0% 0% 3% 2%;
     /* border-collapse: collapse; */
 }
 
@@ -14,7 +26,6 @@ table td {
 
 .tabla-uno thead {
     font-family: 'Nunito';
-    font-weight: lighter;
     font-size: 22px;
 }
 

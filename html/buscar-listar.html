@@ -13,7 +13,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@300&family=Oswald&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
@@ -22,22 +22,35 @@
     <header class="header-principal">
         <nav class="header-principal">
             <div class="logo">
-                <img src="../imgs/logo.png" alt="imagen">
-            </div>
-
-            <div class="item-left">
                 Cine Manager
             </div>
             <div class="item-right">
-                <button class="btn1-fondooscuro">Menú Principal</button>
-            </div>
-            <div class="item-right">
-                <button class="btn1-fondooscuro">Salir</button>
+                <button class="btn1-fondoclaro">Menú Principal</button>
+                <button class="btn1-fondoclaro">Salir</button>
             </div>
         </nav>
     </header>
 
     <h1>Buscar y Listar</h1>
+    <p> Haz click al menu de filtros, elige que deseas buscar y luego ingresa los terminos o palabras clave en el buscador </p>
+
+    <select class="selector-filtros-dropdown">
+        <option value="" disabled selected>Filtros</option>
+        <option value="">Carteleras</option>
+        <option value="">Peliculas</option>
+        <option value="">Cines</option>
+        <option value="">Cadenas Cine</option>
+        <option value="">Historial Compras</option>
+        <option value="" disabled>-- Super Admin --</option>
+        <option value="">Usuarios</option>
+        <option value="">Categoria Peliculas</option>
+        <option value="" disabled>-- Jefe Soporte --</option>
+        <option value="">Salas</option>
+        <option value="">Tipos de Sala</option>
+        <option value="">Tipos de asiento</option>
+        
+    </select>
+    <input class="input-filtros" type="text">
 
     <table class="tabla-uno">
         <thead>
