@@ -27,6 +27,13 @@ h1 {
     width: 50%;
 }
 
+.form-text {
+    font-size: 16px;
+    width: 50%;
+    line-height: 2;
+    padding-left: 10px;
+}
+
 .input-short select {
     background-color: rgba(0, 0, 0, 0);
     border: 0;
@@ -36,6 +43,10 @@ h1 {
     font-family: 'Lora';
     width: 100%;
 }
+.input-short select option {
+    background-color: #333;
+    border: none;
+}
 
 .dual-inputs {
     display: flex;
@@ -44,7 +55,7 @@ h1 {
 
 ::placeholder {
     font-size: 16px;
-    color: #666
+    color: #666;
 }
 
 .input-alternate {
@@ -72,6 +83,28 @@ h1 {
 
 .input-error {
     border: 2px solid #950F11;
+}
+
+.input-form-blurb {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #555;
+    text-align: justify;
+    text-justify: auto;
+}
+
+.input-form-blurb:hover {
+    color: #fff;
+}
+ 
+.input-form-icon {
+    font-size: 20px;
+    padding: 0% 5px;
+    color: #333;
+}
+
+.input-form-separator {
+    width: 60%;
 }
 
 

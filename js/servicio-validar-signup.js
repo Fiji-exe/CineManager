@@ -70,7 +70,7 @@ const validar = () => {
             'confirmButtonText': 'Entendido'
         });
     } else {
-        console.log("ACC");
+        window.location.href = 'crear-validar.html';
     }
 
 };
