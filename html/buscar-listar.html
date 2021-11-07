@@ -32,78 +32,49 @@
     </header>
 
     <h1>Buscar y Listar</h1>
-    <p> Haz click al menu de filtros, elige que deseas buscar y luego ingresa los terminos o palabras clave en el buscador </p>
+    <p> Haz click al menu de filtros, elige que deseas buscar y luego podras ingresar los terminos o palabras clave en el buscador </p>
 
     <select class="selector-filtros-dropdown">
-        <option value="" disabled selected>Filtros</option>
-        <option value="">Carteleras</option>
-        <option value="">Peliculas</option>
-        <option value="">Cines</option>
-        <option value="">Cadenas Cine</option>
-        <option value="">Historial Compras</option>
-        <option value="" disabled>-- Super Admin --</option>
-        <option value="">Usuarios</option>
-        <option value="">Categoria Peliculas</option>
-        <option value="" disabled>-- Jefe Soporte --</option>
-        <option value="">Salas</option>
-        <option value="">Tipos de Sala</option>
-        <option value="">Tipos de asiento</option>
-        
-    </select>
-    <input class="input-filtros" type="text">
+            <option value="" disabled selected>Filtros</option>
+            <option value="">Carteleras</option>
+            <option value="">Peliculas</option>
+            <option value="">Cines</option>
+            <option value="">Historial Compras</option>
+            <option value="">Cadenas Cine</option>
+            <option value="" disabled>-- Super Admin --</option>
+            <option value="">Usuarios</option>
+            <option value="">Categoria Peliculas</option>
+            <option value="">Salas</option>
+            <option value="">Tipos de Sala</option>
+            <option value="">Tipos de asiento</option>
+        </select>
+    <input class="input-filtros" type="text" maxlength="127" size="80" disabled>
+    <button class="btn1-fondoclaro" id="boton-buscar-filtros"> Buscar </button>
 
-    <table class="tabla-uno">
+    <table class="tabla-uno" id="tabla-uno">
         <thead>
             <tr>
-                <th>Titulo 1</th>
-                <th>Titulo 2</th>
-                <th>Titulo 3</th>
-                <th>Titulo 4</th>
-                <th>Titulo 5</th>
-                <th>Titulo 6</th>
+                <th>Nombre o ID</th>
+                <th>Propiedad 1</th>
+                <th>Propiedad 2</th>
+                <th>Propiedad 3</th>
+                <th>Propiedad 4</th>
+                <th>Propiedad 5</th>
             </tr>
         </thead>
 
         <tbody>
             <tr>
-                <td>Alfred</td>
-                <td>Maria</td>
-                <td>Germany</td>
-                <td>i see</td>
-                <td>everyone</td>
-                <td>thinks</td>
-            </tr>
-            <tr>
-                <td>Centro</td>
-                <td>Francis</td>
-                <td>Mexico</td>
-                <td>am crazy</td>
-                <td>crazyfor</td>
-                <td>youoh</td>
-            </tr>
-            <tr>
-                <td>Malo</td>
-                <td>Eres</td>
-                <td>Nose</td>
-                <td>boyharv</td>
-                <td>yeahwe</td>
-                <td>getit</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>.</td>
+                <td></td>
+                <td></td>
             </tr>
         </tbody>
-
-        <tfoot>
-            <tr>
-                <td>Engaña</td>
-                <td>A quien</td>
-                <td>Se quiere no</td>
-                <td>you wanna</td>
-                <td>see,whoshe</td>
-                <td>is, where</td>
-            </tr>
-        </tfoot>
-
     </table>
-
+    <script src="../js/buscar-listar.js"></script>
 </body>
 
 </html>

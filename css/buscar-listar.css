@@ -7,6 +7,13 @@ select {
 .input-filtros {
     font-family: 'Nunito';
     font-size: 20px;
+    width: 50%;
+    border: 0px;
+    outline: none;
+}
+
+.input-filtros {
+    border: 1px solid black;
 }
 
 .tabla-uno {
