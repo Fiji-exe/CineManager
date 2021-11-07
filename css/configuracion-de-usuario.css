@@ -18,31 +18,64 @@ h1 {
     padding: 2%;
 }
 
-.contenedor-izq {
+.contenedor-principal {
     display: flex;
-    align-items: center;
-    width: 4px;
-    padding: 1%;
 }
 
-.contenedor-izq img {
-    max-width: 300px;
+.contenedor-principal img {
+    max-width: 200px;
     margin: 3px;
 }
 
 .contenedor-centro {
-    display: flex;
-    align-self: center;
-}
-
-.contenedor-izq {
-    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 35%;
 }
 
 .input-box {
-    display: flex;
+    margin: 2%;
+    padding: 2%;
+    width: 70%;
 }
 
 .input-box-compuesto {
+    margin: 2%;
+    padding: 2%;
+}
+
+.contenedor-der {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2%;
+    padding: 2%;
+    width: 35%;
+}
+
+.card-botones {
     display: flex;
+    margin-top: 35%;
+}
+
+.card-botones button {
+    margin: 15px;
+}
+
+input {
+    padding: 3px;
+    margin: 3px;
+}
+
+.notice {
+    margin: 2%;
+    padding: 2%;
+    font-family: 'Nunito';
+    font-size: 16px;
+    border: 1px solid #070F1A;
+    border-radius: 3px;
+}
+
+h2 {
+    font-family: 'Nunito';
+    font-size: 16px;
 }
