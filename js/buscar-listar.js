@@ -60,27 +60,31 @@ let listaCines = [{
         'perfil': 'Perfil de Cadena'
     },
     {
-        'Cadena': 'La Momia',
-        'imagen': '',
-        'duracion': '180',
-        'categoria': 'accion',
-        'sinopsis': 'W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our terms of use, cookie and privacy policy.',
-        'idioma': 'español'
+        'cadena': 'Cinepolis',
+        'codigo': 'ciis-400',
+        'ubicacion': 'moravia',
+        'margen': '15%',
+        'perfil': '(ruta a perfil.html)'
+    },
+    {
+        'cadena': 'Cine Magaly',
+        'codigo': 'Cily-074',
+        'ubicacion': 'san carlos',
+        'margen': '11%',
+        'perfil': '(ruta a perfil.html)'
     }
 ]
 let listaUsuarios = [{
-    'nombre': 'Pablo Monestel',
-    'correo': 'pablo@gmail.com',
-    'contrasenna': '123abc',
-    'nacimiento': '1987-10-12',
-    'edad': 34,
-    'avatar': '',
-    'rol': 1,
-    'estado': 1
+    'nombre': 'Nombre de Usuario',
+    'correo': 'Correo Electronico',
+    'nacimiento': 'Fecha Nacimiento',
+    'edad': 'Edad',
+    'avatar': 'Avatar',
+    'rol': 'Tipo de Usuario',
+    'estado': 'Estado de Cuenta'
 }, {
     'nombre': 'Alejandro Coto',
     'correo': 'alejandro@gmail.com',
-    'contrasenna': '123abc',
     'nacimiento': '1966-09-01',
     'edad': 55,
     'avatar': '',
@@ -89,23 +93,60 @@ let listaUsuarios = [{
 }, {
     'nombre': 'Belén Acuña',
     'correo': 'belen@gmail.com',
-    'contrasenna': '123abc',
     'nacimiento': '2000-03-19',
     'edad': 21,
     'avatar': '',
     'rol': 3,
     'estado': 1
 }];
+let listaSalas = [{
+    'codigo': 'Codigo de Sala',
+    'cine': 'Cadena de Cine',
+    'btotal': 'Butacas Totales',
+    'estado': 'Estado de Sala',
+    'costo': 'Costo de Sala',
+    'tipo': 'Tipo de sala'
+}, {
+    'codigo': 'sl-ciis-4411',
+    'cine': 'Cinepolisco',
+    'btotal': '24',
+    'estado': 'activa',
+    'costo': '1500',
+    'tipo': 'regular'
+}, {
+    'codigo': 'Codigo de Sala',
+    'cine': 'Cadena de Cine',
+    'btotal': 'Butacas Totales',
+    'estado': 'Estado de Sala',
+    'costo': 'Costo de Sala',
+    'tipo': 'imax'
+}];
+let listaCategorias = [{
+    'nombre': 'Nombre de Categoria',
+    'editar': 'Ir a editar'
+}, {
+    'nombre': 'accion',
+    'editar': '(editar URL)'
+}, {
+    'nombre': 'animacion',
+    'editar': '(editar URL)'
+}];
 
-;
-
+const elem_fitro = document.querySelector('#selector-filtros-dropdown');
+const elem_inputtext = document.querySelector('#input-filtros-texto');
 const tabla = document.querySelector('#tabla-uno');
-const js_checar_inputs = () => {
-    let filtro = document.querySelector('#tabla-uno');
-    let keyword = document.querySelector('#tabla-uno');
+const filtro_seleccionado = '';
+
+
+const js_habilitar_input = () => {
+    filtro_seleccionado = elem_fitro.value;
+    elem_inputtext.disabled = false;
 }
+const js_checar_inputs = () => {
+    let keyword = elem_inputtext.value;
 
 
+}
 const js_limpiar_tabla = () => {
     tabla.innerHTML = '';
 }
@@ -116,8 +157,7 @@ const js_crear_encabezados_tabla = (data_json) => {
     // Insertar palabras en los encabezados
     let array_propiedades = Object.keys(data_json[0]);
     array_propiedades.forEach(propiedad => {
-        propiedad = propiedad.charAt(0).toUpperCase() + propiedad.slice(1)
-        fila_encabezados.insertCell().innerHTML = propiedad;
+        fila_encabezados.insertCell().innerHTML = data_json[0][propiedad];
     })
 }
 const js_crear_cuerpo_tabla = (data_json) => {
@@ -138,8 +178,9 @@ const js_crear_cuerpo_tabla = (data_json) => {
 
 const accion = () => {
     js_limpiar_tabla();
-    js_crear_encabezados_tabla(listaCartelera);
-    js_crear_cuerpo_tabla(listaCartelera);
+    js_crear_encabezados_tabla(listaUsuarios);
+    js_crear_cuerpo_tabla(listaUsuarios);
 }
 
-document.getElementById("boton-buscar-filtros").onclick = accion;
+elem_fitro.onchange = js_habilitar_input;
+document.getElementById("boton-buscar-filtros").onclick = js_checar_inputs;

@@ -31,23 +31,22 @@
         </nav>
     </header>
 
-    <h1>Buscar y Listar</h1>
-    <p> Haz click al menu de filtros, elige que deseas buscar y luego podras ingresar los terminos o palabras clave en el buscador </p>
+    <h1>Buscador</h1>
+    <p> Este es un buscador universal. Haz click al menu de filtros, <br> elige que deseas buscar y luego podras ingresar los terminos o palabras clave en el buscador </p>
 
-    <select class="selector-filtros-dropdown">
+    <select class="selector-filtros-dropdown" id="selector-filtros-dropdown">
             <option value="" disabled selected>Filtros</option>
-            <option value="">Carteleras</option>
-            <option value="">Peliculas</option>
-            <option value="">Cines</option>
-            <option value="">Historial Compras</option>
+            <option value="cart">Carteleras</option>
+            <option value="peli">Peliculas</option>
+            <option value="cine">Cines</option>
             <option value="" disabled>-- Super Admin --</option>
-            <option value="">Usuarios</option>
-            <option value="">Categoria Peliculas</option>
-            <option value="">Salas</option>
-            <option value="">Tipos de Sala</option>
-            <option value="">Tipos de asiento</option>
-        </select>
-    <input class="input-filtros" type="text" maxlength="127" size="80" disabled>
+            <option value="user">Usuarios</option>
+            <option value="sala">Salas</option>
+            <option value="tsla">Tipos de Sala</option>
+            <option value="tasi">Tipos de asiento</option>
+            <option value="cate">Categoria Peliculas</option>  
+    </select>
+    <input class="input-filtros" id="input-filtros-texto" disabled type="text" maxlength="127" size="80">
     <button class="btn1-fondoclaro" id="boton-buscar-filtros"> Buscar </button>
 
     <table class="tabla-uno" id="tabla-uno">
