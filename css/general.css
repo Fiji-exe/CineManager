@@ -1,0 +1,145 @@
+.header-principal {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    background: #BB9526;
+    display: flex;
+    min-height: 56px;
+    padding: 0 3%;
+}
+
+.header-principal .logo {  
+    height: 56px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.header-principal .logo img {
+    height: 100%;
+}
+
+.header-principal nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.header-principal .item {
+    padding: 0px 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.header-principal .item a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-principal .item:hover {
+   background-color: #950F11;
+}
+
+.push {
+    margin-left: auto;
+}
+
+.material-icons.md-light { 
+  color: rgba(255, 255, 255, 1); 
+}
+
+.contenido main{
+    margin: 0px 3%;
+}
+
+.contenido{
+    min-height: calc(100vh - 206px);
+}
+
+/* css footer  */
+.footer {
+    width: 100%;
+    height: 150px;
+    background-color: #950F11;
+}
+.footer .contain{
+    display: flex;
+    flex-direction: row;
+}
+.footer .col{
+    width: 190px;
+    padding: 20px;
+}
+.footer .col p{
+    font-family: 'Lora';
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 0px 5px 0px;
+}
+.footer .col a{
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* end css footer */
+
+h1 {
+    font-family: "Oswald";
+    font-size: 30px;
+}
+
+textarea {
+    outline: none;
+    resize: none;
+    width: 100%;
+    height: 200px;
+  }
+
+.btn1-fondoclaro {
+    background: #950F11;
+    border: 2px solid #950F11;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Lora';
+}
+
+
+    * {
+        box-sizing: border-box;
+    }
+    .input-default {
+      border-bottom: 1px solid #333;
+      border-radius: 4px;
+      padding: 5px 5px;
+      font-size: 16px;
+    }
+    .input-default ::placeholder {
+      font-size: 16px;
+    }
+    .section-prop-2 .input-default ::placeholder {
+      font-size: 16px;
+      color: #fff
+    }
+    .input-alternate {
+      padding: 15px 5px;
+      font-size: 16px;
+    }
+    .input-default input {
+      background-color: rgba(0, 0, 0, 0);
+      border: 0;
+      font-size: 16px;
+      outline: none;
+    }
+    .input-error {
+        border: 2px solid #950F11;
+    }
+    body {
+      font-size: 16px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif
+    }

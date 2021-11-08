@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/registro-pago.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <header class="header-principal">
+        <div class="logo">
+            <img src="imgs/logo.png" alt="imagen">
+        </div>
+
+        <nav>
+            <div class="item">      
+              <span class="material-icons md-light">home</span>          
+              <a href="index.html">Inicio</a>
+            </div>     
+            <div class="item">
+              <span class="material-icons md-light">camera_indoor</span>
+              <a class="item" href="index.html">Cines</a>
+            </div>    
+            <div class="item">
+              <span class="material-icons md-light">event_seat</span>
+              <a class="item" href="index.html">Reservas</a>
+            </div>
+            <div class="item">
+              <span class="material-icons md-light">theaters</span>
+              <a class="item" href="index.html">Cartelera</a>
+            </div>
+            <div class="item">
+              <span class="material-icons md-light">movie</span>
+              <a class="item" href="index.html">Peliculas</a>
+            </div>
+            <div class="item push">
+              <span class="material-icons md-light">account_circle</span>
+              <a class="item" href="index.html">Iniciar sesion</a>
+            </div>
+        </nav>    
+    </header>
+
+  <div class="contenido">
+      <main class="sct-main">
+          <h1>Registro de metodo de pago</h1>
+          <div class="form-registro-pago">
+            <div class="input">
+                <label for="txt-numero-tarjeta">Numero de tarjeta</label>
+                <div class="input-container input-default">      
+                    <input type="text" name="" id="txt-numero-tarjeta">  
+                </div>
+            </div>
+  
+            
+            <div class="div-fecha-vencimiento">
+                
+                <div class="input">
+                    <label for="fecha-vencimiento">Mes de vencimiento</label>
+                    <div class="input-container input-default">
+                        <input type="number" name="" id="mes-vencimiento">
+                    </div>             
+                </div>
+                <div class="input">   
+                    <label for="fecha-vencimiento">Año de vencimiento</label> 
+                    <div class="input-container input-default">
+                        <input type="number" name="" id="anno-vencimiento">
+                    </div>             
+                </div>
+            </div>
+           
+         
+            <div class="input">
+                <label for="cvc">CVC</label>
+                <div class="input-container input-default">
+                    <input type="number" name="" id="cvc">
+                </div>
+            </div>
+        
+
+            <div class="input">
+                <label for="txt-titular">Titular de la tarjeta</label>
+                <div class="input-container input-default">
+                    <input type="text" name="" id="txt-titular">
+                </div>
+            </div>
+           
+
+            <div class="input">
+                <label for="txt-direccion">Direccion</label>
+                <div class="input-container input-default">        
+                    <input type="text" name="" id="txt-direccion">
+                </div>
+            </div>
+           
+            <div class="form-division-politica">
+                <div class="input">
+                    <label for="select-provincia">Provincia</label>
+                    <div class="input-container input-default">     
+                        <select id="select-provincia"></select>
+                    </div>
+                </div>
+                
+    
+                <div class="input">
+                    <label for="select-canton">Canton</label>
+                    <div class="input-container input-default">
+                        <select  id="select-canton"></select>
+                    </div>
+                </div>
+             
+    
+                <div class="input">
+                    <label for="select-distrito">Distrito</label>
+                    <div class="input-container input-default">    
+                        <select  id="select-distrito"></select>
+                    </div>
+                </div>
+            </div>
+ 
+           <button class="btn1-fondoclaro" id="btn-registrar-pago">Registrar</button>
+<!-- 
+            <label for="txt-codigo-postal"></label>
+            <div class="input-container input-default">            
+                <input type="text" name="" id="txt-codigo-postal">
+            </div> -->
+
+          </div>
+
+         
+      </main>
+    
+  </div>
+
+  <footer class="footer">
+         <div class="contain">
+            <div class="col">
+               <p>Cine REX</p>
+               <ul>
+                  <li><a href="">Terminos y condiciones</a></li>
+               </ul>
+            </div>
+            <div class="col">
+               <p>Cine REX</p>
+               <ul>
+                  <li><a href="">Terminos y condiciones</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/division-politica.js"></script>
+    <script src="/js/registro-pago.js"></script>
+  </body>
+</html>
