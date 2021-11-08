@@ -107,6 +107,10 @@ h1 {
     width: 60%;
 }
 
+.input-hidden {
+    display: none;
+}
+
 
 /* Botones */
 
