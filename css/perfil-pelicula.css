@@ -99,3 +99,14 @@
   width: 150px;
   height: 50px;
 }
+
+.div-title{
+    display: flex;
+    flex-direction: column;
+}
+
+.div-title a{
+    display: flex;
+color: #950F11;
+    margin: 0 10px;
+}
