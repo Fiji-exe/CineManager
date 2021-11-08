@@ -1,0 +1,101 @@
+.div-perfil-pelicula{
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-perfil-pelicula .div-info-pelicula{
+    /* background-color: red; */
+    width: 45%;
+    height: 300px;
+    display: flex;
+}
+
+.div-perfil-pelicula .div-comentarios-pelicula{
+    /* background-color: blue; */
+    width: 45%;
+    height: 300px;
+}
+
+.div-perfil-pelicula .div-info-pelicula .imagen{
+    /* background-color: red; */
+    width: 150px;
+    height: 215px;
+    margin: 10px;
+}
+
+.div-perfil-pelicula .div-info-pelicula .imagen img{
+    /* background-color: red; */
+    width: 150px;
+    height: 215px;
+}
+
+.div-perfil-pelicula .div-info-pelicula .info{
+    width: 100%;
+}
+
+
+.div-perfil-pelicula .div-info-pelicula .info .div-info-item{
+    
+    font-family: 'Nunito', sans-serif;
+    padding: 10px 0;
+}
+
+.actores p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+}
+
+.actores h2{
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.div-perfil-pelicula .div-info-pelicula .div-detalles-adicionales{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+}
+
+.div-perfil-pelicula .div-info-pelicula .div-detalles-adicionales .bold{
+    font-weight: bold;
+}
+
+
+.div-perfil-pelicula .div-info-pelicula .div-detalles-adicionales .div-detalles-item{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+}
+
+.div-contenedor-comentarios .div-comentario{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0 0 0;
+}
+
+.div-imagen-usuario img{
+    height: 63px;
+    width: 63px;
+}
+
+.div-nuevo-comentario{
+    margin: 10px 0 0 0;
+}
+
+.div-nuevo-comentario h2{
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.div-cuerpo-nuevo-comentario{
+    display: flex;
+    flex-direction: row;
+}
+
+.div-cuerpo-nuevo-comentario textarea{
+  width: 150px;
+  height: 50px;
+}
