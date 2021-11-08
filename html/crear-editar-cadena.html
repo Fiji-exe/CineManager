@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Crear y editar cadena</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/crear-editar-cadena.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  </head>
+  <body>
+
+    <header class="header-principal">
+        <div class="logo">
+            <img src="imgs/logo.png" alt="imagen">
+        </div>
+
+        <nav>
+            <div class="item">      
+              <span class="material-icons md-light">home</span>          
+              <a href="index.html">Inicio</a>
+            </div>     
+            <div class="item">
+              <span class="material-icons md-light">camera_indoor</span>
+              <a class="item" href="index.html">Cines</a>
+            </div>    
+            <div class="item">
+              <span class="material-icons md-light">event_seat</span>
+              <a class="item" href="index.html">Reservas</a>
+            </div>
+            <div class="item">
+              <span class="material-icons md-light">theaters</span>
+              <a class="item" href="index.html">Cartelera</a>
+            </div>
+            <div class="item">
+              <span class="material-icons md-light">movie</span>
+              <a class="item" href="index.html">cadenas</a>
+            </div>
+            <div class="item push">
+              <span class="material-icons md-light">account_circle</span>
+              <a class="item" href="index.html">Iniciar sesion</a>
+            </div>
+        </nav>    
+    </header>
+
+    <div class="contenido">
+        <main class="sct-main">
+
+            <div class="div-title">
+            <span class="material-icons">
+                <a href="landing-page.html">chevron_left</a>
+            </span>
+              <h1>Editar cadena</h1>    
+          </div>
+            <div class="div-perfil-cadena">
+                <div class="div-info-cadena">
+                    <div class="imagen">
+                        <img src="/media/logo_cinepolis.jpg" alt="">
+                        <input type="file" id="btn-subir-imagen-data" name="img" accept="image/*" class="subir-imagen-oculto">
+                        <button class="btn1-fondoclaro" id="btn-subir-imagen">Escoger imagen</button>      
+                    </div>
+                    <div class="info">
+
+                        <div class="div-info-item">
+                            <h2>Codigo</h2>
+                            <div class="input-container input-default input-codigo">
+                                <input type="text" name="" id="txt-codigo">
+                            </div>
+                        </div>
+
+                        
+                        <div class="div-info-item">
+                            <h2>Nombre</h2>
+                            <div class="input-container input-default input-nombre">
+                                <input type="text" name="" id="txt-nombre">
+                            </div>
+                        </div>
+
+                        
+                        <div class="div-info-item">
+                            <h2>Ubicacion</h2>
+                            <div class="input-container input-default input-ubicacion">
+                                <input type="text" name="" id="txt-ubicacion">
+                            </div>
+                        </div>
+
+                        
+                        <div class="div-info-item">
+                            <h2>Jefe encargado</h2>
+                            <div class="input-container input-default input-jefe">
+                                <input type="text" name="" id="txt-jefe">
+                            </div>
+                        </div>
+
+                        
+                        <div class="div-info-item">
+                            <h2>Margen de ganancia</h2>
+                            <div class=" input-slider">
+                                <input type="range" min="1" max="100" value="50" class="slider" id="slider-margen-ganancia">
+                                <label id="margen-ganancia-label">50%</label>
+                            </div>
+                          
+                        </div>
+
+                        <div class="div-btn-container">
+
+
+                            <div class="btn-item">
+                                <button class="btn1-fondoclaro" id="btn-crear">Crear y guardar</button>
+
+                                <p></p>
+                            </div>
+
+                            <div class="btn-item">
+                                <button class="btn1-fondoclaro" id="btn-sobrescribir">Sobrescribir</button>
+                                <p>Utilice esta opcion cuando este editando una cadena ya existente</p>
+                            </div>
+                            
+                            <div class="btn-item">
+                                <button class="btn1-fondoclaro" id="btn-eliminar">Eliminar</button>
+
+                                <p></p>
+                            </div>
+
+                        </div>
+                     
+           
+
+           
+                    
+
+                    </div>
+                </div>
+            
+            </div>
+        </main>    
+    </div>
+
+  <footer class="footer">
+         <div class="contain">
+            <div class="col">
+               <p>Cine REX</p>
+               <ul>
+                  <li><a href="">Terminos y condiciones</a></li>
+               </ul>
+            </div>
+            <div class="col">
+               <p>Cine REX</p>
+               <ul>
+                  <li><a href="">Terminos y condiciones</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/crear-editar-cadena.js"></script>
+  </body>
+</html>
