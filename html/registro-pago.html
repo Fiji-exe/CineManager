@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Registro de pago</title>
 
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/general.css">
@@ -54,25 +54,32 @@
       <main class="sct-main">
           <h1>Registro de metodo de pago</h1>
           <div class="form-registro-pago">
-            <div class="input">
-                <label for="txt-numero-tarjeta">Numero de tarjeta</label>
-                <div class="input-container input-default">      
-                    <input type="text" name="" id="txt-numero-tarjeta">  
+
+              <div class="div-numero-tarjeta">
+                <div class="input">
+                    <label for="txt-numero-tarjeta">Numero de tarjeta</label>
+                    <div class="input-container input-default input-tarjeta">      
+                        <input type="text" name="" id="txt-numero-tarjeta">  
+                    </div>
                 </div>
-            </div>
+                <div class="div-img-tarjeta">
+                    <img src="" alt="" id="img-tipo-tarjeta">
+                </div>
+              </div>
+    
   
             
             <div class="div-fecha-vencimiento">
                 
                 <div class="input">
                     <label for="fecha-vencimiento">Mes de vencimiento</label>
-                    <div class="input-container input-default">
+                    <div class="input-container input-default input-mes">
                         <input type="number" name="" id="mes-vencimiento">
                     </div>             
                 </div>
                 <div class="input">   
                     <label for="fecha-vencimiento">Año de vencimiento</label> 
-                    <div class="input-container input-default">
+                    <div class="input-container input-default input-anno">
                         <input type="number" name="" id="anno-vencimiento">
                     </div>             
                 </div>
@@ -81,7 +88,7 @@
          
             <div class="input">
                 <label for="cvc">CVC</label>
-                <div class="input-container input-default">
+                <div class="input-container input-default input-cvc">
                     <input type="number" name="" id="cvc">
                 </div>
             </div>
@@ -89,7 +96,7 @@
 
             <div class="input">
                 <label for="txt-titular">Titular de la tarjeta</label>
-                <div class="input-container input-default">
+                <div class="input-container input-default input-titular">
                     <input type="text" name="" id="txt-titular">
                 </div>
             </div>
@@ -97,7 +104,7 @@
 
             <div class="input">
                 <label for="txt-direccion">Direccion</label>
-                <div class="input-container input-default">        
+                <div class="input-container input-default input-direccion">        
                     <input type="text" name="" id="txt-direccion">
                 </div>
             </div>
@@ -105,7 +112,7 @@
             <div class="form-division-politica">
                 <div class="input">
                     <label for="select-provincia">Provincia</label>
-                    <div class="input-container input-default">     
+                    <div class="input-container input-default input-provincia">     
                         <select id="select-provincia"></select>
                     </div>
                 </div>
@@ -113,7 +120,7 @@
     
                 <div class="input">
                     <label for="select-canton">Canton</label>
-                    <div class="input-container input-default">
+                    <div class="input-container input-default input-canton">
                         <select  id="select-canton"></select>
                     </div>
                 </div>
@@ -121,7 +128,7 @@
     
                 <div class="input">
                     <label for="select-distrito">Distrito</label>
-                    <div class="input-container input-default">    
+                    <div class="input-container input-default input-distrito">    
                         <select  id="select-distrito"></select>
                     </div>
                 </div>

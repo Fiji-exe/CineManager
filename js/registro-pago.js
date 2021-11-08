@@ -4,16 +4,13 @@
 const selectProvincia = document.querySelector('#select-provincia');
 const selectCanton = document.querySelector('#select-canton');
 const selectDistrito = document.querySelector('#select-distrito');
+
 const txtNumeroTarjeta = document.querySelector('#txt-numero-tarjeta');
 const txtMesVencimiento = document.querySelector('#mes-vencimiento');
 const txtAnnoVencimiento = document.querySelector('#anno-vencimiento');
 const txtCvc = document.querySelector('#cvc');
 const txtTitular = document.querySelector('#txt-titular');
-
-
-
-
-
+const txtDireccion = document.querySelector('#txt-direccion');
 
 const botonForm = document.querySelector('#btn-registrar-pago');
 
@@ -28,7 +25,6 @@ const fillSelectProvincia = () => {
         selectProvincia.appendChild(option);
     });
 }
-
 
 const fillSelectCanton = () => {
     selectCanton.innerHTML = "";
@@ -52,14 +48,81 @@ const fillSelectDistrito = () => {
 const validar = () => {
     let error = false;
 
-    if (inputArea.value == '') {
+    if (selectProvincia.value == '' || selectProvincia.value == 'Seleccionar') {
         error = true;
-
+        document.querySelector('.input-provincia').classList.add('input-error');
+    }
+    else {
+        document.querySelector('.input-provincia').classList.remove('input-error');
     }
 
-    if(validarTarjeta == false){
+
+    if (selectCanton.value == '' || selectCanton.value == 'Seleccionar') {
         error = true;
+        document.querySelector('.input-canton').classList.add('input-error');
     }
+    else {
+        document.querySelector('.input-canton').classList.remove('input-error');
+    }
+
+    if (selectDistrito.value == '' || selectDistrito.value == 'Seleccionar') {
+        error = true;
+        document.querySelector('.input-distrito').classList.add('input-error');
+    }
+    else {
+        document.querySelector('.input-distrito').classList.remove('input-error');
+    }
+
+    
+    if(validarTarjeta(txtNumeroTarjeta.value) == false){
+        error = true;
+        document.querySelector('.input-tarjeta').classList.add('input-error');
+    }
+    else {
+        document.querySelector('.input-tarjeta').classList.remove('input-error');
+    }
+
+    if (!(txtMesVencimiento.value > 0 && txtMesVencimiento.value <= 12) || txtMesVencimiento.value == '') {
+        error = true;
+        document.querySelector('.input-mes').classList.add('input-error');
+    }
+    else {
+        document.querySelector('.input-mes').classList.remove('input-error');
+    }
+
+    
+    if (!(txtAnnoVencimiento.value > 2020 && txtAnnoVencimiento.value <=2030) || txtAnnoVencimiento.value == '') {
+        error = true;
+        document.querySelector('.input-anno').classList.add('input-error');
+    }
+    else {
+        document.querySelector('.input-anno').classList.remove('input-error');
+    }
+
+    if (!(txtCvc.value > 100 && txtCvc.value <= 9999) || txtCvc.value == '') {
+        error = true;
+        document.querySelector('.input-cvc').classList.add('input-error');
+    }
+    else {
+        document.querySelector('.input-cvc').classList.remove('input-error');
+    }
+
+    if (txtTitular.value == '') {
+        error = true;
+        document.querySelector('.input-titular').classList.add('input-error');
+    }
+    else {
+        document.querySelector('.input-titular').classList.remove('input-error');
+    }
+
+    if (txtDireccion.value == '') {
+        error = true;
+        document.querySelector('.input-direccion').classList.add('input-error');
+    }
+    else {
+        document.querySelector('.input-direccion').classList.remove('input-error');
+    }
+
 
     if (error == true) {
         Swal.fire({
@@ -101,37 +164,49 @@ const validarTarjeta = (pNumeroTarjeta) => {
     let esValida = true;
    
     if (visa.test(pNumeroTarjeta)) {
-      console.log('VISA');
+      document.getElementById('img-tipo-tarjeta').src = "/media/visa.png";
     }
     else if (amex.test(pNumeroTarjeta)) {
-        console.log('AMEX');
+        document.getElementById('img-tipo-tarjeta').src = "/media/amex.png";
     }
     else if (mastercard.test(pNumeroTarjeta) || mastercard2.test(pNumeroTarjeta)) {
-        console.log('MASTERCARD');
+        document.getElementById('img-tipo-tarjeta').src = "/media/mastercard.png"
     }
-    else if (disco1.test(pNumeroTarjeta) || disco2.test(pNumeroTarjeta) || disco3.test(pNumeroTarjeta)) {
-        console.log('DISCOVER');
-    }
-    else if (diners.test(pNumeroTarjeta)) {
-        console.log('DINERS');
-    }
-    else if (jcb.test(pNumeroTarjeta)) {
-        console.log('JCB');
-    }
-    else if (cup1.test(pNumeroTarjeta) || cup2.test(pNumeroTarjeta)) {
-        console.log('CHINA_UNION_PAY');
-    }
+    // else if (disco1.test(pNumeroTarjeta) || disco2.test(pNumeroTarjeta) || disco3.test(pNumeroTarjeta)) {
+    //     console.log('DISCOVER');
+    // }
+    // else if (diners.test(pNumeroTarjeta)) {
+    //     console.log('DINERS');
+    // }
+    // else if (jcb.test(pNumeroTarjeta)) {
+    //     console.log('JCB');
+    // }
+    // else if (cup1.test(pNumeroTarjeta) || cup2.test(pNumeroTarjeta)) {
+    //     console.log('CHINA_UNION_PAY');
+    // }
     else {
-        console.log('No se pudo identificar');
+        document.getElementById('img-tipo-tarjeta').src = "";
         esValida = false;
     }
 
     return esValida;
 }
 
+const txtTarjetaTextChange = () =>{
+    txtNumeroTarjeta.value = txtNumeroTarjeta.value.replace(/\D/g,'');
+    if(validarTarjeta(txtNumeroTarjeta.value) == false){
+        document.querySelector('.input-tarjeta').classList.add('input-error');
+    }
+    else {
+        document.querySelector('.input-tarjeta').classList.remove('input-error');
+    }
+
+}
+
 
 
 fillSelectProvincia();
 botonForm.addEventListener('click', validar);
+txtNumeroTarjeta.addEventListener('input', txtTarjetaTextChange);
 selectProvincia.addEventListener('change', fillSelectCanton);
 selectCanton.addEventListener('change', fillSelectDistrito);

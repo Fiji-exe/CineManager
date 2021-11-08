@@ -65,3 +65,12 @@ body{
     width: 40%;
     margin: 0 10px 0 0;
 }
+
+.form-registro-pago .div-numero-tarjeta {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-registro-pago .div-numero-tarjeta .input{
+    width: 75%;
+}
