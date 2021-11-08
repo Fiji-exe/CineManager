@@ -135,7 +135,7 @@ let listaCategorias = [{
 const elem_fitro = document.querySelector('#selector-filtros-dropdown');
 const elem_inputtext = document.querySelector('#input-filtros-texto');
 const tabla = document.querySelector('#tabla-uno');
-const filtro_seleccionado = '';
+let filtro_seleccionado = '';
 
 
 const js_habilitar_input = () => {
@@ -144,7 +144,42 @@ const js_habilitar_input = () => {
 }
 const js_checar_inputs = () => {
     let keyword = elem_inputtext.value;
-
+    if (!keyword) {
+        Swal.fire({
+            'icon': 'warning',
+            'title': 'Error en el término',
+            'text': 'Por favor intruduzca un término o palabra clave',
+            'confirmButtonText': 'Entendido'
+        });
+        elem_inputtext.value = '';
+    } else {
+        switch (filtro_seleccionado) {
+            case 'cart':
+                buscar(listaCartelera);
+                break;
+            case 'peli':
+                buscar(listaPeliculas);
+                break;
+            case 'cine':
+                buscar(listaCines);
+                break;
+            case 'user':
+                buscar(listaUsuarios);
+                break;
+            case 'sala':
+                buscar(listaSalas);
+                break;
+            case 'tsla':
+                buscar(listaCines);
+                break;
+            case 'tasi':
+                buscar(listaCines);
+                break;
+            case 'cate':
+                buscar(listaCategorias);
+                break;
+        }
+    }
 
 }
 const js_limpiar_tabla = () => {
@@ -165,21 +200,29 @@ const js_crear_cuerpo_tabla = (data_json) => {
     let cuerpoTabla = tabla.createTBody();
 
     // Crear una fila por cada objeto en el data_json
-    data_json.forEach(data_object => {
+    for (let i = 1; i < data_json.length; i++) {
         let fila_cuerpo = cuerpoTabla.insertRow();
         // Crear una celda por cada propiedad del objeto
-        let array_propiedades = Object.keys(data_object);
+        let array_propiedades = Object.keys(data_json[i]);
         array_propiedades.forEach(propiedad => {
-            fila_cuerpo.insertCell().innerHTML = data_object[propiedad];
-        })
+            fila_cuerpo.insertCell().innerHTML = data_json[i][propiedad];
+        });
+    }
+    /* data_json.forEach(data_object => {
+         let fila_cuerpo = cuerpoTabla.insertRow();
+         // Crear una celda por cada propiedad del objeto
+         let array_propiedades = Object.keys(data_object);
+         array_propiedades.forEach(propiedad => {
+             fila_cuerpo.insertCell().innerHTML = data_object[propiedad];
+         })
 
-    });
+     });*/
 };
 
-const accion = () => {
+const buscar = (data_json) => {
     js_limpiar_tabla();
-    js_crear_encabezados_tabla(listaUsuarios);
-    js_crear_cuerpo_tabla(listaUsuarios);
+    js_crear_encabezados_tabla(data_json);
+    js_crear_cuerpo_tabla(data_json);
 }
 
 elem_fitro.onchange = js_habilitar_input;

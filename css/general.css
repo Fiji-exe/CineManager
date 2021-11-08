@@ -1,43 +1,49 @@
-    .header-principal {
-        min-height: 56px;
-        background: #BB9526;
-    }
-    
-    .header-principal nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-    
-    .header-principal .logo {
-        margin-left: 2%;
-        font-family: 'Nunito', sans-serif;
-        font-size: 32px;
-        color: #ffffff;
-    }
-    
-    .header-principal .item-right .btn1-fondoclaro {
-        padding: 10px;
-        margin-right: 50px;
-        /**/
-        border: 2px solid #950F11;
-        border-radius: 5px;
-        background: #950F11;
-        /**/
-        font-family: 'Lora';
-        font-size: 1rem;
-        font-weight: bold;
-        color: #FFFFFF;
-        cursor: pointer;
-    }
-    
-    .header-principal .item-right .btn1-fondoclaro:hover {
-        border: 2px solid #BAC1CA;
-        background: #BAC1CA;
-        color: #950F11;
-    }
-    /*
+* {
+    box-sizing: border-box;
+}
+
+.header-principal {
+    min-height: 56px;
+    background: #BB9526;
+}
+
+.header-principal nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-principal .logo {
+    margin-left: 2%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.header-principal .item-right .btn1-fondoclaro {
+    padding: 10px;
+    margin-right: 50px;
+    /**/
+    border: 2px solid #950F11;
+    border-radius: 5px;
+    background: #950F11;
+    /**/
+    font-family: 'Lora';
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.header-principal .item-right .btn1-fondoclaro:hover {
+    border: 2px solid #BAC1CA;
+    background: #BAC1CA;
+    color: #950F11;
+}
+
+
+/*
     *
     *
     *
@@ -47,30 +53,36 @@
     * TITULOS, SUBTITULOS y PARRAFOS
     *
     */
-    
-    h1 {
-        font-family: 'Oswald';
-        font-size: 48px;
-        margin: 1% 0% 1% 2%
-    }
-    
-    p {
-        font-family: 'Nunito';
-        font-size: 20px;
-        margin: 1% 0% 3% 2%
-    }
-    
-    .btn1-fondoclaro {
-        padding: 10px;
-        margin-right: 50px;
-        /**/
-        border: 2px solid #950F11;
-        border-radius: 5px;
-        background: #950F11;
-        /**/
-        font-family: 'Lora';
-        font-size: 1rem;
-        font-weight: bold;
-        color: #FFFFFF;
-        cursor: pointer;
-    }
+
+h1 {
+    font-family: 'Oswald';
+    font-size: 48px;
+    margin: 1% 0% 1% 2%
+}
+
+p {
+    font-family: 'Nunito';
+    font-size: 20px;
+    margin: 1% 0% 3% 2%
+}
+
+.btn1-fondoclaro {
+    padding: 10px;
+    margin-right: 50px;
+    /**/
+    border: 2px solid #950F11;
+    border-radius: 5px;
+    background: #950F11;
+    /**/
+    font-family: 'Lora';
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.btn1-fondoclaro:hover {
+    border: 2px solid #BAC1CA;
+    background: #BAC1CA;
+    color: #950F11;
+}
