@@ -1,0 +1,112 @@
+.div-perfil-cadena{
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-perfil-cadena .div-info-cadena{
+    /* background-color: red; */
+    width: 45%;
+    height: 300px;
+    display: flex;
+}
+
+.div-perfil-cadena .div-comentarios-cadena{
+    /* background-color: blue; */
+    width: 45%;
+    height: 300px;
+}
+
+.div-perfil-cadena .div-info-cadena .imagen{
+    /* background-color: red; */
+    width: 150px;
+    height: 215px;
+    margin: 10px;
+}
+
+.div-perfil-cadena .div-info-cadena .imagen img{
+    /* background-color: red; */
+    width: 150px;
+    height: 215px;
+}
+
+.div-perfil-cadena .div-info-cadena .info{
+    width: 100%;
+}
+
+
+.div-perfil-cadena .div-info-cadena .info .div-info-item{
+    
+    font-family: 'Nunito', sans-serif;
+    padding: 10px 0;
+}
+
+.small p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+}
+
+.small h2{
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.div-perfil-cadena .div-info-cadena .div-detalles-adicionales{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+}
+
+.div-perfil-cadena .div-info-cadena .div-detalles-adicionales .bold{
+    font-weight: bold;
+}
+
+
+.div-perfil-cadena .div-info-cadena .div-detalles-adicionales .div-detalles-item{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+}
+
+.div-contenedor-comentarios .div-comentario{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0 0 0;
+}
+
+.div-imagen-usuario img{
+    height: 63px;
+    width: 63px;
+}
+
+.div-nuevo-comentario{
+    margin: 10px 0 0 0;
+}
+
+.div-nuevo-comentario h2{
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.div-cuerpo-nuevo-comentario{
+    display: flex;
+    flex-direction: row;
+}
+
+.div-cuerpo-nuevo-comentario textarea{
+  width: 150px;
+  height: 50px;
+}
+
+.div-title{
+    display: flex;
+    flex-direction: column;
+}
+
+.div-title a{
+    display: flex;
+color: #950F11;
+    margin: 0 10px;
+}
