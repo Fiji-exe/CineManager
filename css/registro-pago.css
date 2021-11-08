@@ -74,3 +74,14 @@ body{
 .form-registro-pago .div-numero-tarjeta .input{
     width: 75%;
 }
+
+.div-title{
+    display: flex;
+    
+}
+
+.div-title a{
+    display: flex;
+    color: #fff;
+    margin: 0 10px;
+}
