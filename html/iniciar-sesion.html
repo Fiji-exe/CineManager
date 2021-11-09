@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Nunito&family=Oswald&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- RESET CSS -->
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <!-- GENERAL CSS -->
+    <link rel="stylesheet" href="../css/recuperar-password.css">
+    <link rel="stylesheet" href="../css/general.css">
+
+    <title>Iniciar Sesión</title>
+</head>
+
+<body>
+    <section class="sct-recover">
+        <div class="div-signup-icon">
+            <p>Bienvenido de Vuelta!</p>
+            <p>Cine Manager</p>
+        </div>
+        <div class="div-signup-card">
+            <div class="signup-card-top">
+                <span class="material-icons">
+                    <a href="landing-page.html">chevron_left</a>
+                </span>
+            </div>
+            <div class="signup-card-body">
+                <form>
+                    <h1>Iniciar Sesión</h1>
+                    <div class="input-container input-default input-email">
+                        <input id="txt-correo" type="email" placeholder="user@exmaple.com"/>
+                    </div>
+                    <div class="input-container input-default input-password">
+                        <input id="txt-password" type="password" placeholder="Contraseña"/>
+                    </div>
+                    <button class="btn1-fondoclaro" type="button" id="btn-account-form">Iniciar Sesión</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        &#169; TeamFiji 2021
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/servicio-validar-login.js"></script>
+
+</html>
