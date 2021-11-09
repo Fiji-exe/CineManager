@@ -11,7 +11,15 @@ h1 {
     font-family: Oswald;
 }
 
+h2, h3, h4, h5, h6 {
+    font-family: Nunito;
+}
+
 /* Inputs  */
+
+.input-container {
+    margin-bottom: 30px;
+}
 
 .input-default {
     border-bottom: 1px solid #333;
@@ -19,6 +27,7 @@ h1 {
     padding: 5px 5px;
     font-size: 16px;
 }
+
 .input-short {
     border-bottom: 1px solid #333;
     border-radius: 4px;
@@ -34,16 +43,32 @@ h1 {
     padding-left: 10px;
 }
 
+.input-default select {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    font-size: 16px;
+    outline: none;
+    font-family: 'Lora';
+    width: 100%;
+}
+
+.input-default select option {
+    color: #fff;
+    background-color: #333;
+    border: none;
+}
+
 .input-short select {
     background-color: rgba(0, 0, 0, 0);
     border: 0;
     font-size: 16px;
     outline: none;
-    color: #fff;
     font-family: 'Lora';
     width: 100%;
 }
+
 .input-short select option {
+    color: #fff;
     background-color: #333;
     border: none;
 }
@@ -63,12 +88,11 @@ h1 {
     font-size: 16px;
 }
 
-.input-default input{
+.input-default input {
     background-color: rgba(0, 0, 0, 0);
     border: 0;
     font-size: 16px;
     outline: none;
-    color: #fff;
     font-family: 'Lora';
 }
 
@@ -77,7 +101,6 @@ h1 {
     border: 0;
     font-size: 16px;
     outline: none;
-    color: #fff;
     font-family: 'Lora';
 }
 
@@ -93,10 +116,6 @@ h1 {
     text-justify: auto;
 }
 
-.input-form-blurb:hover {
-    color: #fff;
-}
- 
 .input-form-icon {
     font-size: 20px;
     padding: 0% 5px;
@@ -110,7 +129,6 @@ h1 {
 .input-hidden {
     display: none;
 }
-
 
 /* Botones */
 

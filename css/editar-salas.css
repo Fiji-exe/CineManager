@@ -1,0 +1,65 @@
+h1{
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.sct-edit-rooms {
+    padding: 0% 50px;
+}
+
+.div-edit-header {
+    height: 100px;
+}
+
+.div-edit-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-edit-form {
+    padding: 0% 10px;
+}
+
+.div-edit-form-general, .div-edit-form-seats {
+    margin-bottom: 50px;
+}
+
+#coordenadas-asiento {
+    justify-content: space-between;
+}
+
+.div-preview {
+    display: block;
+    width: 100%;
+    padding-left: 50px;
+}
+
+.div-preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.div-preview-array {
+    margin-bottom: 50px;
+    display: flex;
+    overflow: scroll;
+}
+
+.chair-button{
+    font-size: 80px;
+    color: #333;
+}
+
+.div-preview-array table td{
+    padding: 10px;
+}

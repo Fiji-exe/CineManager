@@ -42,6 +42,22 @@
     font-size: 40px;
 }
 
+/* INPUT TEXT TO WHITE */
+
+.input-short select {
+    color: #fff;
+}
+
+.input-default input{
+    color: #fff;
+}
+
+.input-short input {
+    color: #fff;
+}
+
+/* TEMPORAL */
+
 footer {
     display: block;
     height: 30px;
