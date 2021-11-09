@@ -3,6 +3,10 @@
     justify-content: space-between;
 }
 
+.arrow{
+    padding: 0 0 10px 0;
+}
+
 .div-perfil-cadena .div-info-cadena{
     /* background-color: red; */
     width: 45%;
