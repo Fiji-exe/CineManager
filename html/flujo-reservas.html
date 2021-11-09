@@ -31,9 +31,37 @@
         </nav>
     </header>
 
-    <h1>Buscador</h1>
-    <p> Este es un buscador universal. Haz click al menu de filtros, <br> elige que deseas buscar y luego podras ingresar los terminos o palabras clave en el buscador </p>
+    <section class="section-step-one">
+        <section class="section-left">
+            <h1>Reserva tus boletos</h1>
+            <p> Elige la cantidad de boletos que necesitas reservar </p>
+            <div class="img-container"> <img src="" alt=""> </div>
 
+            <div class="step-container">
+                <p class="step-one-icon"> 1 </p>
+                <p class="step-two-icon"> 2 </p>
+                <p class="step-three-icon"> 3 </p>
+                <p class="step-four-icon"> 4 </p>
+            </div>
+        </section>
+
+        <section class="section-right">
+            <table class="tabla-uno" id="tabla-uno">
+                <tbody>
+                    <tr>
+                        <td>Cine Magaly</td>
+                        <td>Uvita</td>
+                    </tr>
+                    <tr>
+                        <td>IMAX</td>
+                        <td>16:30</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+
+    <div class="poster de pelicula"></div>
     <select class="selector-filtros-dropdown" id="selector-filtros-dropdown">
             <option value="" disabled selected>Filtros</option>
             <option value="cart">Carteleras</option>
@@ -48,55 +76,7 @@
     </select>
     <input type="text" class="input-filtros" id="input-filtros-texto" disabled placeholder="Elija un filtro. Luego ingrese aquí palabra clave" maxlength="127" size="80">
     <button class="btn1-fondoclaro" id="boton-buscar-filtros"> Buscar </button>
-
-    <table class="tabla-uno" id="tabla-uno">
-        <thead>
-            <tr>
-                <th>- - - - -</th>
-                <th>- - - - -</th>
-                <th>- - - - -</th>
-                <th>- - - - -</th>
-                <th>- - - - -</th>
-                <th>- - - - -</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>.</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>.</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>.</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>.</td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/flujo-reservas.js"></script>
 </body>
