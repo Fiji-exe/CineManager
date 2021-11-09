@@ -60,9 +60,10 @@ h3 {
     overflow: scroll;
 }
 
-.chair-button{
+.chair-button a{
     font-size: 80px;
     color: #333;
+    text-decoration: none;
 }
 
 .div-preview-array table td{
