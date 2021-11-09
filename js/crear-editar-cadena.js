@@ -15,13 +15,13 @@ const btnsobrescribir = document.querySelector('#btn-sobrescribir');
 const btnEliminar = document.querySelector('#btn-eliminar');
 
 
-margenGananciaLabel.innerHTML = margenGananciaSlider.value; // Display the default slider value
+margenGananciaLabel.innerHTML = margenGananciaSlider.value + '%'; // Display the default slider value
 
 
 
 // Update the current slider value (each time you drag the slider handle)
 const updateValueMargenLabel = () => {
-    margenGananciaLabel.innerHTML = margenGananciaSlider.value;
+    margenGananciaLabel.innerHTML = margenGananciaSlider.value  + '%' ;
 }
 
 const btnSubirImagenClicked = () => {
@@ -55,7 +55,7 @@ const validar = () => {
         document.querySelector('.input-ubicacion').classList.remove('input-error');
     }
 
-    if (txtJefe.value == '') {
+    if (txtJefe.value == 'Seleccionar') {
         error = true;
         document.querySelector('.input-jefe').classList.add('input-error');
     }
