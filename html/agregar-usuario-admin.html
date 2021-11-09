@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Registrar usuario</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/agregar-usuario-admin.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  </head>
+  <body>
+
+    <header class="header-principal">
+        <div class="logo">
+            <img src="imgs/logo.png" alt="imagen">
+        </div>
+
+        <nav>
+            <div class="item">      
+              <span class="material-icons md-light">home</span>          
+              <a href="index.html">Inicio</a>
+            </div>     
+            <div class="item">
+              <span class="material-icons md-light">camera_indoor</span>
+              <a class="item" href="index.html">Cines</a>
+            </div>    
+            <div class="item">
+              <span class="material-icons md-light">event_seat</span>
+              <a class="item" href="index.html">Reservas</a>
+            </div>
+            <div class="item">
+              <span class="material-icons md-light">theaters</span>
+              <a class="item" href="index.html">Cartelera</a>
+            </div>
+            <div class="item">
+              <span class="material-icons md-light">movie</span>
+              <a class="item" href="index.html">cadenas</a>
+            </div>
+            <div class="item push">
+              <span class="material-icons md-light">account_circle</span>
+              <a class="item" href="index.html">Iniciar sesion</a>
+            </div>
+        </nav>    
+    </header>
+
+    <div class="contenido">
+        <main class="sct-main">
+
+            <div class="div-title">
+                <span class="material-icons">
+                    <a href="landing-page.html">chevron_left</a>
+                </span>
+                <h1>Registrar usuario</h1>    
+            </div>
+
+            <div class="form">
+              
+                <div class="div-form-item">
+                    <h2>Nombre</h2>
+                    <div class="div-input-container">
+                        <div class="input-container input-default input-nombre">
+                            <input type="text" name="" id="txt-primer-nombre" placeholder="Nombre*">
+                        </div>
+                        <div class="input-container input-default input-segundo-nombre">
+                            <input type="text" name="" id="txt-segundo-nombre" placeholder="Segundo nombre">
+                        </div>
+                    </div>             
+                </div>
+
+                <div class="div-form-item">
+                    <h2>Apellido</h2>
+                    <div class="div-input-container">
+                        <div class="input-container input-default input-apellido">
+                            <input type="text" name="" id="txt-primer-apellido" placeholder="Primer apellido*">
+                        </div>
+                        <div class="input-container input-default input-segundo-apellido">
+                            <input type="text" name="" id="txt-segundo-apellido" placeholder="Segundo apellido">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-form-item">
+                    <h2>Identificacion</h2>
+                    <div class="input-container input-default input-id">
+                        <select id="tipo-identificacion">
+                            <option value="Tipo">Tipo</option>
+                            <option value="Cedula">Cedula</option>
+                            <option value="Dimex">Dimex</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                          </select>
+                        <input type="text" name="" id="txt-numero-id" placeholder="Numero">
+                    </div>
+                </div>
+
+                <div class="div-form-item">
+                    <h2>Correo electronico</h2>
+                    <div class="input-container input-default input-correo">
+                        <input type="text" name="" id="txt-correo" placeholder="usuario@ejemplo.com">                   
+                    </div>
+                </div>
+
+                <div class="div-form-item">
+                    <h2>Fecha de nacimiento</h2>
+                    <div class="input-container input-default input-nacimiento">
+                        <input type="date" name="" id="date-nacimiento" >                   
+                    </div>
+                </div>
+
+                <div class="div-form-item">
+                    <h2>Avatar</h2>
+                    <div class="input-container input-default input-avatar">
+                        <input type="file" name="" id="file-avatar" >                   
+                    </div>
+                </div>
+
+                <div class="div-form-item">
+                    <h2>Tipo de usuario</h2>
+                    <div class="input-container input-default input-tipo">
+                        <input type="radio" id="radio-cliente" name="radio-tipo-usuario" value="Cliente" checked>
+                          <label for="radio-cliente">Cliente</label>
+                            <input type="radio" id="radio-soporte" name="radio-tipo-usuario" value="Soporte">
+                          <label for="radio-soporte">Soporte</label>
+                    </div>
+                   
+                </div>
+
+                <div class="div-form-item">
+                    <button class="btn1-fondoclaro" id="btn-register">Registrar</button>
+                </div>
+
+
+            </div>
+        </main>    
+    </div>
+
+  <footer class="footer">
+         <div class="contain">
+            <div class="col">
+               <p>Cine REX</p>
+               <ul>
+                  <li><a href="">Terminos y condiciones</a></li>
+               </ul>
+            </div>
+            <div class="col">
+               <p>Cine REX</p>
+               <ul>
+                  <li><a href="">Terminos y condiciones</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/agregar-usuario-admin.js"></script>
+  </body>
+</html>
