@@ -42,7 +42,7 @@ const validar = () => {
         });
 
     } else {
-        console.log("ACC");
+        window.location.href = 'homepage-usuario.html';
     }
 
 };

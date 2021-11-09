@@ -87,10 +87,10 @@ h1 {
 
 .input-form-blurb {
     font-size: 12px;
-    margin-bottom: 10px;
     color: #555;
     text-align: justify;
     text-justify: auto;
+    align-items: center;
 }
 
 .input-form-blurb:hover {
@@ -101,6 +101,7 @@ h1 {
     font-size: 20px;
     padding: 0% 5px;
     color: #333;
+    margin-bottom: 10px;
 }
 
 .input-form-separator {
@@ -111,6 +112,13 @@ h1 {
     display: none;
 }
 
+.signup-card-links a {
+    text-decoration: none;
+    color: #950F11;
+    display: block;
+    padding-top: 15px;
+    font-size: 12px;
+}
 
 /* Botones */
 
