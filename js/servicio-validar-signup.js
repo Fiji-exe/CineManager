@@ -70,7 +70,13 @@ const validar = () => {
             'confirmButtonText': 'Entendido'
         });
     } else {
-        window.location.href = 'crear-validar.html';
+        Swal.fire({
+            'icon': 'success',
+            'title': 'Se ha enviado un correo de validación.',
+            'confirmButtonText': 'Entendido'
+        }).then(() => {
+            window.location.href = 'crear-validar.html';
+        });
     }
 
 };

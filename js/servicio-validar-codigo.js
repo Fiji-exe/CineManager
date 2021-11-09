@@ -26,13 +26,7 @@ const validar = () => {
         });
 
     } else {
-        Swal.fire({
-            'icon': 'success',
-            'title': 'Se ha enviado un correo de validación.',
-            'confirmButtonText': 'Entendido'
-        }).then(() => {
-            window.location.href = 'recuperar-cambiar.html';
-        });
+        window.location.href = 'homepage-usuario.html';
     }
 
 };
