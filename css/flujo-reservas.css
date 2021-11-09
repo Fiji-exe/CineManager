@@ -1,72 +1,77 @@
-select {
-    margin: 0% 0% 3% 2%;
-    font-family: 'Nunito';
-    font-size: 22px;
+.section-step-one {
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
-.input-filtros {
-    font-family: 'Nunito';
-    font-size: 20px;
-    width: 50%;
-    border: 0px;
-    outline: none;
+.section-step-one .section-left {
+    display: block;
+    height: 300px;
+    min-height: 300px;
+    padding-top: 1%;
 }
 
-.input-filtros {
-    border: 1px solid black;
+.section-step-one .section-left .step-container {
+    display: block;
 }
 
-.tabla-uno {
+.section-step-one .section-right {
+    display: block;
+    height: 300px;
+    min-height: 300px;
+    margin-left: 3%;
+    padding-top: 5%;
+}
+
+.section-step-one .section-right .header-tabla {
+    margin-bottom: 5%;
+}
+
+.tabla {
     background: #FFFFFF;
     margin: 0% 0% 3% 2%;
     /* border-collapse: collapse; */
 }
 
-.tabla-uno tbody tr:nth-child(odd) {
+.tabla tbody tr:nth-child(odd) {
     background: linear-gradient(0deg, #eaeef4 0%, #FFFFFF 60%);
 }
 
-.tabla-uno th,
+.tabla th,
 table td {
     padding: 0.5rem 2rem;
 }
 
-.tabla-uno thead {
+.tabla thead {
     font-family: 'Nunito';
     font-size: 22px;
 }
 
-.tabla-uno thead tr {
+.tabla thead tr {
     border-bottom: 2px solid #BB9526;
 }
 
-.tabla-uno tbody {
+.tabla tbody {
     font-family: 'Nunito';
     font-size: 16px;
 }
 
-.tabla-uno tbody tr {
+.tabla tbody tr {
     border-bottom: 1px solid #BAC1CA;
 }
 
-.tabla-uno tbody tr:hover {
+.tabla tbody tr:hover {
     cursor: pointer;
-    border-bottom: 2px solid #950F11;
 }
 
-.tabla-uno tfoot {
+.tabla tfoot {
     font-family: 'Nunito';
     font-size: 16px;
     border-bottom: 2px solid #BB9526;
 }
 
-.tabla-uno tfoot tr {
+.tabla tfoot tr {
     border-bottom: 1px solid #BB9526;
-}
-
-.tabla-uno tfoot tr:hover {
-    cursor: pointer;
-    border-bottom: 2px solid #950F11;
 }
 
 .swal2-container .swal2-title {
