@@ -27,10 +27,10 @@
     padding: 5px;
 }
 
-.btn1-fondooscuro {
-    background: #BAC1CA;
-    border: 2px solid #BAC1CA;
-    color: #070F1A;
+.btn1-fondoclaro {
+    background: #950F11;
+    border: 2px solid #950F11;
+    color: #FFFFFF;
     cursor: pointer;
     font-weight: bold;
     padding: 10px;
@@ -38,6 +38,10 @@
     font-family: 'Lora';
 }
 
-.h1 {
+h1 {
     font-family: "Oswald";
+}
+
+p {
+    font-family: 'Nunito';
 }
