@@ -44,11 +44,13 @@ h1 {
     padding: 2%;
 }
 
+.input-box-compuesto form {
+    display: inline;
+}
+
 .contenedor-der {
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 2%;
-    padding: 2%;
     width: 35%;
 }
 
