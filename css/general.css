@@ -1,5 +1,3 @@
-
-
 .header-principal {
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
@@ -48,11 +46,11 @@
 }
 
 .material-icons.md-light { 
-  color: #fff;
+  color: rgba(255, 255, 255, 1); 
 }
 
 .contenido main{
-    margin: 0px 3%;
+    padding: 10px 3%;
 }
 
 .contenido{
@@ -93,10 +91,10 @@ h1 {
     font-size: 30px;
 }
 
-.logo-admin {
-  font-family: "Oswald";
-  font-size: 26px;
-  color: #fff;
+
+h2 {
+    font-family: "Oswald";
+    font-size: 24px;
 }
 
 textarea {
@@ -104,7 +102,7 @@ textarea {
     resize: none;
     width: 100%;
     height: 200px;
-}
+  }
 
 .btn1-fondoclaro {
     background: #950F11;
@@ -117,14 +115,7 @@ textarea {
     font-family: 'Lora';
 }
 
-all { 
-    color: 
-    #FFFFFF,
-    #BAC1CA
-    #BB9526
-    #950F11
-    #260303
-    }
+
     * {
         box-sizing: border-box;
     }
