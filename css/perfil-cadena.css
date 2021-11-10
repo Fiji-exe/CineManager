@@ -7,6 +7,12 @@
     padding: 0 0 10px 0;
 }
 
+
+h2 {
+    font-family: "Oswald";
+    font-size: 24px;
+}
+
 .div-perfil-cadena .div-info-cadena{
     /* background-color: red; */
     width: 45%;
