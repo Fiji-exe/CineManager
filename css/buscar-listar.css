@@ -1,0 +1,80 @@
+select {
+    margin: 0% 0% 3% 2%;
+    font-family: 'Nunito';
+    font-size: 22px;
+}
+
+.input-filtros {
+    font-family: 'Nunito';
+    font-size: 20px;
+    width: 50%;
+    border: 0px;
+    outline: none;
+}
+
+.input-filtros {
+    border: 1px solid black;
+}
+
+.tabla-uno {
+    background: #FFFFFF;
+    margin: 0% 0% 3% 2%;
+    /* border-collapse: collapse; */
+}
+
+.tabla-uno tbody tr:nth-child(odd) {
+    background: linear-gradient(0deg, #eaeef4 0%, #FFFFFF 60%);
+}
+
+.tabla-uno th,
+table td {
+    padding: 0.5rem 2rem;
+}
+
+.tabla-uno thead {
+    font-family: 'Nunito';
+    font-size: 22px;
+}
+
+.tabla-uno thead tr {
+    border-bottom: 2px solid #BB9526;
+}
+
+.tabla-uno tbody {
+    font-family: 'Nunito';
+    font-size: 16px;
+}
+
+.tabla-uno tbody tr {
+    border-bottom: 1px solid #BAC1CA;
+}
+
+.tabla-uno tbody tr:hover {
+    cursor: pointer;
+    border-bottom: 2px solid #950F11;
+}
+
+.tabla-uno tfoot {
+    font-family: 'Nunito';
+    font-size: 16px;
+    border-bottom: 2px solid #BB9526;
+}
+
+.tabla-uno tfoot tr {
+    border-bottom: 1px solid #BB9526;
+}
+
+.tabla-uno tfoot tr:hover {
+    cursor: pointer;
+    border-bottom: 2px solid #950F11;
+}
+
+.swal2-container .swal2-title {
+    font-family: 'Oswald';
+    font-size: 32px;
+}
+
+.swal2-container .swal2-html-container {
+    font-family: 'Nunito';
+    font-size: 24px;
+}
