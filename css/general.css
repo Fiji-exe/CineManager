@@ -1,3 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Lora';
+}
+
+h1 {
+    font-family: 'Oswald';
+    font-size: 48px;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Nunito';
+}
+
+textarea {
+    outline: none;
+    resize: none;
+    width: 100%;
+    height: 200px;
+  }
+
 .btn1-fondoclaro {
     background: #950F11;
     border: 2px solid #950F11;
@@ -52,10 +77,6 @@
     padding: 10%;
 }
 
-h2, h3, h4, h5, h6 {
-    font-family: 'Nunito';
-}
-
 /* Inputs  */
 
 .input-container {
@@ -79,6 +100,7 @@ h2, h3, h4, h5, h6 {
 
 .dual-inputs {
     display: flex;
+    justify-content: space-between;
 }
 
 .input-default select {
@@ -293,24 +315,6 @@ h2, h3, h4, h5, h6 {
 
 /* end css footer */
 
-h1 {
-    font-family: "Oswald";
-    font-size: 30px;
-}
-
-h2 {
-    font-family: "Oswald";
-    font-size: 24px;
-}
-
-
-textarea {
-    outline: none;
-    resize: none;
-    width: 100%;
-    height: 200px;
-  }
-
 .btn1-fondoclaro {
     background: #950F11;
     border: 2px solid #950F11;
@@ -322,14 +326,6 @@ textarea {
     font-family: 'Lora';
 }
 
-
-    * {
-        box-sizing: border-box;
-    }
-    body {
-      font-size: 16px;
-      font-family: 'Lora';
-    }
 .header-principal .logo {
     margin-left: 2%;
     font-family: 'Nunito', sans-serif;
@@ -356,28 +352,6 @@ textarea {
     border: 2px solid #BAC1CA;
     background: #BAC1CA;
     color: #950F11;
-}
-
-
-/*
-    *
-    *
-    *
-    *
-    *
-    *
-    * TITULOS, SUBTITULOS y PARRAFOS
-    *
-    */
-
-h1 {
-    font-family: 'Oswald';
-    font-size: 48px;
-}
-
-p {
-    font-family: 'Nunito';
-    font-size: 20px;
 }
 
 .btn1-fondoclaro {
@@ -467,3 +441,4 @@ p {
 .clearfix {
     clear: both;
 }
+
