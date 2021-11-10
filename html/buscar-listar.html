@@ -46,8 +46,12 @@
             <option value="tasi">Tipos de asiento</option>
             <option value="cate">Categoria Peliculas</option>  
     </select>
-    <input type="text" class="input-filtros" id="input-filtros-texto" disabled placeholder="Elija un filtro. Luego ingrese aquí palabra clave" maxlength="127" size="80">
-    <button class="btn1-fondoclaro" id="boton-buscar-filtros"> Buscar </button>
+    <div class="dual-inputs">
+        <div class="input-container input-short">
+            <input id="input-filtros-texto" type="text" placeholder="Elija un filtro. Luego ingrese aquí palabra clave"/>
+        </div>
+        <button class="btn1-fondoclaro" id="boton-buscar-filtros"> Buscar </button>
+    </div>
 
     <table class="tabla-uno" id="tabla-uno">
         <thead>
