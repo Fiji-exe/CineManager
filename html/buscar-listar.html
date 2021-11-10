@@ -34,7 +34,9 @@
     <h1>Buscador</h1>
     <p> Este es un buscador universal. Haz click al menu de filtros, <br> elige que deseas buscar y luego podras ingresar los terminos o palabras clave en el buscador </p>
 
-    <select class="selector-filtros-dropdown" id="selector-filtros-dropdown">
+    
+    <div class="input-container input-default input-idtype">
+        <select class="input-container input-short" id="selector-filtros-dropdown">
             <option value="" disabled selected>Filtros</option>
             <option value="cart">Carteleras</option>
             <option value="peli">Peliculas</option>
@@ -46,8 +48,9 @@
             <option value="tasi">Tipos de asiento</option>
             <option value="cate">Categoria Peliculas</option>  
     </select>
+    </div>
     <div class="dual-inputs">
-        <div class="input-container input-short">
+        <div class="input-container input-default">
             <input id="input-filtros-texto" type="text" placeholder="Elija un filtro. Luego ingrese aquí palabra clave"/>
         </div>
         <button class="btn1-fondoclaro" id="boton-buscar-filtros"> Buscar </button>
