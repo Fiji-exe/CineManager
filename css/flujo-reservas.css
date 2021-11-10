@@ -1,5 +1,7 @@
 .section-step-inactive {
     display: none;
+    height: 0px;
+    width: 0px;
 }
 
 .section-step-active {
@@ -33,7 +35,7 @@
     /*height: 300px;*/
     /*min-height: 300px;*/
     margin-left: 3%;
-    padding-top: 5%;
+    padding-top: 1%;
 }
 
 .section-right .header-tabla {
@@ -117,8 +119,9 @@ table td {
 
 #button-next {
     position: relative;
-    margin-top: 10%;
-    margin-left: 30%;
+    margin-top: 1%;
+    margin-left: 50%;
+    margin-bottom: 1%;
 }
 
 img {
@@ -136,12 +139,13 @@ img {
 }
 
 .tabla-asientos tr td {
+    border: 1px solid #BAC1CA;
     background-color: #FFFFFF;
     border: #FFFFFF;
 }
 
 .tabla-asientos td:hover {
-    background-color: #BAC1CA;
+    border: 1px solid #260303;
 }
 
 .tabla-asientos .material-icons {

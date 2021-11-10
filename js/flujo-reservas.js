@@ -11,6 +11,9 @@ const js_create_seats = (rows, colums) => {
         for (let j = 0; j < colums; j++) {
             let celda = fila.insertCell();
             celda.innerHTML = seat_html;
+            celda.xpos = `${j}`;
+            celda.ypos = `${i}`;
+            celda.selected = false;
             /*Agregar evento para clicks
              */
             celda.onclick = function() {
@@ -22,7 +25,17 @@ const js_create_seats = (rows, colums) => {
 }
 
 const js_celda_click = (celda) => {
-    console.log(celda);
+    if (celda.selected) {
+        celda.selected = false;
+        celda.style.border = "0px";
+    } else {
+        celda.selected = true;
+        celda.style.border = "2px solid #260303";
+        console.log(celda.xpos + " " + celda.ypos);
+    }
+
+
+
 }
 const js_go_next_step = () => {
     switch (stepflag) {
@@ -34,8 +47,9 @@ const js_go_next_step = () => {
             stepflag = 2;
             break;
         case 2:
-            document.getElementsByClassName("section-step-two")[0].classList.add("section-step-inactive")
+            document.getElementsByClassName("section-step-two")[0].style.display = "none";
             document.getElementsByClassName("section-step-three")[0].classList.remove("section-step-inactive");
+            document.getElementsByClassName("section-step-three")[0].classList.add("section-step-active");
             stepflag = 3;
             break;
         case 3:

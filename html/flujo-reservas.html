@@ -20,8 +20,7 @@
 
 <body>
     <div class="navbar-cliente-iniciado"></div>
-    <div class="contenido">
-    <section class="section-general section-step-one">
+    <section class="section-step-active section-step-one">
         <section class="section-left">
             <h1>Reserva tus boletos</h1>
             <p> Elige la cantidad de boletos que necesitas reservar </p>
@@ -103,7 +102,10 @@
         </section>
 
         <section class="section-right">
-            <table class="tabla tabla-asientos" id="tabla-asientos">
+            <div class="leyenda">
+
+            </div>
+            <table class="tabla-asientos" id="tabla-asientos">
             </table>
         </section>
     </section>
@@ -111,9 +113,8 @@
         <button class="btn1-fondoclaro" id="button-next"> Continuar </button>
     </div>
 
-    <button class="btn1-fondoclaro" id="button-next"> Continuar </button>
-</div>
     <div class="footer-cliente"></div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/navbar-footer.js"></script>
