@@ -36,7 +36,7 @@ const validar = () => {
             'title': 'Se ha enviado un correo de recuperación.',
             'confirmButtonText': 'Entendido'
         }).then(() => {
-            window.location.href = 'recuperar-cambiar.html';
+            window.location.href = 'recuperar-validar.html';
         });
 
         //DELETE .then ONCE RECOVERY EMAIL IS SENT  
