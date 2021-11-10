@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineManager</title>
+
+    <link href="../css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../css/general.css" rel="stylesheet" type="text/css" />
+    <link href="../css/flujo-reservas.css" rel="stylesheet" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@300&family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="header-principal">
+        <nav class="header-principal">
+            <div class="logo">
+                Cine Manager
+            </div>
+            <div class="item-right">
+                <button class="btn1-fondoclaro">Menú Principal</button>
+                <button class="btn1-fondoclaro">Salir</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section-general section-step-one">
+        <section class="section-left">
+            <h1>Reserva tus boletos</h1>
+            <p> Elige la cantidad de boletos que necesitas reservar </p>
+            <div class="img-container"> <img src="" alt=""> </div>
+
+            <div class="step-container">
+                <p class="step-one-icon step-active"> 1 Entradas </p>
+                <p class="step-two-icon step-inactive"> 2 Asientos </p>
+                <p class="step-three-icon step-inactive"> 3 Pago </p>
+                <p class="step-four-icon step-inactive"> 4 Factura </p>
+            </div>
+        </section>
+
+        <section class="section-right">
+            <table class="tabla header-tabla" id="tabla-cartelera-header">
+                <tbody>
+                    <tr>
+                        <td>Cine Magaly</td>
+                        <td>Uvita</td>
+                    </tr>
+                    <tr>
+                        <td>IMAX</td>
+                        <td>16:30</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tabla body-tabla" id="tabla-cartelera-body">
+                <tbody>
+                    <tr>
+                        <td>Elige la cantidad de boletos</td>
+                    </tr>
+                    <tr>
+                        <td>Regular</td>
+                        <td>-</td>
+                        <td>0</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Niño</td>
+                        <td>-</td>
+                        <td>0</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Adulto mayor</td>
+                        <td>-</td>
+                        <td>0</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td></td>
+                        <td>0</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Precio Total</td>
+                        <td></td>
+                        <td>0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+
+    <section class="section-general section-step-two section-step-inactive">
+        <section class="section-left">
+            <h1>Selecciona tus Asientos</h1>
+            <p> Elige la cantidad de boletos que necesitas reservar </p>
+            <div class="img-container"> <img src="" alt=""> </div>
+
+            <div class="step-container">
+                <p class="step-one-icon step-completed"> 1 Entradas </p>
+                <p class="step-two-icon step-active"> 2 Asientos </p>
+                <p class="step-three-icon step-inactive"> 3 Pago </p>
+                <p class="step-four-icon step-inactive"> 4 Factura </p>
+            </div>
+        </section>
+
+        <section class="section-right">
+        </section>
+    </section>
+
+    <button class="btn1-fondoclaro" id="button-next"> Continuar </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/flujo-reservas.js"></script>
+</body>
+
+</html>

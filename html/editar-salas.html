@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Nunito&family=Oswald&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- RESET CSS -->
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <!-- GENERAL CSS -->
+    <link rel="stylesheet" href="../css/editar-salas.css">
+    <link rel="stylesheet" href="../css/general.css">
+
+    <title>Agregar/Editar Sala</title>
+</head>
+
+<body>
+    <header class="header-principal">
+        <div class="logo">
+            <img src="imgs/logo.png" alt="imagen">
+        </div>
+
+        <nav>
+            <div class="item">
+                <span class="material-icons md-light">home</span>
+                <a href="landing-page.html.html">Inicio</a>
+            </div>
+            <div class="item">
+                <span class="material-icons md-light">camera_indoor</span>
+                <a class="item" href="#">Cines</a>
+            </div>
+            <div class="item">
+                <span class="material-icons md-light">event_seat</span>
+                <a class="item" href="#">Reservas</a>
+            </div>
+            <div class="item">
+                <span class="material-icons md-light">theaters</span>
+                <a class="item" href="#">Cartelera</a>
+            </div>
+            <div class="item">
+                <span class="material-icons md-light">movie</span>
+                <a class="item" href="#">Peliculas</a>
+            </div>
+            <div class="item push">
+                <span class="material-icons md-light">account_circle</span>
+                <a class="item" href="#">Iniciar sesion</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="sct-edit-rooms">
+        <div class="div-edit-header">
+            <h1>Agregar o Editar Sala</h1>
+        </div>
+        <div class="div-edit-content">
+            <form class="div-edit-form">
+                <div class="div-edit-form-general">
+                    <h2>General</h2>
+                    <p>Codigo</p>
+                    <div class="input-container input-default">
+                        <input id="txt-id-sala" type="text" placeholder="Codigo" />
+                    </div>
+                    <p>Cadena</p>
+                    <div class="input-container input-default">
+                        <input id="txt-cadena-sala" type="text" placeholder="Cadena" />
+                    </div>
+                    <p>Estatus</p>
+                    <div class="input-container input-default">
+                        <select name="Estatus" id="select-estatus">
+                            <option value="0">Activo</option>
+                            <option value="1">Inactivo</option>
+                        </select>
+                    </div>
+                    <p>Tipo de Sala</p>
+                    <div class="input-container input-default">
+                        <select name="Identificacion" id="#select-tipo-sala">
+                            <option value="0">Regular</option>
+                            <option value="1">VIP</option>
+                            <option value="2">IMAX</option>
+                            <option value="3">3D</option>
+                            <option value="4">4D</option>
+                        </select>
+                    </div>
+
+                    <p>Precio Base</p>
+                    <div class="input-container input-default">
+                        <input id="txt-sala-precio" type="number" placeholder="Precio" />
+                    </div>
+                    
+                    <h3>Dimensiones</h3>
+                    
+                    <p>Vertical</p>
+                    <div class="input-container input-default">
+                        <input id="num-sala-y" type="number" placeholder="Vertical" />
+                    </div>
+                    <p>Horizontal</p>
+                    <div class="input-container input-default">
+                        <input id="num-sala-x" type="number" placeholder="Horizontal" />
+                    </div>
+
+                    <div class="dual-inputs input-form">
+                        <span class="material-icons input-form-icon">
+                            info
+                        </span>
+                        <p class="input-form-blurb">Introduzca un número entre 5 y 30.</p>
+                    </div>
+
+                    <div class="fnd-claro">
+                        <button class="btn1-fondoclaro">Eliminar</button>
+                    </div>
+                </div>
+                <div class="div-edit-form-seats">
+                    <h2>Asiento Seleccionado</h2>
+                    <div class="input-container dual-inputs" id="coordenadas-asiento">
+                        <p>Locación:</p>
+                        <p>[X]x, [Y]y</p>
+                    </div>
+                    <p>Tipo de asiento</p>
+                    <div class="input-container input-default">
+                        <select name="Estatus" id="select-estatus">
+                            <option value="0">Regular</option>
+                            <option value="1">VIP</option>\
+                            <option value="2">Discapacitado</option>
+                        </select>
+                    </div>
+                    <div class="fnd-claro">
+                        <button class="btn1-fondoclaro">Guardar</button>
+                    </div>
+                </div>
+            </form>
+            <div class="div-preview">
+                <div class="div-preview-header">
+                    <h2>Vista Previa</h2>
+                    <p>Conformidad con ley 7600:</p>
+                </div>
+                <div class="div-preview-array">
+                    <table class="table-seats-preview">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="material-icons chair-button chair-disabled">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="material-icons chair-button">
+                                        <a href="#">chair</a>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

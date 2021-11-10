@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Nunito&family=Oswald&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- RESET CSS -->
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <!-- GENERAL CSS -->
+    <link rel="stylesheet" href="../css/crear-cuenta.css">
+    <link rel="stylesheet" href="../css/general.css">
+
+    <title>Crear Cuenta</title>
+</head>
+
+<body>
+    <section class="sct-recover">
+        <div class="div-signup-card">
+            <div class="signup-card-top">
+                <span class="material-icons">
+                    <a href="landing-page.html">chevron_left</a>
+                </span>
+            </div>
+            <div class="signup-card-body">
+                <form>
+                    <h1>Crear Cuenta</h1>
+
+                    <div class="input-container input-default input-name">
+                        <input id="txt-nombre" type="text" placeholder="Nombre"/>
+                    </div>
+
+                    <div class="input-container input-default input-name">
+                        <input id="txt-segundo-nombre" type="text" placeholder="Segundo Nombre"/>
+                    </div>
+
+                    <div class="input-container input-default input-surname">
+                        <input id="txt-apellido" type="text" placeholder="Apellido"/>
+                    </div>
+
+                    <div class="input-container input-default input-surname">
+                        <input id="txt-segundo-apellido" type="text" placeholder="Segundo Apellido"/>
+                    </div>
+
+                    <div class="dual-inputs">
+                        <p class="form-text">Fecha de Nacimiento:</p>
+                        <div class="input-container input-short input-date">
+                            <input id="date-nacimiento" type="date"/>
+                        </div>
+                    </div>
+
+                    <div class="dual-inputs">
+                        <div class="input-container input-short input-idtype">
+                            <select name="Identificacion" id="select-id">
+                                <option value="0">Cédula de Identidad</option>
+                                <option value="1">DIMEX</option>
+                            </select>
+                        </div>
+                        <div class="input-container input-short input-idnum">
+                            <input id="txt-id" type="text" placeholder="Identificación"/>
+                        </div>
+                    </div>
+
+                    <div class="input-container input-default input-email">
+                        <input id="txt-correo" type="email" placeholder="user@exmaple.com"/>
+                    </div>
+
+                    <div class="dual-inputs input-form">
+                        <span class="material-icons input-form-icon">
+                            info
+                        </span>
+                        <p class="input-form-blurb">6 caracteres mínimo, debe incluir mayusculas, minusculas 1 numero y 1 caracter especial.</p>
+                    </div>
+
+                    <div class="input-container input-default input-password">
+                        <input id="txt-password" type="password" placeholder="Contraseña"/>
+                    </div>
+
+                    <div class="input-container input-default input-password-confirm">
+                        <input id="txt-password-confirmar" type="password" placeholder="Confirmar Contraseña"/>
+                    </div>
+
+                    <button class="btn1-fondoclaro" type="button" id="btn-account-form">Crear</button>
+
+                </form>
+                <div class="signup-card-links">
+                    <a href="iniciar-sesion.html">Iniciar Sesión</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        &#169; TeamFiji 2021
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/servicio-validar-signup.js"></script>
+
+</html>
