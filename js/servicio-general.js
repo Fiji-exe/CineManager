@@ -28,6 +28,11 @@ function perfilCadena() {
     window.location = '../html/perfil-cadena.html';
 }
 
+function crearCuenta() {
+    window.location = '../html/crear-cuenta.html';
+}
+
+
 
 function salir() {
     console.log("salir")
