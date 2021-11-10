@@ -188,6 +188,7 @@ textarea {
     color: #333;
     margin-bottom: 10px;
 }
+<<<<<<< Updated upstream
 
 .input-form-separator {
     width: 60%;
@@ -205,6 +206,8 @@ textarea {
     font-size: 12px;
 }
 
+=======
+>>>>>>> Stashed changes
 .header-principal {
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
@@ -214,18 +217,25 @@ textarea {
     padding: 0 3%;
 }
 
+<<<<<<< Updated upstream
 .header-principal .logo {
     height: 56px;
     width: 120px;
     display: flex;
     justify-content: space-evenly;
 }
+=======
+
+>>>>>>> Stashed changes
 
 .header-principal .logo {
     height: 56px;
-    width: 120px;
+    width: 250px;
     display: flex;
+    align-items: center;
     justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
 }
 
 .header-principal .logo img {
@@ -239,25 +249,33 @@ textarea {
     width: 100%;
 }
 
-.header-principal .item {
+.item {
     padding: 0px 10px;
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-.header-principal .item a {
+.item a{
     color: #fff;
     text-decoration: none;
 }
 
+<<<<<<< Updated upstream
 .header-principal .item:hover {
     background-color: #950F11;
+=======
+.item:hover {
+   background-color: #950F11;
+>>>>>>> Stashed changes
 }
 
 .push {
+    display: flex;
+    height: 100%;
     margin-left: auto;
 }
+
 
 .input-default input {
     background-color: rgba(0, 0, 0, 0);
@@ -300,8 +318,6 @@ textarea {
 
 .contenido main {
     padding: 10px 3%;
-    /* CONFLICT WITH ABOVE AND BELOW */
-    margin: 0px 3%;
 }
 
 .input-hidden {
@@ -420,13 +436,8 @@ textarea {
     color: rgba(255, 255, 255, 1);
 }
 
-.footer {
-    width: 100%;
-    position: relative;
-    height: auto;
-    background-color: #070617;
-}
 
+<<<<<<< Updated upstream
 .footer .col {
     width: 190px;
     height: auto;
@@ -483,3 +494,6 @@ textarea {
 .clearfix {
     clear: both;
 }
+=======
+
+>>>>>>> Stashed changes
