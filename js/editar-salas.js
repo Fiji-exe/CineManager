@@ -28,14 +28,14 @@ const validar = () => {
         document.querySelector(".input-base-price").classList.remove("input-error");
     }
 
-    if (salaDimY.value > 30 || salaDimY.value < 0 || salaDimY.value == '') {
+    if (salaDimY.value > 30 || salaDimY.value < 5 || salaDimY.value == '') {
         error = true;
         document.querySelector(".input-room-height").classList.add("input-error");
     } else {
         document.querySelector(".input-room-height").classList.remove("input-error");
     }
 
-    if (salaDimX.value > 30 || salaDimX.value < 0 || salaDimX.value == '') {
+    if (salaDimX.value > 30 || salaDimX.value < 5 || salaDimX.value == '') {
         error = true;
         document.querySelector(".input-room-width").classList.add("input-error");
     } else {
