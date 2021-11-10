@@ -15,6 +15,7 @@
     /*height: 300px;*/
     /*min-height: 300px;*/
     padding-top: 3%;
+    padding-left: 1%;
 }
 
 .section-left .step-container {
@@ -113,13 +114,12 @@ table td {
 
 .step-completed {
     font-weight: normal;
-    font-size: 24px;
+    font-size: 20px;
     color: #BB9526;
 }
 
 #button-next {
     position: relative;
-    margin-top: 1%;
     margin-left: 50%;
     margin-bottom: 1%;
 }
@@ -157,8 +157,16 @@ img {
     justify-content: space-between;
 }
 
-.leyenda p {
-    padding-left: 3px;
+.leyenda div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.leyenda div span {
+    padding-left: 35%;
+    padding-top: 3px;
 }
 
 .quant-modifier {
@@ -169,4 +177,10 @@ img {
 .quant-modifier:hover {
     cursor: pointer;
     outline: 1px solid #260303;
+}
+
+p {
+    padding-top: 3px;
+    font-family: 'Nunito';
+    font-size: 18px;
 }
