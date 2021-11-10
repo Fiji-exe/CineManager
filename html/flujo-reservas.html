@@ -31,17 +31,17 @@
         </nav>
     </header>
 
-    <section class="section-step-one">
+    <section class="section-general section-step-one">
         <section class="section-left">
             <h1>Reserva tus boletos</h1>
             <p> Elige la cantidad de boletos que necesitas reservar </p>
             <div class="img-container"> <img src="" alt=""> </div>
 
             <div class="step-container">
-                <p class="step-one-icon"> 1 </p>
-                <p class="step-two-icon"> 2 </p>
-                <p class="step-three-icon"> 3 </p>
-                <p class="step-four-icon"> 4 </p>
+                <p class="step-one-icon step-active"> 1 Entradas </p>
+                <p class="step-two-icon step-inactive"> 2 Asientos </p>
+                <p class="step-three-icon step-inactive"> 3 Pago </p>
+                <p class="step-four-icon step-inactive"> 4 Factura </p>
             </div>
         </section>
 
@@ -97,6 +97,27 @@
             </table>
         </section>
     </section>
+
+    <section class="section-general section-step-two section-step-inactive">
+        <section class="section-left">
+            <h1>Selecciona tus Asientos</h1>
+            <p> Elige la cantidad de boletos que necesitas reservar </p>
+            <div class="img-container"> <img src="" alt=""> </div>
+
+            <div class="step-container">
+                <p class="step-one-icon step-completed"> 1 Entradas </p>
+                <p class="step-two-icon step-active"> 2 Asientos </p>
+                <p class="step-three-icon step-inactive"> 3 Pago </p>
+                <p class="step-four-icon step-inactive"> 4 Factura </p>
+            </div>
+        </section>
+
+        <section class="section-right">
+        </section>
+    </section>
+
+    <button class="btn1-fondoclaro" id="button-next"> Continuar </button>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/flujo-reservas.js"></script>
 </body>

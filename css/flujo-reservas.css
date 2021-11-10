@@ -1,41 +1,34 @@
+.section-step-inactive {
+    display: none;
+}
+
 .section-step-one {
     display: flex;
     justify-content: start;
     align-items: center;
 }
 
-.section-step-one .section-left {
+.section-left {
     display: block;
     height: 300px;
     min-height: 300px;
     padding-top: 1%;
 }
 
-.section-step-one .section-left .step-container {
-<<<<<<< Updated upstream
-    display: block;
-}
-
-=======
+.section-left .step-container {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
-    width: 40%;
+    width: 100%;
 }
 
+.step-container p {
+    padding-left: 5%;
+    padding-top: 5%;
+}
 
-/*
-display: block;
-        width: 100%;
-        height: 120px;
-        margin-bottom: 15%;
-        background: linear-gradient(0deg, #01413b 1%, #000000 80%);
-        border-bottom: 1px solid white;
-*/
-
->>>>>>> Stashed changes
-.section-step-one .section-right {
+.section-right {
     display: block;
     height: 300px;
     min-height: 300px;
@@ -43,7 +36,7 @@ display: block;
     padding-top: 5%;
 }
 
-.section-step-one .section-right .header-tabla {
+.section-right .header-tabla {
     margin-bottom: 5%;
 }
 
@@ -102,4 +95,22 @@ table td {
 .swal2-container .swal2-html-container {
     font-family: 'Nunito';
     font-size: 24px;
+}
+
+.step-active {
+    font-weight: bold;
+    font-size: 28px;
+    color: #950F11;
+}
+
+.step-inactive {
+    font-weight: normal;
+    font-size: 20px;
+    color: #BAC1CA;
+}
+
+.step-completed {
+    font-weight: normal;
+    font-size: 24px;
+    color: #BB9526;
 }
