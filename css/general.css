@@ -75,7 +75,7 @@ h2, h3, h4, h5, h6 {
 
 .dual-inputs {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 ::placeholder {
@@ -151,3 +151,14 @@ h2, h3, h4, h5, h6 {
     border-radius: 5px;
     font-family: 'Lora';
 }
+
+.btn2-fondoclaro{
+    background: #BB9526;
+     border: 2px solid #BB9526;
+     color: #070F1A;
+     cursor: pointer;
+     font-weight: bold;
+     padding: 10px;
+     border-radius: 5px;
+     font-family: 'Nunito';
+  }

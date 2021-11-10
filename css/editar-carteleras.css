@@ -1,0 +1,70 @@
+h1{
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.sct-edit-rooms {
+    padding: 0% 50px;
+}
+
+.div-edit-header {
+    height: 100px;
+    margin-top: 60px;
+}
+
+.div-edit-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-edit-form {
+    padding: 0% 10px;
+}
+
+.div-edit-form-general, .div-edit-form-seats {
+    margin-bottom: 50px;
+}
+
+#checkbox-precio-sugerido {
+padding-bottom: 15px;}
+
+.div-preview {
+    display: block;
+    width: 100%;
+    padding-left: 50px;
+}
+
+.div-preview-header {
+    padding: 0% 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.div-preview-array {
+    border: 2px solid #333;
+    border-radius: 4px;
+    margin-bottom: 50px;
+    height: 75%;
+    display: block;
+    overflow: scroll;
+}
+
+.chair-button a{
+    font-size: 80px;
+    color: #333;
+    text-decoration: none;
+}
+
+.div-preview-array table td{
+    padding: 10px;
+}
