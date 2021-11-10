@@ -55,6 +55,9 @@
 .input-short input {
     color: #fff;
 }
+.input-default select {
+    color: #fff;
+}
 
 /* TEMPORAL */
 

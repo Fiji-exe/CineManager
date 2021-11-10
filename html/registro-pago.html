@@ -1,132 +1,139 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Registro de pago</title>
 
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/general.css">
-    <link rel="stylesheet" href="/css/registro-pago.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Nunito&family=Oswald&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  </head>
-  <body>
+    <!-- RESET CSS -->
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <!-- GENERAL CSS -->
+    <link rel="stylesheet" href="../css/crear-cuenta.css">
+    <link rel="stylesheet" href="../css/general.css">
+
+    <title>Registro de pago</title>
+</head>
+
+<body>
 
     <div class="navbar-cliente-iniciado"></div>
 
-  <div class="contenido">
-      <main class="sct-main">
-          <div class="div-title">
-            <span class="material-icons">
-                <a href="landing-page.html">chevron_left</a>
-            </span>
-              <h1>Registro de metodo de pago</h1>    
-          </div>
-  
-          <div class="form-registro-pago">
+    <section class="sct-recover">
 
-              <div class="div-numero-tarjeta">
-                <div class="input">
-                    <label for="txt-numero-tarjeta">Numero de tarjeta</label>
-                    <div class="input-container input-default input-tarjeta">      
-                        <input type="text" name="" id="txt-numero-tarjeta">  
+        <div class="div-signup-card">
+            <div class="signup-card-top">
+                <span class="material-icons">
+                    <a href="landing-page.html">chevron_left</a>
+                </span>
+            </div>
+
+            <div class="signup-card-body">
+                <form>
+                    <h1>Registro de Método de Pago</h1>
+
+                    <div class="div-numero-tarjeta">
+                        <div class="input">
+                            <p class="form-text">Número de Tarjeta</p>
+                            <div class="input-container input-default input-tarjeta">
+                                <input type="text" name="" id="txt-numero-tarjeta" placeholder="XXXX-XXXX-XXXX-XXXX">
+                            </div>
+                        </div>
+                        <div class="div-img-tarjeta">
+                            <img src="" alt="" id="img-tipo-tarjeta">
+                        </div>
                     </div>
-                </div>
-                <div class="div-img-tarjeta">
-                    <img src="" alt="" id="img-tipo-tarjeta">
-                </div>
-              </div>
-    
-  
-            
-            <div class="div-fecha-vencimiento">
-                
-                <div class="input">
-                    <label for="fecha-vencimiento">Mes de vencimiento</label>
-                    <div class="input-container input-default input-mes">
-                        <input type="number" name="" id="mes-vencimiento">
-                    </div>             
-                </div>
-                <div class="input">   
-                    <label for="fecha-vencimiento">Año de vencimiento</label> 
-                    <div class="input-container input-default input-anno">
-                        <input type="number" name="" id="anno-vencimiento">
-                    </div>             
-                </div>
-            </div>
-           
-         
-            <div class="input">
-                <label for="cvc">CVC</label>
-                <div class="input-container input-default input-cvc">
-                    <input type="number" name="" id="cvc">
-                </div>
-            </div>
-        
 
-            <div class="input">
-                <label for="txt-titular">Titular de la tarjeta</label>
-                <div class="input-container input-default input-titular">
-                    <input type="text" name="" id="txt-titular">
-                </div>
-            </div>
-           
 
-            <div class="input">
-                <label for="txt-direccion">Direccion</label>
-                <div class="input-container input-default input-direccion">        
-                    <input type="text" name="" id="txt-direccion">
-                </div>
-            </div>
-           
-            <div class="form-division-politica">
-                <div class="input">
-                    <label for="select-provincia">Provincia</label>
-                    <div class="input-container input-default input-provincia">     
-                        <select id="select-provincia"></select>
+
+                    <div class="div-fecha-vencimiento">
+
+                        <div class="dual-inputs">
+                            <p class="form-text">Mes de vencimiento</p>
+                            <div class="input-container input-short input-mes">
+                                <input type="number" name="" id="mes-vencimiento">
+                            </div>
+                        </div>
+                        <div class="dual-inputs">
+                            <p class="form-text">Año de vencimiento</p>
+                            <div class="input-container input-short input-anno">
+                                <input type="number" name="" id="anno-vencimiento">
+                            </div>
+                        </div>
+                        <div class="dual-inputs">
+                            <p class="form-text">CVC</p>
+                            <div class="input-container input-short input-cvc">
+                                <input type="number" name="" id="cvc">
+                            </div>
+                        </div>
+
                     </div>
-                </div>
-                
-    
-                <div class="input">
-                    <label for="select-canton">Canton</label>
-                    <div class="input-container input-default input-canton">
-                        <select  id="select-canton"></select>
+
+                    <div class="input">
+                        <label for="txt-titular">Titular de la tarjeta</label>
+                        <div class="input-container input-default input-titular">
+                            <input type="text" name="" id="txt-titular">
+                        </div>
                     </div>
-                </div>
-             
-    
-                <div class="input">
-                    <label for="select-distrito">Distrito</label>
-                    <div class="input-container input-default input-distrito">    
-                        <select  id="select-distrito"></select>
+
+
+                    <div class="input">
+                        <label for="txt-direccion">Direccion</label>
+                        <div class="input-container input-default input-direccion">
+                            <input type="text" name="" id="txt-direccion">
+                        </div>
                     </div>
-                </div>
+
+                    <div class="form-division-politica">
+                        <div class="input">
+                            <label for="select-provincia">Provincia</label>
+                            <div class="input-container input-default input-provincia">
+                                <select id="select-provincia"></select>
+                            </div>
+                        </div>
+
+
+                        <div class="input">
+                            <label for="select-canton">Canton</label>
+                            <div class="input-container input-default input-canton">
+                                <select id="select-canton"></select>
+                            </div>
+                        </div>
+
+
+                        <div class="input">
+                            <label for="select-distrito">Distrito</label>
+                            <div class="input-container input-default input-distrito">
+                                <select id="select-distrito"></select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn1-fondoclaro" id="btn-registrar-pago">Registrar</button>
+                    <!-- 
+                <label for="txt-codigo-postal"></label>
+                <div class="input-container input-default">            
+                    <input type="text" name="" id="txt-codigo-postal">
+                </div> -->
             </div>
- 
-           <button class="btn1-fondoclaro" id="btn-registrar-pago">Registrar</button>
-<!-- 
-            <label for="txt-codigo-postal"></label>
-            <div class="input-container input-default">            
-                <input type="text" name="" id="txt-codigo-postal">
-            </div> -->
+            </form>
+        </div>
 
-          </div>
+    </section>
 
-         
-      </main>
-    
-  </div>
-
-  <div class="footer-cliente"></div>
+    <div class="footer-cliente"></div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/navbar-footer.js"></script>
     <script src="/js/division-politica.js"></script>
     <script src="/js/registro-pago.js"></script>
-  </body>
+</body>
+
 </html>
