@@ -28,24 +28,25 @@
     width: 100%;
 }
 
-.header-principal .item {
+.item {
     padding: 0px 10px;
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-
-.header-principal .item a{
+.item a{
     color: #fff;
     text-decoration: none;
 }
 
-.header-principal .item:hover {
+.item:hover {
    background-color: #950F11;
 }
 
 .push {
+    display: flex;
+    height: 100%;
     margin-left: auto;
 }
 
