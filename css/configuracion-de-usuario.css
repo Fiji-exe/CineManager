@@ -1,16 +1,3 @@
-.header-principal .item-left {
-    display: flex;
-    margin-left: 0;
-    margin-right: auto;
-    font-family: 'Nunito';
-    font-size: 30px;
-}
-
-.header-principal .item-right {
-    display: inline-flex;
-    padding: 5px;
-}
-
 h1 {
     font-family: "Oswald";
     font-size: 20px;

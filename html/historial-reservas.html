@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historial de Reservas</title>
+
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
     <link rel="stylesheet" href="../css/general.css" type="text/css">
     <link rel="stylesheet" href="../css/historial-reservas.css" type="text/css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
@@ -20,72 +23,65 @@
 </head>
 
 <body>
-    <nav class="header-principal">
-        <div class="logo">
-            <img src="../imgs/logo.png" alt="imagen">
-        </div>
+    <div class="navbar-cliente-iniciado"></div>
 
-        <div class="item-left">
-            Cine Manager
-        </div>
-        <div class="item-right">
-            <button class="btn1-fondooscuro" onclick="homeUsuario()">Menú Principal</button>
-        </div>
-        <div class="item-right">
-            <button class="btn1-fondooscuro" onclick="salir()">Salir</button>
-        </div>
-    </nav>
-    <h1>Historial de Reservas</h1>
+    <div class="contenido">
+        <h1>Historial de Reservas</h1>
 
-    <table class="tabla-historial">
-        <thead>
-            <tr>
-                <th>Película</th>
-                <th>Fecha</th>
-                <th>Cine</th>
-                <th>Factura</th>
-                <th>Review </th>
+        <table class="tabla-historial">
+            <thead>
+                <tr>
+                    <th>Película</th>
+                    <th>Fecha</th>
+                    <th>Cine</th>
+                    <th>Factura</th>
+                    <th>Review </th>
 
-            </tr>
-        </thead>
+                </tr>
+            </thead>
 
 
-        <tbody>
-            <tr>
-                <td>Vámonos con Pancho Villa</td>
-                <td>10/15/2021</td>
-                <td>Cinepolis Desamparados</td>
-                <td> <a href="">PDF</a> </td>
-                <td><a href="">Review</a></td>
-            </tr>
-            <tr>
-                <td>Joker</td>
-                <td>10/30/2021</td>
-                <td>CCM Terra Mall</td>
-                <td> <a href="">PDF</a> </td>
-                <td><a href="">Review</a></td>
-            </tr>
-            <tr>
-                <td>The Wild Bunch</td>
-                <td>10/10/2021</td>
-                <td>Cinepolis Desamparados</td>
-                <td> <a href="">PDF</a> </td>
-                <td><a href="">Review</a></td>
-            </tr>
-        </tbody>
+            <tbody>
+                <tr>
+                    <td>Vámonos con Pancho Villa</td>
+                    <td>10/15/2021</td>
+                    <td>Cinepolis Desamparados</td>
+                    <td> <a href="">PDF</a> </td>
+                    <td><a href="">Review</a></td>
+                </tr>
+                <tr>
+                    <td>Joker</td>
+                    <td>10/30/2021</td>
+                    <td>CCM Terra Mall</td>
+                    <td> <a href="">PDF</a> </td>
+                    <td><a href="">Review</a></td>
+                </tr>
+                <tr>
+                    <td>The Wild Bunch</td>
+                    <td>10/10/2021</td>
+                    <td>Cinepolis Desamparados</td>
+                    <td> <a href="">PDF</a> </td>
+                    <td><a href="">Review</a></td>
+                </tr>
+            </tbody>
 
-        <tfoot>
-            <tr>
-                <td>The Godfather</td>
-                <td>09/28/2021</td>
-                <td>Magaly</td>
-                <td> <a href="">PDF</a> </td>
-                <td><a href="">Review</a></td>
-            </tr>
-        </tfoot>
+            <tfoot>
+                <tr>
+                    <td>The Godfather</td>
+                    <td>09/28/2021</td>
+                    <td>Magaly</td>
+                    <td> <a href="">PDF</a> </td>
+                    <td><a href="">Review</a></td>
+                </tr>
+            </tfoot>
 
-    </table>
+        </table>
+    </div>
+  
+<div class="footer-cliente"></div>
+
     <script src="../js/servicio-general.js"></script>
+    <script src="../js/navbar-footer.js"></script>
 
 </body>
 
