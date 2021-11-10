@@ -81,7 +81,7 @@ textarea {
     padding: 10%;
 }
 
-<<<<<<< HEAD h2,
+h2,
 h3,
 h4,
 h5,
@@ -89,7 +89,6 @@ h6 {
     font-family: 'Nunito';
 }
 
-=======>>>>>>>f892543ba13b27c38f109dbd8da9b0476d317cd3
 /* Inputs  */
 
 .input-container {
@@ -337,7 +336,7 @@ h6 {
 
 /* end css footer */
 
-<<<<<<< HEAD h1 {
+h1 {
     font-family: "Oswald";
     font-size: 30px;
 }
@@ -354,7 +353,7 @@ textarea {
     height: 200px;
 }
 
-=======>>>>>>>f892543ba13b27c38f109dbd8da9b0476d317cd3 .btn1-fondoclaro {
+.btn1-fondoclaro {
     background: #950F11;
     border: 2px solid #950F11;
     color: #FFFFFF;
@@ -365,12 +364,12 @@ textarea {
     font-family: 'Lora';
 }
 
-<<<<<<< HEAD body {
+body {
     font-size: 16px;
     font-family: 'Lora';
 }
 
-=======>>>>>>>f892543ba13b27c38f109dbd8da9b0476d317cd3 .header-principal .logo {
+.header-principal .logo {
     margin-left: 2%;
     font-family: 'Nunito', sans-serif;
     font-size: 32px;
@@ -485,9 +484,4 @@ textarea {
 
 .clearfix {
     clear: both;
-    <<<<<<< HEAD
 }
-
-=======
-}
->>>>>>>f892543ba13b27c38f109dbd8da9b0476d317cd3
