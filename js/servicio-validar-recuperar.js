@@ -3,7 +3,6 @@
 const botonForm = document.querySelector('#btn-account-form');
 
 const inputCorreo = document.querySelector('#txt-correo');
-const inputPassword = document.querySelector('#txt-password');
 
 
 function validarEmail(email) {
@@ -24,15 +23,6 @@ const validar = () => {
         document.querySelector('.input-email').classList.add('input-error');
     }
 
-    //Condicion para validar la contraseña (SOLO VALIDA SI EXISTE)
-    if (inputPassword.value == '') {
-        error = true;
-        document.querySelector(".input-password").classList.add("input-error");
-    } else {
-        document.querySelector(".input-password").classList.remove("input-error");
-    }
-
-
     if (error == true) {
         Swal.fire({
             'icon': 'warning',
@@ -40,9 +30,16 @@ const validar = () => {
             'text': 'Por favor complete los campos resaltados.',
             'confirmButtonText': 'Entendido'
         });
-
     } else {
-        window.location.href = 'homepage-usuario.html';
+        Swal.fire({
+            'icon': 'success',
+            'title': 'Se ha enviado un correo de recuperación.',
+            'confirmButtonText': 'Entendido'
+        }).then(() => {
+            window.location.href = 'recuperar-cambiar.html';
+        });
+
+        //DELETE .then ONCE RECOVERY EMAIL IS SENT  
     }
 
 };

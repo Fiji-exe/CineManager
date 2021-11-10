@@ -2,36 +2,21 @@
 
 const botonForm = document.querySelector('#btn-account-form');
 
-const inputCorreo = document.querySelector('#txt-correo');
-const inputPassword = document.querySelector('#txt-password');
-
-
-function validarEmail(email) {
-    let resultado = false;
-    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    resultado = re.test(email);
-    return resultado;
-}
+const inputPassword = document.querySelector('#txt-cambiar-password');
+const inputPasswordConfirmar = document.querySelector('#txt-confirmar-password');
 
 const validar = () => {
     let error = false;
 
-    // Condición que valida el correo
-    if (validarEmail(inputCorreo.value)) {
-        document.querySelector('.input-email').classList.remove('input-error');
-    } else {
-        error = true;
-        document.querySelector('.input-email').classList.add('input-error');
-    }
-
     //Condicion para validar la contraseña (SOLO VALIDA SI EXISTE)
-    if (inputPassword.value == '') {
+    if (inputPassword.value == '' || inputPassword.value !== inputPasswordConfirmar.value) {
         error = true;
         document.querySelector(".input-password").classList.add("input-error");
+        document.querySelector(".input-password-confirm").classList.add("input-error");
     } else {
         document.querySelector(".input-password").classList.remove("input-error");
+        document.querySelector(".input-password-confirm").classList.remove("input-error");
     }
-
 
     if (error == true) {
         Swal.fire({
@@ -42,6 +27,12 @@ const validar = () => {
         });
 
     } else {
+        console.log("ACC");
+        Swal.fire({
+            'icon': 'info',
+            'title': 'Su contraseña ha sido actualizada',
+            'confirmButtonText': 'Entendido'
+        });
         window.location.href = 'homepage-usuario.html';
     }
 

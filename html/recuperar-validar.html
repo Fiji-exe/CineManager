@@ -20,13 +20,13 @@
     <link rel="stylesheet" href="../css/recuperar-password.css">
     <link rel="stylesheet" href="../css/general.css">
 
-    <title>Iniciar Sesión</title>
+    <title>Validar Codigo</title>
 </head>
 
 <body>
     <section class="sct-recover">
         <div class="div-signup-icon">
-            <p>Bienvenido de Vuelta!</p>
+            <p>Bienvenido!</p>
             <p>Cine Manager</p>
         </div>
         <div class="div-signup-card">
@@ -37,19 +37,12 @@
             </div>
             <div class="signup-card-body">
                 <form>
-                    <h1>Iniciar Sesión</h1>
-                    <div class="input-container input-default input-email">
-                        <input id="txt-correo" type="email" placeholder="user@exmaple.com" />
+                    <h1>Validar Codigo</h1>
+                    <div class="input-container input-default input-code">
+                        <input id="txt-codigo" type="email" placeholder="Código"/>
                     </div>
-                    <div class="input-container input-default input-password">
-                        <input id="txt-password" type="password" placeholder="Contraseña" />
-                    </div>
-                    <button class="btn1-fondoclaro" type="button" id="btn-account-form">Iniciar Sesión</button>
+                    <button class="btn1-fondoclaro" type="button" id="btn-account-form">Recuperar</button>
                 </form>
-                <div class="signup-card-links">
-                    <a href="crear-cuenta.html">Crear Cuenta</a>
-                    <a href="recuperar-password.html">Olvide mi Contraseña</a>
-                </div>
             </div>
         </div>
     </section>
@@ -57,6 +50,6 @@
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="/js/servicio-validar-login.js"></script>
+<script src="/js/servicio-validar-codigo.js"></script>
 
 </html>
