@@ -81,14 +81,6 @@ textarea {
     padding: 10%;
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Nunito';
-}
-
 /* Inputs  */
 
 .input-container {
@@ -336,23 +328,6 @@ h6 {
 
 /* end css footer */
 
-h1 {
-    font-family: "Oswald";
-    font-size: 30px;
-}
-
-h2 {
-    font-family: "Oswald";
-    font-size: 24px;
-}
-
-textarea {
-    outline: none;
-    resize: none;
-    width: 100%;
-    height: 200px;
-}
-
 .btn1-fondoclaro {
     background: #950F11;
     border: 2px solid #950F11;
@@ -361,11 +336,6 @@ textarea {
     font-weight: bold;
     padding: 10px;
     border-radius: 5px;
-    font-family: 'Lora';
-}
-
-body {
-    font-size: 16px;
     font-family: 'Lora';
 }
 
