@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Nunito&family=Oswald&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- RESET CSS -->
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <!-- GENERAL CSS -->
+    <link rel="stylesheet" href="../css/editar-carteleras.css">
+    <link rel="stylesheet" href="../css/general.css">
+
+    <title>Agregar/Editar Sala</title>
+</head>
+
+<body>
+    <header class="header-principal">
+        <div class="logo">
+            <img src="imgs/logo.png" alt="imagen">
+        </div>
+
+        <nav>
+            <div class="item">
+                <span class="material-icons md-light">home</span>
+                <a href="landing-page.html.html">Inicio</a>
+            </div>
+            <div class="item">
+                <span class="material-icons md-light">camera_indoor</span>
+                <a class="item" href="#">Cines</a>
+            </div>
+            <div class="item">
+                <span class="material-icons md-light">event_seat</span>
+                <a class="item" href="#">Reservas</a>
+            </div>
+            <div class="item">
+                <span class="material-icons md-light">theaters</span>
+                <a class="item" href="#">Cartelera</a>
+            </div>
+            <div class="item">
+                <span class="material-icons md-light">movie</span>
+                <a class="item" href="#">Peliculas</a>
+            </div>
+            <div class="item push">
+                <span class="material-icons md-light">account_circle</span>
+                <a class="item" href="#">Iniciar sesion</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="sct-edit-rooms">
+        <div class="div-edit-header">
+            <h1>Agregar o Editar Cartelera</h1>
+        </div>
+        <div class="div-edit-content">
+            <form class="div-edit-form">
+                <div class="div-edit-form-general">
+
+                    <div class="dual-inputs">
+                        <p>Pelicula</p>
+                        <div class="input-container input-default">
+                            <select name="Pelicula" id="select-pelicula">
+                                <option value="0">Spiderman: Somewhat Close to Home</option>
+                                <option value="1">Cars 4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    
+                    <div class="form-text checkbox-solo">
+                        <input id="checkbox-programacion-diaria" type="checkbox">Programación diaria</input>
+                    </div>
+
+
+                    <p>Codigo</p>
+                    <div class="input-container input-default">
+                        <input id="txt-id-cartelera" type="text" placeholder="Codigo" />
+                    </div>
+
+                    <div class="dual-inputs">
+                        <p>Fecha de Inicio</p>
+                        <div class="input-container input-default">
+                            <input id="date-cartelera-fecha-inicio" type="date" />
+                        </div>
+                    </div>
+
+                    <div class="dual-inputs">
+                        <p>Fecha de Fin</p>
+                        <div class="input-container input-default">
+                            <input id="date-cartelera-fecha-fin" type="date" />
+                        </div>
+                    </div>
+
+                    <div class="dual-inputs">
+                        <p>Hora de Inicio</p>
+                        <div class="input-container input-default">
+                            <input id="date-cartelera-hora-inicio" type="time" />
+                        </div>
+                    </div>
+
+                    <div class="dual-inputs">
+                        <p>Hora de Fin</p>
+                        <div class="input-container input-default">
+                            <input id="date-cartelera-hora-fin" type="time" />
+                        </div>
+                    </div>
+
+                    <div class="dual-inputs">
+                        <p>Precio Base</p>
+                        <div class="input-container input-default">
+                            <input id="txt-cartelera-precio" type="number" placeholder="Precio" />
+                        </div>
+                    </div>
+
+                    <div class="form-text checkbox-solo">
+                        <input id="checkbox-precio-sugerido" type="checkbox">Precio Sugerido</input>
+                    </div>
+
+                    <hr>
+
+                    <div class="dual-inputs">
+                        <div class="fnd-claro">
+                            <button class="btn2-fondoclaro">Guardar</button>
+                        </div>
+                        <div class="fnd-claro">
+                            <button class="btn1-fondoclaro">Borrar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+            <div class="div-preview">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

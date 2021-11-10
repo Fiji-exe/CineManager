@@ -1,4 +1,4 @@
-h1{
+h1 {
     font-size: 40px;
 }
 
@@ -60,12 +60,12 @@ h3 {
     overflow: scroll;
 }
 
-.chair-button a{
+.chair-button a {
     font-size: 80px;
     color: #333;
     text-decoration: none;
 }
 
-.div-preview-array table td{
+.div-preview-array table td {
     padding: 10px;
 }
