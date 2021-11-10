@@ -52,6 +52,61 @@
     padding: 10%;
 }
 
+h2, h3, h4, h5, h6 {
+    font-family: 'Nunito';
+}
+
+/* Inputs  */
+
+.input-container {
+    margin-bottom: 30px;
+}
+
+.input-default {
+    border-bottom: 1px solid #333;
+    border-radius: 4px;
+    padding: 5px 5px;
+    font-size: 16px;
+}
+
+.input-short {
+    border-bottom: 1px solid #333;
+    border-radius: 4px;
+    padding: 5px 5px;
+    font-size: 16px;
+    width: 50%;
+}
+
+.input-default select {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    font-size: 16px;
+    outline: none;
+    font-family: 'Lora';
+    width: 100%;
+}
+
+.input-default select option {
+    color: #fff;
+    background-color: #333;
+    border: none;
+}
+
+.input-short select {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    font-size: 16px;
+    outline: none;
+    font-family: 'Lora';
+    width: 100%;
+}
+
+.input-short select option {
+    color: #fff;
+    background-color: #333;
+    border: none;
+}
+
 .header-principal {
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
@@ -97,6 +152,37 @@
 
 .push {
     margin-left: auto;
+}
+
+.input-default input {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    font-size: 16px;
+    outline: none;
+    font-family: 'Lora';
+}
+
+.input-short input {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    font-size: 16px;
+    outline: none;
+    font-family: 'Lora';
+}
+
+.input-form-blurb {
+    font-size: 12px;
+    color: #555;
+    text-align: justify;
+    text-justify: auto;
+    align-items: center;
+}
+
+.input-form-icon {
+    font-size: 20px;
+    padding: 0% 5px;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .material-icons.md-light { 
@@ -152,6 +238,7 @@ h2 {
     font-size: 24px;
 }
 
+
 textarea {
     outline: none;
     resize: none;
@@ -173,32 +260,6 @@ textarea {
 
     * {
         box-sizing: border-box;
-    }
-    .input-default {
-      border-bottom: 1px solid #333;
-      border-radius: 4px;
-      padding: 5px 5px;
-      font-size: 16px;
-    }
-    .input-default ::placeholder {
-      font-size: 16px;
-    }
-    .section-prop-2 .input-default ::placeholder {
-      font-size: 16px;
-      color: #fff
-    }
-    .input-alternate {
-      padding: 15px 5px;
-      font-size: 16px;
-    }
-    .input-default input {
-      background-color: rgba(0, 0, 0, 0);
-      border: 0;
-      font-size: 16px;
-      outline: none;
-    }
-    .input-error {
-        border: 2px solid #950F11;
     }
     body {
       font-size: 16px;
