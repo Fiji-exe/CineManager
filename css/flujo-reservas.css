@@ -12,8 +12,6 @@
 
 .section-left {
     display: block;
-    /*height: 300px;*/
-    /*min-height: 300px;*/
     padding-top: 3%;
     padding-left: 1%;
 }
@@ -33,8 +31,6 @@
 
 .section-right {
     display: block;
-    /*height: 300px;*/
-    /*min-height: 300px;*/
     margin-left: 3%;
     padding-top: 1%;
 }
@@ -46,7 +42,6 @@
 .tabla {
     background: #FFFFFF;
     margin: 0% 0% 3% 2%;
-    /* border-collapse: collapse; */
 }
 
 .tabla tbody tr:nth-child(odd) {
@@ -183,4 +178,14 @@ p {
     padding-top: 3px;
     font-family: 'Nunito';
     font-size: 18px;
+}
+
+form {
+    padding-top: 3px;
+    font-family: 'Nunito';
+    font-size: 18px;
+}
+
+form div {
+    margin-bottom: 5%;
 }

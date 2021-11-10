@@ -52,9 +52,6 @@
             <table class="tabla body-tabla" id="tabla-cartelera-body">
                 <tbody>
                     <tr>
-                        <td>Elige la cantidad de boletos</td>
-                    </tr>
-                    <tr>
                         <td>Regular</td>
                         <td class="quant-modifier" id="quant-modifier-minus-reg">-</td>
                         <td id="quant-total-reg">0</td>
@@ -117,13 +114,16 @@
             </div>
             <table class="tabla-asientos" id="tabla-asientos">
             </table>
+            <div>
+                <p id="ui-max-seats"> Asientos restantes : 0 </p>
+            </div>
         </section>
     </section>
 
     <section class="section-step-inactive section-step-three">
         <section class="section-left">
-            <h1>Selecciona el metodo de pago </h1>
-            <p> Selecciona tu metodo de pago. Si no tienes ninguna haz click en Ir a Registrar metodo de Pago</p>
+            <h1>Selecciona el método de pago </h1>
+            <p> Selecciona tu método de pago. Si no tienes ningún método de pago <br> registrado, haz click en "Ir a registrar método de pago"</p>
             <div class="img-container"> <img src="/media/joker.jpg" alt=""> </div>
 
             <div class="step-container">
@@ -135,7 +135,79 @@
         </section>
 
         <section class="section-right">
+            <form>
+                <div>
+                    <input type="radio" id="tar1" name="form-select-paycard">
+                    <label for="tar1">Visa *** 6859</label>
+                </div>
+                <div>
+                    <input type="radio" id="tar2" name="form-select-paycard">
+                    <label for="tar2">Mastercard *** 2034 </label>
+                </div>
+                <div>
+                    <input type="radio" id="tar3" name="form-select-paycard">
+                    <label for="tar3">AmerExp *** 1107</label>
+                </div>
+                <div>
+                    <a href="/html/registro-pago.html">Ir a registrar método de pago</a>
+                </div>
+                <div>
+                    <input type="checkbox" id="tyc-checkbox" name="form-select-paycard">
+                    <label for="tyc-checkbox"><a href="/html/tyc.html">He leído y acepto los términos y condiciones de CineManager</a></label>
+                </div>
+            </form>
+        </section>
+    </section>
 
+    <section class="section-step-inactive section-step-four">
+        <section class="section-left">
+            <h1>Factura </h1>
+            <p> Vea el comprobante de pago a continuacion </p>
+            <div class="img-container"> <img src="/media/joker.jpg" alt=""> </div>
+
+            <div class="step-container">
+                <p class="step-one-icon step-completed"> 1 Entradas </p>
+                <p class="step-two-icon step-completed"> 2 Asientos </p>
+                <p class="step-three-icon step-completed"> 3 Pago </p>
+                <p class="step-four-icon step-active"> 4 Factura </p>
+            </div>
+        </section>
+
+        <section class="section-right">
+            <table class="tabla body-tabla" id="tabla-cartelera-body">
+                <tbody>
+                    <tr>
+                        <td>CineManager</td>
+                        <td></td>
+                        <td></td>
+                        <td>Factura</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Cine:</td>
+                        <td> </td>
+                        <td></td>
+                        <td>Cine Magaly</td>
+                    </tr>
+                    <tr>
+                        <td>Asientos</td>
+                        <td>5-3</td>
+                        <td>6-3</td>
+                        <td>7-3</td>
+                    </tr>
+                    <tr>
+                        <td>Precio Total</td>
+                        <td></td>
+                        <td id="price-total">0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </section>
 
