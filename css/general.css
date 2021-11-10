@@ -2,6 +2,31 @@
     box-sizing: border-box;
 }
 
+body {
+    font-size: 16px;
+    font-family: 'Lora';
+}
+
+h1 {
+    font-family: 'Oswald';
+    font-size: 48px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Nunito';
+}
+
+textarea {
+    outline: none;
+    resize: none;
+    width: 100%;
+    height: 200px;
+}
+
 .btn1-fondoclaro {
     background: #950F11;
     border: 2px solid #950F11;
@@ -56,7 +81,7 @@
     padding: 10%;
 }
 
-h2,
+<<<<<<< HEAD h2,
 h3,
 h4,
 h5,
@@ -64,7 +89,7 @@ h6 {
     font-family: 'Nunito';
 }
 
-
+=======>>>>>>>f892543ba13b27c38f109dbd8da9b0476d317cd3
 /* Inputs  */
 
 .input-container {
@@ -88,6 +113,7 @@ h6 {
 
 .dual-inputs {
     display: flex;
+    justify-content: space-between;
 }
 
 .input-default select {
@@ -311,7 +337,7 @@ h6 {
 
 /* end css footer */
 
-h1 {
+<<<<<<< HEAD h1 {
     font-family: "Oswald";
     font-size: 30px;
 }
@@ -328,7 +354,7 @@ textarea {
     height: 200px;
 }
 
-.btn1-fondoclaro {
+=======>>>>>>>f892543ba13b27c38f109dbd8da9b0476d317cd3 .btn1-fondoclaro {
     background: #950F11;
     border: 2px solid #950F11;
     color: #FFFFFF;
@@ -339,12 +365,12 @@ textarea {
     font-family: 'Lora';
 }
 
-body {
+<<<<<<< HEAD body {
     font-size: 16px;
     font-family: 'Lora';
 }
 
-.header-principal .logo {
+=======>>>>>>>f892543ba13b27c38f109dbd8da9b0476d317cd3 .header-principal .logo {
     margin-left: 2%;
     font-family: 'Nunito', sans-serif;
     font-size: 32px;
@@ -370,28 +396,6 @@ body {
     border: 2px solid #BAC1CA;
     background: #BAC1CA;
     color: #950F11;
-}
-
-
-/*
-    *
-    *
-    *
-    *
-    *
-    *
-    * TITULOS, SUBTITULOS y PARRAFOS
-    *
-    */
-
-h1 {
-    font-family: 'Oswald';
-    font-size: 48px;
-}
-
-p {
-    font-family: 'Nunito';
-    font-size: 20px;
 }
 
 .btn1-fondoclaro {
@@ -481,4 +485,9 @@ p {
 
 .clearfix {
     clear: both;
+    <<<<<<< HEAD
 }
+
+=======
+}
+>>>>>>>f892543ba13b27c38f109dbd8da9b0476d317cd3
