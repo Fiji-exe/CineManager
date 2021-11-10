@@ -14,32 +14,20 @@ const fillNavFooter = () => {
                 <nav>
                     <div class="item">      
                     <span class="material-icons md-light">home</span>          
-                    <a href="index.html">Inicio</a>
+                    <a href="../html/homepage-usuario.html">Inicio</a>
                     </div>     
                     <div class="item">
                     <span class="material-icons md-light">camera_indoor</span>
-                    <a class="item" href="index.html">Cines</a>
+                    <a class="item" href="../html/buscar-listar.html">Busqueda</a>
                     </div>    
                     <div class="item">
                     <span class="material-icons md-light">event_seat</span>
-                    <a class="item" href="index.html">Reservas</a>
+                    <a class="item" href="../html/flujo-reservas.html">Reservas</a>
                     </div>
-                    <div class="item">
-                    <span class="material-icons md-light">theaters</span>
-                    <a class="item" href="index.html">Cartelera</a>
-                    </div>
-                    <div class="item">
-                    <span class="material-icons md-light">movie</span>
-                    <a class="item" href="index.html">Peliculas</a>
-                    </div>
-                    <div class="push">
-                    <div class="item">
-                        <span class="material-icons md-light">menu</span>
-                        <a class="item" href="index.html">Menu principal</a>
-                    </div>
+                    <div class="push">                
                     <div class="item">
                         <span class="material-icons md-light">account_circle</span>
-                        <a class="item" href="index.html">Cerrar sesion</a>
+                        <a class="item" href="../html/landing-page.html">Cerrar sesion</a>
                     </div>  
                     </div>
                 </nav>    
@@ -57,32 +45,25 @@ const fillNavFooter = () => {
                     <nav>
                         <div class="item">      
                         <span class="material-icons md-light">home</span>          
-                        <a href="index.html">Inicio</a>
+                        <a href="../html/homepage-usuario.html">Inicio</a>
                         </div>     
                         <div class="item">
                         <span class="material-icons md-light">camera_indoor</span>
-                        <a class="item" href="index.html">Cines</a>
+                        <a class="item" href="../html/buscar-listar.html">Busqueda</a>
                         </div>    
                         <div class="item">
                         <span class="material-icons md-light">event_seat</span>
-                        <a class="item" href="index.html">Reservas</a>
+                        <a class="item" href="../html/flujo-reservas.html">Reservas</a>
                         </div>
-                        <div class="item">
-                        <span class="material-icons md-light">theaters</span>
-                        <a class="item" href="index.html">Cartelera</a>
-                        </div>
-                        <div class="item">
-                        <span class="material-icons md-light">movie</span>
-                        <a class="item" href="index.html">Peliculas</a>
-                        </div>     
+    
                         <div class="push">
                         <div class="item">
                             <span class="material-icons md-light">info</span>
-                            <a class="item" href="index.html">Acerca de</a>
+                            <a class="item" href="../html/tyc.html">Acerca de</a>
                         </div>
                         <div class="item">
                             <span class="material-icons md-light">account_circle</span>
-                            <a class="item" href="index.html">Iniciar sesion</a>
+                            <a class="item" href="../html/iniciar-sesion.html">Iniciar sesion</a>
                         </div>  
                         </div>
                     </nav>    
@@ -97,14 +78,10 @@ const fillNavFooter = () => {
                     Cine Manager
                 </div>
                 <nav>
-                <div class="push">
-                    <div class="item">
-                    <span class="material-icons md-light">menu</span>
-                    <a class="item" href="index.html">Menu principal</a>
-                    </div>
+                <div class="push">                 
                     <div class="item">
                     <span class="material-icons md-light">account_circle</span>
-                    <a class="item" href="index.html">Cerrar sesion</a>
+                    <a class="item" href="../html/landing-page.html">Cerrar sesion</a>
                     </div>  
                 </div>
                 </nav>    
@@ -122,11 +99,11 @@ const fillNavFooter = () => {
                 <div class="push">
                     <div class="item">
                     <span class="material-icons md-light">info</span>
-                    <a class="item" href="index.html">Acerca de</a>
+                    <a class="item" href="../html/tyc.html">Acerca de</a>
                     </div>
                     <div class="item">
                     <span class="material-icons md-light">account_circle</span>
-                    <a class="item" href="index.html">Iniciar sesion</a>
+                    <a class="item" href="../html/iniciar-sesion.html">Iniciar sesion</a>
                     </div>  
                 </div>
                 </nav>    
@@ -142,7 +119,7 @@ const fillNavFooter = () => {
                   <div class="col">
                      <p>Cine REX</p>
                      <ul>
-                        <li><a href="">Terminos y condiciones</a></li>
+                        <li><a href="../html/tyc.html">Terminos y condiciones</a></li>
                      </ul>
                   </div>
                   <!-- <div class="col">
@@ -164,7 +141,7 @@ const fillNavFooter = () => {
                   <div class="col">
                      <p>Cine REX</p>
                      <ul>
-                        <li><a href="">Terminos y condiciones</a></li>
+                        <li><a href="../html/tyc.html">Terminos y condiciones</a></li>
                      </ul>
                   </div>
                   <!-- <div class="col">
