@@ -2,8 +2,8 @@ const divNavbarClienteIniciado = document.querySelector(".navbar-cliente-iniciad
 const divNavbarClienteNoIniciado = document.querySelector(".navbar-cliente-no-iniciado");
 const divNavbarAdminIniciado = document.querySelector(".navbar-admin-iniciado");
 const divNavbarAdminNoIniciado = document.querySelector(".navbar-admin-no-iniciado");
-const footerCliente = document.querySelector(".navbar-cliente");
-const footerAdmin = document.querySelector(".navbar-admin");
+const footerCliente = document.querySelector(".footer-cliente");
+const footerAdmin = document.querySelector(".footer-admin");
 
 const fillNavFooter = () => {
     try {
@@ -136,13 +136,45 @@ const fillNavFooter = () => {
     }
 
     try {
-        footerCliente.innerHTML = ``;
+        footerCliente.innerHTML = `
+        <footer class="footer">
+               <div class="contain">
+                  <div class="col">
+                     <p>Cine REX</p>
+                     <ul>
+                        <li><a href="">Terminos y condiciones</a></li>
+                     </ul>
+                  </div>
+                  <!-- <div class="col">
+                     <p>Cine REX</p>
+                     <ul>
+                        <li><a href="">Terminos y condiciones</a></li>
+                     </ul>
+                  </div> -->
+               </div>
+        </footer>`;
     } catch (err) {
 
     }
 
     try {
-        footerAdmin.innerHTML = ``;
+        footerAdmin.innerHTML = `
+        <footer class="footer">
+               <div class="contain">
+                  <div class="col">
+                     <p>Cine REX</p>
+                     <ul>
+                        <li><a href="">Terminos y condiciones</a></li>
+                     </ul>
+                  </div>
+                  <!-- <div class="col">
+                     <p>Cine REX</p>
+                     <ul>
+                        <li><a href="">Terminos y condiciones</a></li>
+                     </ul>
+                  </div> -->
+               </div>
+        </footer>`;
     } catch (err) {
 
     }
