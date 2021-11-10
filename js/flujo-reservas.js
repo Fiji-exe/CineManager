@@ -1,5 +1,6 @@
 'use strict';
 let stepflag = 1;
+let seat_amount_selected = 0;
 let config_total_colums = 9;
 let config_total_rows = 7;
 let seat_html = '<span class="material-icons chair-button chair-disabled"> <a>chair</a> </span>';
@@ -23,26 +24,37 @@ const js_create_seats = (rows, colums) => {
     }
 
 }
-
 const js_celda_click = (celda) => {
     if (celda.selected) {
+        seat_amount_selected = seat_amount_selected + 1
+        js_max_seats_update();
         celda.selected = false;
         celda.style.outline = "0px";
     } else {
-        celda.selected = true;
-        celda.style.outline = "2px solid #260303";
-        console.log(celda.xpos + " " + celda.ypos);
+        if (seat_amount_selected > 0) {
+            seat_amount_selected = seat_amount_selected - 1;
+            js_max_seats_update();
+            celda.selected = true;
+            celda.style.outline = "2px solid #260303";
+            console.log(celda.xpos + " " + celda.ypos);
+        } else {
+            Swal.fire({
+                'icon': 'warning',
+                'title': 'Maximos asientos seleccionados',
+                'text': 'Deseleccione otras butacas para cambiar su seleccion',
+                'confirmButtonText': 'Entendido'
+            });
+        }
     }
-
-
-
 }
 const js_go_next_step = () => {
     switch (stepflag) {
         case 1:
+            seat_amount_selected = parseInt(document.getElementById("quant-total").innerHTML, 10);
             document.getElementsByClassName("section-step-one")[0].style.display = "none";
             document.getElementsByClassName("section-step-two")[0].classList.remove("section-step-inactive");
             document.getElementsByClassName("section-step-two")[0].classList.add("section-step-active");
+            document.getElementById("ui-max-seats").innerHTML = `Asientos restantes : ${seat_amount_selected}`
             js_create_seats(config_total_rows, config_total_colums);
             stepflag = 2;
             break;
@@ -59,10 +71,10 @@ const js_go_next_step = () => {
             stepflag = 4;
             break;
         case 4:
+            window.location = '../html/homepage-usuario.html';
             /*redirect user */
     }
 }
-
 const js_quant_total_update = () => {
     let value_reg = parseInt(document.getElementById("quant-total-reg").innerHTML, 10);
     let value_kid = parseInt(document.getElementById("quant-total-kid").innerHTML, 10);
@@ -70,7 +82,9 @@ const js_quant_total_update = () => {
     document.getElementById("quant-total").innerHTML = value_reg + value_kid + value_adu;
     document.getElementById("price-total").innerHTML = 1300 * (value_reg + value_kid + value_adu);
 }
-
+const js_max_seats_update = () => {
+    document.getElementById("ui-max-seats").innerHTML = `Asientos restantes : ${seat_amount_selected}`
+}
 const js_quant_modifier_click = (modifier) => {
     console.log(document.getElementById("quant-total-reg").value);
     switch (modifier.id) {
@@ -101,7 +115,6 @@ const js_quant_modifier_click = (modifier) => {
     }
     js_quant_total_update();
 }
-
 const js_quant_modifier_set_onClick = function(modifier) {
     let array_modifiers = document.getElementsByClassName("quant-modifier");
     Array.from(array_modifiers).forEach(element => {
