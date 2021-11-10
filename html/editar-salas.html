@@ -36,12 +36,12 @@
                     <div class="div-edit-form-general">
                         <h2>General</h2>
                         <p>Codigo</p>
-                        <div class="input-container input-default">
+                        <div class="input-container input-default input-code">
                             <input id="txt-id-sala" type="text" placeholder="Codigo" />
                         </div>
                         <p>Cadena</p>
-                        <div class="input-container input-default">
-                            <input id="txt-cadena-sala" type="text" placeholder="Cadena" />
+                        <div class="input-container input-default input-code">
+                            <input id="txt-cadena-sala" type="text" placeholder="Cadena" value="Cinemark" disabled />
                         </div>
                         <p>Estatus</p>
                         <div class="input-container input-default">
@@ -62,20 +62,21 @@
                         </div>
 
                         <p>Precio Base</p>
-                        <div class="input-container input-default">
+                        <div class="input-container input-default input-base-price">
                             <input id="txt-sala-precio" type="number" placeholder="Precio" />
                         </div>
 
                         <h3>Dimensiones</h3>
 
                         <p>Vertical</p>
-                        <div class="input-container input-default">
+                        <div class="input-container input-default input-room-height">
                             <input id="num-sala-y" type="number" placeholder="Vertical" />
                         </div>
                         <p>Horizontal</p>
-                        <div class="input-container input-default">
-                            <input id="num-sala-x" type="number" placeholder="Horizontal" />
+                        <div class="input-container input-default input-room-width">
+                            <input id="num-sala-X" type="number" placeholder="Horizontal" />
                         </div>
+                        
 
                         <div class="dual-inputs input-form">
                             <span class="material-icons input-form-icon">
@@ -84,9 +85,6 @@
                             <p class="input-form-blurb">Introduzca un número entre 5 y 30.</p>
                         </div>
 
-                        <div class="fnd-claro">
-                            <button class="btn1-fondoclaro">Eliminar</button>
-                        </div>
                     </div>
                     <div class="div-edit-form-seats">
                         <h2>Asiento Seleccionado</h2>
@@ -102,8 +100,13 @@
                                 <option value="2">Discapacitado</option>
                             </select>
                         </div>
-                        <div class="fnd-claro">
-                            <button class="btn1-fondoclaro">Guardar</button>
+                        <div class="dual-inputs">
+                            <div class="fnd-claro">
+                                <button class="btn2-fondoclaro" id="btn-sala-guardar">Guardar</button>
+                            </div>
+                            <div class="fnd-claro">
+                                <button class="btn1-fondoclaro" id="btn-sala-eliminar">Eliminar</button>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -256,7 +259,10 @@
                 </div>
             </div>
         </section>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="../js/editar-salas.js"></script>
     </div>
+
     <div class="footer-admin"></div>
 
     <script src="/js/navbar-footer.js"></script>
