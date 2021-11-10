@@ -27,10 +27,10 @@ const js_create_seats = (rows, colums) => {
 const js_celda_click = (celda) => {
     if (celda.selected) {
         celda.selected = false;
-        celda.style.border = "0px";
+        celda.style.outline = "0px";
     } else {
         celda.selected = true;
-        celda.style.border = "2px solid #260303";
+        celda.style.outline = "2px solid #260303";
         console.log(celda.xpos + " " + celda.ypos);
     }
 
@@ -62,5 +62,61 @@ const js_go_next_step = () => {
     }
 }
 
+const js_quant_total_update = () => {
+    let value_reg = parseInt(document.getElementById("quant-total-reg").innerHTML, 10);
+    let value_kid = parseInt(document.getElementById("quant-total-kid").innerHTML, 10);
+    let value_adu = parseInt(document.getElementById("quant-total-adu").innerHTML, 10);
+    document.getElementById("quant-total").innerHTML = value_reg + value_kid + value_adu;
+}
 
+const js_quant_modifier_click = (modifier) => {
+    console.log(document.getElementById("quant-total-reg").value);
+    switch (modifier.id) {
+        case 'quant-modifier-minus-reg':
+            if (parseInt(document.getElementById("quant-total-reg").innerHTML, 10) >= 0) {
+                document.getElementById("quant-total-reg").innerHTML = parseInt(document.getElementById("quant-total-reg").innerHTML, 10) - 1;
+            }
+            break;
+        case 'quant-modifier-plus-reg':
+            if (parseInt(document.getElementById("quant-total-reg").innerHTML, 10) >= 0) {
+                document.getElementById("quant-total-reg").innerHTML = parseInt(document.getElementById("quant-total-reg").innerHTML, 10) + 1;
+            }
+            break;
+        case 'quant-modifier-minus-kid':
+            if (parseInt(document.getElementById("quant-total-kid").innerHTML, 10) >= 0) {
+                document.getElementById("quant-total-kid").innerHTML = parseInt(document.getElementById("quant-total-kid").innerHTML, 10) - 1;
+            }
+            break;
+        case 'quant-modifier-plus-kid':
+            if (parseInt(document.getElementById("quant-total-kid").innerHTML, 10) >= 0) {
+                document.getElementById("quant-total-kid").innerHTML = parseInt(document.getElementById("quant-total-kid").innerHTML, 10) + 1;
+            }
+            break;
+        case 'quant-modifier-minus-adu':
+            if (parseInt(document.getElementById("quant-total-adu").innerHTML, 10) >= 0) {
+                document.getElementById("quant-total-adu").innerHTML = parseInt(document.getElementById("quant-total-adu").innerHTML, 10) - 1;
+            }
+            break;
+        case 'quant-modifier-plus-adu':
+            if (parseInt(document.getElementById("quant-total-adu").innerHTML, 10) >= 0) {
+                document.getElementById("quant-total-adu").innerHTML = parseInt(document.getElementById("quant-total-adu").innerHTML, 10) + 1;
+            }
+            break;
+    }
+    js_quant_total_update();
+}
+
+const js_quant_modifier_set_onClick = function(modifier) {
+    let array_modifiers = document.getElementsByClassName("quant-modifier");
+    Array.from(array_modifiers).forEach(element => {
+        element.onclick = function() {
+            js_quant_modifier_click(this);
+        }
+    });
+
+}
+
+
+
+js_quant_modifier_set_onClick();
 document.getElementById("button-next").onclick = js_go_next_step;
