@@ -10,8 +10,8 @@
 
 .section-left {
     display: block;
-    height: 300px;
-    min-height: 300px;
+    /*height: 300px;*/
+    /*min-height: 300px;*/
     padding-top: 3%;
 }
 
@@ -30,8 +30,8 @@
 
 .section-right {
     display: block;
-    height: 300px;
-    min-height: 300px;
+    /*height: 300px;*/
+    /*min-height: 300px;*/
     margin-left: 3%;
     padding-top: 5%;
 }
@@ -119,4 +119,31 @@ table td {
     position: relative;
     margin-top: 10%;
     margin-left: 30%;
+}
+
+img {
+    margin-top: 30px;
+    padding-left: 30px;
+    width: 250px;
+    height: 300px;
+}
+
+.tabla-asientos {
+    margin-top: 50px;
+    z-index: 10;
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.tabla-asientos tr td {
+    background-color: #FFFFFF;
+    border: #FFFFFF;
+}
+
+.tabla-asientos td:hover {
+    background-color: #BAC1CA;
+}
+
+.tabla-asientos .material-icons {
+    color: #00DB9D;
 }

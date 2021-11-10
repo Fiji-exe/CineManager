@@ -1,18 +1,28 @@
 'use strict';
 let stepflag = 1;
-let config_total_colums = 12;
-let config_total_rows = 5;
-let seat_html = '<span class="material-icons chair-button chair-disabled"> <a href="#">chair</a> </span>';
+let config_total_colums = 9;
+let config_total_rows = 7;
+let seat_html = '<span class="material-icons chair-button chair-disabled"> <a>chair</a> </span>';
 
 const js_create_seats = (rows, colums) => {
     let tabla = document.getElementById("tabla-asientos")
     for (let i = 0; i < rows; i++) {
         let fila = tabla.insertRow()
         for (let j = 0; j < colums; j++) {
-            fila.insertCell().innerHTML = seat_html;
+            let celda = fila.insertCell();
+            celda.innerHTML = seat_html;
+            /*Agregar evento para clicks
+             */
+            celda.onclick = function() {
+                js_celda_click(this);
+            }
         }
     }
 
+}
+
+const js_celda_click = (celda) => {
+    console.log(celda);
 }
 const js_go_next_step = () => {
     switch (stepflag) {
