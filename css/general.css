@@ -61,7 +61,7 @@
     padding: 0 3%;
 }
 
-.header-principal .logo {
+.header-principal .logo {  
     height: 56px;
     width: 120px;
     display: flex;
@@ -105,6 +105,8 @@
 
 .contenido main{
     padding: 10px 3%;
+    /* CONFLICT WITH ABOVE AND BELOW */
+    margin: 0px 3%;
 }
 
 .contenido{
