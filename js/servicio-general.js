@@ -32,6 +32,10 @@ function crearCuenta() {
     window.location = '../html/crear-cuenta.html';
 }
 
+function acercaDe() {
+    window.location = '/landing-page-equipo/html/landing-page-equipo.html';
+}
+
 
 
 function salir() {

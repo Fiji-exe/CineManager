@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .btn1-fondoclaro {
     background: #950F11;
     border: 2px solid #950F11;
@@ -52,9 +56,14 @@
     padding: 10%;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Nunito';
 }
+
 
 /* Inputs  */
 
@@ -119,6 +128,7 @@ h2, h3, h4, h5, h6 {
     min-height: 56px;
     padding: 0 3%;
 }
+
 .input-default input {
     background-color: rgba(0, 0, 0, 0);
     border: 0;
@@ -159,14 +169,14 @@ h2, h3, h4, h5, h6 {
     padding: 0 3%;
 }
 
-.header-principal .logo {  
+.header-principal .logo {
     height: 56px;
     width: 120px;
     display: flex;
     justify-content: space-evenly;
 }
 
-.header-principal .logo {  
+.header-principal .logo {
     height: 56px;
     width: 120px;
     display: flex;
@@ -197,7 +207,7 @@ h2, h3, h4, h5, h6 {
 }
 
 .header-principal .item:hover {
-   background-color: #950F11;
+    background-color: #950F11;
 }
 
 .push {
@@ -235,15 +245,15 @@ h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
 }
 
-.material-icons.md-light { 
-  color: rgba(255, 255, 255, 1); 
+.material-icons.md-light {
+    color: rgba(255, 255, 255, 1);
 }
 
-.material-icons.md-light { 
-  color: rgba(255, 255, 255, 1); 
+.material-icons.md-light {
+    color: rgba(255, 255, 255, 1);
 }
 
-.contenido main{
+.contenido main {
     padding: 10px 3%;
     /* CONFLICT WITH ABOVE AND BELOW */
     margin: 0px 3%;
@@ -253,9 +263,10 @@ h2, h3, h4, h5, h6 {
     display: none;
 }
 
-.contenido{
+.contenido {
     min-height: calc(100vh - 206px);
 }
+
 .signup-card-links a {
     text-decoration: none;
     color: #950F11;
@@ -264,32 +275,39 @@ h2, h3, h4, h5, h6 {
     font-size: 12px;
 }
 
+
 /* css footer  */
+
 .footer {
     width: 100%;
     height: 150px;
     background-color: #950F11;
 }
-.footer .contain{
+
+.footer .contain {
     display: flex;
     flex-direction: row;
 }
-.footer .col{
+
+.footer .col {
     width: 190px;
     padding: 20px;
 }
-.footer .col p{
+
+.footer .col p {
     font-family: 'Lora';
     font-size: 16px;
     color: #fff;
     padding: 10px 0px 5px 0px;
 }
-.footer .col a{
+
+.footer .col a {
     font-family: 'Nunito', sans-serif;
     font-size: 12px;
     color: #fff;
     text-decoration: none;
 }
+
 
 /* end css footer */
 
@@ -303,13 +321,12 @@ h2 {
     font-size: 24px;
 }
 
-
 textarea {
     outline: none;
     resize: none;
     width: 100%;
     height: 200px;
-  }
+}
 
 .btn1-fondoclaro {
     background: #950F11;
@@ -322,14 +339,11 @@ textarea {
     font-family: 'Lora';
 }
 
+body {
+    font-size: 16px;
+    font-family: 'Lora';
+}
 
-    * {
-        box-sizing: border-box;
-    }
-    body {
-      font-size: 16px;
-      font-family: 'Lora';
-    }
 .header-principal .logo {
     margin-left: 2%;
     font-family: 'Nunito', sans-serif;
@@ -400,6 +414,7 @@ p {
     background: #BAC1CA;
     color: #950F11;
 }
+
 .material-icons.md-light {
     color: rgba(255, 255, 255, 1);
 }
