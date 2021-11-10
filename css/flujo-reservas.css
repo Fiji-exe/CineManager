@@ -2,7 +2,7 @@
     display: none;
 }
 
-.section-step-one {
+.section-step-active {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -12,7 +12,7 @@
     display: block;
     height: 300px;
     min-height: 300px;
-    padding-top: 1%;
+    padding-top: 3%;
 }
 
 .section-left .step-container {
@@ -113,4 +113,10 @@ table td {
     font-weight: normal;
     font-size: 24px;
     color: #BB9526;
+}
+
+#button-next {
+    position: relative;
+    margin-top: 10%;
+    margin-left: 30%;
 }
