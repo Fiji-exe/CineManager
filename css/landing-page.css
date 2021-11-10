@@ -1,3 +1,8 @@
+<<<<<<< Updated upstream
+* {
+    box-sizing: unset;
+}
+
 .header-principal {
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
@@ -27,6 +32,8 @@
     padding: 5px;
 }
 
+=======
+>>>>>>> Stashed changes
 .btn1-fondooscuro {
     background: #BAC1CA;
     border: 2px solid #BAC1CA;
@@ -72,7 +79,6 @@
     font-size: 25px;
     margin: 3%;
     padding: 2%;
-    min-width: 90%;
     text-align: center;
 }
 
@@ -80,8 +86,7 @@
     display: flex;
     flex-flow: row wrap;
     margin: 3%;
-    padding: 50%;
-    min-width: 100%;
+    padding: 20%;
     background-image: url('/media/img.png');
     background-repeat: no-repeat;
     background-size: cover;

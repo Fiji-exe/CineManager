@@ -3,8 +3,8 @@
 }
 
 body {
-  font-size: 16px;
-  font-family: 'Lora';
+    font-size: 16px;
+    font-family: 'Lora';
 }
 
 h1 {
@@ -12,7 +12,11 @@ h1 {
     font-size: 48px;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Nunito';
 }
 
@@ -21,7 +25,7 @@ textarea {
     resize: none;
     width: 100%;
     height: 200px;
-  }
+}
 
 .btn1-fondoclaro {
     background: #950F11;
@@ -98,9 +102,11 @@ textarea {
     width: 50%;
 }
 
-.dual-inputs {
-    display: flex;
-    justify-content: space-between;
+.form-text {
+    font-size: 16px;
+    width: 50%;
+    line-height: 2;
+    padding-left: 10px;
 }
 
 .input-default select {
@@ -133,14 +139,21 @@ textarea {
     border: none;
 }
 
-.header-principal {
-    font-family: 'Nunito', sans-serif;
-    font-size: 16px;
-    background: #BB9526;
+.dual-inputs {
     display: flex;
-    min-height: 56px;
-    padding: 0 3%;
+    justify-content: space-between;
 }
+
+::placeholder {
+    font-size: 16px;
+    color: #666;
+}
+
+.input-alternate {
+    padding: 15px 5px;
+    font-size: 16px;
+}
+
 .input-default input {
     background-color: rgba(0, 0, 0, 0);
     border: 0;
@@ -155,6 +168,10 @@ textarea {
     font-size: 16px;
     outline: none;
     font-family: 'Lora';
+}
+
+.input-error {
+    border: 2px solid #950F11;
 }
 
 .input-form-blurb {
@@ -172,6 +189,22 @@ textarea {
     margin-bottom: 10px;
 }
 
+.input-form-separator {
+    width: 60%;
+}
+
+.input-hidden {
+    display: none;
+}
+
+.signup-card-links a {
+    text-decoration: none;
+    color: #950F11;
+    display: block;
+    padding-top: 15px;
+    font-size: 12px;
+}
+
 .header-principal {
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
@@ -181,18 +214,21 @@ textarea {
     padding: 0 3%;
 }
 
-.header-principal .logo {  
+.header-principal .logo {
     height: 56px;
     width: 120px;
     display: flex;
     justify-content: space-evenly;
 }
 
-.header-principal .logo {  
+.header-principal .logo {
     height: 56px;
-    width: 120px;
+    width: 250px;
     display: flex;
+    align-items: center;
     justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
 }
 
 .header-principal .logo img {
@@ -206,25 +242,28 @@ textarea {
     width: 100%;
 }
 
-.header-principal .item {
+.item {
     padding: 0px 10px;
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-.header-principal .item a {
+.item a{
     color: #fff;
     text-decoration: none;
 }
 
-.header-principal .item:hover {
+.item:hover {
    background-color: #950F11;
 }
 
 .push {
+    display: flex;
+    height: 100%;
     margin-left: auto;
 }
+
 
 .input-default input {
     background-color: rgba(0, 0, 0, 0);
@@ -257,27 +296,26 @@ textarea {
     margin-bottom: 10px;
 }
 
-.material-icons.md-light { 
-  color: rgba(255, 255, 255, 1); 
+.material-icons.md-light {
+    color: rgba(255, 255, 255, 1);
 }
 
-.material-icons.md-light { 
-  color: rgba(255, 255, 255, 1); 
+.material-icons.md-light {
+    color: rgba(255, 255, 255, 1);
 }
 
-.contenido main{
+.contenido main {
     padding: 10px 3%;
-    /* CONFLICT WITH ABOVE AND BELOW */
-    margin: 0px 3%;
 }
 
 .input-hidden {
     display: none;
 }
 
-.contenido{
+.contenido {
     min-height: calc(100vh - 206px);
 }
+
 .signup-card-links a {
     text-decoration: none;
     color: #950F11;
@@ -286,32 +324,39 @@ textarea {
     font-size: 12px;
 }
 
+
 /* css footer  */
+
 .footer {
     width: 100%;
     height: 150px;
     background-color: #950F11;
 }
-.footer .contain{
+
+.footer .contain {
     display: flex;
     flex-direction: row;
 }
-.footer .col{
+
+.footer .col {
     width: 190px;
     padding: 20px;
 }
-.footer .col p{
+
+.footer .col p {
     font-family: 'Lora';
     font-size: 16px;
     color: #fff;
     padding: 10px 0px 5px 0px;
 }
-.footer .col a{
+
+.footer .col a {
     font-family: 'Nunito', sans-serif;
     font-size: 12px;
     color: #fff;
     text-decoration: none;
 }
+
 
 /* end css footer */
 
@@ -374,71 +419,9 @@ textarea {
     background: #BAC1CA;
     color: #950F11;
 }
+
 .material-icons.md-light {
     color: rgba(255, 255, 255, 1);
 }
 
-.footer {
-    width: 100%;
-    position: relative;
-    height: auto;
-    background-color: #070617;
-}
-
-.footer .col {
-    width: 190px;
-    height: auto;
-    float: left;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    padding: 0px 20px 20px 20px;
-}
-
-.footer .col h1 {
-    margin: 0;
-    padding: 0;
-    font-family: inherit;
-    font-size: 12px;
-    line-height: 17px;
-    padding: 20px 0px 5px 0px;
-    color: rgba(255, 255, 255, 0.2);
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 0.250em;
-}
-
-.footer .col ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.footer .col ul li {
-    color: #999999;
-    font-size: 14px;
-    font-family: inherit;
-    font-weight: bold;
-    padding: 5px 0px 5px 0px;
-    cursor: pointer;
-    transition: .2s;
-    -webkit-transition: .2s;
-    -moz-transition: .2s;
-}
-
-.social ul li {
-    display: inline-block;
-    padding-right: 5px !important;
-}
-
-.footer .col ul li:hover {
-    color: #ffffff;
-    transition: .1s;
-    -webkit-transition: .1s;
-    -moz-transition: .1s;
-}
-
-.clearfix {
-    clear: both;
-}
 

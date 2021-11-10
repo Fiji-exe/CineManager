@@ -24,39 +24,9 @@
 </head>
 
 <body>
-    <header class="header-principal">
-        <div class="logo">
-            <img src="imgs/logo.png" alt="imagen">
-        </div>
+    <div class="navbar-admin-iniciado"></div>
 
-        <nav>
-            <div class="item">
-                <span class="material-icons md-light">home</span>
-                <a href="landing-page.html.html">Inicio</a>
-            </div>
-            <div class="item">
-                <span class="material-icons md-light">camera_indoor</span>
-                <a class="item" href="#">Cines</a>
-            </div>
-            <div class="item">
-                <span class="material-icons md-light">event_seat</span>
-                <a class="item" href="#">Reservas</a>
-            </div>
-            <div class="item">
-                <span class="material-icons md-light">theaters</span>
-                <a class="item" href="#">Cartelera</a>
-            </div>
-            <div class="item">
-                <span class="material-icons md-light">movie</span>
-                <a class="item" href="#">Peliculas</a>
-            </div>
-            <div class="item push">
-                <span class="material-icons md-light">account_circle</span>
-                <a class="item" href="#">Iniciar sesion</a>
-            </div>
-        </nav>
-    </header>
-
+    <div class="contenido">
     <section class="sct-edit-rooms">
         <div class="div-edit-header">
             <h1>Agregar o Editar Cartelera</h1>
@@ -82,35 +52,35 @@
 
 
                     <p>Codigo</p>
-                    <div class="input-container input-default">
+                    <div class="input-container input-default input-code">
                         <input id="txt-id-cartelera" type="text" placeholder="Codigo" />
                     </div>
 
                     <div class="dual-inputs">
                         <p>Fecha de Inicio</p>
-                        <div class="input-container input-default">
-                            <input id="date-cartelera-fecha-inicio" type="date" required/>
+                        <div class="input-container input-default ">
+                            <input id="date-cartelera-fecha-inicio" type="date"/>
                         </div>
                     </div>
 
                     <div class="dual-inputs">
                         <p>Fecha de Fin</p>
                         <div class="input-container input-default">
-                            <input id="date-cartelera-fecha-fin" type="date" required/>
+                            <input id="date-cartelera-fecha-fin" type="date"/>
                         </div>
                     </div>
 
                     <div class="dual-inputs">
                         <p>Hora de Inicio</p>
                         <div class="input-container input-default">
-                            <input id="date-cartelera-hora-inicio" type="time" required/>
+                            <input id="date-cartelera-hora-inicio" type="time"/>
                         </div>
                     </div>
 
                     <div class="dual-inputs">
                         <p>Hora de Fin</p>
                         <div class="input-container input-default">
-                            <input id="date-cartelera-hora-fin" type="time" required/>
+                            <input id="date-cartelera-hora-fin" type="time"/>
                         </div>
                     </div>
 
@@ -142,6 +112,16 @@
             </div>
         </div>
     </section>
+<<<<<<< Updated upstream
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/editar-carteleras.js"></script>
+=======
+</div>
+
+<div class="footer-admin"></div>
+
+    <script src="/js/navbar-footer.js"></script>
+>>>>>>> Stashed changes
 </body>
 
 </html>
