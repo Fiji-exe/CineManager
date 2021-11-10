@@ -7,6 +7,8 @@
     padding: 0 3%;
 }
 
+
+
 .header-principal .logo {  
     height: 56px;
     width: 250px;
@@ -77,7 +79,7 @@
     padding: 20px;
 }
 .footer .col p{
-    font-family: 'Lora';
+    font-family: 'Oswald';
     font-size: 16px;
     color: #fff;
     padding: 10px 0px 5px 0px;
