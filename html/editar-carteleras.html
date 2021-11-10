@@ -20,13 +20,13 @@
     <link rel="stylesheet" href="../css/editar-carteleras.css">
     <link rel="stylesheet" href="../css/general.css">
 
-    <title>Agregar/Editar Sala</title>
+    <title>Agregar/Editar Cartelera</title>
 </head>
 
 <body>
     <header class="header-principal">
         <div class="logo">
-            <img src="imgs/logo.png" alt="imagen">
+            <img src="../imgs/logo.png" alt="imagen">
         </div>
 
         <nav>
@@ -66,7 +66,9 @@
                 <div class="div-edit-form-general">
 
                     <div class="dual-inputs">
-                        <p>Pelicula</p>
+                        <div class="form-text">
+                            <p>Pelicula</p>
+                        </div>
                         <div class="input-container input-default">
                             <select name="Pelicula" id="select-pelicula">
                                 <option value="0">Spiderman: Somewhat Close to Home</option>
@@ -75,48 +77,52 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="form-text checkbox-solo">
                         <input id="checkbox-programacion-diaria" type="checkbox">Programación diaria</input>
                     </div>
 
 
-                    <p>Codigo</p>
-                    <div class="input-container input-default input-code">
-                        <input id="txt-id-cartelera" type="text" placeholder="Codigo" />
+                    <div class="dual-inputs">
+                        <div class="form-text">
+                            <p>Codigo</p>
+                        </div>
+                        <div class="input-container input-default input-code">
+                            <input id="txt-id-cartelera" type="text" placeholder="Codigo" />
+                        </div>
                     </div>
 
                     <div class="dual-inputs">
                         <p>Fecha de Inicio</p>
-                        <div class="input-container input-default ">
-                            <input id="date-cartelera-fecha-inicio" type="date"/>
+                        <div class="input-container input-default input-date-start">
+                            <input id="date-cartelera-fecha-inicio" type="date" />
                         </div>
                     </div>
 
                     <div class="dual-inputs">
                         <p>Fecha de Fin</p>
-                        <div class="input-container input-default">
-                            <input id="date-cartelera-fecha-fin" type="date"/>
+                        <div class="input-container input-default input-date-end">
+                            <input id="date-cartelera-fecha-fin" type="date" />
                         </div>
                     </div>
 
                     <div class="dual-inputs">
                         <p>Hora de Inicio</p>
-                        <div class="input-container input-default">
-                            <input id="date-cartelera-hora-inicio" type="time"/>
+                        <div class="input-container input-default input-time-start">
+                            <input id="date-cartelera-hora-inicio" type="time" />
                         </div>
                     </div>
 
                     <div class="dual-inputs">
                         <p>Hora de Fin</p>
-                        <div class="input-container input-default">
-                            <input id="date-cartelera-hora-fin" type="time"/>
+                        <div class="input-container input-default input-time-end">
+                            <input id="date-cartelera-hora-fin" type="time" />
                         </div>
                     </div>
 
                     <div class="dual-inputs">
                         <p>Precio Base</p>
-                        <div class="input-container input-default">
+                        <div class="input-container input-default input-base-price">
                             <input id="num-cartelera-precio" type="number" placeholder="Precio" />
                         </div>
                     </div>
@@ -124,8 +130,6 @@
                     <div class="form-text checkbox-solo">
                         <input id="checkbox-precio-sugerido" type="checkbox">Precio Sugerido</input>
                     </div>
-
-                    <hr>
 
                     <div class="dual-inputs">
                         <div class="fnd-claro">
@@ -135,7 +139,6 @@
                             <button class="btn1-fondoclaro" id="btn-carteleras-borrar">Borrar</button>
                         </div>
                     </div>
-
                 </div>
             </form>
             <div class="div-preview">
