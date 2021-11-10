@@ -256,6 +256,13 @@ h2, h3, h4, h5, h6 {
 .contenido{
     min-height: calc(100vh - 206px);
 }
+.signup-card-links a {
+    text-decoration: none;
+    color: #950F11;
+    display: block;
+    padding-top: 15px;
+    font-size: 12px;
+}
 
 /* css footer  */
 .footer {
