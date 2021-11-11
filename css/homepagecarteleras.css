@@ -52,10 +52,27 @@
     margin: 2%;
     padding: 2%;
     flex-grow: 1;
+    ;
 }
 
 .pelicula-card {
     width: 80%;
     height: 10%;
     margin: 2%;
+    font-family: 'Nunito';
+    font-size: 16px;
+}
+
+.titulo-pelicula {
+    font-family: "Owsald";
+    font-size: 30px;
+}
+
+.sinopsis {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sinopsis p {
+    font-weight: normal;
 }
