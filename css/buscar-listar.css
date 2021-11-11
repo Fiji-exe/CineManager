@@ -99,3 +99,9 @@ table td {
     font-family: 'Nunito';
     font-size: 24px;
 }
+
+.btn1-fondoclaro {
+    margin-left: 1%;
+    height: 40px;
+    width: 80px;
+}
