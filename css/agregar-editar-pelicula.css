@@ -3,6 +3,12 @@
     height: 500px;
 }
 
+.div-edit-header {
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-bottom: 3%;
+}
+
 .image-div img,
 button {
     display: block;
@@ -23,7 +29,7 @@ button {
     float: left;
     height: 500px;
     width: 50%;
-    margin-left: -15%;
+    margin-left: 10px;
 }
 
 .left-div {
