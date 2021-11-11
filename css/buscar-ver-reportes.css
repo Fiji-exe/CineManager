@@ -1,0 +1,25 @@
+.sct-graficos-reporte{
+    display: flex;
+}
+
+.contenedor-de-detalles{
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100%;
+}
+
+.div-detalles{
+    background-color: gray;
+    width: 25%;
+    height: 150px;
+}
+
+.div-detalles-link{
+    width: 100%;
+}
+
+.contenido{
+    padding: 20px;
+}

@@ -1,0 +1,26 @@
+.div-title{
+    display: flex;
+    flex-direction: row;
+}
+
+.div-title a{
+    display: flex;
+    color: #950F11;
+    margin: 0 10px;
+}
+
+.sct-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-form-item{
+    padding: 10px 0;
+}
+
+.div-input-container{
+    display: flex;
+    
+}

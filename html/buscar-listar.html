@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineManager</title>
+
+    <link href="../css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../css/general.css" rel="stylesheet" type="text/css" />
+    <link href="../css/buscar-listar.css" rel="stylesheet" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@300&family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="navbar-cliente-iniciado"></div>
+    <div class="contenido">
+        <h1>Buscador</h1>
+        <p> Este es un buscador universal. Haz click al menu de filtros, <br> elige que deseas buscar y luego podras ingresar los terminos o palabras clave en el buscador </p>
+
+        <div class="inputs-container">
+            <div class="input-container input-default input-idtype">
+                <select class="input-container input-short" id="selector-filtros-dropdown">
+            <option value="" disabled selected>Filtros</option>
+            <option value="cart">Carteleras</option>
+            <option value="peli">Peliculas</option>
+            <option value="cine">Cines</option>
+            <option value="" disabled>-- Super Admin --</option>
+            <option value="user">Usuarios</option>
+            <option value="sala">Salas</option>
+            <option value="tsla">Tipos de Sala</option>
+            <option value="tasi">Tipos de asiento</option>
+            <option value="cate">Categoria Peliculas</option>  
+            
+    </select>
+            </div>
+
+            <div class="dual-inputs">
+                <div class="input-container input-default input-string">
+                    <input id="input-filtros-texto" type="text" placeholder="Elija un filtro. Luego ingrese aquí palabra clave" />
+                </div>
+            </div>
+            <button class="btn1-fondoclaro" id="boton-buscar-filtros"> Buscar </button>
+        </div>
+
+        <table class="tabla-uno" id="tabla-uno">
+            <thead>
+                <tr>
+                    <th>- - - - -</th>
+                    <th>- - - - -</th>
+                    <th>- - - - -</th>
+                    <th>- - - - -</th>
+                    <th>- - - - -</th>
+                    <th>- - - - -</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>.</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>.</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>.</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>.</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="footer-cliente"></div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/navbar-footer.js"></script>
+    <script src="../js/buscar-listar.js"></script>
+</body>
+
+</html>

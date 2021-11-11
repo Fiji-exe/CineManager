@@ -1,0 +1,40 @@
+.header-principal .item-left {
+    display: flex;
+    margin-left: 0;
+    margin-right: auto;
+    font-family: 'Nunito';
+    font-size: 30px;
+}
+
+.header-principal .item-right {
+    display: inline-flex;
+    padding: 5px;
+}
+
+.contenedor-centro {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-funcion {
+    flex-wrap: wrap;
+    min-width: 25%;
+    border: 3px solid #070F1A;
+    border-radius: 30px;
+    padding: 3%;
+    margin: 10px;
+    font-size: 25px;
+    font-family: "Nunito";
+}
+
+.card-funcion-admin {
+    flex-wrap: wrap;
+    min-width: 25%;
+    border: 3px solid #070F1A;
+    border-radius: 30px;
+    padding: 3%;
+    margin: 10px;
+    font-size: 25px;
+    font-family: "Nunito";
+    background-color: grey;
+}

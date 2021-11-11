@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineManager</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/agregar-editar-pelicula.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@300&family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar-cliente-iniciado"></div>
+    <div class="contenido">
+        <section class="sct-edit-rooms">
+            <div class="div-edit-header">
+                <h1>Agregar o editar película</h1>
+                <div class="form-text">
+                    <p>Haz click al menú de filtros, elige que deseas buscar y luego ingresa los términos o palabras clave en el buscador.</p>
+                </div>
+            </div>
+
+            <div class="main-div">
+                <div class="left-div">
+                    <div class="image-div">
+                        <img src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640" alt="">
+                        <input id='fileid' type='file' hidden/>
+                        <button class="btn1-fondoclaro" id="btn_cargar_imagen">Cargar imagen</button>
+                    </div>
+                </div>
+
+                <div class="right-div">
+                    <form>
+                        <div class="input-container input-default input-code">
+                            <input id="txt-id-cartelera" type="text" placeholder="Título de la películas" />
+                        </div>
+
+                        <div class="input-container input-default">
+                            <select name="Pelicula" id="select-pelicula">
+                                <option value="0">Drama</option>
+                                <option value="1">Acción</option>
+                                <option value="2">Suspenso</option>
+                            </select>
+                        </div>
+                        <a href="html/editar-categorias.html
+                        ">Ir a Agregar/Editar categoría de película</a>
+
+                        <div class="input-container  input-code">
+                            <textarea name="" id="txt-descripcion" cols="30" rows="10" placeholder="Descripción o sinopsis"></textarea>
+
+                            <div class="input-short form-text">
+                                <input id="txt-duracion" type="text" placeholder="Duración" />
+                                <input id="txt-anno_pelicula" type="text" placeholder="Año de película" />
+                                <input id="txt-idioma_audio" type="text" placeholder="Idioma audio" />
+                                <input id="txt-idioma_subtitulos" type="text" placeholder="Idioma subtitulos" />
+                            </div>
+
+                            <div class="input-short">
+                                <input id="txt-actores" type="text" placeholder="Actores" style="width: 100%;" />
+                            </div>
+
+                            <div class="button-div">
+                                <button class="btn1-fondoclaro">Crear y guardar</button>
+                                <button class="btn1-fondoclaro">Sobreescribir</button>
+                                <button class="btn1-fondoclaro">Eliminar</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <div class="footer-admin"></div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="editar-carteleras.js"></script>
+    <script src="/js/navbar-footer.js"></script>
+    <script src="./agregar-editar-pelicula.js"></script>
+    <script src="/js/navbar-footer.js"></script>
+
+</body>
+
+</html>

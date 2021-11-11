@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineManager</title>
+
+    <link href="../css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../css/general.css" rel="stylesheet" type="text/css" />
+    <link href="../css/flujo-reservas.css" rel="stylesheet" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito:wght@300&family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="navbar-cliente-iniciado"></div>
+    <section class="section-step-active section-step-one">
+        <section class="section-left">
+            <h1>Reserva tus boletos</h1>
+            <p> Elige la cantidad de boletos que necesitas reservar </p>
+            <div class="img-container"> <img src="/media/joker.jpg" alt=""> </div>
+
+            <div class="step-container">
+                <p class="step-one-icon step-active"> 1 Entradas </p>
+                <p class="step-two-icon step-inactive"> 2 Asientos </p>
+                <p class="step-three-icon step-inactive"> 3 Pago </p>
+                <p class="step-four-icon step-inactive"> 4 Factura </p>
+            </div>
+        </section>
+
+        <section class="section-right">
+            <table class="tabla header-tabla" id="tabla-cartelera-header">
+                <tbody>
+                    <tr>
+                        <td>San Jose</td>
+                        <td>Cine Magaly</td>
+                        <td>Joker</td>
+                    </tr>
+                    <tr>
+                        <td>Sala Regular</td>
+                        <td>13:00</td>
+                        <td>1300 colones</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tabla body-tabla" id="tabla-cartelera-body">
+                <tbody>
+                    <tr>
+                        <td>Regular</td>
+                        <td class="quant-modifier" id="quant-modifier-minus-reg">-</td>
+                        <td id="quant-total-reg">0</td>
+                        <td class="quant-modifier" id="quant-modifier-plus-reg">+</td>
+                    </tr>
+                    <tr>
+                        <td>Niño</td>
+                        <td class="quant-modifier" id="quant-modifier-minus-kid">-</td>
+                        <td id="quant-total-kid">0</td>
+                        <td class="quant-modifier" id="quant-modifier-plus-kid">+</td>
+                    </tr>
+                    <tr>
+                        <td>Adulto mayor</td>
+                        <td class="quant-modifier" id="quant-modifier-minus-adu">-</td>
+                        <td id="quant-total-adu">0</td>
+                        <td class="quant-modifier" id="quant-modifier-plus-adu">+</td>
+                    </tr>
+                    <tr>
+                        <td>Total Entradas</td>
+                        <td></td>
+                        <td id="quant-total">0</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Precio Total</td>
+                        <td></td>
+                        <td id="price-total">0</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+
+    <section class="section-step-inactive section-step-two ">
+        <section class="section-left">
+            <h1>Selecciona tus Asientos</h1>
+            <p> Elige los asientos del cine </p>
+            <div class="img-container"> <img src="/media/joker.jpg" alt=""> </div>
+
+            <div class="step-container">
+                <p class="step-one-icon step-completed"> 1 Entradas </p>
+                <p class="step-two-icon step-active"> 2 Asientos </p>
+                <p class="step-three-icon step-inactive"> 3 Pago </p>
+                <p class="step-four-icon step-inactive"> 4 Factura </p>
+            </div>
+        </section>
+
+        <section class="section-right">
+            <div class="leyenda">
+                <p> Leyenda de butacas: </p>
+                <div>
+                    <p>Disponible</p> <span class="material-icons chair-button chair-disabled" style="color: #00DB9D">  chair </span> </div>
+                <div>
+                    <p>Ocupada </p> <span class="material-icons chair-button chair-disabled" style="color: #D65771"> chair </span></div>
+                <div>
+                    <p>Ley 7600 </p> <span class="material-icons chair-button chair-disabled" style="color: #4A86E8"> chair </span></div>
+                <div>
+                    <p>Deshabilitada </p> <span class="material-icons chair-button chair-disabled" style="color: #CACACA"> chair </span></div>
+            </div>
+            <table class="tabla-asientos" id="tabla-asientos">
+            </table>
+            <div>
+                <p id="ui-max-seats"> Asientos restantes : 0 </p>
+            </div>
+        </section>
+    </section>
+
+    <section class="section-step-inactive section-step-three">
+        <section class="section-left">
+            <h1>Selecciona el método de pago </h1>
+            <p> Selecciona tu método de pago. Si no tienes ningún método de pago <br> registrado, haz click en "Ir a registrar método de pago"</p>
+            <div class="img-container"> <img src="/media/joker.jpg" alt=""> </div>
+
+            <div class="step-container">
+                <p class="step-one-icon step-completed"> 1 Entradas </p>
+                <p class="step-two-icon step-completed"> 2 Asientos </p>
+                <p class="step-three-icon step-active"> 3 Pago </p>
+                <p class="step-four-icon step-inactive"> 4 Factura </p>
+            </div>
+        </section>
+
+        <section class="section-right">
+            <form>
+                <div>
+                    <input type="radio" id="tar1" name="form-select-paycard" checked=true>
+                    <label for="tar1">Visa *** 6859</label>
+                </div>
+                <div>
+                    <input type="radio" id="tar2" name="form-select-paycard">
+                    <label for="tar2">Mastercard *** 2034 </label>
+                </div>
+                <div>
+                    <input type="radio" id="tar3" name="form-select-paycard">
+                    <label for="tar3">AmerExp *** 1107</label>
+                </div>
+                <div>
+                    <a href="/html/registro-pago.html">Ir a registrar método de pago</a>
+                </div>
+                <div>
+                    <input type="checkbox" id="tyc-checkbox" name="form-select-paycard">
+                    <label for="tyc-checkbox"><a href="/html/tyc.html">He leído y acepto los términos y condiciones de CineManager</a></label>
+                </div>
+            </form>
+        </section>
+    </section>
+
+    <section class="section-step-inactive section-step-four">
+        <section class="section-left">
+            <h1>Factura </h1>
+            <p> Vea el comprobante de pago a continuacion </p>
+            <div class="img-container"> <img src="/media/joker.jpg" alt=""> </div>
+
+            <div class="step-container">
+                <p class="step-one-icon step-completed"> 1 Entradas </p>
+                <p class="step-two-icon step-completed"> 2 Asientos </p>
+                <p class="step-three-icon step-completed"> 3 Pago </p>
+                <p class="step-four-icon step-active"> 4 Factura </p>
+            </div>
+        </section>
+
+        <section class="section-right">
+            <table class="tabla body-tabla" id="tabla-cartelera-body">
+                <tbody>
+                    <tr>
+                        <td>FACTURA </td>
+                        <td></td>
+                        <td></td>
+                        <td>CineManager</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Cine Magaly</td>
+                        <td>San Jose</td>
+                        <td>Joker</td>
+                        <td>Hora 13:00</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Asientos</td>
+                        <td>Asiento 5,3</td>
+                        <td>Asiento 6,3</td>
+                        <td>Asiento 7,3</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Precio Total</td>
+                        <td></td>
+                        <td> 9000 </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+
+
+    <div>
+        <button class="btn1-fondoclaro" id="button-next"> Continuar </button>
+    </div>
+
+    <div class="footer-cliente"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/navbar-footer.js"></script>
+    <script src="../js/flujo-reservas.js"></script>
+</body>
+
+</html>
