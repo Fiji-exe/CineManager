@@ -39,16 +39,20 @@ let listaPeliculas = [{
         'imagen': '',
         'duracion': '90',
         'categoria': 'animacion',
-        'sinopsis': 'W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our terms of use, cookie and privacy policy.',
-        'idioma': 'ingles'
+        'sinopsis': 'En el siglo XXIX, el consumismo desenfrenado, la codicia empresarial y la negligencia ambiental han convertido al planeta Tierra en un páramo lleno de basura; la humanidad no se encuentra por ningún lado y ha sido evacuada por la megacorporación Buy-n-Large (BnL) en gigantes naves generacionales siete siglos antes. ',
+        'idioma': 'ingles',
+        'subtitulo': 'español',
+        'perfil': '<a href="/html/perfil-pelicula.html">Ir a perfil</a>'
     },
     {
         'titulo': 'Heathers',
         'imagen': '',
         'duracion': '120',
         'categoria': 'musical',
-        'sinopsis': 'W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our terms of use, cookie and privacy policy.',
-        'idioma': 'portugues'
+        'sinopsis': 'Verónica Sawyer, de 17 años, es una de las muchachas más populares en el Instituto Westerburg en Sherwood, Ohio. Además de Verónica, la pandilla popular consiste en tres muchachas ricas y hermosas con el mismo nombre de pila: la líder, Heather Chandler; Heather McNamara, una maleable animadora, y Heather Duke; una bulímica aficionada a la literatura.',
+        'idioma': 'portugues',
+        'subtitulo': 'no',
+        'perfil': '<a href="/html/perfil-pelicula.html">Ir a perfil</a>'
     },
 
 ]
@@ -64,14 +68,14 @@ let listaCines = [{
         'codigo': 'ciis-400',
         'ubicacion': 'moravia',
         'margen': '15%',
-        'perfil': '(ruta a perfil.html)'
+        'perfil': '<a href="/html/perfil-cadena.html">Ir a perfil</a>'
     },
     {
         'cadena': 'Cine Magaly',
         'codigo': 'Cily-074',
         'ubicacion': 'san carlos',
         'margen': '11%',
-        'perfil': '(ruta a perfil.html)'
+        'perfil': '<a href="/html/perfil-cadena.html">Ir a perfil</a>'
     }
 ]
 let listaUsuarios = [{
@@ -105,31 +109,56 @@ let listaSalas = [{
     'btotal': 'Butacas Totales',
     'estado': 'Estado de Sala',
     'costo': 'Costo de Sala',
-    'tipo': 'Tipo de sala'
+    'tipo': 'Tipo de sala',
+    'editar': 'Editar'
 }, {
     'codigo': 'sl-ciis-4411',
-    'cine': 'Cinepolisco',
+    'cine': 'Cinepolis',
     'btotal': '24',
     'estado': 'activa',
     'costo': '1500',
-    'tipo': 'regular'
+    'tipo': 'regular',
+    'editar': '<a href="/html/editar-salas.html">Editar</a>'
+
 }, {
-    'codigo': 'Codigo de Sala',
-    'cine': 'Cadena de Cine',
-    'btotal': 'Butacas Totales',
-    'estado': 'Estado de Sala',
-    'costo': 'Costo de Sala',
-    'tipo': 'imax'
+    'codigo': 'sl-ciar-1647',
+    'cine': 'Cinemark',
+    'btotal': '12',
+    'estado': 'inactiva',
+    'costo': '1300',
+    'tipo': 'imax',
+    'editar': '<a href="/html/editar-salas.html">Editar </a>'
+}];
+
+let listaTipoSala = [{
+    'nombre': 'Nombre de Categoria',
+    'editar': 'Ir a editar'
+}, {
+    'nombre': 'Regular',
+    'editar': '<a href="/html/editar-tipos-salas.html">Editar</a>'
+}, {
+    'nombre': 'IMAX',
+    'editar': '<a href="/html/editar-tipos-salas.html">Editar</a>'
+}];
+let listaTipoAsiento = [{
+    'nombre': 'Nombre de Categoria',
+    'editar': 'Ir a editar'
+}, {
+    'nombre': 'Regular',
+    'editar': '<a href="/html/editar-tipos-de-asiento.html">Editar</a>'
+}, {
+    'nombre': 'Asiento VIP',
+    'editar': '<a href="/html/editar-tipos-de-asiento.html">Editar</a>'
 }];
 let listaCategorias = [{
     'nombre': 'Nombre de Categoria',
     'editar': 'Ir a editar'
 }, {
     'nombre': 'accion',
-    'editar': '(editar URL)'
+    'editar': '<a href="/html/editar-categorias.html">Editar</a>'
 }, {
     'nombre': 'animacion',
-    'editar': '(editar URL)'
+    'editar': '<a href="/html/editar-categorias.html">Editar</a>'
 }];
 
 const elem_fitro = document.querySelector('#selector-filtros-dropdown');
@@ -170,10 +199,10 @@ const js_checar_inputs = () => {
                 buscar(listaSalas);
                 break;
             case 'tsla':
-                buscar(listaCines);
+                buscar(listaTipoSala);
                 break;
             case 'tasi':
-                buscar(listaCines);
+                buscar(listaTipoAsiento);
                 break;
             case 'cate':
                 buscar(listaCategorias);
