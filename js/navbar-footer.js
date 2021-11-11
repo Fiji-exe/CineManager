@@ -22,7 +22,7 @@ const fillNavFooter = () => {
                     </div>    
                     <div class="item">
                     <span class="material-icons md-light">event_seat</span>
-                    <a class="item" href="../html/flujo-reservas.html">Reservas</a>
+                    <a class="item" href="../html/homepagecarteleras.html">Reservas</a>
                     </div>
                     <div class="push">                
                     <div class="item">
@@ -53,7 +53,7 @@ const fillNavFooter = () => {
                         </div>    
                         <div class="item">
                         <span class="material-icons md-light">event_seat</span>
-                        <a class="item" href="../html/flujo-reservas.html">Reservas</a>
+                        <a class="item" href="../html/homepagecarteleras.html">Reservas</a>
                         </div>
     
                         <div class="push">

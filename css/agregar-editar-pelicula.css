@@ -1,0 +1,51 @@
+.image-div {
+    width: 50%;
+    height: 500px;
+}
+
+.image-div img,
+button {
+    display: block;
+}
+
+.image-div img {
+    margin: 0 auto 20px auto;
+    height: 70%;
+    width: 100%;
+}
+
+.image-div button {
+    float: right;
+    margin: 0;
+}
+
+.right-div {
+    float: left;
+    height: 500px;
+    width: 50%;
+    margin-left: -15%;
+}
+
+.left-div {
+    float: left;
+}
+
+a {
+    display: inline-block;
+    margin-bottom: 1%;
+}
+
+.input-short {
+    margin-top: 2%;
+    width: 100%;
+}
+
+.button-div {
+    margin-top: 3%;
+    margin: 2% auto 0 auto;
+    text-align: center;
+}
+
+.button-div button {
+    display: inline-block;
+}

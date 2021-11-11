@@ -16,6 +16,12 @@ select {
     border: 1px solid black;
 }
 
+.input-idtype {
+    margin-bottom: 3%;
+    height: 35px;
+    width: 10%;
+}
+
 .tabla-uno {
     background: #FFFFFF;
     margin: 0% 0% 3% 2%;

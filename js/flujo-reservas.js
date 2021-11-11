@@ -51,24 +51,53 @@ const js_go_next_step = () => {
     switch (stepflag) {
         case 1:
             seat_amount_selected = parseInt(document.getElementById("quant-total").innerHTML, 10);
-            document.getElementsByClassName("section-step-one")[0].style.display = "none";
-            document.getElementsByClassName("section-step-two")[0].classList.remove("section-step-inactive");
-            document.getElementsByClassName("section-step-two")[0].classList.add("section-step-active");
-            document.getElementById("ui-max-seats").innerHTML = `Asientos restantes : ${seat_amount_selected}`
-            js_create_seats(config_total_rows, config_total_colums);
-            stepflag = 2;
+            if (seat_amount_selected > 0) {
+                document.getElementsByClassName("section-step-one")[0].style.display = "none";
+                document.getElementsByClassName("section-step-two")[0].classList.remove("section-step-inactive");
+                document.getElementsByClassName("section-step-two")[0].classList.add("section-step-active");
+                document.getElementById("ui-max-seats").innerHTML = `Asientos restantes : ${seat_amount_selected}`
+                js_create_seats(config_total_rows, config_total_colums);
+                stepflag = 2;
+            } else {
+                Swal.fire({
+                    'icon': 'warning',
+                    'title': 'Seleccion invalida',
+                    'text': 'Debe comprar almenos 1 boleto',
+                    'confirmButtonText': 'Entendido'
+                });
+            }
             break;
         case 2:
-            document.getElementsByClassName("section-step-two")[0].style.display = "none";
-            document.getElementsByClassName("section-step-three")[0].classList.remove("section-step-inactive");
-            document.getElementsByClassName("section-step-three")[0].classList.add("section-step-active");
-            stepflag = 3;
+            if (seat_amount_selected != 0) {
+                Swal.fire({
+                    'icon': 'warning',
+                    'title': 'Seleccion invalida',
+                    'text': `Aun quedan  ${seat_amount_selected}  asientos sin seleccionar`,
+                    'confirmButtonText': 'Entendido'
+                });
+
+            } else {
+                document.getElementsByClassName("section-step-two")[0].style.display = "none";
+                document.getElementsByClassName("section-step-three")[0].classList.remove("section-step-inactive");
+                document.getElementsByClassName("section-step-three")[0].classList.add("section-step-active");
+                stepflag = 3;
+
+            }
             break;
         case 3:
-            document.getElementsByClassName("section-step-three")[0].style.display = "none";
-            document.getElementsByClassName("section-step-four")[0].classList.remove("section-step-inactive");
-            document.getElementsByClassName("section-step-four")[0].classList.add("section-step-active");
-            stepflag = 4;
+            if (document.getElementById("tyc-checkbox").checked) {
+                document.getElementsByClassName("section-step-three")[0].style.display = "none";
+                document.getElementsByClassName("section-step-four")[0].classList.remove("section-step-inactive");
+                document.getElementsByClassName("section-step-four")[0].classList.add("section-step-active");
+                stepflag = 4;
+            } else {
+                Swal.fire({
+                    'icon': 'warning',
+                    'title': 'Seleccion incompleta',
+                    'text': `Marque la casetilla si acepta los terminos y condiciones`,
+                    'confirmButtonText': 'Entendido'
+                });
+            }
             break;
         case 4:
             window.location = '../html/homepage-usuario.html';
