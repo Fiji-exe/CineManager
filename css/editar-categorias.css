@@ -1,0 +1,17 @@
+.padding{
+    padding: 10px 0;
+}
+
+.btn-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-instruction{
+ width: 10%;
+}
+
+p{
+    font-size: 10px;
+    margin: 10px 0;
+}

@@ -1,0 +1,70 @@
+h1 {
+    font-family: "Oswald";
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2%;
+}
+
+.contenedor-principal {
+    display: flex;
+}
+
+.contenedor-principal img {
+    max-width: 200px;
+    margin: 3px;
+}
+
+.contenedor-centro {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 35%;
+}
+
+.input-box {
+    margin: 2%;
+    padding: 2%;
+    width: 70%;
+}
+
+.input-box-compuesto {
+    margin: 2%;
+    padding: 2%;
+}
+
+.input-box-compuesto form {
+    display: inline;
+}
+
+.contenedor-der {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 35%;
+}
+
+.card-botones {
+    display: flex;
+    margin-top: 35%;
+}
+
+.card-botones button {
+    margin: 15px;
+}
+
+input {
+    padding: 3px;
+    margin: 3px;
+}
+
+.notice {
+    margin: 2%;
+    padding: 2%;
+    font-family: 'Nunito';
+    font-size: 16px;
+    border: 1px solid #070F1A;
+    border-radius: 3px;
+}
+
+h2 {
+    font-family: 'Nunito';
+    font-size: 16px;
+}

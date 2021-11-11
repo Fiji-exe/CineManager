@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Editar tipos de sala</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/editar-tipos-salas.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="navbar-admin-iniciado"></div>
+
+  <div class="contenido">
+      <main>
+        <div class="padding">
+        <h1>Agregar o editar tipos de salas</h1>
+        <p>Escriba un tipo de sala existente o uno nuevo y a continuacion seleccione una de las dos opciones</p>
+        </div>
+        <div class="padding input-container input-default">
+        <input type="text" name="" id="txt-categoria" placeholder="Tipo de sala" class=""> 
+        </div>
+        <div class="padding btn-container">
+          <div class="btn-instruction">
+            <button class="btn1-fondoclaro" id="btn-add">Crear y guardar</button>
+          </div>
+          <div class="btn-instruction">
+            <button class="btn1-fondoclaro">Sobrescribir</button>
+            <p>Utilice esta opcion cuando este editando una categoria ya existente</p>
+          </div>
+          <div class="btn-instruction">
+            <button class="btn1-fondoclaro" id="btn-remove">Eliminar</button>
+          </div>
+        </div>
+      </main>  
+  </div>
+
+  <div class="footer-admin"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/navbar-footer.js"></script>
+    <script src="/js/editar-tipos-salas.js"></script>
+  </body>
+</html>
