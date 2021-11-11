@@ -131,7 +131,7 @@ let listaSalas = [{
 }];
 
 let listaTipoSala = [{
-    'nombre': 'Nombre de Categoria',
+    'nombre': 'Nombre de Tipo de Sala',
     'editar': 'Ir a editar'
 }, {
     'nombre': 'Regular',
@@ -141,7 +141,7 @@ let listaTipoSala = [{
     'editar': '<a href="/html/editar-tipos-salas.html">Editar</a>'
 }];
 let listaTipoAsiento = [{
-    'nombre': 'Nombre de Categoria',
+    'nombre': 'Nombre de Tipo de Asiento',
     'editar': 'Ir a editar'
 }, {
     'nombre': 'Regular',
