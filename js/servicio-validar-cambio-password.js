@@ -32,8 +32,9 @@ const validar = () => {
             'icon': 'info',
             'title': 'Su contraseña ha sido actualizada',
             'confirmButtonText': 'Entendido'
+        }).then(() => {
+            window.location.href = 'homepage-usuario.html';
         });
-        window.location.href = 'homepage-usuario.html';
     }
 
 };
