@@ -1,69 +1,54 @@
-.btn1-fondooscuro {
-    background: #BAC1CA;
-    border: 2px solid #BAC1CA;
-    color: #070F1A;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: 'Lora';
-}
-
-.contendedor-principal {
+.sct-recover {
+    background-image: url(../media/landing-page.png);
+    background-size: cover;
     display: flex;
-    flex-flow: row wrap;
-}
-
-.contenedor-izq {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.contenedor-izq-interno {
-    border: 1px solid #070F1A;
-    border-radius: 5px;
-    margin: 10%;
-    font-size: 25px;
-    font-family: "Nunito";
-    padding: 10%;
-    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    padding: 0px 30px;
 }
 
 .contenedor-der {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.descripcion {
-    display: flex;
-    flex-flow: row wrap;
-    border: 1px solid #070F1A;
+    background-color: #11111180;
+    color: #fff;
+    padding: 5px 60px;
     border-radius: 5px;
-    font-family: "Nunito";
-    font-size: 25px;
-    margin: 3%;
-    padding: 2%;
-    text-align: center;
+    max-width: 30%;
 }
 
-.contenedor-der-interno {
-    display: flex;
-    flex-flow: row wrap;
+.contenedor-der p {
+    color: #fff;
+    ;
     margin: 3%;
-    padding: 20%;
-    background-image: url('/media/img.png');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-.registrarse {
-    width: 100%;
-    border: 1px solid #070F1A;
-    padding: 10px;
-    margin: 5px;
+.contenedor-izq {
+    background-color: #11111180;
+    color: #fff;
+    padding: 5px 60px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.contenedor-izq p {
+    color: #fff;
+    ;
+    margin: 3%;
+    max-width: 50%;
 }
 
 .registrarse button {
+    margin: 3%;
+    width: 50%;
     position: relative;
-    left: 50%;
+    left: 5%;
+}
+
+.descripcion {
+    margin: 1%;
+}
+
+span {
+    color: #BB9526;
+    font-weight: bold;
 }

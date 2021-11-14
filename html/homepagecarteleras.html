@@ -14,57 +14,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
 
 
 </head>
 
 <body>
-    <div class="busqueda">
-        <input type="text" placeholder="Ubicación..">
-        <input type="text" placeholder="Búsqueda..">
-    </div>
+
 
 
     <div class="navbar-cliente-iniciado"></div>
     <div class="contenedor-principal">
         <div class="contenedor-izq">
-            <div class="categorias"> Categorías
-                <ul>
 
-                    <li> <a href="">Drama</a>
-                    </li>
 
-                    <li> <a href="">Acción</a>
-                    </li>
+            <div class="filtros">
+                <p>Filtros</p>
 
-                    <li> <a href="">Comedia</a>
-                    </li>
-
-                    <li> <a href="">Terror</a>
-                    </li>
-
-                    <li> <a href="">Musical</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="filtros"> Filtros
-                <div class="price-slider"> Precio
-                    <input type="range" min="0" max="10000" value="5000" class="slider">
-                </div>
                 <div class="input-container-date"> Fecha
                     <input type="date" placeholder="Fecha" />
                 </div>
                 <div class="salas">
-                    <label for="salas">Tipo de Sala:</label>
+                    <label for="salas">Cine</label>
 
                     <select name="sala" id="sala">
-            <option value="tipo1">Sala tipo 1</option>
-            <option value="tipo2">Sala tipo 2</option>
-            <option value="tipo3">Sala tipo 3</option>
-            <option value="tipo4">Sala tipo 4</option>
+            <option value="tipo1">Magaly</option>
+            <option value="tipo2">CCN</option>
+            <option value="tipo3">CineMark </option>
+            <option value="tipo4">Cinepolis</option>
             </select>
+                </div>
+                <div class="salas">
+                    <button class="btn1-fondoclaro" onclick="buscarLista()">Buscar</button>
                 </div>
             </div>
         </div>
@@ -76,11 +57,9 @@
                 </div>
                 <div class="pelicula-card">
                     <div class="titulo-pelicula"> Vamos con Pancho Villa
-
+                        <button class="btn1-fondoclaro" onclick="comprar()"> Comprar</button>
                     </div>
-                    <div class="comprar"><a href="../html/flujo-reservas.html">Comprar</a>
 
-                    </div>
                     <div class="review">
                         <p>Cadena:
                             <a href="../html/perfil-cadena.html">Cinepolis</a>
@@ -93,7 +72,13 @@
                             Vámonos con Pancho Villa toma lugar en el Norte de México durante la fase armada de la Revolución (1910 hasta 1923).5​ Se basa en la lucha revolucionaria de la División del Norte, comandada por el general Doroteo Arango, conocido como Francisco “Pancho”
                             Villa.
                         </p>
-
+                        <div class="div-calificacion-comentario"> Calificación
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons-outlined">star_rate </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -105,11 +90,9 @@
                 </div>
                 <div class="pelicula-card">
                     <div class="titulo-pelicula"> <a href="../html/perfil-pelicula.html">Joker</a>
-
+                        <button class="btn1-fondoclaro" onclick="comprar()"> Comprar</button>
                     </div>
-                    <div class="comprar"><a href="../html/flujo-reservas.html">Comprar</a>
 
-                    </div>
                     <div class="review">
                         <p>Cadena:
                             <a href="../html/perfil-cadena.html">Cinepolis</a>
@@ -122,7 +105,13 @@
                             Arthur Fleck es un comediante fracasado, con una vida desgraciada, que solo tiene en el mundo a su madre... y su venganza cuando se cansa de ser golpeado y humillado por la vida. La primera descripción oficial de "Joker" decía que en la película "exploraremos
                             la vida de un hombre despreciado por la sociedad, donde no solo trataremos de adentrarnos en su carácter energético, sino también de contar una historia más grande".
                         </p>
-
+                        <div class="div-calificacion-comentario"> Calificación
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons-outlined">star_rate </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -134,25 +123,24 @@
                 </div>
                 <div class="pelicula-card">
                     <div class="titulo-pelicula"> Wild Bunch
-
+                        <button class="btn1-fondoclaro" onclick="comprar()"> Comprar</button>
                     </div>
-                    <div class="comprar"><a href="../html/flujo-reservas.html">Comprar</a>
-
-                    </div>
-                    <div class="review">
-                        <p>Cadena:
-                            <a href="../html/perfil-cadena.html">Cinepolis</a>
-                        </p>
-
-                    </div>
-
+                    <p>Cadena:
+                        <a href="../html/perfil-cadena.html">Cinepolis</a>
+                    </p>
                     <div class="sinopsis"> Sinópsis
                         <p>
                             Nueve soldados se acercan cabalgando a una ciudad. Pasan delante de unos niños que torturan a un escorpión dándoselo de comer a las hormigas. Un predicador amenaza con el infierno a los borrachos. Pronto sus fieles inician un desfile cantando por las
                             calles. Los soldados desmontan y entran en las oficinas del ferrocarril del sur de Texas. Son en realidad atracadores, y el gran golpe que esperaban dar se convierte en una trampa, ya que un grupo de cazarrecompensas apostados
                             en las azoteas de los edificios los está esperando para acabar con ellos.
                         </p>
-
+                        <div class="div-calificacion-comentario"> Calificación
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons-outlined">star_rate </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -164,11 +152,9 @@
                 </div>
                 <div class="pelicula-card">
                     <div class="titulo-pelicula"> The Godfather
-
+                        <button class="btn1-fondoclaro" onclick="comprar()"> Comprar</button>
                     </div>
-                    <div class="comprar"><a href="../html/flujo-reservas.html">Comprar</a>
 
-                    </div>
                     <div class="review">
                         <p>Cadena:
                             <a href="../html/perfil-cadena.html">Cinepolis</a>
@@ -183,7 +169,13 @@
                             presencia del famoso cantante Johnny Fontane. Los hijos de don Vito, Sonny, Fredo y Michael, también están presentes en la celebración familiar, así como los hombres de confianza del Don, los capos Sal Tessio y Peter Clemenza,
                             y el consigliere Tom Hagen
                         </p>
-
+                        <div class="div-calificacion-comentario"> Calificación
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons-outlined">star_rate </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -195,11 +187,9 @@
                 </div>
                 <div class="pelicula-card">
                     <div class="titulo-pelicula"> The Shawshank Redemption
-
+                        <button class="btn1-fondoclaro" onclick="comprar()"> Comprar</button>
                     </div>
-                    <div class="comprar"> <a href="../html/flujo-reservas.html">Comprar</a>
 
-                    </div>
                     <div class="review">
                         <p>Cadena:
                             <a href="../html/perfil-cadena.html">Cinepolis</a>
@@ -212,7 +202,13 @@
                             En 1947, Andrew «Andy» Dufresne (Tim Robbins), vicepresidente de un importante banco de Portland, Maine, es juzgado por el homicidio de su esposa y de un hombre con quien ella tenía una aventura. Aunque insiste con su inocencia, las pruebas son motivo
                             suficiente para que el juez lo condene a cumplir dos cadenas perpetuas en la prisión estatal de Shawshank.
                         </p>
-
+                        <div class="div-calificacion-comentario"> Calificación
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons">star</span>
+                            <span class="material-icons-outlined">star_rate </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -224,6 +220,7 @@
     </div>
     <div class="footer-cliente"></div>
     <script src="/js/navbar-footer.js"></script>
+    <script src="../js/servicio-general.js"></script>
 </body>
 
 </html>

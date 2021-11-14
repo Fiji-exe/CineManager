@@ -36,7 +36,9 @@ function acercaDe() {
     window.location = '/landing-page-equipo/html/landing-page-equipo.html';
 }
 
-
+function comprar() {
+    window.location = '../html/flujo-reservas.html';
+}
 
 function salir() {
     console.log("salir")
