@@ -40,8 +40,8 @@ const js_celda_click = (celda) => {
         } else {
             Swal.fire({
                 'icon': 'warning',
-                'title': 'Maximos asientos seleccionados',
-                'text': 'Deseleccione otras butacas para cambiar su seleccion',
+                'title': 'Máximos asientos seleccionados',
+                'text': 'Deseleccione otras butacas para cambiar su selección',
                 'confirmButtonText': 'Entendido'
             });
         }
@@ -61,7 +61,7 @@ const js_go_next_step = () => {
             } else {
                 Swal.fire({
                     'icon': 'warning',
-                    'title': 'Seleccion invalida',
+                    'title': 'Selección inválida',
                     'text': 'Debe comprar almenos 1 boleto',
                     'confirmButtonText': 'Entendido'
                 });
@@ -71,7 +71,7 @@ const js_go_next_step = () => {
             if (seat_amount_selected != 0) {
                 Swal.fire({
                     'icon': 'warning',
-                    'title': 'Seleccion invalida',
+                    'title': 'Selección inválida',
                     'text': `Aun quedan  ${seat_amount_selected}  asientos sin seleccionar`,
                     'confirmButtonText': 'Entendido'
                 });
@@ -93,8 +93,8 @@ const js_go_next_step = () => {
             } else {
                 Swal.fire({
                     'icon': 'warning',
-                    'title': 'Seleccion incompleta',
-                    'text': `Marque la casetilla si acepta los terminos y condiciones`,
+                    'title': 'Selección incompleta',
+                    'text': `Marque la casetilla si acepta los términos y condiciones`,
                     'confirmButtonText': 'Entendido'
                 });
             }
