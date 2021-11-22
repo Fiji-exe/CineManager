@@ -13,22 +13,15 @@ const fillNavFooter = () => {
                 </div>
                 <nav>
                     <div class="item">      
-                    <span class="material-icons md-light">home</span>          
-                    <a href="../html/homepage-usuario.html">Inicio</a>
-                    </div>     
-                    <div class="item">
-                    <span class="material-icons md-light">camera_indoor</span>
-                    <a class="item" href="../html/buscar-listar.html">Busqueda</a>
-                    </div>    
-                    <div class="item">
-                    <span class="material-icons md-light">event_seat</span>
-                    <a class="item" href="../html/homepagecarteleras.html">Reservas</a>
-                    </div>
+                        <span class="material-icons">
+                        <a href="landing-page.html">chevron_left</a>
+                        </span>
+                    </div>   
                     <div class="push">                
-                    <div class="item">
-                        <span class="material-icons md-light">account_circle</span>
-                        <a class="item" href="../html/landing-page.html">Cerrar sesion</a>
-                    </div>  
+                        <div class="item">
+                            <span class="material-icons md-light">account_circle</span>
+                            <a class="item" href="../html/landing-page.html">Cerrar sesión</a>
+                        </div>  
                     </div>
                 </nav>    
                 </header>`;
