@@ -15,7 +15,7 @@
 
 body {
     font-size: 16px;
-    font-family: 'Lora';
+    font-family: 'Nunito';
 }
 
 h1 {
@@ -115,7 +115,7 @@ textarea {
 }
 
 .footer .col p {
-    font-family: 'Lora';
+    font-family: 'Nunito';
     font-size: 16px;
     color: #fff;
     padding: 10px 0px 5px 0px;
@@ -141,33 +141,25 @@ textarea {
 */
 
 .btn1-fondoclaro {
-    padding: 10px;
-    margin-right: 50px;
-    /**/
-    border: 2px solid #950F11;
-    border-radius: 5px;
+    /*Position*/
+    padding: 5px 10px 5px 10px;
+    /*Self Decoration*/
+    border: 1px solid transparent;
+    border-radius: 3px;
     background: #950F11;
-    /**/
+    /*Text*/
     font-family: 'Nunito';
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: lighter;
     color: #FFFFFF;
     cursor: pointer;
+    /*Animation*/
+    transition: all 0.3s ease-in;
 }
 
 .btn1-fondoclaro:hover {
-    animation-name: anim-button-hover;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes anim-button-hover {
-    0% {
-        background: linear-gradient(180deg, #950F11 10%, #950F11 80%);
-    }
-    100% {
-        background: linear-gradient(180deg, #950F11 10%, #FFD65B 80%);
-    }
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
 }
 
 
@@ -213,7 +205,7 @@ textarea {
     border: 0;
     font-size: 16px;
     outline: none;
-    font-family: 'Lora';
+    font-family: 'Nunito';
     width: 100%;
 }
 
@@ -228,7 +220,7 @@ textarea {
     border: 0;
     font-size: 16px;
     outline: none;
-    font-family: 'Lora';
+    font-family: 'Nunito';
     width: 100%;
 }
 
@@ -244,8 +236,9 @@ textarea {
 }
 
 ::placeholder {
+    font-family: 'Nunito';
     font-size: 16px;
-    color: #666;
+    color: #666666;
 }
 
 .input-alternate {
@@ -258,7 +251,7 @@ textarea {
     border: 0;
     font-size: 16px;
     outline: none;
-    font-family: 'Lora';
+    font-family: 'Nunito';
 }
 
 .input-short input {
@@ -266,7 +259,7 @@ textarea {
     border: 0;
     font-size: 16px;
     outline: none;
-    font-family: 'Lora';
+    font-family: 'Nunito';
 }
 
 .input-error {
@@ -275,7 +268,7 @@ textarea {
 
 .input-form-blurb {
     font-size: 12px;
-    color: #555;
+    color: #666666;
     text-align: justify;
     text-justify: auto;
     align-items: center;
@@ -284,7 +277,7 @@ textarea {
 .input-form-icon {
     font-size: 20px;
     padding: 0% 5px;
-    color: #333;
+    color: #666666;
     margin-bottom: 10px;
 }
 
@@ -309,7 +302,7 @@ textarea {
     border: 0;
     font-size: 16px;
     outline: none;
-    font-family: 'Lora';
+    font-family: 'Nunito';
 }
 
 .input-short input {
@@ -317,12 +310,12 @@ textarea {
     border: 0;
     font-size: 16px;
     outline: none;
-    font-family: 'Lora';
+    font-family: 'Nunito';
 }
 
 .input-form-blurb {
     font-size: 12px;
-    color: #555;
+    color: #666666;
     text-align: justify;
     text-justify: auto;
     align-items: center;
@@ -331,7 +324,7 @@ textarea {
 .input-form-icon {
     font-size: 20px;
     padding: 0% 5px;
-    color: #333;
+    color: #666666;
     margin-bottom: 10px;
 }
 
