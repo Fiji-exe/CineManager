@@ -141,61 +141,6 @@ textarea {
 */
 
 .btn1-fondoclaro {
-    background: #950F11;
-    border: 2px solid #950F11;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: 'Lora';
-}
-
-.btn1-fondooscuro {
-    background: #BAC1CA;
-    border: 2px solid #BAC1CA;
-    color: #070F1A;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: 'Lora';
-}
-
-.btn2-fondoclaro {
-    background: #BB9526;
-    border: 2px solid #BB9526;
-    color: #070F1A;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: 'Nunito';
-}
-
-.btn2-fondooscuro {
-    background: #950F11;
-    border: 2px solid #950F11;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: 'Nunito';
-}
-
-.btn1-fondoclaro {
-    background: #950F11;
-    border: 2px solid #950F11;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: 'Lora';
-}
-
-.btn1-fondoclaro {
     padding: 10px;
     margin-right: 50px;
     /**/
@@ -203,7 +148,7 @@ textarea {
     border-radius: 5px;
     background: #950F11;
     /**/
-    font-family: 'Lora';
+    font-family: 'Nunito';
     font-size: 1rem;
     font-weight: bold;
     color: #FFFFFF;
@@ -211,9 +156,18 @@ textarea {
 }
 
 .btn1-fondoclaro:hover {
-    border: 2px solid #BAC1CA;
-    background: #BAC1CA;
-    color: #950F11;
+    animation-name: anim-button-hover;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anim-button-hover {
+    0% {
+        background: linear-gradient(180deg, #950F11 10%, #950F11 80%);
+    }
+    100% {
+        background: linear-gradient(180deg, #950F11 10%, #FFD65B 80%);
+    }
 }
 
 
