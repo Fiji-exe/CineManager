@@ -3,7 +3,6 @@ const divNavbarClienteNoIniciado = document.querySelector(".navbar-cliente-no-in
 const divNavbarAdminIniciado = document.querySelector(".navbar-admin-iniciado");
 const divNavbarAdminNoIniciado = document.querySelector(".navbar-admin-no-iniciado");
 const footerCliente = document.querySelector(".footer-cliente");
-const footerAdmin = document.querySelector(".footer-admin");
 
 const fillNavFooter = () => {
     try { /* Cliente Iniciado */
@@ -91,7 +90,7 @@ const fillNavFooter = () => {
 
     try { /* FOOTER */
         footerCliente.innerHTML = `
-        <footer class="footer">
+        <footer>
                <div class="contain">
                   <div class="col">
                      <p>Cine Manager</p>
