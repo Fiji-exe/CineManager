@@ -18,8 +18,12 @@
 
 .contenedor-der p {
     color: #fff;
-    ;
     margin: 3%;
+    font-family: 'Nunito';
+}
+
+.contenedor-izq .titulo {
+    font-family: 'Oswald';
 }
 
 .contenedor-izq {
@@ -32,7 +36,7 @@
 
 .contenedor-izq p {
     color: #fff;
-    ;
+    font-family: 'Nunito';
     margin: 3%;
     max-width: 50%;
 }

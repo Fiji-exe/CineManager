@@ -1,3 +1,7 @@
+.contenido {
+    background-image: url(../media/landing-page.jpg);
+}
+
 .tabla-historial {
     background: #FFFFFF;
     /* border-collapse: collapse; */
