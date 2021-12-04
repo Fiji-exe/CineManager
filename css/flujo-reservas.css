@@ -1,12 +1,10 @@
-.section-step-inactive {
-    display: none;
-    height: 0px;
-    width: 0px;
-}
-
 .container {
     background-image: url(../media/background2.jpg);
     background-size: cover;
+}
+
+.section-step-inactive {
+    display: none;
 }
 
 .section-step-active {
@@ -16,15 +14,31 @@
     color: #FFFFFF;
 }
 
-.section-left {
+.section-title {
     display: block;
-    padding-top: 1%;
-    padding-left: 3%;
+    justify-content: start;
+    align-items: center;
+    color: #FFFFFF;
 }
 
-.section-left h1 {
-    padding-top: 3px;
-    padding-left: 10px;
+.section-title h1 {
+    padding-top: 5px;
+    padding-left: 15px;
+    font-family: 'Oswald';
+    font-size: 3rem;
+}
+
+.section-title p {
+    padding-top: 5px;
+    padding-left: 15px;
+    font-family: 'Nunito';
+    font-size: 1.5rem;
+}
+
+.section-left {
+    display: block;
+    min-width: 70vh;
+    max-width: 70vh;
 }
 
 .section-left p {
@@ -32,17 +46,18 @@
     padding-left: 10px;
     padding-top: 13px;
     font-family: 'Nunito';
-    font-size: 26px;
+    font-size: 1.5rem;
 }
 
 .img-container {
     margin-top: 30px;
-    margin-left: 25%;
+    margin-bottom: 30px;
+    margin-left: 15vh;
     width: 200px;
     height: 300px;
     border: 1px solid #FFD65B;
     border-radius: 10px;
-    box-shadow: 20px 20px #ffd65b52;
+    box-shadow: 20px 20px #ffd65b3b;
     background-image: url(../media/joker.jpg);
     background-size: cover;
 }
@@ -60,10 +75,33 @@
     padding-top: 5%;
 }
 
+.step-active {
+    font-weight: bold;
+    font-size: 28px;
+    color: #FFD65B;
+}
+
+.step-inactive {
+    font-weight: normal;
+    font-size: 20px;
+    color: #BAC1CA;
+}
+
+.step-completed {
+    font-weight: normal;
+    font-size: 20px;
+    color: #950F11;
+}
+
 .section-right {
     display: block;
-    margin-left: 3%;
-    padding-top: 1%;
+    height: fit-content;
+}
+
+.section-right p {
+    margin-top: 3%;
+    font-family: 'Nunito';
+    font-size: 18px;
 }
 
 .section-right .header-tabla {
@@ -125,24 +163,6 @@ table td {
 .swal2-container .swal2-html-container {
     font-family: 'Nunito';
     font-size: 24px;
-}
-
-.step-active {
-    font-weight: bold;
-    font-size: 28px;
-    color: #950F11;
-}
-
-.step-inactive {
-    font-weight: normal;
-    font-size: 20px;
-    color: #BAC1CA;
-}
-
-.step-completed {
-    font-weight: normal;
-    font-size: 20px;
-    color: #BB9526;
 }
 
 #button-next {

@@ -53,8 +53,10 @@ const js_go_next_step = () => {
             seat_amount_selected = parseInt(document.getElementById("quant-total").innerHTML, 10);
             if (seat_amount_selected > 0) {
                 document.getElementsByClassName("section-step-one")[0].style.display = "none";
-                document.getElementsByClassName("section-step-two")[0].classList.remove("section-step-inactive");
-                document.getElementsByClassName("section-step-two")[0].classList.add("section-step-active");
+                document.getElementsByClassName("section-step-one")[1].style.display = "none";
+                document.getElementsByClassName("section-step-two")[0].style.display = "block";
+                document.getElementsByClassName("section-step-two")[1].classList.remove("section-step-inactive");
+                document.getElementsByClassName("section-step-two")[1].classList.add("section-step-active");
                 document.getElementById("ui-max-seats").innerHTML = `Asientos restantes : ${seat_amount_selected}`
                 js_create_seats(config_total_rows, config_total_colums);
                 stepflag = 2;
@@ -78,8 +80,10 @@ const js_go_next_step = () => {
 
             } else {
                 document.getElementsByClassName("section-step-two")[0].style.display = "none";
-                document.getElementsByClassName("section-step-three")[0].classList.remove("section-step-inactive");
-                document.getElementsByClassName("section-step-three")[0].classList.add("section-step-active");
+                document.getElementsByClassName("section-step-two")[1].style.display = "none";
+                document.getElementsByClassName("section-step-three")[0].style.display = "block";
+                document.getElementsByClassName("section-step-three")[1].classList.remove("section-step-inactive");
+                document.getElementsByClassName("section-step-three")[1].classList.add("section-step-active");
                 stepflag = 3;
 
             }
@@ -87,8 +91,10 @@ const js_go_next_step = () => {
         case 3:
             if (document.getElementById("tyc-checkbox").checked) {
                 document.getElementsByClassName("section-step-three")[0].style.display = "none";
-                document.getElementsByClassName("section-step-four")[0].classList.remove("section-step-inactive");
-                document.getElementsByClassName("section-step-four")[0].classList.add("section-step-active");
+                document.getElementsByClassName("section-step-three")[1].style.display = "none";
+                document.getElementsByClassName("section-step-four")[0].style.display = "block";
+                document.getElementsByClassName("section-step-four")[1].classList.remove("section-step-inactive");
+                document.getElementsByClassName("section-step-four")[1].classList.add("section-step-active");
                 stepflag = 4;
             } else {
                 Swal.fire({
@@ -153,7 +159,6 @@ const js_quant_modifier_set_onClick = function(modifier) {
     });
 
 }
-
 
 
 js_quant_modifier_set_onClick();
