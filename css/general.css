@@ -14,8 +14,11 @@
 }
 
 body {
+    position: relative;
+    min-height: 100vh;
+    padding: 0;
     font-size: 16px;
-    font-family: 'Lora';
+    font-family: 'Nunito';
 }
 
 h1 {
@@ -98,32 +101,36 @@ textarea {
     margin-left: auto;
 }
 
-.footer {
+footer {
+    position: relative;
+    bottom: 0;
+    margin-top: 3%;
     width: 100%;
-    height: 150px;
+    height: 120px;
     background-color: #111111;
 }
 
-.footer .contain {
+footer .contain {
     display: flex;
     flex-direction: row;
 }
 
-.footer .col {
-    width: 190px;
-    padding: 20px;
+footer .col {
+    width: 290px;
+    padding-top: 20px;
+    padding-left: 10px;
 }
 
-.footer .col p {
-    font-family: 'Lora';
-    font-size: 16px;
+footer .col p {
+    margin-bottom: 6%;
+    font-family: 'Oswald';
+    font-size: 32px;
     color: #fff;
-    padding: 10px 0px 5px 0px;
 }
 
-.footer .col a {
+footer .col a {
     font-family: 'Nunito', sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     color: #fff;
     text-decoration: none;
 }
@@ -141,79 +148,25 @@ textarea {
 */
 
 .btn1-fondoclaro {
+    /*Position*/
+    padding: 5px 10px 5px 10px;
+    /*Self Decoration*/
+    border: 1px solid transparent;
+    border-radius: 3px;
     background: #950F11;
-    border: 2px solid #950F11;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: 'Lora';
-}
-
-.btn1-fondooscuro {
-    background: #BAC1CA;
-    border: 2px solid #BAC1CA;
-    color: #070F1A;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: 'Lora';
-}
-
-.btn2-fondoclaro {
-    background: #BB9526;
-    border: 2px solid #BB9526;
-    color: #070F1A;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
+    /*Text*/
     font-family: 'Nunito';
-}
-
-.btn2-fondooscuro {
-    background: #950F11;
-    border: 2px solid #950F11;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: 'Nunito';
-}
-
-.btn1-fondoclaro {
-    background: #950F11;
-    border: 2px solid #950F11;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: 'Lora';
-}
-
-.btn1-fondoclaro {
-    padding: 10px;
-    margin-right: 50px;
-    /**/
-    border: 2px solid #950F11;
-    border-radius: 5px;
-    background: #950F11;
-    /**/
-    font-family: 'Lora';
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: lighter;
     color: #FFFFFF;
     cursor: pointer;
+    /*Animation*/
+    transition: all 0.3s ease-in;
 }
 
 .btn1-fondoclaro:hover {
-    border: 2px solid #BAC1CA;
-    background: #BAC1CA;
-    color: #950F11;
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
 }
 
 
@@ -259,7 +212,7 @@ textarea {
     border: 0;
     font-size: 16px;
     outline: none;
-    font-family: 'Lora';
+    font-family: 'Nunito';
     width: 100%;
 }
 
@@ -274,7 +227,7 @@ textarea {
     border: 0;
     font-size: 16px;
     outline: none;
-    font-family: 'Lora';
+    font-family: 'Nunito';
     width: 100%;
 }
 
@@ -290,8 +243,9 @@ textarea {
 }
 
 ::placeholder {
+    font-family: 'Nunito';
     font-size: 16px;
-    color: #666;
+    color: #666666;
 }
 
 .input-alternate {
@@ -304,7 +258,7 @@ textarea {
     border: 0;
     font-size: 16px;
     outline: none;
-    font-family: 'Lora';
+    font-family: 'Nunito';
 }
 
 .input-short input {
@@ -312,7 +266,7 @@ textarea {
     border: 0;
     font-size: 16px;
     outline: none;
-    font-family: 'Lora';
+    font-family: 'Nunito';
 }
 
 .input-error {
@@ -321,7 +275,7 @@ textarea {
 
 .input-form-blurb {
     font-size: 12px;
-    color: #555;
+    color: #666666;
     text-align: justify;
     text-justify: auto;
     align-items: center;
@@ -330,7 +284,7 @@ textarea {
 .input-form-icon {
     font-size: 20px;
     padding: 0% 5px;
-    color: #333;
+    color: #666666;
     margin-bottom: 10px;
 }
 
@@ -355,7 +309,7 @@ textarea {
     border: 0;
     font-size: 16px;
     outline: none;
-    font-family: 'Lora';
+    font-family: 'Nunito';
 }
 
 .input-short input {
@@ -363,12 +317,12 @@ textarea {
     border: 0;
     font-size: 16px;
     outline: none;
-    font-family: 'Lora';
+    font-family: 'Nunito';
 }
 
 .input-form-blurb {
     font-size: 12px;
-    color: #555;
+    color: #666666;
     text-align: justify;
     text-justify: auto;
     align-items: center;
@@ -377,7 +331,7 @@ textarea {
 .input-form-icon {
     font-size: 20px;
     padding: 0% 5px;
-    color: #333;
+    color: #666666;
     margin-bottom: 10px;
 }
 
