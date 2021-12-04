@@ -8,10 +8,6 @@
     display: none;
 }
 
-section {
-    height: 100%;
-}
-
 .section-step-active {
     display: flex;
     justify-content: start;
