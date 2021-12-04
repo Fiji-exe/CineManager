@@ -1,1 +1,4 @@
-/* Se elimino ya que se repetia en css general */
+.contendio-tyc {
+    display: flex;
+    min-height: calc(100vh - 206px);
+}

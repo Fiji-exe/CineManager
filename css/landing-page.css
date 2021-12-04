@@ -18,7 +18,8 @@
 
 .contenedor-der p {
     color: #fff;
-    ;
+    font-family: 'Nunito';
+    font-size: 30px;
     margin: 3%;
 }
 
@@ -32,7 +33,8 @@
 
 .contenedor-izq p {
     color: #fff;
-    ;
+    font-family: 'Nunito';
+    font-size: 30px;
     margin: 3%;
     max-width: 50%;
 }
@@ -49,6 +51,8 @@
 }
 
 span {
-    color: #BB9526;
+    color: #fff;
     font-weight: bold;
+    font-family: 'Oswald';
+    font-size: 36px;
 }
