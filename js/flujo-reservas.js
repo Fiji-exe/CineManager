@@ -35,7 +35,7 @@ const js_celda_click = (celda) => {
             seat_amount_selected = seat_amount_selected - 1;
             js_max_seats_update();
             celda.selected = true;
-            celda.style.outline = "2px solid #260303";
+            celda.style.outline = "1px solid #FFFFFF";
             console.log(celda.xpos + " " + celda.ypos);
         } else {
             Swal.fire({

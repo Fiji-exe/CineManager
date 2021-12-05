@@ -203,39 +203,13 @@ td {
 *
 */
 
-.tabla-asientos {
-    background-color: #FFFFFF;
-    border-color: #FFFFFF;
-}
-
-.tabla-asientos tr td {
-    margin: 2px;
-    background-color: #FFFFFF;
-    border: #FFFFFF;
-}
-
-.tabla-asientos td:hover {
-    cursor: pointer;
-    outline: 1px solid #260303;
-}
-
-.tabla-asientos .material-icons {
-    color: #00DB9D;
-}
-
-
-/*
-*
-* LEYENDA
-*
-*
-*/
-
 .leyenda {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2%;
     padding: 0;
-    max-width: 600px;
+    min-width: 500px;
+    max-width: 500px;
 }
 
 .leyenda div {
@@ -246,6 +220,20 @@ td {
 .leyenda div span {
     padding-left: 35%;
     padding-top: 3px;
+}
+
+.tabla-asientos {
+    padding: 0;
+    border: none;
+}
+
+.tabla-asientos td:hover {
+    cursor: pointer;
+    outline: 1px solid #FFD65B;
+}
+
+.tabla-asientos .material-icons {
+    color: #00DB9D;
 }
 
 form {
