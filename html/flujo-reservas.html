@@ -21,10 +21,6 @@
 <body>
     <div class="navbar-cliente-iniciado"></div>
     <div class="container">
-        <div class="section-title section-step-one">
-            <h1>Reservá tus boletos</h1>
-            <p> Elegí la cantidad de boletos que necesitás reservar </p>
-        </div>
         <section class="section-step-active section-step-one">
             <section class="section-left">
                 <div class="img-container"> <img alt=""> </div>
@@ -38,7 +34,11 @@
             </section>
 
             <section class="section-right">
-                <table class="tabla header-tabla" id="tabla-cartelera-header">
+                <div class="section-title">
+                    <h1>Reservá tus boletos</h1>
+                    <p> Elegí la cantidad de boletos que necesitás reservar.</p>
+                </div>
+                <table class="tabla tabla-reserva" id="tabla-reserva">
                     <tbody>
                         <tr>
                             <td>San José</td>
@@ -50,10 +50,16 @@
                             <td>13:00</td>
                             <td>1300 colones</td>
                         </tr>
-                    </tbody>
-                </table>
-                <table class="tabla body-tabla" id="tabla-cartelera-body">
-                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
                         <tr>
                             <td>Regular</td>
                             <td class="quant-modifier" id="quant-modifier-minus-reg">-</td>
@@ -86,17 +92,11 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="section-step-active">
-                    <button class="btn1-fondoclaro" id="button-next"> Continuar </button>
-                </div>
+                <button class="btn1-fondoclaro" onClick="js_go_next_step()"> Continuar </button>
             </section>
 
         </section>
 
-        <div class="section-title section-step-two" style="display: none;">
-            <h1>Seleccioná los asientos</h1>
-            <p> Eligí los asientos de la sala de cine </p>
-        </div>
         <section class="section-step-inactive section-step-two">
             <section class="section-left">
 
@@ -111,6 +111,10 @@
             </section>
 
             <section class="section-right">
+                <div class="section-title">
+                    <h1>Seleccioná los asientos</h1>
+                    <p> Eligí los asientos de la sala de cine </p>
+                </div>
                 <div class="leyenda">
                     <p> Leyenda de butacas: </p>
                     <div>
@@ -122,21 +126,14 @@
                     <div>
                         <p>Deshabilitada </p> <span class="material-icons chair-button chair-disabled" style="color: #CACACA"> chair </span></div>
                 </div>
-                <table class="tabla-asientos" id="tabla-asientos">
-                </table>
-                <div>
+                <table class="tabla tabla-asientos" id="tabla-asientos">
                     <p id="ui-max-seats"> Asientos restantes : 0 </p>
-                </div>
-                <div class="section-step-active">
-                    <button class="btn1-fondoclaro" id="button-next"> Continuar </button>
-                </div>
+                </table>
+
+                <button class="btn1-fondoclaro" onClick="js_go_next_step()"> Continuar </button>
             </section>
         </section>
 
-        <div class="section-title section-step-three" style="display: none;">
-            <h1>Seleccioná el método de pago </h1>
-            <p> Seleccioná el método de pago. Si no tienes ningún método de pago registrado, haz click en "Ir a registrar método de pago"</p>
-        </div>
         <section class="section-step-inactive section-step-three">
             <section class="section-left">
                 <div class="img-container"> <img alt=""> </div>
@@ -150,6 +147,10 @@
             </section>
 
             <section class="section-right">
+                <div class="section-title">
+                    <h1>Seleccioná el método de pago </h1>
+                    <p> Seleccioná el método de pago. Si no tienes ningún método de pago registrado, haz click en "Ir a registrar método de pago"</p>
+                </div>
                 <form>
                     <div>
                         <input type="radio" id="tar1" name="form-select-paycard" checked=true>
@@ -171,16 +172,11 @@
                         <label for="tyc-checkbox"><a href="/html/tyc.html">He leído y acepto los términos y condiciones de CineManager</a></label>
                     </div>
                 </form>
-                <div class="section-step-active">
-                    <button class="btn1-fondoclaro" id="button-next"> Continuar </button>
-                </div>
+                <button class="btn1-fondoclaro" onClick="js_go_next_step()"> Continuar </button>
             </section>
         </section>
 
-        <div class="section-title section-step-four" style="display: none;">
-            <h1>Factura </h1>
-            <p> A continuación, el comprobante de pago </p>
-        </div>
+
         <section class="section-step-inactive section-step-four">
             <section class="section-left">
                 <div class="img-container"> <img alt=""> </div>
@@ -194,7 +190,11 @@
             </section>
 
             <section class="section-right">
-                <table class="tabla body-tabla" id="tabla-cartelera-body">
+                <div class="section-title">
+                    <h1>Factura </h1>
+                    <p> A continuación, el comprobante de pago </p>
+                </div>
+                <table class="tabla tabla-factura">
                     <tbody>
                         <tr>
                             <td>FACTURA </td>
@@ -240,11 +240,9 @@
                         </tr>
                     </tbody>
                 </table>
+                <button class="btn1-fondoclaro button-next" onClick="js_go_next_step()"> Continuar </button>
             </section>
         </section>
-
-
-
     </div>
 
     <div class="footer-cliente"></div>
