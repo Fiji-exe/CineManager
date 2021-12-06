@@ -20,33 +20,34 @@
 
 <body>
     <div class="navbar-cliente-iniciado"></div>
-    <div class="contenido">
-        <h1>Buscador Tesst</h1>
-        <p> Este es un buscador universal. Haz click al menu de filtros, <br> elige que deseas buscar y luego podras ingresar los terminos o palabras clave en el buscador </p>
-
-        <div class="inputs-container">
-            <div class="input-container input-default input-idtype">
-                <select class="input-container input-short" id="selector-filtros-dropdown">
-            <option value="" disabled selected>Filtros</option>
-            <option value="cart">Carteleras</option>
-            <option value="peli">Peliculas</option>
-            <option value="cine">Cines</option>
-            <option value="" disabled>-- Super Admin --</option>
-            <option value="user">Usuarios</option>
-            <option value="sala">Salas</option>
-            <option value="tsla">Tipos de Sala</option>
-            <option value="tasi">Tipos de asiento</option>
-            <option value="cate">Categoria Peliculas</option>  
-            
-    </select>
-            </div>
-
-            <div class="dual-inputs">
-                <div class="input-container input-default input-string">
-                    <input id="input-filtros-texto" type="text" placeholder="Elija un filtro. Luego ingrese aquí palabra clave" />
+    <div class="container">
+        <div class="container-input">
+            <div class="inputs-container">
+                <div class="input-default input-idtype">
+                    <select class="input-filtros input-container input-short" id="selector-filtros-dropdown">
+                        <option value="" disabled selected>Filtros</option>
+                        <option value="cart">Carteleras</option>
+                        <option value="peli">Películas</option>
+                        <option value="cine">Cines</option>
+                        <option value="" disabled>-- Super Admin --</option>
+                        <option value="user">Usuarios</option>
+                        <option value="sala">Salas</option>
+                        <option value="tsla">Tipos de Sala</option>
+                        <option value="tasi">Tipos de asiento</option>
+                        <option value="cate">Categoría Películas</option>
+                    </select>
                 </div>
+
+                <div class="dual-inputs">
+                    <div class="input-container input-default input-string">
+                        <input id="input-filtros-texto" type="text" placeholder="Elija un filtro. Luego ingrese aquí palabra clave" disabled/>
+                    </div>
+                </div>
+
+                <button class="btn1-fondoclaro" id="boton-buscar-filtros"> Buscar </button>
             </div>
-            <button class="btn1-fondoclaro" id="boton-buscar-filtros"> Buscar </button>
+            <p> Haz click al menú de "Filtros", elige que deseas buscar y luego <br> podrás ingresar los términos o palabras clave en el buscador.</p>
+
         </div>
 
         <table class="tabla-uno" id="tabla-uno">

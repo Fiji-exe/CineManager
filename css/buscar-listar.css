@@ -1,45 +1,76 @@
-select {
-    margin: 0% 0% 3% 2%;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #111111;
+}
+
+.container-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #111111;
+    width: 100%;
+}
+
+.inputs-container {
+    background-color: magenta;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 35px;
+}
+
+
+/* SELECT */
+
+.input-idtype {
+    background-color: yellow;
+    width: 25%;
+    height: 100%;
+    color: #666666;
     font-family: 'Nunito';
     font-size: 22px;
 }
 
-.input-filtros {
-    font-family: 'Nunito';
-    font-size: 20px;
-    width: 50%;
-    border: 0px;
-    outline: none;
-}
 
-.input-filtros {
-    border: 1px solid black;
-}
+/* INPUT */
 
-.inputs-container {
-    margin-top: 3%;
-    margin-bottom: 3%;
-    display: flex;
-    flex-direction: row;
-}
-
-.input-idtype {
+.dual-inputs {
+    background-color: green;
+    width: 55%;
     height: 35px;
-    width: 10%;
 }
 
 .input-string {
     height: 35px;
-    width: 500px;
 }
 
 .input-string input {
     width: 100%;
 }
 
+
+/* BUTTON */
+
+button {
+    width: 20%;
+    height: 35px;
+}
+
+
+/* SUBTITLE */
+
+p {
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
 .tabla-uno {
+    width: 90%;
     background: #FFFFFF;
-    margin: 0% 0% 3% 2%;
     /* border-collapse: collapse; */
 }
 
@@ -98,10 +129,4 @@ table td {
 .swal2-container .swal2-html-container {
     font-family: 'Nunito';
     font-size: 24px;
-}
-
-.btn1-fondoclaro {
-    margin-left: 1%;
-    height: 40px;
-    width: 80px;
 }
