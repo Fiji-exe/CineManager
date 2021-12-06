@@ -1,4 +1,4 @@
-body{
+/* body{
     background-image: url('/media/background1.jpg');
     background-size: cover;
 }
@@ -25,17 +25,11 @@ body{
 
 .form-registro-pago .input{
     padding: 8px 0;
-    /* display: flex;
-    flex-direction: column; */
+
 }
 
 .form-registro-pago .input textarea{
     color: #fff;
-}
-
-.form-registro-pago .form-division-politica{
-    display: flex;
-    flex-direction: row;
 }
 
 
@@ -50,10 +44,9 @@ body{
     width: 100%;
     border: none;
     background-color: transparent;
-    /* color: #fff; */
 }
 
-.form-registro-pago .div-fecha-vencimiento{
+ .div-fecha-vencimiento{
     display: flex;
     flex-direction: row;
 }
@@ -71,7 +64,7 @@ body{
     flex-direction: row;
 }
 
-.form-registro-pago .div-numero-tarjeta .input{
+.div-numero-tarjeta .input{
     width: 75%;
 }
 
@@ -84,4 +77,133 @@ body{
     display: flex;
     color: #fff;
     margin: 0 10px;
+}
+ */
+
+ 
+ 
+.div-numero-tarjeta {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.form-division-politica .input{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 0 10px 0 0;
+}
+
+
+ .div-numero-tarjeta .input{
+    width: 100%;
+
+}
+
+ .input{
+    width: 100%;
+    margin: 10px 0;
+}
+
+
+.form-division-politica{
+    display: flex;
+    flex-direction: row;
+}
+
+ .div-fecha-vencimiento{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+}
+
+
+ .div-fecha-vencimiento .input{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+}
+
+.sct-registro-pago {
+    background-image: url(../media/pexels-cottonbro-8263324.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    padding: 0px 30px;
+}
+
+.div-signup-card {
+    background-color: #111111;
+    color: #fff;
+    padding: 5px 60px;
+    margin: 5px 60px;
+    border-radius: 5px;
+    min-width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.div-signup-card .signup-card-body {
+  width: 80%;
+}
+
+
+
+/* 
+
+
+.div-signup-card .input-container {
+    margin-bottom: 30px;
+}
+
+.div-signup-card {
+    background-color: #111111;
+    color: #fff;
+    padding: 5px 60px;
+    border-radius: 5px;
+    min-width: 700px;
+}
+
+.div-signup-card .signup-card-body {
+    padding: 5px 5%;
+    padding-bottom: 50px;
+}
+
+.div-signup-card form h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    width: 50%;
+    align-items: center;
+}
+
+.div-signup-card .signup-card-top {
+    padding: 5px 0px;
+}
+
+.div-signup-card .signup-card-top .material-icons a {
+    text-decoration: none;
+    color: #950F11;
+    font-size: 40px;
+} */
+
+/* INPUT TEXT TO WHITE */
+
+.input-short select {
+    color: #fff;
+}
+
+.input-default input{
+    color: #fff;
+}
+
+.input-short input {
+    color: #fff;
+}
+.input-default select {
+    color: #fff;
 }
