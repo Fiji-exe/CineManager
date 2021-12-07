@@ -88,3 +88,25 @@ color: #950F11;
 .btn-item{
     width: 200px;
 }
+
+.contenido{
+    background-color: #111;
+    color: #fff;
+    height: 100vh;
+    padding: 30px;
+}
+
+.input-short select {
+    color: #fff;
+}
+
+.input-default input{
+    color: #fff;
+}
+
+.input-short input {
+    color: #fff;
+}
+.input-default select {
+    color: #fff;
+}
