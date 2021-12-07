@@ -1,4 +1,16 @@
-.contendio-tyc {
-    display: flex;
-    min-height: calc(100vh - 206px);
-}
+ h1 {
+     text-align: center;
+ }
+ 
+ .tyc p {
+     text-align: center;
+ }
+ 
+ span {
+     font-weight: bold;
+     text-align: center;
+ }
+ 
+ .contenido {
+     background-color: darkgray;
+ }

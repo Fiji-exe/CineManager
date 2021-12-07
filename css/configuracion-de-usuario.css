@@ -68,11 +68,14 @@ input {
     font-family: 'Nunito';
     font-size: 16px;
     border: 1px solid #fff;
-    ;
     border-radius: 3px;
 }
 
 h2 {
     font-family: 'Nunito';
     font-size: 16px;
+}
+
+span {
+    font-family: 'Nunito';
 }

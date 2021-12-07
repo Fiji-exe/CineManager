@@ -80,3 +80,13 @@ const validar = () => {
 btnGuardar.addEventListener("click", validar);
 
 btnEliminar.addEventListener("click", '');
+
+
+function edad() {
+
+    let Bdate = document.getElementById('date-nacimiento').value;
+    let Bday = +new Date(Bdate);
+    let edadTexto = "Edad: " + ~~((Date.now() - Bday) / (31557600000)) + " años";
+    let theBday = document.getElementById('resultadoEdad');
+    theBday.innerHTML = edadTexto;
+}
