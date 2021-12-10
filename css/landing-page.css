@@ -9,11 +9,13 @@
 }
 
 .contenedor-der {
-    background-color: #11111180;
+    background-color: #111111;
     color: #fff;
     padding: 5px 60px;
     border-radius: 5px;
     max-width: 30%;
+    backdrop-filter: blur(50px);
+    margin: 30px;
 }
 
 .contenedor-der p {
@@ -24,11 +26,13 @@
 }
 
 .contenedor-izq {
-    background-color: #11111180;
+    background-color: #111111;
     color: #fff;
     padding: 5px 60px;
     border-radius: 5px;
     padding: 5px;
+    backdrop-filter: blur(50px);
+    margin: 30px;
 }
 
 .contenedor-izq p {

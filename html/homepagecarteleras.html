@@ -24,31 +24,43 @@
 
 
     <div class="navbar-cliente-iniciado"></div>
-    <div class="contenedor-principal">
-        <div class="contenedor-izq">
 
 
-            <div class="filtros">
-                <p>Filtros</p>
+    <section class="section-step-active section-step-one" id="step-one">
+        <section class="section-left">
+            <h1>Buscá tu película</h1>
+            <p> Elegí un cine y fecha para ver la cartelera </p>
 
-                <div class="input-container-date"> Fecha
-                    <input type="date" placeholder="Fecha" />
-                </div>
-                <div class="salas">
-                    <label for="salas">Cine</label>
 
-                    <select name="sala" id="sala">
-            <option value="tipo1">Magaly</option>
-            <option value="tipo2">CCN</option>
-            <option value="tipo3">CineMark </option>
-            <option value="tipo4">Cinepolis</option>
-            </select>
-                </div>
-                <div class="salas">
-                    <button class="btn1-fondoclaro" onclick="buscarLista()">Buscar</button>
-                </div>
+        </section>
+        <section class="section-right">
+
+            <div class="input-container-date"> Fecha:
+                <input type="date" placeholder="Fecha" min='2021-12-15' />
             </div>
-        </div>
+            <div class="salas">
+                <label for="salas">Cine: </label>
+
+                <select name="sala" id="sala">
+                        <option value="tipo1">Magaly</option>
+                        <option value="tipo2">CCN</option>
+                        <option value="tipo3">CineMark </option>
+                        <option value="tipo4">Cinepolis</option>
+                        </select>
+
+            </div>
+            <div class="sala-btn">
+                <button class="btn1-fondoclaro" id="btn-buscar-listar" onclick="buscarLista()">Buscar</button>
+            </div>
+        </section>
+    </section>
+
+
+    </div>
+    </div>
+    </section>
+
+    <section class="section-step-inactive section-step-two" id="step-two">
         <div class="cartelera">
             <div class="contenedor-cartelera">
                 <div class="img-pelicula">
@@ -215,12 +227,13 @@
 
 
         </div>
-
+    </section>
     </div>
     </div>
     <div class="footer-cliente"></div>
     <script src="/js/navbar-footer.js"></script>
     <script src="../js/servicio-general.js"></script>
+    <script src="../js/homepagecarteleras.js"></script>
 </body>
 
 </html>

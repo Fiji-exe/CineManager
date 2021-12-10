@@ -1,87 +1,47 @@
-.contenedor-principal {
-    background-image: url(../media/landing-page.jpg);
-    background-size: cover;
-    display: flex;
-    flex-flow: row wrap;
+.section-step-inactive {
+    display: none;
+    height: 0px;
+    width: 0px;
 }
 
-.contenedor-izq {
-    max-width: 20%;
+.section-step-active {
+    justify-content: center;
+    height: 100vh;
+    padding: 3%;
 }
 
-.categorias {
-    border: 1px solid #070F1A;
-    margin: 3%;
-    padding: 2%;
+.section-step-one {
+    align-items: center;
+}
+
+.section-left {
+    display: inline-block;
+    padding-right: 200px;
+}
+
+.section-right {
+    display: inline-block;
+    padding: 200px;
     font-family: 'Nunito';
+    font-size: 25px;
+    text-align: left;
 }
 
-.categorias ul {
-    align-items: left;
+.input-container-date {
+    text-align: left;
+    padding-bottom: 70px;
+}
+
+.salas {
+    text-align: left;
+}
+
+.sala-btn {
+    text-align: left;
+    padding-top: 70px;
+}
+
+p {
     font-family: 'Nunito';
-}
-
-.filtros {
-    background-color: #11111180;
-    color: #fff;
-    padding: 5px 60px;
-    border-radius: 5px;
-    margin: 3%;
-    margin: 3%;
-    padding: 2%;
-    font-family: 'Nunito';
-}
-
-.filtros div {
-    padding: 2%;
-    font-family: 'Nunito';
-}
-
-.filtros p {
-    font-weight: bold;
-}
-
-.cartelera img {
-    max-width: 200px;
-}
-
-.cartelera {
-    width: 80%;
-}
-
-.contenedor-cartelera {
-    display: flex;
-    flex-flow: row wrap;
-    margin: 2%;
-    padding: 2%;
-    background-color: #11111170;
-    color: #fff;
-    border-radius: 5px;
-}
-
-.pelicula-card {
-    width: 80%;
-    height: 10%;
-    margin: 2%;
-    font-family: 'Nunito';
-    font-size: 16px;
-}
-
-.pelicula-card button {
-    position: absolute;
-    left: 70%;
-}
-
-.titulo-pelicula {
-    font-family: "Owsald";
-    font-size: 30px;
-}
-
-.sinopsis {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.sinopsis p {
-    font-weight: normal;
+    font-size: 25px;
 }
