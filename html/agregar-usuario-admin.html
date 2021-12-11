@@ -16,20 +16,20 @@
   </head>
   <body>
 
-    <div class="navbar-admin-iniciado"></div>
+    <!-- <div class="navbar-admin-iniciado"></div> -->
 
     <div class="contenido">
         <main class="sct-main">
 
-            <div class="div-title">
-                <span class="material-icons">
-                    <a href="landing-page.html">chevron_left</a>
-                </span>
-                <h1>Registrar usuario</h1>    
-            </div>
+          
 
-            <div class="form">
-              
+            <div class="form">     
+                <div class="div-title">
+                    <span class="material-icons">
+                        <a href="landing-page.html">chevron_left</a>
+                    </span>
+                    <h1>Agregar o editar usuario</h1>    
+                </div>        
                 <div class="div-form-item">
                     <h2>Nombre</h2>
                     <div class="div-input-container">
@@ -55,20 +55,20 @@
                 </div>
 
                 <div class="div-form-item">
-                    <h2>Identificacion</h2>
+                    <h2>Identificación</h2>
                     <div class="input-container input-default input-id">
                         <select id="tipo-identificacion">
                             <option value="Tipo">Tipo</option>
-                            <option value="Cedula">Cedula</option>
+                            <option value="Cedula">Cédula</option>
                             <option value="Dimex">Dimex</option>
                             <option value="Pasaporte">Pasaporte</option>
                           </select>
-                        <input type="text" name="" id="txt-numero-id" placeholder="Numero">
+                        <input type="text" name="" id="txt-numero-id" placeholder="Número">
                     </div>
                 </div>
 
                 <div class="div-form-item">
-                    <h2>Correo electronico</h2>
+                    <h2>Correo electrónico</h2>
                     <div class="input-container input-default input-correo">
                         <input type="text" name="" id="txt-correo" placeholder="usuario@ejemplo.com">                   
                     </div>
@@ -91,13 +91,31 @@
                 <div class="div-form-item">
                     <h2>Tipo de usuario</h2>
                     <div class="input-container input-default input-tipo">
-                        <input type="radio" id="radio-cliente" name="radio-tipo-usuario" value="Cliente" checked>
-                          <label for="radio-cliente">Cliente</label>
-                            <input type="radio" id="radio-soporte" name="radio-tipo-usuario" value="Soporte">
+
+                    
+
+                        <input type="radio" id="radio-soporte" name="radio-tipo-usuario" value="Soporte" checked>
                           <label for="radio-soporte">Soporte</label>
-                    </div>
-                   
+
+                        <input type="radio" id="radio-cliente" name="radio-tipo-usuario" value="Cliente">
+                          <label for="radio-cliente">Cliente</label>
+
+                
+                    </div>                   
                 </div>
+
+                <div class="div-form-item" id="div-select-cadena">
+                    <h2>Cadena</h2>
+                    <div class="input-container input-default input-id">
+                        <select id="select-cadena">
+                            <option value="Tipo">Seleccionar</option>
+                            <option value="Tipo">Cinepolis</option>
+                            <option value="Cedula">Cinemark</option>
+                            <option value="Dimex">CCM</option>                   
+                          </select>
+                    </div>
+                </div>
+
 
                 <div class="div-form-item">
                     <button class="btn1-fondoclaro" id="btn-register">Registrar</button>
@@ -107,7 +125,7 @@
             </div>
         </main>    
     </div>
-    <div class="footer-admin">  
+    <!-- <div class="footer-admin">   -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/navbar-footer.js"></script>

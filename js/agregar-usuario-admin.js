@@ -11,7 +11,7 @@ const txtCorreo = document.querySelector('#txt-correo');
 const dateNacimiento = document.querySelector('#date-nacimiento');
 const fileAvatar = document.querySelector('#file-avatar');
 
-const radioTipoUsuario = document.querySelector('input[name="radio-tipo-usuario"]:checked');
+const radioTipoUsuario = document.querySelectorAll('input[name="radio-tipo-usuario"]');
 const btnRegistrar = document.querySelector('#btn-register');
 
 
@@ -33,13 +33,13 @@ const validar = () => {
         document.querySelector('.input-nombre').classList.remove('input-error');
     }
 
-    if (txtSegundoNombre.value == '') {
-        error = true;
-        document.querySelector('.input-segundo-nombre').classList.add('input-error');
-    }
-    else {
-        document.querySelector('.input-segundo-nombre').classList.remove('input-error');
-    }
+    // if (txtSegundoNombre.value == '') {
+    //     error = true;
+    //     document.querySelector('.input-segundo-nombre').classList.add('input-error');
+    // }
+    // else {
+    //     document.querySelector('.input-segundo-nombre').classList.remove('input-error');
+    // }
 
     if (txtApellido.value == '') {
         error = true;
@@ -49,13 +49,13 @@ const validar = () => {
         document.querySelector('.input-apellido').classList.remove('input-error');
     }
 
-    if (txtSegundoApellido.value == '') {
-        error = true;
-        document.querySelector('.input-segundo-apellido').classList.add('input-error');
-    }
-    else {
-        document.querySelector('.input-segundo-apellido').classList.remove('input-error');
-    }
+    // if (txtSegundoApellido.value == '') {
+    //     error = true;
+    //     document.querySelector('.input-segundo-apellido').classList.add('input-error');
+    // }
+    // else {
+    //     document.querySelector('.input-segundo-apellido').classList.remove('input-error');
+    // }
 
     
     if (selectTipoId.value == 'Tipo' || txtIdentificacion.value == '') {
@@ -83,13 +83,7 @@ const validar = () => {
         document.querySelector('.input-nacimiento').classList.remove('input-error');
     }
 
-    if (radioTipoUsuario.value == '') {
-        error = true;
-        document.querySelector('.input-tipo').classList.add('input-error');
-    }
-    else {
-        document.querySelector('.input-tipo').classList.remove('input-error');
-    }
+
 
     if (error == true) {
         Swal.fire({
@@ -111,5 +105,22 @@ const validar = () => {
     }
 }
 
+const radioUsuarioChanged = () => {
 
+    var radios = document.getElementsByName('radio-tipo-usuario');
+    for (var radio of radios)
+    {
+        if (radio.checked) {          
+            if (radio.value == 'Cliente') {
+                document.querySelector('#div-select-cadena').classList.add('hide');
+            }
+            else {
+                document.querySelector('#div-select-cadena').classList.remove('hide');
+            }
+        }
+    }
+
+}
+
+radioTipoUsuario.forEach(radio => radio.addEventListener('change', radioUsuarioChanged));
 btnRegistrar.addEventListener("click", validar);

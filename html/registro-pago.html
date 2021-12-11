@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../css/reset.css">
 
     <!-- GENERAL CSS -->
-    <link rel="stylesheet" href="../css/crear-cuenta.css">
+    <link rel="stylesheet" href="../css/registro-pago.css">
     <link rel="stylesheet" href="../css/general.css">
 
     <title>Registro de pago</title>
@@ -25,18 +25,19 @@
 
 <body>
 
-    <div class="navbar-cliente-iniciado"></div>
+    <!-- <div class="navbar-cliente-iniciado"></div> -->
 
-    <section class="sct-recover">
+    <section class="sct-registro-pago">
 
         <div class="div-signup-card">
             <div class="signup-card-top">
-                <span class="material-icons">
-                    <a href="landing-page.html">chevron_left</a>
-                </span>
+               
             </div>
 
             <div class="signup-card-body">
+                <span class="material-icons">
+                    <a href="landing-page.html">chevron_left</a>
+                </span>
                 <form>
                     <h1>Registro de Método de Pago</h1>
 
@@ -56,20 +57,20 @@
 
                     <div class="div-fecha-vencimiento">
 
-                        <div class="dual-inputs">
-                            <p class="form-text">Mes de vencimiento</p>
+                        <div class="input">
+                            <p>Mes de vencimiento</p>
                             <div class="input-container input-short input-mes">
                                 <input type="number" name="" id="mes-vencimiento">
                             </div>
                         </div>
-                        <div class="dual-inputs">
-                            <p class="form-text">Año de vencimiento</p>
+                        <div class="input">
+                            <p>Año de vencimiento</p>
                             <div class="input-container input-short input-anno">
                                 <input type="number" name="" id="anno-vencimiento">
                             </div>
                         </div>
-                        <div class="dual-inputs">
-                            <p class="form-text">CVC</p>
+                        <div class="input">
+                            <p>CVC</p>
                             <div class="input-container input-short input-cvc">
                                 <input type="number" name="" id="cvc">
                             </div>
@@ -86,7 +87,7 @@
 
 
                     <div class="input">
-                        <label for="txt-direccion">Direccion</label>
+                        <label for="txt-direccion">Dirección</label>
                         <div class="input-container input-default input-direccion">
                             <input type="text" name="" id="txt-direccion">
                         </div>
@@ -102,9 +103,11 @@
 
 
                         <div class="input">
-                            <label for="select-canton">Canton</label>
+                            <label for="select-canton">Cantón</label>
                             <div class="input-container input-default input-canton">
-                                <select id="select-canton"></select>
+                                <select id="select-canton">
+                                    <option value="">Seleccionar</option>
+                                </select>
                             </div>
                         </div>
 
@@ -112,7 +115,9 @@
                         <div class="input">
                             <label for="select-distrito">Distrito</label>
                             <div class="input-container input-default input-distrito">
-                                <select id="select-distrito"></select>
+                                <select id="select-distrito">
+                                    <option value="">Seleccionar</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -129,7 +134,7 @@
 
     </section>
 
-    <div class="footer-cliente"></div>
+    <!-- <div class="footer-cliente"></div> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/navbar-footer.js"></script>
     <script src="/js/division-politica.js"></script>

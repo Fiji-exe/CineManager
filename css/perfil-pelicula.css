@@ -1,3 +1,20 @@
+.contenido-perfil-pelicula{
+    background-image: url(../media/pexels-cottonbro-8263324.jpg);
+    background-size: cover;   
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;  
+}
+
+.sct-main{
+    margin-top: 20px;
+    width: 1200px;
+    height: 90vh;
+    background-color: #111111;
+    color: #fff;
+}
+
 .div-perfil-pelicula{
     display: flex;
     justify-content: space-between;
@@ -87,6 +104,14 @@
 .div-nuevo-comentario{
     margin: 10px 0 0 0;
 }
+h2 {
+    font-family: "Oswald";
+    font-size: 24px;
+    }
+    h3 {
+        font-family: "Oswald";
+        font-size: 20px;
+        }
 
 .div-nuevo-comentario h2{
     font-family: 'Nunito', sans-serif;
@@ -100,8 +125,8 @@
 }
 
 .div-cuerpo-nuevo-comentario textarea{
-  width: 150px;
-  height: 50px;
+  width: 300px;
+  height: 100px;
 }
 
 .div-title{
@@ -113,4 +138,7 @@
     display: flex;
 color: #950F11;
     margin: 0 10px;
+}
+.comentarios-anteriores{
+    margin-top: 20px;
 }
