@@ -37,7 +37,19 @@
 
                         <div class="dual-inputs">
                             <div class="form-text">
-                                <p>Pelicula</p>
+                                <p>Cartelera</p>
+                            </div>
+                            <div class="input-container input-default">
+                                <select name="Cartelera" id="select-cartelera">
+                                    <option value="0">Cine Magaly</option>
+                                    <option value="1">Cinépolis</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="dual-inputs">
+                            <div class="form-text">
+                                <p>Película </p>
                             </div>
                             <div class="input-container input-default">
                                 <select name="Pelicula" id="select-pelicula">
@@ -50,16 +62,6 @@
 
                         <div class="form-text checkbox-solo">
                             <input id="checkbox-programacion-diaria" type="checkbox">Programación diaria</input>
-                        </div>
-
-
-                        <div class="dual-inputs">
-                            <div class="form-text">
-                                <p>Codigo</p>
-                            </div>
-                            <div class="input-container input-default input-code">
-                                <input id="txt-id-cartelera" type="text" placeholder="Codigo" />
-                            </div>
                         </div>
 
                         <div class="dual-inputs">
@@ -91,6 +93,44 @@
                         </div>
 
                         <div class="dual-inputs">
+                            <div class="form-text">
+                                <p>Sala</p>
+                            </div>
+                            <div class="input-container input-default">
+                                <select name="Sala" id="select-sala">
+                                    <option value="0">001424</option>
+                                    <option value="1">004787</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="dual-inputs">
+                            <div class="form-text">
+                                <p>Idioma</p>
+                            </div>
+                            <div class="input-container input-default">
+                                <select name="idioma" id="select-idioma">
+                                    <option value="1">Español</option>
+                                    <option value="1">Inglés</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="dual-inputs">
+                            <div class="form-text">
+                                <p>Subtitulos</p>
+                            </div>
+                            <div class="input-container input-default">
+                                <select name="Subtitulos" id="select-subtitulos">
+                                    <option value="0">No</option>
+                                    <option value="1">Español</option>
+                                    <option value="1">Inglés</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="dual-inputs">
                             <p>Precio Base</p>
                             <div class="input-container input-default input-base-price">
                                 <input id="num-cartelera-precio" type="number" placeholder="Precio" />
@@ -102,10 +142,10 @@
                         </div>
 
                         <div class="dual-inputs">
-                            <div class="fnd-claro">
+                            <div class="fnd-oscuro">
                                 <button class="btn2-fondoclaro" id="btn-carteleras-guardar">Guardar</button>
                             </div>
-                            <div class="fnd-claro">
+                            <div class="fnd-oscuro">
                                 <button class="btn1-fondoclaro" id="btn-carteleras-borrar">Borrar</button>
                             </div>
                         </div>

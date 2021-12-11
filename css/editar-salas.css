@@ -12,6 +12,11 @@ h3 {
     margin-bottom: 40px;
 }
 
+body {
+    background-color: #111111;
+    color: #fff;
+}
+
 .sct-edit-rooms {
     padding: 0% 50px;
 }
@@ -62,7 +67,7 @@ h3 {
 
 .chair-button a {
     font-size: 80px;
-    color: #333;
+    color: #888;
     text-decoration: none;
 }
 
