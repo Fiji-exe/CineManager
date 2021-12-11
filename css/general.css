@@ -104,7 +104,6 @@ textarea {
 footer {
     position: relative;
     bottom: 0;
-    margin-top: 3%;
     width: 100%;
     height: 120px;
     background-color: #111111;
@@ -171,6 +170,7 @@ footer .col a {
 .fnd-oscuro {
     padding: 10%;
 }
+
 .btn1-fondoclaro:hover {
     border: 1px solid #FFFFFF;
     border-radius: 3px;
@@ -249,19 +249,21 @@ footer .col a {
     justify-content: space-between;
 }
 
+
 /* INPUT TEXT TO WHITE */
 
 .input-short select {
     color: #fff;
 }
 
-.input-default input{
+.input-default input {
     color: #fff;
 }
 
 .input-short input {
     color: #fff;
 }
+
 .input-default select {
     color: #fff;
 }
