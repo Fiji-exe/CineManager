@@ -129,7 +129,6 @@ let listaSalas = [{
     'tipo': 'imax',
     'editar': '<a href="/html/editar-salas.html">Editar </a>'
 }];
-
 let listaTipoSala = [{
     'nombre': 'Nombre de Tipo de Sala',
     'editar': 'Ir a editar'

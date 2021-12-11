@@ -35,13 +35,13 @@ const js_celda_click = (celda) => {
             seat_amount_selected = seat_amount_selected - 1;
             js_max_seats_update();
             celda.selected = true;
-            celda.style.outline = "2px solid #260303";
+            celda.style.outline = "1px solid #FFFFFF";
             console.log(celda.xpos + " " + celda.ypos);
         } else {
             Swal.fire({
                 'icon': 'warning',
-                'title': 'Maximos asientos seleccionados',
-                'text': 'Deseleccione otras butacas para cambiar su seleccion',
+                'title': 'Máximos asientos seleccionados',
+                'text': 'Deseleccione otras butacas para cambiar su selección',
                 'confirmButtonText': 'Entendido'
             });
         }
@@ -61,7 +61,7 @@ const js_go_next_step = () => {
             } else {
                 Swal.fire({
                     'icon': 'warning',
-                    'title': 'Seleccion invalida',
+                    'title': 'Selección inválida',
                     'text': 'Debe comprar almenos 1 boleto',
                     'confirmButtonText': 'Entendido'
                 });
@@ -71,7 +71,7 @@ const js_go_next_step = () => {
             if (seat_amount_selected != 0) {
                 Swal.fire({
                     'icon': 'warning',
-                    'title': 'Seleccion invalida',
+                    'title': 'Selección inválida',
                     'text': `Aun quedan  ${seat_amount_selected}  asientos sin seleccionar`,
                     'confirmButtonText': 'Entendido'
                 });
@@ -93,8 +93,8 @@ const js_go_next_step = () => {
             } else {
                 Swal.fire({
                     'icon': 'warning',
-                    'title': 'Seleccion incompleta',
-                    'text': `Marque la casetilla si acepta los terminos y condiciones`,
+                    'title': 'Selección incompleta',
+                    'text': `Marque la casetilla si acepta los términos y condiciones`,
                     'confirmButtonText': 'Entendido'
                 });
             }
@@ -115,7 +115,6 @@ const js_max_seats_update = () => {
     document.getElementById("ui-max-seats").innerHTML = `Asientos restantes : ${seat_amount_selected}`
 }
 const js_quant_modifier_click = (modifier) => {
-    console.log(document.getElementById("quant-total-reg").value);
     switch (modifier.id) {
         case 'quant-modifier-minus-reg':
             if (parseInt(document.getElementById("quant-total-reg").innerHTML, 10) > 0) {
@@ -155,6 +154,4 @@ const js_quant_modifier_set_onClick = function(modifier) {
 }
 
 
-
 js_quant_modifier_set_onClick();
-document.getElementById("button-next").onclick = js_go_next_step;

@@ -1,19 +1,55 @@
+.container {
+    height: 100vh;
+    background-color: #111111;
+    background-size: cover;
+}
+
+section {
+    height: 100%;
+    padding-top: 1%;
+}
+
 .section-step-inactive {
     display: none;
-    height: 0px;
-    width: 0px;
 }
 
 .section-step-active {
     display: flex;
     justify-content: start;
     align-items: center;
+    color: #FFFFFF;
 }
 
+
+/*
+*
+* SECTION LEFT
+*
+*
+*/
+
 .section-left {
+    height: 100%;
     display: block;
-    padding-top: 3%;
-    padding-left: 1%;
+    padding-top: 35px;
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: #222222;
+}
+
+.section-left p {
+    padding: 10px;
+    font-family: 'Oswald';
+    font-size: 2rem;
+}
+
+.img-container {
+    width: 200px;
+    height: 300px;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    background-image: url(../media/joker.jpg);
+    background-size: cover;
 }
 
 .section-left .step-container {
@@ -24,65 +60,127 @@
     width: 100%;
 }
 
-.step-container p {
-    padding-left: 5%;
-    padding-top: 5%;
+.step-container {
+    padding-top: 15%;
 }
+
+.step-active {
+    font-size: 28px;
+    color: #FFD65B;
+}
+
+.step-inactive {
+    font-weight: normal;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.step-completed {
+    font-weight: normal;
+    font-size: 20px;
+    color: #444444;
+}
+
+
+/*
+*
+* SECTION RIGTH
+*
+*
+*/
 
 .section-right {
     display: block;
-    margin-left: 3%;
-    padding-top: 1%;
+    height: 100%;
+    width: 100%;
+    padding-left: 2%;
+    background-color: #111111;
 }
 
-.section-right .header-tabla {
-    margin-bottom: 5%;
+.section-title {
+    margin-bottom: 3%;
+    color: #FFFFFF;
+}
+
+.section-title h1 {
+    margin-bottom: 1%;
+    font-family: 'Oswald';
+    font-size: 3rem;
+}
+
+.section-title p {
+    font-family: 'Nunito';
+    font-size: 1.5rem;
+}
+
+.section-right p {
+    font-family: 'Nunito';
+    font-size: 18px;
+}
+
+button {
+    margin-left: 15%;
+}
+
+
+/*
+*
+*
+* TABLAS
+*
+*
+*/
+
+th,
+td {
+    padding: 0.5rem 2rem;
+    vertical-align: center;
 }
 
 .tabla {
-    background: #FFFFFF;
-    margin: 0% 0% 3% 2%;
-}
-
-.tabla tbody tr:nth-child(odd) {
-    background: linear-gradient(0deg, #eaeef4 0%, #FFFFFF 60%);
-}
-
-.tabla th,
-table td {
-    padding: 0.5rem 2rem;
-}
-
-.tabla thead {
-    font-family: 'Nunito';
-    font-size: 22px;
-}
-
-.tabla thead tr {
-    border-bottom: 2px solid #BB9526;
-}
-
-.tabla tbody {
+    margin-bottom: 3%;
     font-family: 'Nunito';
     font-size: 16px;
+    background: #222222;
+    color: #FFFFFF;
+    border-top: 15px solid #222222;
+    border-bottom: 15px solid #222222;
 }
 
-.tabla tbody tr {
-    border-bottom: 1px solid #BAC1CA;
-}
-
-.tabla tbody tr:hover {
+.quant-modifier {
+    padding: 0;
+    vertical-align: center;
     cursor: pointer;
+    font-family: 'Oswald';
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.tabla tfoot {
-    font-family: 'Nunito';
-    font-size: 16px;
-    border-bottom: 2px solid #BB9526;
+#quant-modifier-minus-reg,
+#quant-modifier-minus-kid,
+#quant-modifier-minus-adu {
+    text-align: right;
 }
 
-.tabla tfoot tr {
-    border-bottom: 1px solid #BB9526;
+#quant-total-reg,
+#quant-total-kid,
+#quant-total-adu,
+#quant-total,
+#price-total {
+    padding: 0;
+    text-align: center;
+}
+
+#quant-modifier-plus-reg,
+#quant-modifier-plus-kid,
+#quant-modifier-plus-adu {
+    text-align: left;
+    vertical-align: center;
+}
+
+.quant-modifier:hover {
+    cursor: pointer;
+    color: #FFD65B;
 }
 
 .swal2-container .swal2-title {
@@ -95,68 +193,27 @@ table td {
     font-size: 24px;
 }
 
-.step-active {
-    font-weight: bold;
-    font-size: 28px;
-    color: #950F11;
-}
 
-.step-inactive {
-    font-weight: normal;
-    font-size: 20px;
-    color: #BAC1CA;
-}
-
-.step-completed {
-    font-weight: normal;
-    font-size: 20px;
-    color: #BB9526;
-}
-
-#button-next {
-    position: relative;
-    margin-left: 50%;
-    margin-bottom: 1%;
-}
-
-img {
-    margin-top: 30px;
-    padding-left: 30px;
-    width: 250px;
-    height: 300px;
-}
-
-.tabla-asientos {
-    margin-top: 50px;
-    background-color: #FFFFFF;
-    border-color: #FFFFFF;
-}
-
-.tabla-asientos tr td {
-    margin: 2px;
-    background-color: #FFFFFF;
-    border: #FFFFFF;
-}
-
-.tabla-asientos td:hover {
-    cursor: pointer;
-    outline: 1px solid #260303;
-}
-
-.tabla-asientos .material-icons {
-    color: #00DB9D;
-}
+/*
+*
+*
+* TABLA DE ASIENTOS
+*
+*
+*/
 
 .leyenda {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2%;
+    padding: 0;
+    min-width: 500px;
+    max-width: 500px;
 }
 
 .leyenda div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
 }
 
 .leyenda div span {
@@ -164,20 +221,18 @@ img {
     padding-top: 3px;
 }
 
-.quant-modifier {
-    font-size: 24px;
-    font-weight: bold;
+.tabla-asientos {
+    padding: 0;
+    border: none;
 }
 
-.quant-modifier:hover {
+.tabla-asientos td:hover {
     cursor: pointer;
-    outline: 1px solid #260303;
+    outline: 1px solid #FFD65B;
 }
 
-p {
-    padding-top: 3px;
-    font-family: 'Nunito';
-    font-size: 18px;
+.tabla-asientos .material-icons {
+    color: #00DB9D;
 }
 
 form {
