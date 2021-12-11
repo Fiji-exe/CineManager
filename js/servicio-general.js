@@ -93,6 +93,19 @@ function cartelera() {
 }
 
 
+
 function salir() {
     console.log("salir")
 }
+
+
+const registrarDatos = async(pDatos, pEndPoint) => {
+    url += pEndPoint;
+
+    await axios({
+        method: 'post',
+        url: url,
+        data: pDatos
+    });
+};
+
