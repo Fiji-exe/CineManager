@@ -11,3 +11,15 @@
 .div-titulo{
     padding: 10px 0;
 }
+
+.contenido{
+    background-color: #111;
+    color: #fff;
+    height: 100vh;
+    padding: 30px;
+}
+
+.contenido textarea{
+    background-color: #111;
+    color: #fff;
+}
