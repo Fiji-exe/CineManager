@@ -1,1 +1,26 @@
-/* Se elimino ya que se repetia en css general */
+ h1 {
+     text-align: center;
+     color: #FFFFFF;
+     font-family: "Oswald";
+ }
+ 
+ .tyc {
+     padding: 0 35%;
+ }
+ 
+ .tyc p {
+     text-align: center;
+     color: #FFFFFF;
+     font-family: "Nunito";
+ }
+ 
+ span {
+     font-weight: bold;
+     text-align: center;
+     color: #FFFFFF;
+     font-family: "Nunito";
+ }
+ 
+ .contenido {
+     background-color: #333333;
+ }

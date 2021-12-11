@@ -35,14 +35,14 @@
 
         <div class="contenedor-principal">
             <div class="foto-perfil">
+
                 <img src="../media/profile.png" alt="Foto de perfil">
-                <div>
+                <div class="boton-foto">
                     <label for="files" class="btn1-fondoclaro">Cambiar imagen</label>
-                    <input id="files" style="visibility:hidden;" type="file">
+
                 </div>
 
             </div>
-
 
 
             <div class="contenedor-centro">
@@ -90,7 +90,8 @@
                 <div class="input-box ">
                     <h2>Fecha de nacimiento</h2>
                     <form action="">
-                        <input type="date" id="date-nacimiento" name="birthday" class="input-box-fecha-nacimiento">
+                        <input type="date" id="date-nacimiento" name="birthday" max='2021-12-15' class="input-box-fecha-nacimiento" onchange="edad()">
+                        <span id="resultadoEdad"></span>
                     </form>
 
                     <div class="input-box input-box-contrasena">
@@ -98,6 +99,7 @@
                         <input type="password" placeholder="Contraseña actual" id="txt-contraseña-actual">
                         <input type="password" placeholder="Nueva contraseña" id="txt-nueva-contrasena">
                         <input type="password" placeholder="Confirmar contraseña" id="txt-confirmar-contrasena">
+                        <button class=btn1-fondoclaro id="btn-ambiarcontr">Cambiar contraseña</button>
                     </div>
 
                     <div class=notice>
@@ -106,6 +108,7 @@
                         </p>
                     </div>
 
+                    <input id="files" class="input-invisible" type="file">
 
 
                 </div>

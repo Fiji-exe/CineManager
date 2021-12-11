@@ -9,15 +9,19 @@
 }
 
 .contenedor-der {
-    background-color: #11111180;
+    background-color: #111111;
     color: #fff;
     padding: 5px 60px;
     border-radius: 5px;
     max-width: 30%;
+    backdrop-filter: blur(50px);
+    margin: 30px;
 }
 
 .contenedor-der p {
     color: #fff;
+    font-family: 'Nunito';
+    font-size: 30px;
     margin: 3%;
     font-family: 'Nunito';
 }
@@ -27,16 +31,19 @@
 }
 
 .contenedor-izq {
-    background-color: #11111180;
+    background-color: #111111;
     color: #fff;
     padding: 5px 60px;
     border-radius: 5px;
     padding: 5px;
+    backdrop-filter: blur(50px);
+    margin: 30px;
 }
 
 .contenedor-izq p {
     color: #fff;
     font-family: 'Nunito';
+    font-size: 30px;
     margin: 3%;
     max-width: 50%;
 }
@@ -53,6 +60,8 @@
 }
 
 span {
-    color: #BB9526;
+    color: #fff;
     font-weight: bold;
+    font-family: 'Oswald';
+    font-size: 36px;
 }

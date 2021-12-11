@@ -1,36 +1,49 @@
 .contenedor-centro {
-    background-image: url(../media/background1.jpg);
+    background-color: #1A1A1A;
     background-size: cover;
     display: flex;
     flex-flow: row wrap;
+    height: 80vh;
+    align-items: center;
+    padding: 95px;
 }
 
 .card-funcion {
-    flex-wrap: wrap;
-    min-width: 25%;
-    padding: 3%;
+    display: flex;
+    width: 500px;
+    height: 100px;
     margin: 10px;
+    padding: 10px;
     font-size: 25px;
     font-family: "Nunito";
-    background-color: #111111;
+    background-color: #333333;
     color: #fff;
 }
 
 .card-funcion-admin {
-    flex-wrap: wrap;
-    min-width: 25%;
-    padding: 3%;
-    margin: 10px;
-    font-size: 25px;
-    font-family: "Nunito";
-    background-color: grey;
-    color: #fff;
+    background-color: rgb(83, 50, 50);
 }
 
 .card-funcion i {
-    font-size: 70px;
+    font-size: 45px;
 }
 
 .card-funcion-admin i {
-    font-size: 70px;
+    font-size: 45px;
+}
+
+.card-funcion button {
+    margin-left: 70px;
+    height: auto;
+    width: 250px;
+}
+
+.card-funcion i {
+    align-items: left;
+    padding: 3px;
+    margin-left: 30px;
+}
+
+i {
+    color: #009688;
 }
