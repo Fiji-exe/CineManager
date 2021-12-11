@@ -22,46 +22,97 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <title>Cine Manager</title>
 </head>
 
 <body>
     <div class="navbar-cliente-iniciado"></div>
-    <div class="contenido">
-        <div class="contenedor-centro">
-            <div class="card-funcion"><a href="../html/configuracion-de-usuario.html">Perfil de Usuario</a></div>
-            <div class="card-funcion">
-                <a href="../html/historial-reservas.html">Historial de Reservas</a></div>
 
-            <div class="card-funcion">
-                <a href="../html/registro-pago.html">Métodos de Pago</a></div>
-            <div class="card-funcion">
-                <a href="../html/buscar-listar.html">Historial de Búsquedas</a>
-            </div>
+    <div class="contenedor-centro">
+        <div class="card-funcion"><i class="fa fa-bars w3-text-teal"></i>
+            <button class="btn1-fondoclaro " onclick="configUsuario() "> Configuración de usuario</button></div>
+        <div class="card-funcion">
+            <i class="fa fa-bars w3-text-teal"></i>
+            <button class="btn1-fondoclaro " onclick="historial() "> Historial de Reservas</button>
 
-            <div class="card-funcion"><a href="../html/homepagecarteleras.html">Cartelera</a></div>
-            <!-- contenedores de login de admin -->
-            <div class="card-funcion-admin"><a href="../html/agregar-usuario-admin.html">Agregar Usuario</a></div>
-            <div class="card-funcion-admin"><a href="../html/crear-editar-cadena.html">Editar Cadena</a></div>
-            <div class="card-funcion-admin"><a href="../html/buscar-ver-reportes.html">Ver Reportes de Cadena</a></div>
-            <div class="card-funcion-admin"><a href="../html/editar-carteleras.html">Agregar/Editar Cartelera</a></div>
-            <div class="card-funcion-admin"><a href="../html/agregar-editar-pelicula.html">Agregar/Editar Película</a></div>
-            <div class="card-funcion-admin"><a href="../html/editar-categorias.html">Agregar / Editar Categoría</a></div>
-            <div class="card-funcion-admin"><a href="../html/editar-salas.html">Agregar / Sala</a></div>
-            <div class="card-funcion-admin"><a href="../html/editar-tipos-salas.html">Agregar / Editar Tipo de Sala</a></div>
-            <div class="card-funcion-admin"><a href="../html/editar-tipos-de-asiento.html">Agregar / Editar Tipo de Asiento</a></div>
-            <div class="card-funcion-admin"><a href="../html/editar-terminos-condiciones.html">Editar Términos y condiciones</a></div>
+        </div>
+
+        <div class="card-funcion ">
+            <i class="fa fa-bars w3-text-teal"></i>
+            <button class="btn1-fondoclaro " onclick="registroPago() "> Métodos de Pago</button>
+
+        </div>
+        <div class="card-funcion ">
+            <i class="fa fa-bars w3-text-teal"></i>
+            <button class="btn1-fondoclaro " onclick="buscarLista() "> Historial de Búsquedas</button>
 
 
+        </div>
 
+        <div class="card-funcion ">
+            <i class="fa fa-bars w3-text-teal"></i>
+            <button class="btn1-fondoclaro " onclick="cartelera() "> Cartelera</button>
+        </div>
+
+        <!-- contenedores de login de admin -->
+        <div class="card-funcion-admin ">
+            <i class="fa fa-bars w3-text-teal"></i>
+            <button class="btn1-fondoclaro " onclick="agregarUsuario() "> Agregar Usuario</button>
+
+        </div>
+        <div class="card-funcion-admin ">
+            <i class="fa fa-bars w3-text-teal"></i>
+            <button class="btn1-fondoclaro " onclick="crearCadena() "> Editar Cadena</button>
+
+        </div>
+        <div class="card-funcion-admin ">
+            <i class="fa fa-bars w3-text-teal"></i>
+            <button class="btn1-fondoclaro " onclick="reportes() "> Ver Reportes de Cadena</button>
+        </div>
+        <div class="card-funcion-admin ">
+            <i class="fa fa-bars w3-text-teal"></i>
+            <button class="btn1-fondoclaro " onclick="crearCadena() "> Agregar/Editar Cartelera</button>
+
+        </div>
+        <div class="card-funcion-admin "><i class="fa fa-bars w3-text-teal"></i>
+            <button class="btn1-fondoclaro " onclick="agregarPelicula() "> Agregar/Editar Película</button>
+
+
+        </div>
+        <div class="card-funcion-admin ">
+            <i class="fa fa-bars w3-text-teal"></i>
+            <button class="btn1-fondoclaro " onclick="editarCategoria() "> >Agregar / Editar Categoría</button>
+
+        </div>
+        <div class="card-funcion-admin ">
+            <i class="fa fa-bars w3-text-teal"></i>
+            <button class="btn1-fondoclaro " onclick="editarSala() "> Agregar / editar sala</button>
+
+        </div>
+        <div class="card-funcion-admin ">
+            <i class="fa fa-bars w3-text-teal"></i>
+            <button class="btn1-fondoclaro " onclick="editarTipoSala() "> Agregar / Editar Tipo de Sala</button>
+
+
+        </div>
+        <div class="card-funcion-admin ">
+            <i class="fa fa-bars w3-text-teal"></i>
+            <button class="btn1-fondoclaro " onclick="editarTipoAsiento() "> Agregar / Editar Tipo de Asiento</button>
+
+        </div>
+        <div class="card-funcion-admin ">
+            <i class="fa fa-bars w3-text-teal"></i>
+            <button class="btn1-fondoclaro " onclick="editarTyc() "> Editar términos y condiciones</button>
 
 
         </div>
     </div>
-    <div class="footer-cliente"></div>
-    <script src="/js/navbar-footer.js"></script>
+
+    <div class="footer-cliente "></div>
+    <script src="/js/navbar-footer.js "></script>
+    <script src="/js/servicio-general.js "></script>
 </body>
 
 </html>

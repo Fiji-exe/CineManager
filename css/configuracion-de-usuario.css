@@ -3,15 +3,22 @@ h1 {
     font-size: 20px;
     font-weight: bold;
     padding: 2%;
+    color: #fff;
+}
+
+.contenido {
+    background-image: url(../media/background1.jpg);
 }
 
 .contenedor-principal {
     display: flex;
+    color: #fff;
 }
 
 .contenedor-principal img {
     max-width: 200px;
     margin: 3px;
+    padding: 20px;
 }
 
 .contenedor-centro {
@@ -39,6 +46,7 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     width: 35%;
+    align-self: left;
 }
 
 .card-botones {
@@ -60,7 +68,8 @@ input {
     padding: 2%;
     font-family: 'Nunito';
     font-size: 16px;
-    border: 1px solid #070F1A;
+    border: 1px solid #fff;
+    ;
     border-radius: 3px;
 }
 
