@@ -19,4 +19,5 @@
 // // Cine Locacion, Cine Nombre, Peli Nombre
 // // Tipo de sala, hora inicio, precio entrada
 // // asientos comprados
+// // fecha
 // // Precio total
