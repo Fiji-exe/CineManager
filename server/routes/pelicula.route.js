@@ -35,7 +35,7 @@ router.post('/agregar-pelicula', (req, res) => {
 });
 
 router.get('/listar-peliculas', (req, res) => {
-    Pelicula.find((error, lista) => {
+    Pelicula.find((error, peliculas) => {
         if (error) {
             res.json({
                 msj: 'ERR <Reporte> Route JS: No se pudo listar-peliculas',
