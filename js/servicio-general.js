@@ -109,3 +109,25 @@ const registrarDatos = async(pDatos, pEndPoint) => {
     });
 };
 
+
+const leerDatos = async(pEndPoint) => {
+    url += pEndPoint;
+    let lista = [];
+
+
+    await axios({
+            'method': 'get',
+            'url': url,
+        })
+        .then(response => {
+            lista = response.data.lista;
+        })
+        .catch(error => {
+            Swal.fire({
+                'icon': 'error',
+                'title': 'No se pudo listar los contactos',
+                'text': `Error :${error}`
+            });
+        });
+    return lista;
+};

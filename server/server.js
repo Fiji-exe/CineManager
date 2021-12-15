@@ -52,6 +52,7 @@ function handleError(res, reason, message, code) {
 app.use('/api', require('./routes/categoria.route'));
 app.use('/api', require('./routes/tipo-asiento.route'));
 app.use('/api', require('./routes/tipo-sala.route'));
+app.use('/api', require('./routes/terminos-condiciones.route'));
 
 
 //TODO@JRF344 #79 Adaptar a programa
