@@ -1,0 +1,17 @@
+'use strict';
+
+const mongoose = require('mongoose');
+
+let schemaUsuarios = new mongoose.Schema({
+    primerNombre: { type: String, required: true },
+    segundoNombre: { type: String, required: false },
+    primerApellido: { type: String, required: true },
+    segundoApellido: { type: String, required: false },
+    fechaNacimiento: { type: Date, required: true },
+    tipoId: { type: Number, required: true },
+    numeroId: { type: String, required: true, unique: true },
+    correoUsuario: { type: String, required: true, unique: true },
+    passwordUsuario: { type: String, required: true },
+});
+
+module.exports = new mongoose.model('Usuario', schemaUsuarios, 'usuarios');

@@ -99,13 +99,28 @@ function salir() {
 }
 
 
-const registrarDatos = async(pDatos, pEndPoint) => {
-    url += pEndPoint;
+const registrarUsuario = async (pDatos, pEndPoint, urlRedireccion) => {
+    let url = `http://localhost:3000/api${pEndPoint}`;
 
     await axios({
-        method: 'post',
-        url: url,
-        data: pDatos
-    });
+        'method': 'post',
+        'url': url,
+        'data': pDatos
+    }).then(res => {
+        Swal.fire({
+            'icon': 'success',
+            'title': 'Se ha enviado un correo de validación.',
+            'text': res.msj,
+            'confirmButtonText': 'Entendido'
+        })/* .then(() => {
+            window.location.href = urlRedireccion;
+        }) */;
+    }).catch(error => {
+        Swal.fire({
+            'icon': 'error',
+            'title': 'Ha ocurrido un error.',
+            'text': `${error}`
+        });
+    })
 };
 

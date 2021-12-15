@@ -36,25 +36,25 @@
                     <h1>Crear Cuenta</h1>
 
                     <div class="input-container input-default input-name">
-                        <input id="txt-nombre" type="text" placeholder="Nombre"/>
+                        <input id="txt-nombre" type="text" placeholder="Nombre" />
                     </div>
 
                     <div class="input-container input-default input-name">
-                        <input id="txt-segundo-nombre" type="text" placeholder="Segundo Nombre"/>
+                        <input id="txt-segundo-nombre" type="text" placeholder="Segundo Nombre" />
                     </div>
 
                     <div class="input-container input-default input-surname">
-                        <input id="txt-apellido" type="text" placeholder="Apellido"/>
+                        <input id="txt-apellido" type="text" placeholder="Apellido" />
                     </div>
 
                     <div class="input-container input-default input-surname">
-                        <input id="txt-segundo-apellido" type="text" placeholder="Segundo Apellido"/>
+                        <input id="txt-segundo-apellido" type="text" placeholder="Segundo Apellido" />
                     </div>
 
                     <div class="dual-inputs">
                         <p class="form-text">Fecha de Nacimiento:</p>
                         <div class="input-container input-short input-date">
-                            <input id="date-nacimiento" type="date"/>
+                            <input id="date-nacimiento" type="date" />
                         </div>
                     </div>
 
@@ -66,27 +66,28 @@
                             </select>
                         </div>
                         <div class="input-container input-short input-idnum">
-                            <input id="txt-id" type="text" placeholder="Identificación"/>
+                            <input id="txt-id" type="text" placeholder="Identificación" />
                         </div>
                     </div>
 
                     <div class="input-container input-default input-email">
-                        <input id="txt-correo" type="email" placeholder="user@exmaple.com"/>
+                        <input id="txt-correo" type="email" placeholder="user@exmaple.com" />
                     </div>
 
                     <div class="dual-inputs input-form">
                         <span class="material-icons input-form-icon">
                             info
                         </span>
-                        <p class="input-form-blurb">6 caracteres mínimo, debe incluir mayúsculas, minúsculas 1 número y 1 carácter especial.</p>
+                        <p class="input-form-blurb">6 caracteres mínimo, debe incluir mayúsculas, minúsculas 1 número y
+                            1 carácter especial.</p>
                     </div>
 
                     <div class="input-container input-default input-password">
-                        <input id="txt-password" type="password" placeholder="Contraseña"/>
+                        <input id="txt-password" type="password" placeholder="Contraseña" />
                     </div>
 
                     <div class="input-container input-default input-password-confirm">
-                        <input id="txt-password-confirmar" type="password" placeholder="Confirmar Contraseña"/>
+                        <input id="txt-password-confirmar" type="password" placeholder="Confirmar Contraseña" />
                     </div>
 
                     <button class="btn1-fondoclaro" type="button" id="btn-account-form">Crear</button>
@@ -101,9 +102,22 @@
     <footer>
         &#169; TeamFiji 2021
     </footer>
+    <!--AXIOS-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!--SWEET ALERT-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!--MOMENT-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--GENERAL-->
+    <script src="/js/navbar-footer.js"></script>
+    <script src="/js/servicio-validar-signup.js"></script>
+    <script src="/js/servicio-general.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="/js/navbar-footer.js"></script>
-<script src="/js/servicio-validar-signup.js"></script>
+
 
 </html>

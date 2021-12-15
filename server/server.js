@@ -50,8 +50,6 @@ function handleError(res, reason, message, code) {
 
 // Conexión a todas la rutas.
 
-
-//TODO@JRF344 #79 Adaptar a programa
 app.use('/api', require('./routes/usuarios.route'));
 
 //http://localhost:3000/api/registrar-usuario

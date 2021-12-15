@@ -1,7 +1,10 @@
 'use strict';
 
 const inputNombre = document.querySelector('#txt-nombre');
+const inputSegundoNombre = document.querySelector('#txt-segundo-nombre');
 const inputApellido = document.querySelector('#txt-apellido');
+const inputSegundoApellido = document.querySelector('#txt-segundo-apellido');
+const inputFechaNacimiento = document.querySelector('#date-nacimiento');
 
 const selectId = document.querySelector('#select-id');
 const inputId = document.querySelector('#txt-id');
@@ -70,13 +73,19 @@ const validar = () => {
             'confirmButtonText': 'Entendido'
         });
     } else {
-        Swal.fire({
-            'icon': 'success',
-            'title': 'Se ha enviado un correo de validación.',
-            'confirmButtonText': 'Entendido'
-        }).then(() => {
-            window.location.href = 'crear-validar.html';
-        });
+        let usuario = {
+            primerNombre: inputNombre.value,
+            segundoNombre: inputSegundoNombre.value,
+            primerApellido: inputApellido.value,
+            segundoApellido: inputSegundoApellido.value,
+            fechaNacimiento: inputFechaNacimiento.value,
+            tipoId: selectId.value,
+            numeroId: inputId.value,
+            correoUsuario: inputCorreo.value,
+            passwordUsuario: inputPassword.value
+        };
+
+        registrarUsuario(usuario, '/registrar-usuario', 'crear-validar.html')
     }
 
 };
