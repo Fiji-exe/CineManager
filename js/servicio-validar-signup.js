@@ -82,7 +82,8 @@ const validar = () => {
             tipoId: selectId.value,
             numeroId: inputId.value,
             correoUsuario: inputCorreo.value,
-            passwordUsuario: inputPassword.value
+            passwordUsuario: inputPassword.value,
+            tipoCliente: "1"
         };
 
         registrarUsuario(usuario, '/registrar-usuario', 'crear-validar.html')

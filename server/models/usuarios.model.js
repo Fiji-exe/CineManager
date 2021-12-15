@@ -4,11 +4,11 @@ const mongoose = require('mongoose');
 
 let schemaUsuarios = new mongoose.Schema({
     primerNombre: { type: String, required: true },
-    segundoNombre: { type: String, required: false },
+    segundoNombre: { type: String },
     primerApellido: { type: String, required: true },
-    segundoApellido: { type: String, required: false },
+    segundoApellido: { type: String },
     fechaNacimiento: { type: Date, required: true },
-    tipoId: { type: Number, required: true },
+    tipoId: { type: String, required: true },
     numeroId: { type: String, required: true, unique: true },
     correoUsuario: { type: String, required: true, unique: true },
     passwordUsuario: { type: String, required: true },
