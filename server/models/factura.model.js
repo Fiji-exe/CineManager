@@ -13,4 +13,4 @@ let schemaFacturas = new mongoose.Schema({
     asientos: { type: String, required: true }
 });
 
-module.exports = new mongoose.model('Facturas', schemaFacturas, 'mongodb-coleccion-facturas');
+module.exports = new mongoose.model('Factura', schemaFacturas, 'mongodb-coleccion-facturas');

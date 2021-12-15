@@ -1,10 +1,10 @@
 'use strict';
 
 const express = require('express');
-const Factura = require('../models/factura.model');
+const Factura = require('../models/pelicula.model');
 const router = express.Router();
 
-router.post('/agregar-factura', (req, res) => {
+router.post('/agregar-pelicula', (req, res) => {
 
     let nuevoFactura = new Factura({
         fecha: req.body.fecha,
@@ -20,12 +20,12 @@ router.post('/agregar-factura', (req, res) => {
     nuevoFactura.save(error => {
         if (error) {
             res.json({
-                msj: 'ERR <Factura> Route JS: No se pudo agregar-factura',
+                msj: 'ERR <Pelicula> Route JS: No se pudo agregar-pelicula',
                 error
             });
         } else {
             res.json({
-                msj: 'OK <Factura> Route JS: Exito agregar-factura'
+                msj: 'OK <Pelicula> Route JS: Exito agregar-pelicula'
             });
 
         }
@@ -34,16 +34,16 @@ router.post('/agregar-factura', (req, res) => {
 
 });
 
-router.get('/listar-facturas', (req, res) => {
+router.get('/listar-peliculas', (req, res) => {
     contacto.find((error, lista) => {
         if (error) {
             res.json({
-                msj: 'ERR <Reporte> Route JS: No se pudo listar-reportes',
+                msj: 'ERR <Reporte> Route JS: No se pudo listar-peliculas',
                 error
             });
         } else {
             res.json({
-                msj: 'OK <Reporte> Route JS: Exito listar-reportes',
+                msj: 'OK <Reporte> Route JS: Exito listar-peliculas',
                 reportes
             });
         }
