@@ -12,6 +12,8 @@ let schemaUsuarios = new mongoose.Schema({
     numeroId: { type: String, required: true, unique: true },
     correoUsuario: { type: String, required: true, unique: true },
     passwordUsuario: { type: String, required: true },
+    tipoUsuario: { type: String, required: true },
+    cadena: { type: String, required: false },
     metodos_pago: [{
         numero: { type: String, required: true },
         mes: { type: Number, required: true },
