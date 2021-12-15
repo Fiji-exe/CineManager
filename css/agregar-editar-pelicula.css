@@ -1,57 +1,78 @@
-.image-div {
-    width: 50%;
-    height: 500px;
+.contenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    background-color: #111;
+    height: 100vh;
+    width: 100vw;
 }
 
-.div-edit-header {
-    margin-top: 1%;
-    margin-left: 1%;
-    margin-bottom: 3%;
-}
-
-.image-div img,
-button {
-    display: block;
-}
-
-.image-div img {
-    margin: 0 auto 20px auto;
-    height: 70%;
-    width: 100%;
-}
-
-.image-div button {
-    float: right;
-    margin: 0;
-}
-
-.right-div {
-    float: left;
-    height: 500px;
-    width: 50%;
-    margin-left: 10px;
+h1 {
+    padding: 20px 35px 0px 35px;
+    color: #fff;
+    background-color: #111;
+    font-size: 4vw;
 }
 
 .left-div {
-    float: left;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 20px 35px 0px 35px;
 }
 
-a {
-    display: inline-block;
-    margin-bottom: 1%;
-}
-
-.input-short {
-    margin-top: 2%;
+.img-container {
     width: 100%;
+    height: 50%;
+    background-color: #666666;
+    border: 1px solid #666666;
 }
 
-.button-div {
-    margin-top: 3%;
-    margin: 2% auto 0 auto;
-    text-align: center;
+.img-container img {
+    width: 100%;
+    height: 100%;
 }
 
-.button-div button {
-    display: inline-block;
+.right-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.subright-div1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.subright-div1 div:nth-child(1) {
+    width: 70%;
+}
+
+.right-div a {
+    font-family: 'Nunito';
+    font-size: 1.1vw;
+    color: #7ea6b6;
+}
+
+
+/*
+*
+* Overwrite general
+*
+*/
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    font-size: 1.3vw;
+}
+
+textarea {
+    font-family: 'Nunito';
+    font-size: 1.3vw;
+    color: #111111;
+}
+
+.input-container {
+    margin-bottom: 0px;
+    border-bottom: 1px #333 solid;
 }
