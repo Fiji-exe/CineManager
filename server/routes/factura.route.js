@@ -53,7 +53,9 @@ router.get('/listar-facturas', (req, res) => {
 /*no es necesario editar factura*/
 /*router.put('/modificar-reporte', (req, res) => {});*/
 
-router.delete('/eliminar-factura', (req, res) => {});
+router.delete('/eliminar-factura', (req, res) => {
+
+});
 
 
 module.exports = router;

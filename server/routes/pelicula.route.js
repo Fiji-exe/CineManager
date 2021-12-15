@@ -1,12 +1,12 @@
 'use strict';
 
 const express = require('express');
-const Factura = require('../models/pelicula.model');
+const Pelicula = require('../models/pelicula.model');
 const router = express.Router();
 
 router.post('/agregar-pelicula', (req, res) => {
 
-    let nuevoFactura = new Factura({
+    let nuevoPelicula = new Pelicula({
         fecha: req.body.fecha,
         locacion_cine: req.body.locacion_cine,
         nombre_cine: req.body.nombre_cine,
@@ -17,7 +17,7 @@ router.post('/agregar-pelicula', (req, res) => {
         asientos: req.body.asientos
     });
 
-    nuevoFactura.save(error => {
+    nuevoPelicula.save(error => {
         if (error) {
             res.json({
                 msj: 'ERR <Pelicula> Route JS: No se pudo agregar-pelicula',
@@ -35,7 +35,7 @@ router.post('/agregar-pelicula', (req, res) => {
 });
 
 router.get('/listar-peliculas', (req, res) => {
-    contacto.find((error, lista) => {
+    Pelicula.find((error, lista) => {
         if (error) {
             res.json({
                 msj: 'ERR <Reporte> Route JS: No se pudo listar-peliculas',
@@ -50,10 +50,46 @@ router.get('/listar-peliculas', (req, res) => {
     });
 });
 
-/*no es necesario editar factura*/
-/*router.put('/modificar-reporte', (req, res) => {});*/
+router.put('/modificar-pelicula', (req, res) => {
+    let datos = {
+        nombre: req.body.nombre,
+        categoria: req.body.categoria,
+        descripcion: req.body.descripcion,
+        duracion: req.body.duracion,
+        anno: req.body.anno,
+        idioma: req.body.idioma,
+        subtitulos: req.body.subtitulos,
+        actores: req.body.actores
+    }
+    contacto.updateOne({ _id: req.body._id }, datos, error => {
+        if (error) {
+            res.json({
+                msj: 'Ocurrio un error al actualizar contacto',
+                error
+            });
+        } else {
+            res.json({
+                msj: 'El contacto se actualizo exitosamente'
+            });
+        }
+    })
+});
 
-router.delete('/eliminar-factura', (req, res) => {});
 
+
+router.delete('/eliminar-contacto', (req, res) => {
+    contacto.deleteOne({ _id: req.body._id }, error => {
+        if (error) {
+            res.json({
+                msj: 'Ocurrio un error al eliminar contacto',
+                error
+            });
+        } else {
+            res.json({
+                msj: 'El contacto se elimino exitosamente'
+            });
+        }
+    });
+});
 
 module.exports = router;

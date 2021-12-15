@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
 
-let schemaFacturas = new mongoose.Schema({
+let schemaFactura = new mongoose.Schema({
     fecha: { type: String, required: true },
     locacion_cine: { type: String, required: true },
     nombre_cine: { type: String, required: true },
@@ -13,4 +13,4 @@ let schemaFacturas = new mongoose.Schema({
     asientos: { type: String, required: true }
 });
 
-module.exports = new mongoose.model('Factura', schemaFacturas, 'mongodb-coleccion-facturas');
+module.exports = new mongoose.model('Factura', schemaFactura, 'mongodb-coleccion-facturas');
