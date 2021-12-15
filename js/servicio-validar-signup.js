@@ -27,6 +27,7 @@ const validar = () => {
     if (inputNombre.value == '') {
         document.querySelector(".input-name").classList.add("input-error");
     } else {
+        error = true;
         document.querySelector(".input-name").classList.remove("input-error");
     }
     
@@ -34,6 +35,7 @@ const validar = () => {
     if (inputApellido.value == '') {
         document.querySelector(".input-surname").classList.add("input-error");
     } else {
+        error = true;
         document.querySelector(".input-surname").classList.remove("input-error");
     }
 
@@ -41,6 +43,7 @@ const validar = () => {
     if (inputId.value == '') {
         document.querySelector(".input-idnum").classList.add("input-error");
     } else {
+        error = true;
         document.querySelector(".input-idnum").classList.remove("input-error");
     }
 
