@@ -4,9 +4,6 @@ const express = require('express');
 const terminosyCondiciones = require('../models/terminos-condiciones.model');
 const router = express.Router();
 
-
-
-
 router.post('/registrar-terminos', (req, res) => {
     let nuevosTerminos = new terminosyCondiciones({
         terminos: req.body.terminos
@@ -27,7 +24,6 @@ router.post('/registrar-terminos', (req, res) => {
     } );
 
 });
-
 
 router.get('/obtener-terminos', (req, res) => {
     terminosyCondiciones.find((error, lista) =>{
@@ -64,7 +60,6 @@ router.put('/modificar-terminos', (req, res) => {
         }
     })
 });
-
 
 
 module.exports = router;
