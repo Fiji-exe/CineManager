@@ -23,7 +23,8 @@ router.post('/registrar-usuario', (req, res) => {
     nuevoUsuario.save(error => {
         if (error) {
             res.json({
-                msj: 'ERR <Usuario> Route JS: No se pudo crear usuario.'
+                msj: 'ERR <Usuario> Route JS: No se pudo crear usuario.',
+                error
             });
         } else {
             res.json({
