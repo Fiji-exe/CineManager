@@ -7,14 +7,14 @@ const router = express.Router();
 router.post('/agregar-pelicula', (req, res) => {
 
     let nuevoPelicula = new Pelicula({
-        fecha: req.body.fecha,
-        locacion_cine: req.body.locacion_cine,
-        nombre_cine: req.body.nombre_cine,
-        nombre_peli: req.body.nombre_peli,
-        tipo_sala: req.body.tipo_sala,
-        hora_inicio: req.body.hora_inicio,
-        precio_total: req.body.precio_total,
-        asientos: req.body.asientos
+        nombre: req.body.nombre,
+        categoria: req.body.categoria,
+        descripcion: req.body.descripcion,
+        duracion: req.body.duracion,
+        anno: req.body.anno,
+        idioma: req.body.idioma,
+        subtitulos: req.body.subtitulos,
+        actores: req.body.actores
     });
 
     nuevoPelicula.save(error => {
@@ -44,7 +44,7 @@ router.get('/listar-peliculas', (req, res) => {
         } else {
             res.json({
                 msj: 'OK <Reporte> Route JS: Exito listar-peliculas',
-                reportes
+                peliculas
             });
         }
     });
@@ -61,15 +61,15 @@ router.put('/modificar-pelicula', (req, res) => {
         subtitulos: req.body.subtitulos,
         actores: req.body.actores
     }
-    contacto.updateOne({ _id: req.body._id }, datos, error => {
+    Pelicula.updateOne({ _id: req.body._id }, datos, error => {
         if (error) {
             res.json({
-                msj: 'Ocurrio un error al actualizar contacto',
+                msj: 'ERR <Pelicula> Route JS: No se pudo modificar-pelicula',
                 error
             });
         } else {
             res.json({
-                msj: 'El contacto se actualizo exitosamente'
+                msj: 'OK <Pelicula> Route JS: Exito modificar-pelicula'
             });
         }
     })
@@ -77,16 +77,16 @@ router.put('/modificar-pelicula', (req, res) => {
 
 
 
-router.delete('/eliminar-contacto', (req, res) => {
+router.delete('/eliminar-pelicula', (req, res) => {
     contacto.deleteOne({ _id: req.body._id }, error => {
         if (error) {
             res.json({
-                msj: 'Ocurrio un error al eliminar contacto',
+                msj: 'ERR <Pelicula> Route JS: No se pudo modificar-pelicula',
                 error
             });
         } else {
             res.json({
-                msj: 'El contacto se elimino exitosamente'
+                msj: 'OK <Pelicula> Route JS: Exito modificar-pelicula'
             });
         }
     });
