@@ -3,6 +3,7 @@
 const express = require('express');
 const usuariosModel = require('../models/usuarios.model');
 const router = express.Router();
+const mailer = require('../templates/codigo-verificacion');
 
 router.post('/registrar-usuario', (req, res) => {
     let nuevoUsuario = new usuariosModel({
@@ -16,11 +17,12 @@ router.post('/registrar-usuario', (req, res) => {
         correoUsuario: req.body.correoUsuario,
         passwordUsuario: req.body.passwordUsuario,
         tipoUsuario: req.body.tipoUsuario,
+        cuentaVerificada: req.body.cuentaVerificada,
         cadena: req.body.cadena,
         metodos_pago: req.body.metodos_pago,
     });
 
-    nuevoUsuario.save(error => {
+    nuevoUsuario.save((error, usuario, codigo) => {
         if (error) {
             res.json({
                 msj: 'ERR <Usuario> Route JS: No se pudo crear usuario.',
@@ -30,6 +32,8 @@ router.post('/registrar-usuario', (req, res) => {
             res.json({
                 msj: '<Usuario> Route JS: Usuario creado exitosamente.'
             })
+
+            mailer.enviarCodigo(usuario.correoUsuario, usuario.primerNombre, codigo)
         }
     })
 })
@@ -48,10 +52,23 @@ router.put('/modificar-cuenta', (req, res) => {
         correoUsuario: req.body.correoUsuario,
         passwordUsuario: req.body.passwordUsuario,
         tipoUsuario: req.body.tipoUsuario,
+        cuentaVerificada: req.body.cuentaVerificada,
         cadena: req.body.cadena,
         metodos_pago: req.body.metodos_pago,
     };
-})
+    Usiario.updateOne({_id: req.body.id}, datosNuevos, error => {
+        if (error) {
+            res.json({
+                msj: 'No se pudieron actualizar los datos.',
+                error
+            });
+        } else {
+            res.json({
+                msj: 'Datos actualizados exitosamente.'
+            });
+        }
+    });
+});
 
 router.delete('/borrar-cuenta', (req, res) => {})
 

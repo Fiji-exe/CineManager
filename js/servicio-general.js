@@ -112,9 +112,9 @@ const registrarUsuario = async (pDatos, pEndPoint, urlRedireccion) => {
             'title': 'Se ha enviado un correo de validación.',
             'text': res.msj,
             'confirmButtonText': 'Entendido'
-        })/* .then(() => {
+        }).then(() => {
             window.location.href = urlRedireccion;
-        }) */;
+        });
     }).catch(error => {
         Swal.fire({
             'icon': 'error',
@@ -124,3 +124,33 @@ const registrarUsuario = async (pDatos, pEndPoint, urlRedireccion) => {
     })
 };
 
+const actualizarUsuario = async (pDatos, pEndPoint, urlRedireccion) => {
+    let url = `http://localhost:3000/api${pEndPoint}`;
+
+    await axios({
+        'method': 'put',
+        'url': url,
+        'data': pDatos
+    }).then(res => {
+        Swal.fire({
+            'icon': 'success',
+            'title': 'Operacion realizada exitosamente.',
+            'text': res.msj
+        }).then(() => {
+            for (let i = 0; i < 10; i++) {
+                const random = Math.random();
+                const bit = (random * 16) | 0;
+                res += (bit).toString(16);
+            };
+            console.log(res);
+            localStorage.setItem('codigoStorage', JSON.stringify(res));
+            window.location.href = urlRedireccion;
+        }).catch(error => {
+            Swal.fire({
+                'icon': 'error',
+                'title': 'Ha ocurrido un error.',
+                'text': `${error}`
+            });
+        });
+    });
+}

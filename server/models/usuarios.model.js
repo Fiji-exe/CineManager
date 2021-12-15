@@ -13,6 +13,7 @@ let schemaUsuarios = new mongoose.Schema({
     correoUsuario: { type: String, required: true, unique: true },
     passwordUsuario: { type: String, required: true },
     tipoUsuario: { type: String, required: true },
+    cuentaVerificada: { type: String, required: true },
     cadena: { type: String, required: false },
     metodos_pago: [{
         numero: { type: String, required: true },

@@ -83,10 +83,11 @@ const validar = () => {
             numeroId: inputId.value,
             correoUsuario: inputCorreo.value,
             passwordUsuario: inputPassword.value,
-            tipoCliente: "1"
+            tipoUsuario: '1',
+            cuentaVerificada: '0'
         };
-
-        registrarUsuario(usuario, '/registrar-usuario', 'crear-validar.html')
+        localStorage.setItem('usuarioSinVerificar', JSON.stringify(usuario));
+        registrarUsuario(usuario, '/registrar-usuario', 'crear-validar.html', );
     }
 
 };
