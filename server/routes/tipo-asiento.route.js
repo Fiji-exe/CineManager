@@ -7,7 +7,7 @@ const router = express.Router();
 router.post('/registrar-tipo-asiento', (req, res) => {
 
     let nuevoTipoAsiento = new TipoAsiento({
-        tipoAsiento: req.body.tipoAsiento,
+        TipoAsiento: req.body.TipoAsiento,
 
     });
 
@@ -44,9 +44,25 @@ router.get('/obtener-tipo-asiento', (req, res) => {
     });
 });
 
+router.get('/obtener-tipo-asiento-editar', (req, res) => {
+    TipoAsiento.find({_id: req.query._id},(error, lista) => {
+        if (error) {
+            res.json({
+                msj: 'Fallo la consulta',
+                error
+            });
+        } else {
+            res.json({
+                msj: 'Tipo de asiento listada correctamente',
+                lista
+            });
+        }
+    });
+});
+
 router.put('/modificar-tipo-asiento', (req, res) => {
     let datos = {
-        tipoAsiento: req.body.tipoAsiento
+        TipoAsiento: req.body.TipoAsiento
     }
     TipoAsiento.updateOne({ _id: req.body._id }, datos, error => {
         if (error) {
