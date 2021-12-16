@@ -3,6 +3,7 @@
 const mongoose = require('mongoose');
 
 let schemaUsuarios = new mongoose.Schema({
+    foto: { type: String, required: true },
     primerNombre: { type: String, required: true },
     segundoNombre: { type: String },
     primerApellido: { type: String, required: true },
