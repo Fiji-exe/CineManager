@@ -40,8 +40,7 @@ const validar = () => {
         document.querySelector(".input-room-width").classList.add("input-error");
     } else {
         document.querySelector(".input-room-width").classList.remove("input-error");
-    }
-;
+    };
     if (error == true) {
 
         Swal.fire({

@@ -1,13 +1,17 @@
 'use strict';
 
 const express = require('express');
+
 const categoria = require('../models/categoria.model');
+
 const router = express.Router();
 
 router.post('/registrar-categoria', (req, res) => {
 
+
     let nuevaCategoria = new categoria({
         categoria: req.body.categoria
+
     });
 
     nuevaCategoria.save(error => {
@@ -28,6 +32,7 @@ router.post('/registrar-categoria', (req, res) => {
 });
 
 router.get('/obtener-categoria', (req, res) => {
+
     categoria.find((error, lista) => {
         if (error) {
             res.json({
@@ -63,7 +68,9 @@ router.put('/modificar-categoria', (req, res) => {
     let datos = {
         categoria: req.body.categoria
     }
+
     categoria.updateOne({ _id: req.body._id }, datos, error => {
+
         if (error) {
             res.json({
                 msj: 'Ocurrio un error al actualizar la categoria',
@@ -78,8 +85,8 @@ router.put('/modificar-categoria', (req, res) => {
 });
 
 router.delete('/eliminar-categoria', (req, res) => {
-
     categoria.deleteOne({ _id: req.body._id }, error => {
+
         if (error) {
             res.json({
                 msj: 'Ocurrio un error al eliminar categoria',

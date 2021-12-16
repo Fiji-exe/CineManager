@@ -17,6 +17,7 @@ const validar = () => {
     return error;
 };
 
+
 const cargarDatosTipoAsientoEditar = async() => {
 
     localStorage.setItem('_id', JSON.stringify('61baee91a830575c7875198a'));

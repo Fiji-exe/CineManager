@@ -69,7 +69,6 @@ if (validar() == true) {
     });
 }
 
-
 }
 
 const actualizarTipoSala = () => {

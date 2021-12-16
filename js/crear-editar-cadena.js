@@ -65,7 +65,7 @@ const cargarListaJefes = () => {
 
 // Update the current slider value (each time you drag the slider handle)
 const updateValueMargenLabel = () => {
-    margenGananciaLabel.innerHTML = margenGananciaSlider.value  + '%' ;
+    margenGananciaLabel.innerHTML = margenGananciaSlider.value + '%';
 }
 
 const registrarNuevaCadena = () => {
@@ -181,6 +181,7 @@ const eliminarCadena = () => {
 const validar = () => {
     let error = false;
 
+
     // if (txtCodigo.value == '') {
     //     error = true;
     //     document.querySelector('.input-codigo').classList.add('input-error');
@@ -189,31 +190,29 @@ const validar = () => {
     //     document.querySelector('.input-codigo').classList.remove('input-error');
     // }
 
+
     if (txtNombre.value == '') {
         error = true;
         document.querySelector('.input-nombre').classList.add('input-error');
-    }
-    else {
+    } else {
         document.querySelector('.input-nombre').classList.remove('input-error');
     }
 
     if (txtUbicacion.value == '') {
         error = true;
         document.querySelector('.input-ubicacion').classList.add('input-error');
-    }
-    else {
+    } else {
         document.querySelector('.input-ubicacion').classList.remove('input-error');
     }
 
     if (txtJefe.value == 'Seleccionar') {
         error = true;
         document.querySelector('.input-jefe').classList.add('input-error');
-    }
-    else {
+    } else {
         document.querySelector('.input-jefe').classList.remove('input-error');
     }
-
     return error;
+
 }
 
 margenGananciaSlider.addEventListener('input', updateValueMargenLabel);

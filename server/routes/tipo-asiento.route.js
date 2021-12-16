@@ -8,7 +8,6 @@ router.post('/registrar-tipo-asiento', (req, res) => {
 
     let nuevoTipoAsiento = new TipoAsiento({
         TipoAsiento: req.body.TipoAsiento,
-
     });
 
     nuevoTipoAsiento.save(error => {
@@ -44,6 +43,7 @@ router.get('/obtener-tipo-asiento', (req, res) => {
     });
 });
 
+
 router.get('/obtener-tipo-asiento-editar', (req, res) => {
     TipoAsiento.find({_id: req.query._id},(error, lista) => {
         if (error) {
@@ -63,6 +63,7 @@ router.get('/obtener-tipo-asiento-editar', (req, res) => {
 router.put('/modificar-tipo-asiento', (req, res) => {
     let datos = {
         TipoAsiento: req.body.TipoAsiento
+
     }
     TipoAsiento.updateOne({ _id: req.body._id }, datos, error => {
         if (error) {

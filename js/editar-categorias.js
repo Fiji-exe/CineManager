@@ -48,7 +48,9 @@ const registrarNuevaCategoria = () => {
         Swal.fire({
             'icon': 'warning',
             'title': 'La información introducida es inválida',
-            'text': 'Categoria no puede estar vacio',
+
+            'text': 'Categoria no puede estar vacio.',
+
             'confirmButtonText': 'Entendido'
         });
 
