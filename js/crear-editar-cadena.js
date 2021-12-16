@@ -14,8 +14,6 @@ const btnCrear = document.querySelector('#btn-crear');
 const btnsobrescribir = document.querySelector('#btn-sobrescribir');
 const btnEliminar = document.querySelector('#btn-eliminar');
 
-
-
 margenGananciaLabel.innerHTML = margenGananciaSlider.value + '%'; // Display the default slider value
 
 let widget_cloudinary = cloudinary.createUploadWidget({
@@ -24,17 +22,17 @@ let widget_cloudinary = cloudinary.createUploadWidget({
 }, (err, result) => {
     if (!err && result && result.event === 'success') {
         console.log('Imagen subida con éxito', result.info);
-        imgCadena.src = result.info.secure_url;
+        imgCadena.src = result.info.secure_url; //Cambiar img 
     }
 });
-buttonSubirImagenView.addEventListener('click', () => {
+buttonSubirImagenView.addEventListener('click', () => { //cambiar button
     widget_cloudinary.open();
 }, false);
 
 
 const cargarDatosCadenaEditar = async() => {
 
-        localStorage.setItem('_id', '61baaf1bb208e04d360d41d6');
+        //localStorage.setItem('_id', '61baaf1bb208e04d360d41d6');
 
         cargarListaJefes();
         let _id = localStorage.getItem('_id'); 
@@ -101,16 +99,6 @@ const registrarNuevaCadena = () => {
             window.location.href = 'buscar-listar.html';
         });
     }
-
-    let datos = {
-        foto: imgCadena.src,
-        nombre: txtNombre.value,
-        ubicacion: txtUbicacion.value,
-        jefe: txtJefe.value,
-        margen: margenGananciaSlider.value
-    }
-
-    
 
 }
 

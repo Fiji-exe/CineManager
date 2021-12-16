@@ -55,7 +55,7 @@ function handleError(res, reason, message, code) {
 //app.use('/api', require('./routes/usuarios.route'));
 app.use('/api', require('./routes/terminos-condiciones.route'));
 app.use('/api', require('./routes/cadena.route'));
-
+app.use('/api', require('./routes/categoria.route'));
 
 //http://localhost:3000/api/registrar-usuario
 //comment by adriando
