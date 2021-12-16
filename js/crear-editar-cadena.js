@@ -34,7 +34,7 @@ buttonSubirImagenView.addEventListener('click', () => {
 
 const cargarDatosCadenaEditar = async() => {
 
-        //localStorage.setItem('_id', '61ba9d576b6f43de1bc533b5');
+        localStorage.setItem('_id', '61baaf1bb208e04d360d41d6');
 
         cargarListaJefes();
         let _id = localStorage.getItem('_id'); 

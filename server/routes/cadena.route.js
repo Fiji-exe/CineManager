@@ -6,10 +6,11 @@ const router = express.Router();
 
 router.post('/registrar-cadena', (req, res) => {
     let nuevaCadena = new cadena({
+        foto:       req.body.foto,
         nombre:     req.body.nombre,
         ubicacion:  req.body.ubicacion,
         jefe:       req.body.jefe,
-        margen:     req.body.margen,
+        margen:     req.body.margen
     });
 
     nuevaCadena.save( (error) => {
@@ -48,10 +49,11 @@ router.get('/obtener-cadena', (req, res) => {
 
 router.put('/modificar-cadena', (req, res) => {
     let datos = {
+        foto:       req.body.foto,
         nombre:     req.body.nombre,
         ubicacion:  req.body.ubicacion,
         jefe:       req.body.jefe,
-        margen:     req.body.margen,
+        margen:     req.body.margen
     }
     cadena.updateOne({_id: req.body._id}, datos, error => {
         if(error){
