@@ -73,6 +73,15 @@ const validar = () => {
             'confirmButtonText': 'Entendido'
         });
     } else {
+        let codigoGen = 0;
+        for (let i = 0; i < 10; i++) {
+            const random = Math.random();
+            const bit = (random * 16) | 0;
+            codigoGen += (bit).toString(16);
+        };
+        console.log(codigoGen);
+        localStorage.setItem('codigoStorage', JSON.stringify(codigoGen));
+        
         let usuario = {
             primerNombre: inputNombre.value,
             segundoNombre: inputSegundoNombre.value,
@@ -84,18 +93,11 @@ const validar = () => {
             correoUsuario: inputCorreo.value,
             passwordUsuario: inputPassword.value,
             tipoUsuario: '1',
+            codigoUsuario: codigoGen, //CODIGO
             cuentaVerificada: '0'
         };
         localStorage.setItem('usuarioSinVerificar', JSON.stringify(usuario));
-        let codigoGen;
-        for (let i = 0; i < 10; i++) {
-            const random = Math.random();
-            const bit = (random * 16) | 0;
-            codigoGen += (bit).toString(16);
-        };
-        console.log(codigoGen);
-        localStorage.setItem('codigoStorage', JSON.stringify(codigoGen));
-        registrarUsuario(usuario, '/registrar-usuario', 'crear-validar.html', codigoGen);
+        registrarUsuario(usuario, '/registrar-usuario', 'crear-validar.html');
     }
 
 };

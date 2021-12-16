@@ -22,7 +22,7 @@ router.post('/registrar-usuario', (req, res) => {
         metodos_pago: req.body.metodos_pago,
     });
 
-    nuevoUsuario.save((error, usuario, codigo) => {
+    nuevoUsuario.save((error, usuario) => {
         if (error) {
             res.json({
                 msj: 'ERR <Usuario> Route JS: No se pudo crear usuario.',
@@ -33,7 +33,7 @@ router.post('/registrar-usuario', (req, res) => {
                 msj: '<Usuario> Route JS: Usuario creado exitosamente.'
             })
 
-            mailer.enviarCodigo(usuario.correoUsuario, usuario.primerNombre);
+            mailer.enviarCodigo(usuario.correoUsuario, usuario.primerNombre, usuario.codigoUsuario);
         }
     })
 })

@@ -18,7 +18,7 @@ this.enviarCodigo = (pCorreo, pNombre, pCodigo) => {
         subject: "Bienvenido a CineManager",
         html: `
 
-        <table border="0" cellpadding="0" cellspacing="0" width="600px" background-color="#111111">
+        <table border="0" cellpadding="0" cellspacing="0" width="600px" background-color="#111111" bgcolor="#111111" padding="20px">
             <tr>
                 <td>
                     <h1 style="color: #fff;">¡Bienvenid@, ${pNombre}!</h1>

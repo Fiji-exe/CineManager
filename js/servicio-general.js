@@ -1,7 +1,5 @@
 'use strict'
 
-const { enviarCodigo } = require("../server/templates/codigo-verificacion");
-
 function goHome() {
     window.location = '../html/landing-page.html';
 }
@@ -101,7 +99,7 @@ function salir() {
 }
 
 
-const registrarUsuario = async (pDatos, pEndPoint, urlRedireccion, codigoGen) => {
+const registrarUsuario = async (pDatos, pEndPoint, urlRedireccion) => {
     let url = `http://localhost:3000/api${pEndPoint}`;
 
     await axios({
