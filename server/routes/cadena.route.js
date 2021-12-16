@@ -29,7 +29,8 @@ router.post('/registrar-cadena', (req, res) => {
 });
 
 router.get('/obtener-cadena', (req, res) => {
-    cadena.find((error, lista) =>{
+
+    cadena.find({_id: req.query._id}, (error, lista) =>{
         if(error){
             res.json({
                 msj: 'Fallo la consulta',
