@@ -80,7 +80,7 @@ const validar = () => {
             codigoGen += (bit).toString(16);
         };
         console.log(codigoGen);
-        localStorage.setItem('codigoStorage', JSON.stringify(codigoGen));
+        localStorage.setItem('codigoUsuario', codigoGen);
         
         let usuario = {
             primerNombre: inputNombre.value,
@@ -93,10 +93,10 @@ const validar = () => {
             correoUsuario: inputCorreo.value,
             passwordUsuario: inputPassword.value,
             tipoUsuario: '1',
-            codigoUsuario: codigoGen, //CODIGO
+            codigoUsuario: codigoGen,
             cuentaVerificada: '0'
         };
-        localStorage.setItem('usuarioSinVerificar', JSON.stringify(usuario));
+        localStorage.setItem('usuario', JSON.stringify(usuario));
         registrarUsuario(usuario, '/registrar-usuario', 'crear-validar.html');
     }
 
