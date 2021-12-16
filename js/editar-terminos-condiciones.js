@@ -15,7 +15,7 @@ const validar = () => {
     if (error == true) {
         Swal.fire({
             'icon': 'warning',
-            'title': 'La informacion intruducida es invalida',
+            'title': 'La información introducida es inválida',
             'text': 'Los terminos y condiciones no pueden estar vacios.',
             'confirmButtonText': 'Entendido'
         });

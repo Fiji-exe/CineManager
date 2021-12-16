@@ -108,4 +108,3 @@ const registrarDatos = async(pDatos, pEndPoint) => {
         data: pDatos
     });
 };
-
