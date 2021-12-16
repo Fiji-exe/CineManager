@@ -21,8 +21,8 @@ const obtenerCategorias = async() => {
 };
 
 
-const registrarPelicula = async(pDatos, pEndPoint) => {
-    let url = `http://localhost:3000/api${pEndPoint}`;
+const registrarPelicula = async(pDatos) => {
+    let url = `http://localhost:3000/api/agregar-pelicula`;
 
     await axios({
         'method': 'post',

@@ -60,28 +60,64 @@ const validar_inputs = () => {
     let validacion = true;
     /* LIMPIAR PREVIA VALIDACION */
     let nodelist_inputs_requeridos = document.querySelectorAll('[required]');
-    nodelist_inputs_requeridos.forEach(input => {
-        input.classList.remove('userinput-error');
-        input.parentNode.classList.remove('userinput-error');
-    });
 
-    /* Checar vacios */
     nodelist_inputs_requeridos.forEach(input => {
-        if (input.value === '') {
-            input.classList.add('userinput-error');
-            input.parentNode.classList.add('userinput-error');
+        let tag = input.tagName;
+        if (tag === 'TEXTAREA') {
+            input.classList.remove('input-error');
+        } else {
+            input.parentNode.classList.remove('input-error');
         }
     });
 
+    /* Checar vacios */
+    // for (let i = 0; i < array.length; i++) {
+    //     const element = array[i];
 
+    // }
+    nodelist_inputs_requeridos.forEach(input => {
+        let tag = input.tagName;
+        if (input.value === '') {
+            validacion = false;
+            if (tag === 'TEXTAREA') {
+                input.classList.add('input-error')
+            } else {
+                input.parentNode.classList.add('input-error');
 
-
-    Swal.fire({
-        'icon': 'success',
-        'title': 'Éxito',
-        'text': 'Película agregada correctamente',
-        'confirmButtonText': 'Entendido'
+            }
+        }
     });
+
+    if (validacion) {
+        compilar_inputs();
+    } else {
+        Swal.fire({
+            'icon': 'success',
+            'title': 'Error',
+            'text': 'Por favor, verifique los campos',
+            'confirmButtonText': 'Entendido'
+        });
+    }
+
+}
+
+const compilar_inputs = () => {
+    let nodelist_inputs_requeridos = document.querySelectorAll('[required]');
+
+    let datos = {
+        img_url: document.getElementsByTagName('img')[0].src,
+        nombre: nodelist_inputs_requeridos[0].value,
+        categoria: nodelist_inputs_requeridos[1].value,
+        descripcion: nodelist_inputs_requeridos[2].value,
+        duracion: nodelist_inputs_requeridos[3].value,
+        anno: nodelist_inputs_requeridos[4].value,
+        idioma: nodelist_inputs_requeridos[5].value,
+        subtitulos: nodelist_inputs_requeridos[6].value,
+        actores: nodelist_inputs_requeridos[7].value,
+    }
+
+    registrarPelicula(datos);
+
 
 }
 

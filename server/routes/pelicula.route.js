@@ -7,6 +7,7 @@ const router = express.Router();
 router.post('/agregar-pelicula', (req, res) => {
 
     let nuevoPelicula = new Pelicula({
+        img_url: req.body.img_url,
         nombre: req.body.nombre,
         categoria: req.body.categoria,
         descripcion: req.body.descripcion,
@@ -61,7 +62,7 @@ router.put('/modificar-pelicula', (req, res) => {
         subtitulos: req.body.subtitulos,
         actores: req.body.actores
     }
-    Pelicula.updateOne({ _id: req.body._id }, datos, error => {
+    Pelicula.updateOne({ _id: req.query._id }, datos, error => {
         if (error) {
             res.json({
                 msj: 'ERR <Pelicula> Route JS: No se pudo modificar-pelicula',
@@ -78,7 +79,7 @@ router.put('/modificar-pelicula', (req, res) => {
 
 
 router.delete('/eliminar-pelicula', (req, res) => {
-    contacto.deleteOne({ _id: req.body._id }, error => {
+    Pelicula.deleteOne({ _id: req.body._id }, error => {
         if (error) {
             res.json({
                 msj: 'ERR <Pelicula> Route JS: No se pudo modificar-pelicula',
