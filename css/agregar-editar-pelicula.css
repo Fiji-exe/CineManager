@@ -36,6 +36,19 @@
 }
 
 .subright-div1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1vw;
+}
+
+.subright-div2 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1vw;
+}
+
+.subright-div3 {
     display: flex;
     flex-direction: row;
     margin-bottom: 1vw;
@@ -45,6 +58,18 @@
     width: 70%;
 }
 
+.subright-div1 div:nth-child(2) {
+    width: 30%;
+}
+
+.subright-div1 select {
+    font-size: 1vw;
+}
+
+.button-div {
+    margin-top: 2vw;
+}
+
 
 /*
 *
@@ -52,13 +77,23 @@
 *
 */
 
-a {
+.right-div a {
     width: 100%;
-    margin-bottom: 5vw;
+    margin-bottom: 1vw;
     font-family: 'Nunito';
-    font-size: 1.3vw;
+    font-size: 1vw;
     text-align: right;
-    color: #7ea6b6;
+    color: #76b1c8;
+    float: right;
+}
+
+.right-div button {
+    margin-right: 1vw;
+}
+
+textarea {
+    margin-top: 1.3vw;
+    margin-bottom: 1.3vw;
 }
 
 h1 {
@@ -68,8 +103,9 @@ h1 {
     font-size: 4vw;
 }
 
-.rigth-div div {
-    margin-bottom: 50px;
+input::placeholder {
+    font-size: 1vw;
+    color: #666666;
 }
 
 input[type="text"],
