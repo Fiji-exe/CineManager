@@ -1,5 +1,7 @@
 'use strict'
 
+const { enviarCodigo } = require("../server/templates/codigo-verificacion");
+
 function goHome() {
     window.location = '../html/landing-page.html';
 }
@@ -99,7 +101,7 @@ function salir() {
 }
 
 
-const registrarUsuario = async (pDatos, pEndPoint, urlRedireccion) => {
+const registrarUsuario = async (pDatos, pEndPoint, urlRedireccion, codigoGen) => {
     let url = `http://localhost:3000/api${pEndPoint}`;
 
     await axios({
@@ -137,13 +139,6 @@ const actualizarUsuario = async (pDatos, pEndPoint, urlRedireccion) => {
             'title': 'Operacion realizada exitosamente.',
             'text': res.msj
         }).then(() => {
-            for (let i = 0; i < 10; i++) {
-                const random = Math.random();
-                const bit = (random * 16) | 0;
-                res += (bit).toString(16);
-            };
-            console.log(res);
-            localStorage.setItem('codigoStorage', JSON.stringify(res));
             window.location.href = urlRedireccion;
         }).catch(error => {
             Swal.fire({

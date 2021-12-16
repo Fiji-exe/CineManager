@@ -87,7 +87,15 @@ const validar = () => {
             cuentaVerificada: '0'
         };
         localStorage.setItem('usuarioSinVerificar', JSON.stringify(usuario));
-        registrarUsuario(usuario, '/registrar-usuario', 'crear-validar.html', );
+        let codigoGen;
+        for (let i = 0; i < 10; i++) {
+            const random = Math.random();
+            const bit = (random * 16) | 0;
+            codigoGen += (bit).toString(16);
+        };
+        console.log(codigoGen);
+        localStorage.setItem('codigoStorage', JSON.stringify(codigoGen));
+        registrarUsuario(usuario, '/registrar-usuario', 'crear-validar.html', codigoGen);
     }
 
 };

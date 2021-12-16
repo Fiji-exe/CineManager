@@ -33,7 +33,7 @@ router.post('/registrar-usuario', (req, res) => {
                 msj: '<Usuario> Route JS: Usuario creado exitosamente.'
             })
 
-            mailer.enviarCodigo(usuario.correoUsuario, usuario.primerNombre, codigo)
+            mailer.enviarCodigo(usuario.correoUsuario, usuario.primerNombre);
         }
     })
 })
