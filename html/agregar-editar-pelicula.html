@@ -22,54 +22,52 @@
     <h1>Agregar o editar película</h1>
     <div class="contenido">
         <div class="left-div">
-            <div class="img-container"> <img src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640" alt=""> </div>
+            <div class="img-container"> <img id="imagen-peli" src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640" alt=""> </div>
             <button class="btn1-fondoclaro" id="btn_cargar_imagen">Cargar imagen</button>
 
         </div>
 
         <div class="right-div">
-            <form>
-                <div class="subright-div1">
-                    <div class="input-container input-default input-code">
-                        <input id="txt-id-cartelera" type="text" placeholder="Título de la película" />
-                    </div>
-                    <div class="input-container input-default input-code">
-                        <select name="Pelicula" id="select-categorias">
-                       
+            <div class="subright-div1">
+                <div class="input-container input-default input-code">
+                    <input required id="txt-id-cartelera" type="text" placeholder="Título de la película" />
+                </div>
+                <div class="input-container input-default input-code">
+                    <select required id="select-categorias">
                         </select>
-                    </div>
                 </div>
-                <a href="html/editar-categorias.html">Ir a Agregar/Editar categoría de película &#129125</a>
+            </div>
+            <a href="html/editar-categorias.html">Ir a Agregar/Editar categoría de película &#129125</a>
+
+            <div>
+                <textarea required id="txt-descripcion" cols="30" rows="10" placeholder="Descripción o sinópsis"></textarea>
+            </div>
 
 
-                <textarea name="" id="txt-descripcion" cols="30" rows="10" placeholder="Descripción o sinópsis"></textarea>
-
-
-                <div class="input-container  input-code">
-                    <div class="subright-div2">
-                        <div class="input-container input-default input-code"> <input id="txt-duracion" type="number" placeholder="Duración (minutos)" /> </div>
-                        <div class="input-container input-default input-code"> <input id="txt-anno_pelicula" type="number" placeholder="Año de película" /> </div>
-                    </div>
-                    <div class="subright-div3">
-                        <div class="input-container input-default input-code"> <input id="txt-idioma_audio" type="text" placeholder="Idioma audio" /> </div>
-                        <div class="input-container input-default input-code"> <input id="txt-idioma_subtitulos" type="text" placeholder="Idioma subtítulos" /> </div>
-                    </div>
-                    <div class="input-container input-default input-code"> <input id="txt-actores" type="text" placeholder="Actores" style="width: 100%;" /> </div>
-
+            <div class="input-container  input-code">
+                <div class="subright-div2">
+                    <div class="input-container input-default input-code"> <input required id="txt-duracion" type="number" placeholder="Duración (minutos)" /> </div>
+                    <div class="input-container input-default input-code"> <input required id="txt-anno_pelicula" type="number" placeholder="Año de película" /> </div>
                 </div>
-                <div class="button-div">
-                    <button class="btn1-fondoclaro" id="btn-crear">Crear y guardar</button>
-                    <button class="btn1-fondoclaro" id="btn-overw"> Sobreescribir</button>
-                    <button class="btn1-fondoclaro" id="btn-delet">Eliminar</button>
+                <div class="subright-div3">
+                    <div class="input-container input-default input-code"> <input required id="txt-idioma_audio" type="text" placeholder="Idioma audio" /> </div>
+                    <div class="input-container input-default input-code"> <input required id="txt-idioma_subtitulos" type="text" placeholder="Idioma subtítulos" /> </div>
                 </div>
+                <div class="input-container input-default input-code"> <input required id="txt-actores" type="text" placeholder="Actores" style="width: 100%;" /> </div>
+
+            </div>
+            <div class="button-div">
+                <button class="btn1-fondoclaro" id="btn-crear-peli">Crear y guardar</button>
+                <button class="btn1-fondoclaro" id="btn-overw"> Sobreescribir</button>
+                <button class="btn1-fondoclaro" id="btn-delet">Eliminar</button>
+            </div>
         </div>
-
-        </form>
     </div>
     </div>
 
 
     <div class="footer-cliente"></div>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../js/navbar-footer.js"></script>
