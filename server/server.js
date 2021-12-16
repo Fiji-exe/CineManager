@@ -49,11 +49,14 @@ function handleError(res, reason, message, code) {
 }
 
 // Conexión a todas la rutas.
+app.use('/api', require('./routes/cadena.route'));
 app.use('/api', require('./routes/categoria.route'));
-app.use('/api', require('./routes/reporte.route'));
-app.use('/api', require('./routes/pelicula.route'));
 app.use('/api', require('./routes/factura.route'));
-
+app.use('/api', require('./routes/pelicula.route'));
+app.use('/api', require('./routes/reporte.route'));
+app.use('/api', require('./routes/terminos-condiciones.route'));
+app.use('/api', require('./routes/tipo-sala.route'));
+app.use('/api', require('./routes/usuarios.route'));
 //TODO@JRF344 #79 Adaptar a programa
 
 

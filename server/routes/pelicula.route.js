@@ -39,12 +39,12 @@ router.get('/listar-peliculas', (req, res) => {
     Pelicula.find((error, peliculas) => {
         if (error) {
             res.json({
-                msj: 'ERR <Reporte> Route JS: No se pudo listar-peliculas',
+                msj: 'ERR <Pelicula> Route JS: No se pudo listar-peliculas',
                 error
             });
         } else {
             res.json({
-                msj: 'OK <Reporte> Route JS: Exito listar-peliculas',
+                msj: 'OK <Pelicula> Route JS: Exito listar-peliculas',
                 peliculas
             });
         }
