@@ -29,7 +29,7 @@ router.post('/registrar-tipo-sala', (req, res) => {
 });
 
 router.get('/obtener-tipo-sala', (req, res) => {
-    tipoSala.find((error, lista) => {
+    TipoSala.find((error, lista) => {
         if (error) {
             res.json({
                 msj: 'Fallo la consulta',
@@ -48,7 +48,7 @@ router.put('/modificar-tipo-sala', (req, res) => {
     let datos = {
         tipoSala: req.body.tipoSala
     }
-    tipoSala.updateOne({ _id: req.body._id }, datos, error => {
+    TipoSala.updateOne({ _id: req.body._id }, datos, error => {
         if (error) {
             res.json({
                 msj: 'Ocurrio un error al actualizar el tipo de sala',
@@ -64,7 +64,7 @@ router.put('/modificar-tipo-sala', (req, res) => {
 
 router.delete('/eliminar-tipo-sala', (req, res) => {
 
-    tipoSala.deleteOne({ _id: req.body._id }, error => {
+    TipoSala.deleteOne({ _id: req.body._id }, error => {
         if (error) {
             res.json({
                 msj: 'Ocurrio un error al eliminar el tipo de sala',

@@ -29,7 +29,7 @@ router.post('/registrar-tipo-asiento', (req, res) => {
 });
 
 router.get('/obtener-tipo-asiento', (req, res) => {
-    tipoAsiento.find((error, lista) => {
+    TipoAsiento.find((error, lista) => {
         if (error) {
             res.json({
                 msj: 'Fallo la consulta',
@@ -48,7 +48,7 @@ router.put('/modificar-tipo-asiento', (req, res) => {
     let datos = {
         tipoAsiento: req.body.tipoAsiento
     }
-    tipoAsiento.updateOne({ _id: req.body._id }, datos, error => {
+    TipoAsiento.updateOne({ _id: req.body._id }, datos, error => {
         if (error) {
             res.json({
                 msj: 'Ocurrio un error al actualizar el tipo de asiento',
@@ -64,7 +64,7 @@ router.put('/modificar-tipo-asiento', (req, res) => {
 
 router.delete('/eliminar-tipo-asiento', (req, res) => {
 
-    tipoAsiento.deleteOne({ _id: req.body._id }, error => {
+    TipoAsiento.deleteOne({ _id: req.body._id }, error => {
         if (error) {
             res.json({
                 msj: 'Ocurrio un error al eliminar el tipo de asiento',

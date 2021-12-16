@@ -51,8 +51,7 @@ const validar = () => {
     if (selectProvincia.value == '' || selectProvincia.value == 'Seleccionar') {
         error = true;
         document.querySelector('.input-provincia').classList.add('input-error');
-    }
-    else {
+    } else {
         document.querySelector('.input-provincia').classList.remove('input-error');
     }
 
@@ -60,66 +59,58 @@ const validar = () => {
     if (selectCanton.value == '' || selectCanton.value == 'Seleccionar') {
         error = true;
         document.querySelector('.input-canton').classList.add('input-error');
-    }
-    else {
+    } else {
         document.querySelector('.input-canton').classList.remove('input-error');
     }
 
     if (selectDistrito.value == '' || selectDistrito.value == 'Seleccionar') {
         error = true;
         document.querySelector('.input-distrito').classList.add('input-error');
-    }
-    else {
+    } else {
         document.querySelector('.input-distrito').classList.remove('input-error');
     }
 
-    
-    if(validarTarjeta(txtNumeroTarjeta.value) == false){
+
+    if (validarTarjeta(txtNumeroTarjeta.value) == false) {
         error = true;
         document.querySelector('.input-tarjeta').classList.add('input-error');
-    }
-    else {
+    } else {
         document.querySelector('.input-tarjeta').classList.remove('input-error');
     }
 
     if (!(txtMesVencimiento.value > 0 && txtMesVencimiento.value <= 12) || txtMesVencimiento.value == '') {
         error = true;
         document.querySelector('.input-mes').classList.add('input-error');
-    }
-    else {
+    } else {
         document.querySelector('.input-mes').classList.remove('input-error');
     }
 
-    
-    if (!(txtAnnoVencimiento.value > 2020 && txtAnnoVencimiento.value <=2030) || txtAnnoVencimiento.value == '') {
+
+    if (!(txtAnnoVencimiento.value > 2020 && txtAnnoVencimiento.value <= 2030) || txtAnnoVencimiento.value == '') {
         error = true;
         document.querySelector('.input-anno').classList.add('input-error');
-    }
-    else {
+    } else {
         document.querySelector('.input-anno').classList.remove('input-error');
     }
 
     if (!(txtCvc.value > 100 && txtCvc.value <= 9999) || txtCvc.value == '') {
         error = true;
         document.querySelector('.input-cvc').classList.add('input-error');
-    }
-    else {
+    } else {
         document.querySelector('.input-cvc').classList.remove('input-error');
     }
 
     if (txtTitular.value == '') {
         error = true;
         document.querySelector('.input-titular').classList.add('input-error');
-    }
-    else {
+    } else {
         document.querySelector('.input-titular').classList.remove('input-error');
     }
 
     if (txtDireccion.value == '') {
         error = true;
         document.querySelector('.input-direccion').classList.add('input-error');
-    }
-    else {
+    } else {
         document.querySelector('.input-direccion').classList.remove('input-error');
     }
 
@@ -127,7 +118,7 @@ const validar = () => {
     if (error == true) {
         Swal.fire({
             'icon': 'warning',
-            'title': 'La informacion intruducida es invalida',
+            'title': 'La información introducida es inválida',
             'text': 'Por favor revise los campos en rojo',
             'confirmButtonText': 'Entendido'
         });
@@ -150,26 +141,24 @@ const validarTarjeta = (pNumeroTarjeta) => {
     let visa = new RegExp('^4[0-9]{12}(?:[0-9]{3})?$');
     let cup1 = new RegExp('^62[0-9]{14}[0-9]*$');
     let cup2 = new RegExp('^81[0-9]{14}[0-9]*$');
-   
+
     let mastercard = new RegExp('^5[1-5][0-9]{14}$');
     let mastercard2 = new RegExp('^2[2-7][0-9]{14}$');
-   
+
     let disco1 = new RegExp('^6011[0-9]{12}[0-9]*$');
     let disco2 = new RegExp('^62[24568][0-9]{13}[0-9]*$');
     let disco3 = new RegExp('^6[45][0-9]{14}[0-9]*$');
-    
+
     let diners = new RegExp('^3[0689][0-9]{12}[0-9]*$');
-    let jcb =  new RegExp('^35[0-9]{14}[0-9]*$');
-   
+    let jcb = new RegExp('^35[0-9]{14}[0-9]*$');
+
     let esValida = true;
-   
+
     if (visa.test(pNumeroTarjeta)) {
-      document.getElementById('img-tipo-tarjeta').src = "/media/visa.png";
-    }
-    else if (amex.test(pNumeroTarjeta)) {
+        document.getElementById('img-tipo-tarjeta').src = "/media/visa.png";
+    } else if (amex.test(pNumeroTarjeta)) {
         document.getElementById('img-tipo-tarjeta').src = "/media/amex.png";
-    }
-    else if (mastercard.test(pNumeroTarjeta) || mastercard2.test(pNumeroTarjeta)) {
+    } else if (mastercard.test(pNumeroTarjeta) || mastercard2.test(pNumeroTarjeta)) {
         document.getElementById('img-tipo-tarjeta').src = "/media/mastercard.png"
     }
     // else if (disco1.test(pNumeroTarjeta) || disco2.test(pNumeroTarjeta) || disco3.test(pNumeroTarjeta)) {
@@ -192,12 +181,11 @@ const validarTarjeta = (pNumeroTarjeta) => {
     return esValida;
 }
 
-const txtTarjetaTextChange = () =>{
-    txtNumeroTarjeta.value = txtNumeroTarjeta.value.replace(/\D/g,'');
-    if(validarTarjeta(txtNumeroTarjeta.value) == false){
+const txtTarjetaTextChange = () => {
+    txtNumeroTarjeta.value = txtNumeroTarjeta.value.replace(/\D/g, '');
+    if (validarTarjeta(txtNumeroTarjeta.value) == false) {
         document.querySelector('.input-tarjeta').classList.add('input-error');
-    }
-    else {
+    } else {
         document.querySelector('.input-tarjeta').classList.remove('input-error');
     }
 
