@@ -19,7 +19,7 @@ const validar = () => {
 
 const cargarDatosCategoriaEditar = async() => {
 
-        localStorage.setItem('_id', JSON.stringify('61bac88385a537a6005446e9'));
+        //localStorage.setItem('_id', JSON.stringify('61bac88385a537a6005446e9'));
 
 
         let _id = JSON.parse( localStorage.getItem('_id')) ;      
@@ -47,7 +47,7 @@ const registrarNuevaCategoria = () => {
     if (validar() == true) {
         Swal.fire({
             'icon': 'warning',
-            'title': 'La informacion intruducida es invalida',
+            'title': 'La información introducida es inválida',
             'text': 'Categoria no puede estar vacio',
             'confirmButtonText': 'Entendido'
         });
@@ -61,7 +61,7 @@ const registrarNuevaCategoria = () => {
 
         Swal.fire({
             'icon': 'success',
-            'title': 'Se ha guardado la informacion.',
+            'title': 'Se ha guardado la información.',
             'confirmButtonText': 'Entendido'
         }).then(() => {
             //Redireccionamos al dashboard luego de darle click al botón del sweet alert
@@ -78,7 +78,7 @@ const actualizarCategoria = () => {
     if (validar() == true) {
         Swal.fire({
             'icon': 'warning',
-            'title': 'La informacion intruducida es invalida',
+            'title': 'La información introducida es inválida',
             'text': 'Categoria no puede estar vacio',
             'confirmButtonText': 'Entendido'
         });
@@ -93,7 +93,7 @@ const actualizarCategoria = () => {
         
         Swal.fire({
             'icon': 'success',
-            'title': 'Se ha guardado la informacion.',
+            'title': 'Se ha guardado la información.',
             'confirmButtonText': 'Entendido'
         }).then(() => {
             //Redireccionamos al dashboard luego de darle click al botón del sweet alert

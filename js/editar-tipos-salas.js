@@ -14,30 +14,12 @@ const validar = () => {
         error = true;
     }
 
-    if (error == true) {
-        Swal.fire({
-            'icon': 'warning',
-            'title': 'La informacion intruducida es invalida',
-            'text': 'Tipo de sala no puede estar vacio.',
-            'confirmButtonText': 'Entendido'
-        });
-
-    } else {
-        Swal.fire({
-            'icon': 'success',
-            'title': 'Se ha guardado la informacion.',
-            'confirmButtonText': 'Entendido'
-        }).then(() => {
-            // Redireccionamos al dashboard luego de darle click al botón del sweet alert
-            // window.location.href = 'dashboard.html';
-        });
-    }
-
+    return error;
 };
 
 const cargarDatosTipoSalaEditar = async() => {
 
-    localStorage.setItem('_id', JSON.stringify('61bac88385a537a6005446e9'));
+    localStorage.setItem('_id', JSON.stringify('61badfed8b595bb16855eb61'));
 
 
     let _id = JSON.parse( localStorage.getItem('_id')) ;      
@@ -53,9 +35,9 @@ const cargarDatosTipoSalaEditar = async() => {
     else{
         localStorage.removeItem('_id');
         document.querySelector('.guardar').classList.add('hide');
-        let data = await obtenerTipoSalaEditar('/obtener-tiposala-editar', {_id: _id});        
+        let data = await obtenerTipoSalaEditar('/obtener-tipo-sala-editar', {_id: _id});        
 
-        inputArea.value = data[0].tiposala;    
+        inputArea.value = data[0].tipoSala;    
     }
 }
 
@@ -65,21 +47,21 @@ const registrarNuevaTipoSala = () => {
 if (validar() == true) {
     Swal.fire({
         'icon': 'warning',
-        'title': 'La informacion intruducida es invalida',
-        'text': 'TipoSala no puede estar vacio',
+        'title': 'La información introducida es inválida',
+        'text': 'Tipo de sala no puede estar vacío',
         'confirmButtonText': 'Entendido'
     });
 
 } else {
 
     let datos = {
-        tiposala:  inputArea.value,           
+        tipoSala:  inputArea.value,           
     }
-    registrarTipoSalaApi(datos, '/registrar-tiposala');
+    registrarTipoSalaApi(datos, '/registrar-tipo-sala');
 
     Swal.fire({
         'icon': 'success',
-        'title': 'Se ha guardado la informacion.',
+        'title': 'Se ha guardado la información.',
         'confirmButtonText': 'Entendido'
     }).then(() => {
         //Redireccionamos al dashboard luego de darle click al botón del sweet alert
@@ -91,27 +73,25 @@ if (validar() == true) {
 }
 
 const actualizarTipoSala = () => {
-
-
-if (validar() == true) {
+    if (validar() == true) {
     Swal.fire({
         'icon': 'warning',
-        'title': 'La informacion intruducida es invalida',
-        'text': 'TipoSala no puede estar vacio',
+        'title': 'La información introducida es inválida',
+        'text': 'TipoSala no puede estar vacío',
         'confirmButtonText': 'Entendido'
     });
 
 } else {
     let datos = {
-        tiposala:  inputArea.value,
+        tipoSala:  inputArea.value,
         _id: JSON.parse( localStorage.getItem('_id-temp'))    
     }
 
-    actualizarTipoSalaApi(datos, '/modificar-tiposala');
+    actualizarTipoSalaApi(datos, '/modificar-tipo-sala');
     
     Swal.fire({
         'icon': 'success',
-        'title': 'Se ha guardado la informacion.',
+        'title': 'Se ha guardado la información.',
         'confirmButtonText': 'Entendido'
     }).then(() => {
         //Redireccionamos al dashboard luego de darle click al botón del sweet alert
@@ -139,7 +119,7 @@ Swal.fire({
     cancelButtonText: 'Cancelar'
   }).then((result) => {
     if (result.isConfirmed) {
-        eliminarDatos(JSON.parse( localStorage.getItem('_id-temp')), '/eliminar-tiposala');       
+        eliminarDatos(JSON.parse( localStorage.getItem('_id-temp')), '/eliminar-tipo-sala');       
         Swal.fire({
             'icon': 'success',
             'title': 'Se ha eliminado la tiposala.',

@@ -74,7 +74,7 @@ const registrarNuevaCadena = () => {
     if (validar() == true) {
         Swal.fire({
             'icon': 'warning',
-            'title': 'La informacion intruducida es invalida',
+            'title': 'La información introducida es inválida',
             'text': 'Por favor revise los campos en rojo',
             'confirmButtonText': 'Entendido'
         });
@@ -92,7 +92,7 @@ const registrarNuevaCadena = () => {
 
         Swal.fire({
             'icon': 'success',
-            'title': 'Se ha guardado la informacion.',
+            'title': 'Se ha guardado la información.',
             'confirmButtonText': 'Entendido'
         }).then(() => {
             //Redireccionamos al dashboard luego de darle click al botón del sweet alert
@@ -108,7 +108,7 @@ const actualizarCadena = () => {
     if (validar() == true) {
         Swal.fire({
             'icon': 'warning',
-            'title': 'La informacion intruducida es invalida',
+            'title': 'La información introducida es inválida',
             'text': 'Por favor revise los campos en rojo',
             'confirmButtonText': 'Entendido'
         });
@@ -127,7 +127,7 @@ const actualizarCadena = () => {
         
         Swal.fire({
             'icon': 'success',
-            'title': 'Se ha guardado la informacion.',
+            'title': 'Se ha guardado la información.',
             'confirmButtonText': 'Entendido'
         }).then(() => {
             //Redireccionamos al dashboard luego de darle click al botón del sweet alert

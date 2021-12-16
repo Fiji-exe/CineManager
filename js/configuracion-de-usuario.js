@@ -80,7 +80,7 @@ const validar = () => {
     if (error == true) {
         Swal.fire({
             'icon': 'warning',
-            'title': 'La informacion intruducida es invalida',
+            'title': 'La información introducida es inválida',
             'text': 'Por favor revise los campos en rojo',
             'confirmButtonText': 'Entendido'
         });
@@ -104,7 +104,7 @@ const validarContr = () => {
     if (error == true) {
         Swal.fire({
             'icon': 'warning',
-            'title': 'La informacion intruducida es invalida',
+            'title': 'La información introducida es inválida',
             'text': 'Por favor revise los campos en rojo',
             'confirmButtonText': 'Entendido'
         });
