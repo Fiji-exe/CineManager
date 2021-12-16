@@ -124,6 +124,29 @@ const registrarUsuario = async (pDatos, pEndPoint, urlRedireccion) => {
     })
 };
 
+const listarDatosUsuario = async (pEndPoint, query) => {
+    let url = `http://localhost:3000/api${pEndPoint}`;
+    let lista = [];
+
+    await axios ({
+        'method': 'get',
+        'url': url,
+        'params': {
+            'correoUsuario': query.correoUsuario
+        }
+    }).then(res => {
+        lista = res.data.lista;
+        console.log(lista);
+    }).catch(error => {
+        Swal.fire({
+            'icon': 'error',
+            'title': 'Ha ocurrido un error.',
+            'text': `${error}`
+        });
+    })
+
+}
+
 const actualizarUsuario = async (pDatos, pEndPoint, urlRedireccion) => {
     let url = `http://localhost:3000/api${pEndPoint}`;
 

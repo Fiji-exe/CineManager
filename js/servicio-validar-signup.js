@@ -92,7 +92,7 @@ const validar = () => {
             numeroId: inputId.value,
             correoUsuario: inputCorreo.value,
             passwordUsuario: inputPassword.value,
-            tipoUsuario: '1',
+            tipoUsuario: '0',
             codigoUsuario: codigoGen,
             cuentaVerificada: '0'
         };

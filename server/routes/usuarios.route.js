@@ -38,7 +38,21 @@ router.post('/registrar-usuario', (req, res) => {
     })
 })
 
-router.get('/listar-cuenta', (req, res) => {})
+router.get('/listar-cuenta', (req, res) => {
+    usuariosModel.find({ usuarioCorreo: req.query.usuarioCorreo}, (error, lista) => {
+        if (error) {
+            res.json({
+                msj: 'No se pudo encontrar la información en la base de datos.',
+                error
+            })
+        } else {
+            res.json({
+                msj: 'Usuario encontrado exitosamente.',
+                lista
+            })
+        }
+    })
+})
 
 router.put('/modificar-cuenta', (req, res) => {
     let datosNuevos = {
