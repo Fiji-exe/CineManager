@@ -1,14 +1,36 @@
 'use strict'
 
+const buttonSubirImagenView = document.getElementById("btn_cargar_imagen");
+
+/**
+ * 
+ * Cargar imagen
+ * 
+ */
+
+let widget_cloudinary = cloudinary.createUploadWidget({
+    cloudName: 'da0h0oymq',
+    uploadPreset: 'xfkkawkm'
+}, (err, result) => {
+    if (!err && result && result.event === 'success') {
+        console.log('Imagen subida con éxito', result.info);
+        imgCadena.src = result.info.secure_url;
+    }
+});
+
+buttonSubirImagenView.addEventListener('click', () => {
+    widget_cloudinary.open();
+}, false);
+
+
+
+
 /*
  *
  * Obtener Categorias
  *
  *
  */
-
-
-
 
 const recuperar_categorias_de_BD = async() => {
     return await obtenerCategorias();
