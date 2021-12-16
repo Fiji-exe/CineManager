@@ -7,6 +7,7 @@ const mailer = require('../templates/codigo-verificacion');
 
 router.post('/registrar-usuario', (req, res) => {
     let nuevoUsuario = new usuariosModel({
+        foto: req.body.foto, // NEW 
         primerNombre: req.body.primerNombre,
         segundoNombre: req.body.segundoNombre,
         primerApellido: req.body.primerApellido,
@@ -42,6 +43,7 @@ router.get('/listar-cuenta', (req, res) => {})
 
 router.put('/modificar-cuenta', (req, res) => {
     let datosNuevos = {
+        foto: req.body.foto,
         primerNombre: req.body.primerNombre,
         segundoNombre: req.body.segundoNombre,
         primerApellido: req.body.primerApellido,
@@ -56,7 +58,7 @@ router.put('/modificar-cuenta', (req, res) => {
         cadena: req.body.cadena,
         metodos_pago: req.body.metodos_pago,
     };
-    Usiario.updateOne({_id: req.body.id}, datosNuevos, error => {
+    Usiario.updateOne({ _id: req.body.id }, datosNuevos, error => {
         if (error) {
             res.json({
                 msj: 'No se pudieron actualizar los datos.',

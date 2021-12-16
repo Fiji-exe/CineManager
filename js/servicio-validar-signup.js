@@ -11,10 +11,24 @@ const inputId = document.querySelector('#txt-id');
 
 const inputCorreo = document.querySelector('#txt-correo');
 const inputPassword = document.querySelector('#txt-password');
-const inputPasswordConfirm= document.querySelector('#txt-password-confirmar');
+const inputPasswordConfirm = document.querySelector('#txt-password-confirmar');
 
 const botonForm = document.querySelector('#btn-account-form');
 
+const botonUpload = document.querySelector('#btn-upload-foto'); //NEW
+let foto_url; //NEW
+
+let widget_cloudinary = cloudinary.createUploadWidget({ //NEW
+    cloudName: 'da0h0oymq',
+    uploadPreset: 'xfkkawkm'
+}, (err, result) => {
+    if (!err && result && result.event === 'success') {
+        console.log('Imagen subida con éxito', result.info);
+        botonUpload.disabled = true;
+        document.getElementsByClassName('input-container')[0].innerHTML = `<label> Foto subida con éxito</label> `
+        foto_url = result.info.secure_url;
+    }
+});
 
 function validarEmail(email) {
     let resultado = false;
@@ -32,7 +46,7 @@ const validar = () => {
     } else {
         document.querySelector(".input-name").classList.remove("input-error");
     }
-    
+
     //Condicion para validar Apellido
     if (inputApellido.value == '') {
         document.querySelector(".input-surname").classList.add("input-error");
@@ -79,10 +93,10 @@ const validar = () => {
             const bit = (random * 16) | 0;
             codigoGen += (bit).toString(16);
         };
-        console.log(codigoGen);
         localStorage.setItem('codigoUsuario', codigoGen);
-        
+
         let usuario = {
+            foto: foto_url, //NEW
             primerNombre: inputNombre.value,
             segundoNombre: inputSegundoNombre.value,
             primerApellido: inputApellido.value,
@@ -104,3 +118,7 @@ const validar = () => {
 
 
 botonForm.addEventListener('click', validar);
+
+botonUpload.addEventListener('click', () => { //NEW
+    widget_cloudinary.open();
+}, false);
