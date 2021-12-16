@@ -29,7 +29,7 @@ router.post('/registrar-categoria', (req, res) => {
 });
 
 router.get('/obtener-categoria', (req, res) => {
-    categoria.find((error, lista) => {
+    Categoria.find((error, lista) => {
         if (error) {
             res.json({
                 msj: 'Fallo la consulta',
@@ -48,7 +48,7 @@ router.put('/modificar-categoria', (req, res) => {
     let datos = {
         categoria: req.body.categoria
     }
-    categoria.updateOne({ _id: req.body._id }, datos, error => {
+    Categoria.updateOne({ _id: req.body._id }, datos, error => {
         if (error) {
             res.json({
                 msj: 'Ocurrio un error al actualizar la categoria',
@@ -64,7 +64,7 @@ router.put('/modificar-categoria', (req, res) => {
 
 router.delete('/eliminar-categoria', (req, res) => {
 
-    categoria.deleteOne({ _id: req.body._id }, error => {
+    Categoria.deleteOne({ _id: req.body._id }, error => {
         if (error) {
             res.json({
                 msj: 'Ocurrio un error al eliminar categoria',

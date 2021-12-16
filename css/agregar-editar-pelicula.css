@@ -66,6 +66,12 @@
     font-size: 1vw;
 }
 
+.subright-div1 select option {
+    font-family: 'Nunito';
+    font-size: 1vw;
+    color: #FFF;
+}
+
 .button-div {
     margin-top: 2vw;
 }
