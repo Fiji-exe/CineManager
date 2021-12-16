@@ -1,13 +1,16 @@
 'use strict';
 
 const express = require('express');
-const Categoria = require('../models/categoria.model');
+
+const categoria = require('../models/categoria.model');
+
 const router = express.Router();
 
 router.post('/registrar-categoria', (req, res) => {
 
-    let nuevaCategoria = new Categoria({
-        categoria: req.body.categoria,
+
+    let nuevaCategoria = new categoria({
+        categoria: req.body.categoria
 
     });
 
@@ -29,7 +32,24 @@ router.post('/registrar-categoria', (req, res) => {
 });
 
 router.get('/obtener-categoria', (req, res) => {
-    Categoria.find((error, lista) => {
+
+    categoria.find((error, lista) => {
+        if (error) {
+            res.json({
+                msj: 'Fallo la consulta',
+                error
+            });
+        } else {
+            res.json({
+                msj: 'Categoria listada correctamente',
+                lista
+            });
+        }
+    });
+});
+
+router.get('/obtener-categoria-editar', (req, res) => {
+    categoria.find({_id: req.query._id},(error, lista) => {
         if (error) {
             res.json({
                 msj: 'Fallo la consulta',
@@ -48,7 +68,9 @@ router.put('/modificar-categoria', (req, res) => {
     let datos = {
         categoria: req.body.categoria
     }
-    Categoria.updateOne({ _id: req.body._id }, datos, error => {
+
+    categoria.updateOne({ _id: req.body._id }, datos, error => {
+
         if (error) {
             res.json({
                 msj: 'Ocurrio un error al actualizar la categoria',
@@ -63,8 +85,8 @@ router.put('/modificar-categoria', (req, res) => {
 });
 
 router.delete('/eliminar-categoria', (req, res) => {
+    categoria.deleteOne({ _id: req.body._id }, error => {
 
-    Categoria.deleteOne({ _id: req.body._id }, error => {
         if (error) {
             res.json({
                 msj: 'Ocurrio un error al eliminar categoria',

@@ -7,9 +7,12 @@ const router = express.Router();
 router.post('/registrar-tipo-sala', (req, res) => {
 
     let nuevoTipoSala = new TipoSala({
-        tipoSala: req.body.tipoSala,
 
+        tipoSala: req.body.tipoSala
     });
+
+    console.log(req.body.tipoSala);
+
 
     nuevoTipoSala.save(error => {
         if (error) {
@@ -30,6 +33,22 @@ router.post('/registrar-tipo-sala', (req, res) => {
 
 router.get('/obtener-tipo-sala', (req, res) => {
     TipoSala.find((error, lista) => {
+        if (error) {
+            res.json({
+                msj: 'Fallo la consulta',
+                error
+            });
+        } else {
+            res.json({
+                msj: 'Sala listada correctamente',
+                lista
+            });
+        }
+    });
+});
+
+router.get('/obtener-tipo-sala-editar', (req, res) => {
+    TipoSala.find({_id: req.query._id}, (error, lista) => {
         if (error) {
             res.json({
                 msj: 'Fallo la consulta',

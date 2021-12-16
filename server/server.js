@@ -57,6 +57,13 @@ app.use('/api', require('./routes/terminos-condiciones.route'));
 
 //TODO@JRF344 #79 Adaptar a programa
 
+//app.use('/api', require('./routes/usuarios.route'));
+app.use('/api', require('./routes/terminos-condiciones.route'));
+app.use('/api', require('./routes/cadena.route'));
+app.use('/api', require('./routes/categoria.route'));
+app.use('/api', require('./routes/tipo-sala.route'));
+app.use('/api', require('./routes/tipo-asiento.route'));
+
 
 //http://localhost:3000/api/registrar-usuario
 //comment by adriando

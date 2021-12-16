@@ -91,7 +91,7 @@ const validar = () => {
     } else {
         Swal.fire({
             'icon': 'success',
-            'title': 'Se ha guardado la informacion.',
+            'title': 'Se ha guardado la información.',
             'confirmButtonText': 'Entendido'
         }).then(() => {
             // Redireccionamos al dashboard luego de darle click al botón del sweet alert

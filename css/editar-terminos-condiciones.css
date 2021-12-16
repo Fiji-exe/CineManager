@@ -22,4 +22,10 @@
 .contenido textarea{
     background-color: #111;
     color: #fff;
+
+        outline: none;
+        resize: none;
+        width: 100%;
+        height: 400px;
+
 }

@@ -132,7 +132,7 @@ const validar = () => {
     if (error == true) {
         Swal.fire({
             'icon': 'warning',
-            'title': 'La información introducida es invlida',
+            'title': 'La información introducida es inválida',
             'text': 'Por favor revise los campos en rojo',
             'confirmButtonText': 'Entendido'
         });
