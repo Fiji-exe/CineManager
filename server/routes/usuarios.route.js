@@ -1,12 +1,12 @@
 'use strict';
 
 const express = require('express');
-const usuariosModel = require('../models/usuarios.model');
+const Usuarios = require('../models/usuarios.model');
 const router = express.Router();
 const mailer = require('../templates/codigo-verificacion');
 
 router.post('/registrar-usuario', (req, res) => {
-    let nuevoUsuario = new usuariosModel({
+    let nuevoUsuario = new Usuarios({
         foto: req.body.foto, // NEW 
         primerNombre: req.body.primerNombre,
         segundoNombre: req.body.segundoNombre,
@@ -40,7 +40,7 @@ router.post('/registrar-usuario', (req, res) => {
 })
 
 router.get('/listar-cuenta', (req, res) => {
-    usuariosModel.find({ usuarioCorreo: req.query.usuarioCorreo}, (error, lista) => {
+    Usuarios.find({ usuarioCorreo: req.query.usuarioCorreo}, (error, lista) => {
         if (error) {
             res.json({
                 msj: 'No se pudo encontrar la información en la base de datos.',

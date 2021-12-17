@@ -50,7 +50,7 @@ function handleError(res, reason, message, code) {
 // Conexión a todas la rutas.
 app.use('/api', require('./routes/usuarios.route'));
 app.use('/api', require('./routes/cadena.route'));
-// CARTELERAS AQUI
+app.use('/api', require('./routes/carteleras.route'));
 // SALAS AQUI
 app.use('/api', require('./routes/tipo-sala.route'));
 app.use('/api', require('./routes/tipo-asiento.route'));
