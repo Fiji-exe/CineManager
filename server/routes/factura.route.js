@@ -20,12 +20,12 @@ router.post('/agregar-factura', (req, res) => {
     nuevoFactura.save(error => {
         if (error) {
             res.json({
-                msj: 'ERR <Factura> Route JS: No se pudo agregar-factura',
+                msj: 'ERR <Factura> Route JS: No se pudo agregar factura.',
                 error
             });
         } else {
             res.json({
-                msj: 'OK <Factura> Route JS: Exito agregar-factura'
+                msj: 'OK <Factura> Route JS: Exito agregar factura.'
             });
 
         }

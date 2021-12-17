@@ -20,7 +20,6 @@ app.use(function(req, res, next) {
     next();
 });
 
-
 // Se crea la variable db, que almacena la instancia de la base de datos, para ser reutilizada en el "callback".
 let db;
 
@@ -60,8 +59,3 @@ app.use('/api', require('./routes/categoria.route'));
 app.use('/api', require('./routes/factura.route'));
 app.use('/api', require('./routes/reporte.route'));
 app.use('/api', require('./routes/terminos-condiciones.route'));
-
-
-
-//http://localhost:3000/api/registrar-usuario
-//comment by adriando

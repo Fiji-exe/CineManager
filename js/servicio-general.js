@@ -99,12 +99,74 @@ function salir() {
 }
 
 
-const registrarDatos = async(pDatos, pEndPoint) => {
-    url += pEndPoint;
+const registrarUsuario = async (pDatos, pEndPoint, urlRedireccion) => {
+    let url = `http://localhost:3000/api${pEndPoint}`;
 
     await axios({
-        method: 'post',
-        url: url,
-        data: pDatos
-    });
+        'method': 'post',
+        'url': url,
+        'data': pDatos
+    }).then(res => {
+        Swal.fire({
+            'icon': 'success',
+            'title': 'Se ha enviado un correo de validación.',
+            'text': res.msj,
+            'confirmButtonText': 'Entendido'
+        }).then(() => {
+            window.location.href = urlRedireccion;
+        });
+    }).catch(error => {
+        Swal.fire({
+            'icon': 'error',
+            'title': 'Ha ocurrido un error.',
+            'text': `${error}`
+        });
+    })
 };
+
+const listarDatosUsuario = async (pEndPoint, query) => {
+    let url = `http://localhost:3000/api${pEndPoint}`;
+    let lista = [];
+
+    await axios ({
+        'method': 'get',
+        'url': url,
+        'params': {
+            'correoUsuario': query.correoUsuario
+        }
+    }).then(res => {
+        lista = res.data.lista;
+        console.log(lista);
+    }).catch(error => {
+        Swal.fire({
+            'icon': 'error',
+            'title': 'Ha ocurrido un error.',
+            'text': `${error}`
+        });
+    })
+
+}
+
+const actualizarUsuario = async (pDatos, pEndPoint, urlRedireccion) => {
+    let url = `http://localhost:3000/api${pEndPoint}`;
+
+    await axios({
+        'method': 'put',
+        'url': url,
+        'data': pDatos
+    }).then(res => {
+        Swal.fire({
+            'icon': 'success',
+            'title': 'Operacion realizada exitosamente.',
+            'text': res.msj
+        }).then(() => {
+            window.location.href = urlRedireccion;
+        }).catch(error => {
+            Swal.fire({
+                'icon': 'error',
+                'title': 'Ha ocurrido un error.',
+                'text': `${error}`
+            });
+        });
+    });
+}
