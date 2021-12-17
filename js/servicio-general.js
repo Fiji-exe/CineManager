@@ -94,13 +94,13 @@ function cartelera() {
 
 
 
-function salir() {
+/* function salir() {
     console.log("salir")
 }
 
 
 
-const salirCuenta
+const salirCuenta */
 
 
 const registrarUsuario = async (pDatos, pEndPoint, urlRedireccion) => {
