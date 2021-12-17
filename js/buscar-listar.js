@@ -105,7 +105,7 @@ const js_crear_cuerpo_tabla = (data_json) => {
         // Crear una celda por cada propiedad del objeto
         let keys = Object.keys(data_json[i]);
 
-        for (let j = 2; j < 10; j++) {
+        for (let j = 2; j < 12; j++) {
             fila_cuerpo.insertCell().innerHTML = data_json[i][keys[j]];
         };
     }
