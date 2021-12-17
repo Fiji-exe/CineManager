@@ -51,6 +51,7 @@ router.get('/listar-cuenta', (req, res) => {
                 msj: 'Usuario encontrado exitosamente.',
                 lista
             })
+            return lista
         }
     })
 })

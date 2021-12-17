@@ -136,7 +136,6 @@ const listarDatosUsuario = async (pEndPoint, query) => {
         }
     }).then(res => {
         lista = res.data.lista;
-        console.log(lista);
     }).catch(error => {
         Swal.fire({
             'icon': 'error',
@@ -144,6 +143,7 @@ const listarDatosUsuario = async (pEndPoint, query) => {
             'text': `${error}`
         });
     })
+    return lista;
 
 }
 
