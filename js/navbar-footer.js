@@ -79,7 +79,7 @@ const fillNavFooter = () => {
                     <div class="push">                 
                         <div class="item">
                             <span class="material-icons md-light">account_circle</span>
-                            <a class="item" href="../html/landing-page.html">Cerrar sesión</a>
+                            <a class="item" href="../html/landing-page.html" id="signout">Cerrar sesión</a>
                         </div>  
                     </div>
                 </nav>    

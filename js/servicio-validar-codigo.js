@@ -9,7 +9,7 @@ const validar = () => {
     let error = false;
 
     //Condicion para validar el codigo (SOLO VALIDA SI EXISTE)
-    if (inputCodigo.value == '') {
+    if (inputCodigo.value != localStorage.getItem('codigoUsuario')) {
         error = true;
         document.querySelector(".input-code").classList.add("input-error");
     } else {
