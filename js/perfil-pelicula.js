@@ -16,6 +16,7 @@ const labelAnno = document.querySelector('#label-anno');
 const labelIdioma = document.querySelector('#label-idioma');
 const labelSubtitulos = document.querySelector('#label-subtitulos');
 const labelActores = document.querySelector('#label-actores');
+const imgUsuarioP = document.querySelector('#img-usuario');
 
 
 let calificacionUsuario = 5;
@@ -70,6 +71,8 @@ const cargarDatosPelicula = async() => {
     localStorage.setItem('_id', '61bae3371842a79c30ea7bca');
 
     let _id = localStorage.getItem('_id'); 
+    let usuario = JSON.parse(localStorage.getItem('usuario'));
+
     localStorage.removeItem('_id');
 
     let data = await obtenerPelicula('/listar-peliculas-unico', {_id: _id});
@@ -85,7 +88,7 @@ const cargarDatosPelicula = async() => {
     labelActores 
 
 
-
+    imgUsuarioP.src = usuario.foto;
     imgPeliculaP.src =  data[0].img_url;       
     labelNombre.innerHTML = data[0].nombre;       
     labelCategoria.innerHTML = data[0].categoria;   
@@ -183,24 +186,17 @@ const cargarComentarios = async(nombre, tipo) => {
 const publicarComentario = () => {
     let usuario = JSON.parse(localStorage.getItem('usuario'));
 
-    // let data = {
-    //     comentario: txtComentario.value,
-    //     calificacion: calificacionUsuario,
-    //     usuario: usuario.primerNombre,//JSON.parse(localStorage.getItem('usuario')),    
-    //     foto: usuario.foto,//JSON.parse(localStorage.getItem('usuario')),    
-    //     tipo: 'pelicula',                
-    //     nombre: labelNombre.innerHTML          
-    // }
-
-    
     let data = {
         comentario: txtComentario.value,
         calificacion: calificacionUsuario,
-        usuario: 'usuario.primerNombre',//JSON.parse(localStorage.getItem('usuario')),    
-        foto: 'usuario.foto',//JSON.parse(localStorage.getItem('usuario')),    
+        usuario: usuario.primerNombre,//JSON.parse(localStorage.getItem('usuario')),    
+        foto: usuario.foto,//JSON.parse(localStorage.getItem('usuario')),    
         tipo: 'pelicula',                
         nombre: labelNombre.innerHTML          
     }
+
+    
+
 
     crearComentarioApi(data, '/registrar-comentario');
 }

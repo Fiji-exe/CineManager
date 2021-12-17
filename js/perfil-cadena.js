@@ -10,6 +10,7 @@ const txtComentario = document.querySelector('#txt-nuevo-comentario');
 const labelNombre = document.querySelector('#label-nombre');
 const labelUbicacion = document.querySelector('#label-cadena');
 const imgCadenaP = document.querySelector('#img-cadena-principal');
+const imgUsuarioP = document.querySelector('#img-usuario');
 
 let calificacionUsuario = 5;
 
@@ -60,13 +61,17 @@ const starFiveClick = () =>{
 
 const cargarDatosCadena = async() => {
 
+
     localStorage.setItem('_id', '61baaf1bb208e04d360d41d6');
 
     let _id = localStorage.getItem('_id'); 
+    let usuario = JSON.parse(localStorage.getItem('usuario'));
+
     localStorage.removeItem('_id');
 
     let data = await obtenerCadena('/obtener-cadena', {_id: _id});
 
+    imgUsuarioP.src = usuario.foto;
     imgCadenaP.src =  data[0].foto;
     labelNombre.innerHTML = data[0].nombre;
     labelUbicacion.innerHTML = data[0].ubicacion;
