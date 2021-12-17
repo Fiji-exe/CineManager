@@ -4,6 +4,8 @@ const botonForm = document.querySelector('#btn-account-form');
 
 const inputCorreo = document.querySelector('#txt-correo');
 
+let usuario;
+
 
 function validarEmail(email) {
     let resultado = false;
@@ -12,11 +14,16 @@ function validarEmail(email) {
     return resultado;
 }
 
-const validar = () => {
+const buscarUsuario = async () => {
+    usuario = await listarDatosUsuario('/listar-cuenta', inputCorreo.value);
+    validar(usuario[0].correoUsuario)
+}
+
+const validar = (correo) => {
     let error = false;
 
     // Condición que valida el correo
-    if (validarEmail(inputCorreo.value)) {
+    if (validarEmail(inputCorreo.value) && inputCorreo.value == correo) {
         document.querySelector('.input-email').classList.remove('input-error');
     } else {
         error = true;
@@ -36,13 +43,15 @@ const validar = () => {
             'title': 'Se ha enviado un correo de recuperación.',
             'confirmButtonText': 'Entendido'
         }).then(() => {
-            window.location.href = 'recuperar-validar.html';
+            usuario = {
+                passwordUsuario: inputPassword
+            }
+            actualizarUsuario(usuario, '/recuperar-cuenta', 'recuperar-validar.html')
+            localStorage.setItem('usuario', JSON.stringify(usuario));
         });
-
-        //DELETE .then ONCE RECOVERY EMAIL IS SENT  
     }
 
 };
 
 
-botonForm.addEventListener('click', validar);
+botonForm.addEventListener('click', buscarUsuario);

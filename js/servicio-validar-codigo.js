@@ -26,6 +26,7 @@ const validar = () => {
         });
 
     } else {
+        localStorage.removeItem('codigoUsuario');
         window.location.href = 'homepage-usuario.html';
     }
 

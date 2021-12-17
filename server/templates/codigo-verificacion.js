@@ -3,7 +3,7 @@
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
-this.enviarCodigo = (pCorreo, pNombre, pCodigo) => {
+this.enviarCodigoSignup = (pCorreo, pNombre, pCodigo) => {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {

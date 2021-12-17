@@ -34,7 +34,7 @@ router.post('/registrar-usuario', (req, res) => {
                 msj: '<Usuario> Route JS: Usuario creado exitosamente.'
             })
 
-            mailer.enviarCodigo(usuario.correoUsuario, usuario.primerNombre, req.body.codigoUsuario);
+            mailer.enviarCodigoSignup(usuario.correoUsuario, usuario.primerNombre, req.body.codigoUsuario);
         }
     })
 })
@@ -54,7 +54,42 @@ router.get('/listar-cuenta', (req, res) => {
             return lista
         }
     })
-})
+});
+
+/* router.get('/listar-una-cuenta', (req, res) => {
+    Usuarios.findOne({ usuarioCorreo: req.body.usuarioCorreo }, (error, lista) => {
+        if (error) {
+            res.json({
+                msj: 'No se pudo encontrar la información en la base de datos.',
+                error
+            })
+        } else {
+            res.json({
+                msj: 'Usuario encontrado exitosamente.',
+                lista
+            })
+            return lista
+        }
+    })
+}); */
+
+router.put('/recuperar-cuenta', (req, res) => {
+    let datosNuevos = {
+        passwordUsuario: req.body.passwordUsuario,
+    };
+    Usiario.updateOne({ usuarioCorreo: req.query.usuarioCorreo }, datosNuevos, error => {
+        if (error) {
+            res.json({
+                msj: 'No se pudieron actualizar los datos.',
+                error
+            });
+        } else {
+            res.json({
+                msj: 'Datos actualizados exitosamente.'
+            });
+        }
+    });
+});
 
 router.put('/modificar-cuenta', (req, res) => {
     let datosNuevos = {
