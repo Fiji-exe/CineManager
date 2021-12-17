@@ -54,8 +54,15 @@ app.use('/api', require('./routes/carteleras.route'));
 // SALAS AQUI
 app.use('/api', require('./routes/tipo-sala.route'));
 app.use('/api', require('./routes/tipo-asiento.route'));
+
+app.use('/api', require('./routes/comentarios.route'));
+
+//http://localhost:3000/api/registrar-usuario
+//comment by adriando
+
 app.use('/api', require('./routes/pelicula.route'));
 app.use('/api', require('./routes/categoria.route'));
 app.use('/api', require('./routes/factura.route'));
 app.use('/api', require('./routes/reporte.route'));
 app.use('/api', require('./routes/terminos-condiciones.route'));
+

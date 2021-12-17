@@ -67,8 +67,9 @@ const validar = () => {
     // Condición que valida el correo
     if (validarEmail(inputCorreo.value)) {
         document.querySelector('.input-email').classList.remove('input-error');
-        error = true;
+
     } else {
+        error = true;
         document.querySelector('.input-email').classList.add('input-error');
     }
 
@@ -109,7 +110,7 @@ const validar = () => {
             numeroId: inputId.value,
             correoUsuario: inputCorreo.value,
             passwordUsuario: inputPassword.value,
-            tipoUsuario: '0',
+            tipoUsuario: '2',
             codigoUsuario: codigoGen,
             cuentaVerificada: '0'
         };
