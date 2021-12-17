@@ -22,14 +22,36 @@ const obtenerCadena = async(pEndPoint, query) => {
     return lista;
 };
 
-const obtenerComentariosApi = async(pEndPoint) => {
+const obtenerPelicula = async(pEndPoint, query) => {
+    let url = `http://localhost:3000/api${pEndPoint}`;
+    let lista = [];
+
+    await axios({
+        method: 'get', 
+        url: url,
+        params: {_id: query._id}
+    }).then(response => {
+        lista = response.data.peliculas;
+    })
+    .catch(error => {
+        Swal.fire({
+            'icon': 'ERROR',
+            'title': 'No se pudo listar los contactos',
+            'text': `Ocurrio el siguiente error ${error}`
+        });
+    });
+ 
+    return lista;
+};
+
+const obtenerComentariosApi = async(pEndPoint, params) => {
     let url = `http://localhost:3000/api${pEndPoint}`;
     let lista = [];
 
     await axios({
         method: 'get',
-        url: url
-      
+        url: url, 
+        params: params
     }).then(response => {
         lista = response.data.lista;
     })

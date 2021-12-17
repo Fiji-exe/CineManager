@@ -71,11 +71,18 @@ const cargarDatosCadena = async() => {
     labelNombre.innerHTML = data[0].nombre;
     labelUbicacion.innerHTML = data[0].ubicacion;
 
-
+    cargarComentarios(data[0].nombre, 'cadena');
     
 }
+
 const cargarComentarios = async(nombre, tipo) => {
-    let data = await obtenerComentariosApi('/obtener-comentarios');
+
+    let params = {
+        nombre: nombre,
+        tipo: tipo
+    }
+
+    let data = await obtenerComentariosApi('/obtener-comentarios', params);
 
 
     let html = '';
@@ -146,11 +153,13 @@ const cargarComentarios = async(nombre, tipo) => {
 }
 
 const publicarComentario = () => {
+    let usuario = JSON.parse(localStorage.getItem('usuario'));
+
     let data = {
         comentario: txtComentario.value,
         calificacion: calificacionUsuario,
-        usuario: 'Abraham',//JSON.parse(localStorage.getItem('usuario')),    
-        foto: 'aa',//JSON.parse(localStorage.getItem('usuario')),    
+        usuario: usuario.primerNombre,//JSON.parse(localStorage.getItem('usuario')),    
+        foto: usuario.foto,//JSON.parse(localStorage.getItem('usuario')),    
         tipo: 'cadena',                
         nombre: labelNombre.innerHTML          
     }
@@ -166,4 +175,4 @@ starFour.addEventListener('click', starFourClick);
 starFive.addEventListener('click', starFiveClick);
 btnPublicar.addEventListener('click', publicarComentario);
 cargarDatosCadena();
-cargarComentarios(labelNombre.value, 'cadena');
+

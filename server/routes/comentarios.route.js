@@ -38,7 +38,8 @@ router.post('/registrar-comentario', (req, res) => {
 
 router.get('/obtener-comentarios', (req, res) => {
 
-    comentario.find((error, lista) => {
+    console.log({nombre: req.query.nombre,  tipo: req.query.tipo});
+    comentario.find({nombre: req.query.nombre,  tipo: req.query.tipo},(error, lista) => {
         if (error) {
             res.json({
                 msj: 'Fallo la consulta',
