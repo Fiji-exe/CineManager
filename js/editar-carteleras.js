@@ -45,7 +45,7 @@ const validar = () => {
     } else {
         document.querySelector(".input-time-start").classList.remove("input-error");
     }
-    
+
     //Condicion para validar la hora de fin (SOLO VALIDA SI NO ES EL DEFAULT)
     if (horaFin.value == '') {
         error = true;
@@ -59,13 +59,12 @@ const validar = () => {
         document.querySelector(".input-base-price").classList.add("input-error");
     } else {
         document.querySelector(".input-base-price").classList.remove("input-error");
-    }
-;
+    };
     if (error == true) {
 
         Swal.fire({
             'icon': 'warning',
-            'title': 'La informacion intruducida es invalida',
+            'title': 'La información introducida es inválida',
             'text': 'Por favor revise los campos resaltados.',
             'confirmButtonText': 'Entendido'
         });

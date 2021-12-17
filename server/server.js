@@ -48,5 +48,14 @@ function handleError(res, reason, message, code) {
 }
 
 // Conexión a todas la rutas.
-
 app.use('/api', require('./routes/usuarios.route'));
+app.use('/api', require('./routes/cadena.route'));
+// CARTELERAS AQUI
+// SALAS AQUI
+app.use('/api', require('./routes/tipo-sala.route'));
+app.use('/api', require('./routes/tipo-asiento.route'));
+app.use('/api', require('./routes/pelicula.route'));
+app.use('/api', require('./routes/categoria.route'));
+app.use('/api', require('./routes/factura.route'));
+app.use('/api', require('./routes/reporte.route'));
+app.use('/api', require('./routes/terminos-condiciones.route'));

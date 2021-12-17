@@ -35,12 +35,11 @@
 
         <div class="contenedor-principal">
             <div class="foto-perfil">
+                <img src="../media/profile.png" alt="Foto de perfil" id="foto-perfil">
 
-                <img src="../media/profile.png" alt="Foto de perfil">
-                <div class="boton-foto">
-                    <label for="files" class="btn1-fondoclaro">Cambiar imagen</label>
+                <button class="btn1-fondoclaro" id="btn-cambiar-imagen">Cambiar imagen</button>
 
-                </div>
+
 
             </div>
 
@@ -60,7 +59,7 @@
                 <div class="input-box-compuesto">
                     <h2>Identificación</h2>
                     <form>
-                        <select>  
+                        <select id="tipo-id">  
                 <option value = "cedula"> Cédula   
                 </option>  
                 <option value = "residencia"> Cédula de residencia   
@@ -99,7 +98,7 @@
                         <input type="password" placeholder="Contraseña actual" id="txt-contraseña-actual">
                         <input type="password" placeholder="Nueva contraseña" id="txt-nueva-contrasena">
                         <input type="password" placeholder="Confirmar contraseña" id="txt-confirmar-contrasena">
-                        <button class=btn1-fondoclaro id="btn-ambiarcontr">Cambiar contraseña</button>
+                        <button class=btn1-fondoclaro id="btn-cambiarcontr">Cambiar contraseña</button>
                     </div>
 
                     <div class=notice>
@@ -108,7 +107,7 @@
                         </p>
                     </div>
 
-                    <input id="files" class="input-invisible" type="file">
+
 
 
                 </div>
@@ -118,6 +117,7 @@
     </div>
 
     <div class="footer-cliente"></div>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/servicio-general.js"></script>
     <script src="../js/navbar-footer.js"></script>
