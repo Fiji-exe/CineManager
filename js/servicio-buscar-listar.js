@@ -10,13 +10,13 @@ let listaCartelera = {
     'horafinaliza': 'Hora Fin',
 }
 let listaPeliculas = {
-    'nombre': 'Titulo de Pelicula',
-    'categoria': 'Categoria Pelicula',
-    'sinopsis': 'Sinopsis',
-    'duracion': 'Duracion (min.)',
+    'nombre': 'Titulo de Película',
+    'categoria': 'Categoría Película',
+    'sinopsis': 'Sinópsis',
+    'duracion': 'Duración (min.)',
     'anno': 'Año',
     'idioma': 'Idioma',
-    'subtitulo': 'Subtitulos',
+    'subtitulo': 'Subtítulos',
     'Actores': 'Actores',
 }
 let listaCines = {
@@ -43,19 +43,15 @@ let listaSalas = {
     'estado': 'Estado de Sala',
     'costo': 'Costo de Sala',
     'tipo': 'Tipo de sala',
-    'editar': 'Editar'
 }
 let listaTipoSala = {
     'nombre': 'Nombre de Tipo de Sala',
-    'editar': 'Ir a editar'
 }
 let listaTipoAsiento = {
     'nombre': 'Nombre de Tipo de Asiento',
-    'editar': 'Ir a editar'
 }
 let listaCategorias = {
     'nombre': 'Nombre de Categoria',
-    'editar': 'Ir a editar'
 }
 
 const obtenerCartelera = async() => {

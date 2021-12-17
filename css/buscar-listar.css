@@ -34,6 +34,11 @@
     font-size: 22px;
 }
 
+table .btn1-fondoclaro {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .input-idtype select {
     color: #FFFFFF;
 }

@@ -95,7 +95,7 @@ const fillNavFooter = () => {
                   <div class="col">
                      <p>Cine Manager</p>
                      <ul>
-                        <li><a href="../html/tyc.html">Terminos y condiciones</a></li>
+                        <li><a href="../html/tyc.html">Términos y condiciones</a></li>
                      </ul>
                   </div>
                </div>

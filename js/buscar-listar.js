@@ -24,10 +24,11 @@ const select_soporte = ` <option disabled selected>Filtros</option>
 <option value="peli">Películas</option>
 <option value="cine">Cines</option>`
 
-const js_checar_tipo_user = () => {
-    let user = localStorage.getItem("usuario");
-    user = JSON.parse(user);
+let user = localStorage.getItem("usuario");
+user = JSON.parse(user);
 
+const js_checar_tipo_user = () => {
+    user.tipoUsuario = '0'; // TODO delete
     switch (user.tipoUsuario) {
         case '0':
             document.getElementById("selector-filtros-dropdown").innerHTML = select_admin;
@@ -44,6 +45,23 @@ const js_checar_tipo_user = () => {
 const js_habilitar_input = () => {
     filtro_seleccionado = elem_fitro.value;
     elem_inputtext.disabled = false;
+}
+const js_checar_inputs = () => {
+    let keyword = elem_inputtext.value;
+    if (!keyword) {
+        Swal.fire({
+            'icon': 'warning',
+            'title': 'Error en el filtro y/o término',
+            'text': 'Por favor cheque el filtro o término',
+            'confirmButtonText': 'Entendido'
+        });
+        elem_inputtext.value = '';
+    } else {
+        js_buscar_bd();
+    }
+
+}
+const js_buscar_bd = () => {
     switch (filtro_seleccionado) {
         case ('cart'):
             obtenerCartelera().then((res) => { js_listar_en_tabla(res) });
@@ -70,47 +88,6 @@ const js_habilitar_input = () => {
             obtenerCategorias().then((res) => { js_listar_en_tabla(res) });
             break;
     }
-
-}
-const js_checar_inputs = () => {
-    let keyword = elem_inputtext.value;
-    if (!keyword) {
-        Swal.fire({
-            'icon': 'warning',
-            'title': 'Error en el término',
-            'text': 'Por favor intruduzca un término o palabra clave',
-            'confirmButtonText': 'Entendido'
-        });
-        elem_inputtext.value = '';
-    } else {
-        switch (filtro_seleccionado) {
-            case 'cart':
-                buscar(listaCartelera);
-                break;
-            case 'peli':
-                buscar(listaPeliculas);
-                break;
-            case 'cine':
-                buscar(listaCines);
-                break;
-            case 'user':
-                buscar(listaUsuarios);
-                break;
-            case 'sala':
-                buscar(listaSalas);
-                break;
-            case 'tsla':
-                buscar(listaTipoSala);
-                break;
-            case 'tasi':
-                buscar(listaTipoAsiento);
-                break;
-            case 'cate':
-                buscar(listaCategorias);
-                break;
-        }
-    }
-
 }
 const js_limpiar_tabla = () => {
     tabla.innerHTML = '';
@@ -128,11 +105,12 @@ const js_crear_encabezados_tabla = (data_json) => {
     array_propiedades.forEach(propiedad => {
         fila_encabezados.insertCell().innerHTML = data_json[0][propiedad];
     })
+    fila_encabezados.insertCell().innerHTML = 'Editar'
 }
 const js_crear_cuerpo_tabla = (data_json) => {
     // Crear el cuerpo de la tabla 
     let cuerpoTabla = tabla.createTBody();
-    console.log(data_json);
+
 
 
     // Crear una fila por cada objeto en el data_json
@@ -141,22 +119,62 @@ const js_crear_cuerpo_tabla = (data_json) => {
         // Crear una celda por cada propiedad del objeto
         let keys = Object.keys(data_json[i]);
 
-        for (let j = 2; j < 12; j++) {
-            fila_cuerpo.insertCell().innerHTML = data_json[i][keys[j]];
-        };
+        if (keys.length > 5) {
+            for (let j = 2; j < 10; j++) {
+                fila_cuerpo.insertCell().innerHTML = data_json[i][keys[j]];
+            };
+        } else {
+            for (let j = 1; j <= keys.length; j++) {
+                fila_cuerpo.insertCell().innerHTML = data_json[i][keys[j]];
+            };
+        }
+
+        switch (filtro_seleccionado) {
+            case ('cart'):
+                if (user.tipoUsuario != 2) {
+
+                } else {
+                    fila_cuerpo.insertCell().innerHTML = `  <button class="btn1-fondoclaro" id="boton-editar" href="../html/editar-carteleras.html" value="${data_json[i]._id}"> &#129125  </button>`
+                }
+                break;
+            case ('peli'):
+                fila_cuerpo.insertCell().innerHTML = `  <button class="btn1-fondoclaro" id="boton-editar" href="../html/agregar-editar-pelicula.html" value="${data_json[i]._id}"> &#129125  </button>`
+                break;
+            case ('cine'):
+                fila_cuerpo.insertCell().innerHTML = `  <button class="btn1-fondoclaro" id="boton-editar" href="../html/crear-editar-cadena.html" value="${data_json[i]._id}"> &#129125  </button>`
+                break;
+            case ('user'):
+                fila_cuerpo.insertCell().innerHTML = `  <button class="btn1-fondoclaro" id="boton-editar" href="../html/configuracion-de-usuario.html" value="${data_json[i]._id}"> &#129125  </button>`
+                break;
+            case ('sala'):
+                fila_cuerpo.insertCell().innerHTML = `  <button class="btn1-fondoclaro" id="boton-editar" href="../html/editar-salas.html" value="${data_json[i]._id}"> &#129125  </button>`
+                break;
+            case ('tsala'):
+                fila_cuerpo.insertCell().innerHTML = `  <button class="btn1-fondoclaro" id="boton-editar" href="../html/editar-tipos-salas.html" value="${data_json[i]._id}"> &#129125  </button>`
+                break;
+            case ('tasi'):
+                fila_cuerpo.insertCell().innerHTML = `  <button class="btn1-fondoclaro" id="boton-editar" href="../html/editar-tipos-de-asiento.html" value="${data_json[i]._id}"> &#129125  </button>`
+                break;
+            case ('cate'):
+                fila_cuerpo.insertCell().innerHTML = `  <button class="btn1-fondoclaro" id="boton-editar" href="../html/editar-categorias.html" value="${data_json[i]._id}"> &#129125  </button>`
+                break;
+        }
+
+
+
     }
+    let btn = document.getElementById("boton-editar");
 
-
-    /* data_json.forEach(data_object => {
-         let fila_cuerpo = cuerpoTabla.insertRow();
-         // Crear una celda por cada propiedad del objeto
-         let array_propiedades = Object.keys(data_object);
-         array_propiedades.forEach(propiedad => {
-             fila_cuerpo.insertCell().innerHTML = data_object[propiedad];
-         })
-
-     });*/
+    btn.addEventListener('click', js_ir_editar)
 };
+
+function js_ir_editar() {
+    localStorage.setItem("_id", this.value);
+    console.log(this)
+        //window.location = ;
+
+}
+
 
 const js_listar_en_tabla = (super_data_json) => {
     js_limpiar_tabla();
