@@ -51,6 +51,22 @@ router.get('/listar-peliculas', (req, res) => {
     });
 });
 
+router.get('/listar-peliculas-unico', (req, res) => {
+    Pelicula.find({_id: req.query._id},(error, peliculas) => {
+        if (error) {
+            res.json({
+                msj: 'ERR <Pelicula> Route JS: No se pudo listar-peliculas',
+                error
+            });
+        } else {
+            res.json({
+                msj: 'OK <Pelicula> Route JS: Exito listar-peliculas',
+                peliculas
+            });
+        }
+    });
+});
+
 router.put('/modificar-pelicula', (req, res) => {
     let datos = {
         nombre: req.body.nombre,
