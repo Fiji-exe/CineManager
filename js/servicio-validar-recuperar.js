@@ -14,8 +14,9 @@ function validarEmail(email) {
 }
 
 const buscarUsuario = async () => {
-    usuario = await listarDatosUsuario('/listar-cuenta', {usuarioCorreo: inputCorreo.value});
-    validar(usuario[0].correoUsuario)
+    //usuario = await listarDatosUsuario('/listar-cuenta', {usuarioCorreo: inputCorreo.value});
+    usuario = listarDatosUsuario("/listar-cuenta",{correoUsuario: "joshrf344@gmail.com"})
+    validar(usuario.value[0].correoUsuario)
 }
 
 const validar = (correo) => {

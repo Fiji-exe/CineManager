@@ -74,7 +74,7 @@ const validar = () => {
     }
 
     //Condicion para validar la contraseña (SOLO VALIDA SI ES IGUAL A LA CONFIRMACION)
-    if (inputPassword.value == '' || inputPassword.value !== inputPasswordConfirm.value) {
+    if (inputPassword.value.length <= 6 || inputPassword.value !== inputPasswordConfirm.value) {
         error = true;
         document.querySelector(".input-password").classList.add("input-error");
         document.querySelector(".input-password-confirm").classList.add("input-error");
