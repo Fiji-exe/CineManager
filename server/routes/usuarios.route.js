@@ -61,6 +61,20 @@ router.get('/listar-cuenta', (req, res) => {
     })
 });
 
+router.get('/listar-cuenta-recuperar', (req, res) => {
+    Usuarios.find({ usuarioCorreo: req.query.usuarioCorreo }, (error, lista) => {
+        if (error) {
+            res.json({
+                msj: 'No se pudo encontrar la información en la base de datos.',
+                error
+            })
+        } else {
+            mailer.enviarCodigoSignup(usuario.correoUsuario, usuario.primerNombre, req.body.codigoUsuario);
+            return lista
+        }
+    })
+});
+
 /* router.get('/listar-una-cuenta', (req, res) => {
     Usuarios.findOne({ usuarioCorreo: req.body.usuarioCorreo }, (error, lista) => {
         if (error) {
