@@ -34,7 +34,7 @@ router.post('/agregar-factura', (req, res) => {
 
 });
 
-router.get('/listar-reportes', (req, res) => {
+router.get('/listar-facturas', (req, res) => {
     contacto.find((error, lista) => {
         if (error) {
             res.json({
@@ -50,9 +50,12 @@ router.get('/listar-reportes', (req, res) => {
     });
 });
 
-router.put('/modificar-reporte', (req, res) => {});
+/*no es necesario editar factura*/
+/*router.put('/modificar-reporte', (req, res) => {});*/
 
-router.delete('/eliminar-contacto', (req, res) => {});
+router.delete('/eliminar-factura', (req, res) => {
+
+});
 
 
 module.exports = router;

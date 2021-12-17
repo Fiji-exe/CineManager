@@ -14,8 +14,7 @@
     <link rel="stylesheet" href="../css/reset.css">
 
     <!-- GENERAL CSS -->
-    <link rel="stylesheet" href="../css/general.css" type="text/css">
-    <link rel="stylesheet" href="../css/homepage-usuario.css" type="text/css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
@@ -24,6 +23,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/general.css" type="text/css">
+    <link rel="stylesheet" href="../css/homepage-usuario.css" type="text/css">
     <title>Cine Manager</title>
 </head>
 
@@ -31,79 +32,79 @@
     <div class="navbar-cliente-iniciado"></div>
 
     <div class="contenedor-centro">
-        <div class="card-funcion"><i class="fa fa-user w3-text-teal"></i>
+        <div class="card-funcion"><i class="fa fa-user "></i>
             <button class="btn1-fondoclaro " onclick="configUsuario() "> Configuración de usuario</button></div>
         <div class="card-funcion">
-            <i class="fa fa-history w3-text-teal"></i>
-            <button class="btn1-fondoclaro " onclick="historial() "> Historial de Reservas</button>
+            <i class="fa fa-history "></i>
+            <button class="btn1-fondoclaro " onclick="historial() "> Historial de reservas</button>
 
         </div>
 
         <div class="card-funcion ">
-            <i class="fa fa-credit-card w3-text-teal"></i>
-            <button class="btn1-fondoclaro " onclick="registroPago() "> Métodos de Pago</button>
+            <i class="fa fa-credit-card "></i>
+            <button class="btn1-fondoclaro " onclick="registroPago() ">Agregar métodos de pago</button>
 
         </div>
         <div class="card-funcion ">
-            <i class="fa fa-search w3-text-teal"></i>
+            <i class="fa fa-search "></i>
             <button class="btn1-fondoclaro " onclick="buscarLista() "> Buscador universal</button>
 
 
         </div>
 
         <div class="card-funcion ">
-            <i class="fa fa-film w3-text-teal"></i>
+            <i class="fa fa-film "></i>
             <button class="btn1-fondoclaro " onclick="cartelera() "> Cartelera</button>
         </div>
 
         <!-- contenedores de login de admin -->
-        <div class="card-funcion card-funcion-admin ">
-            <i class="fa fa-user-plus w3-text-teal"></i>
-            <button class="btn1-fondoclaro " onclick="agregarUsuario() "> Agregar Usuario</button>
+        <div class="card-funcion card-funcion-admin" id="card-funcion-admin">
+            <i class="fa fa-user-plus "></i>
+            <button class="btn1-fondoclaro " onclick="agregarUsuario() "> Agregar usuario</button>
 
         </div>
-        <div class="card-funcion card-funcion-admin ">
-            <i class="fa fa-pencil w3-text-teal"></i>
-            <button class="btn1-fondoclaro " onclick="crearCadena() "> Editar Cadena</button>
+        <div class="card-funcion card-funcion-admin" id="card-funcion-admin">
+            <i class="fa fa-pencil "></i>
+            <button class="btn1-fondoclaro " onclick="crearCadena() "> Editar cadena</button>
 
         </div>
-        <div class="card-funcion card-funcion-admin ">
-            <i class="fa fa-bars w3-text-teal"></i>
-            <button class="btn1-fondoclaro " onclick="reportes() "> Ver Reportes de Cadena</button>
+        <div class="card-funcion card-funcion-admin" id="card-funcion-admin">
+            <i class="fa fa-bars "></i>
+            <button class="btn1-fondoclaro " onclick="reportes() "> Ver Reportes de cadena</button>
         </div>
-        <div class="card-funcion card-funcion-admin ">
-            <i class="fa fa-edit w3-text-teal"></i>
-            <button class="btn1-fondoclaro " onclick="crearCadena() "> Agregar Cartelera</button>
+        <div class="card-funcion card-funcion-admin" id="card-funcion-admin">
+            <i class="fa fa-edit "></i>
+            <button class="btn1-fondoclaro " onclick="crearCadena() "> Agregar cartelera</button>
 
         </div>
-        <div class="card-funcion card-funcion-admin "><i class="fa fa-file-video-o  w3-text-teal"></i>
-            <button class="btn1-fondoclaro " onclick="agregarPelicula() "> Agregar Película</button>
-
-
-        </div>
-        <div class="card-funcion card-funcion-admin ">
-            <i class="fa fa-tags w3-text-teal"></i>
-            <button class="btn1-fondoclaro " onclick="editarCategoria() "> Agregar Categoría</button>
-
-        </div>
-        <div class="card-funcion card-funcion-admin ">
-            <i class="fa fa-plus-circle w3-text-teal"></i>
-            <button class="btn1-fondoclaro " onclick="editarSala() "> Agregar Sala</button>
-
-        </div>
-        <div class="card-funcion card-funcion-admin ">
-            <i class="fa fa-users w3-text-teal"></i>
-            <button class="btn1-fondoclaro " onclick="editarTipoSala() "> Agregar Tipo de Sala</button>
+        <div class="card-funcion card-funcion-admin" id="card-funcion-admin"><i class="fa fa-file-video-o "></i>
+            <button class="btn1-fondoclaro " onclick="agregarPelicula() "> Agregar película</button>
 
 
         </div>
-        <div class="card-funcion card-funcion-admin ">
+        <div class="card-funcion card-funcion-admin" id="card-funcion-admin ">
+            <i class="fa fa-tags "></i>
+            <button class="btn1-fondoclaro " onclick="editarCategoria() "> Agregar categoría</button>
+
+        </div>
+        <div class="card-funcion card-funcion-admin" id="card-funcion-admin">
+            <i class="fa fa-plus-circle "></i>
+            <button class="btn1-fondoclaro " onclick="editarSala() "> Agregar sala</button>
+
+        </div>
+        <div class="card-funcion card-funcion-admin" id="card-funcion-admin ">
+            <i class="fa fa-users "></i>
+            <button class="btn1-fondoclaro " onclick="editarTipoSala() "> Agregar tipo de sala</button>
+
+
+        </div>
+        <div class="card-funcion card-funcion-admin" id="card-funcion-admin">
             <i class="material-icons ">event_seat</i>
-            <button class="btn1-fondoclaro " onclick="editarTipoAsiento() "> Agregar Tipo de Asiento</button>
+            <button class="btn1-fondoclaro " onclick="editarTipoAsiento() "> Agregar tipo de asiento</button>
 
         </div>
-        <div class="card-funcion card-funcion-admin ">
-            <i class="fa fa-pencil w3-text-teal"></i>
+        <div class="card-funcion card-funcion-admin" id="card-funcion-admin ">
+            <i class="fa fa-pencil "></i>
             <button class="btn1-fondoclaro " onclick="editarTyc() "> Editar términos y condiciones</button>
 
 
@@ -114,6 +115,7 @@
     <script src="/js/servicio-validar-estatus-login.js"></script>
     <script src="/js/navbar-footer.js "></script>
     <script src="/js/servicio-general.js "></script>
+    <script src="/js/homepage-usuario.js "></script>
 </body>
 
 </html>

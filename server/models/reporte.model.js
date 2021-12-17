@@ -8,9 +8,9 @@ let schemaReporte = new mongoose.Schema({
     nombre_eje_x: { type: String, required: true },
     nombre_eje_y: { type: String, required: true },
     vectores: [{
-        v_eje_x: { type: String },
-        v_eje_y: { type: String },
-        v_valor: { type: String },
+        v_eje_x: { type: String, required: false },
+        v_eje_y: { type: String, required: false },
+        v_valor: { type: String, required: false },
     }]
 
 });

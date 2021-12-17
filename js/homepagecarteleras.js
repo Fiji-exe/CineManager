@@ -12,12 +12,45 @@ if (mes < 10) {
 fechaact = anno + '-' + mes + '-' + dia;
 
 
-document.getElementById("date-nacimiento").setAttribute("min", fechaact)
+document.getElementById("fecha").setAttribute("min", fechaact)
 
-function buscarLista() {
-    let visual = document.getElementById('step-two')
-    let noVisual = document.getElementById('step-one')
-    visual.style.visibility = 'visible';
-    noVisual.style.visibility = 'invisible';
-    console.log('test')
+function mostrarResultado() {
+    window.scrollTo(0, document.querySelector(".cartelera").scrollHeight);
 }
+
+const leerCartelera = async(pEndPoint) => {
+    let url = `http://localhost:3000/api${pEndPoint}`;
+    let msj = '';
+
+    await axios({
+        method: 'get',
+        url: url,
+
+    }).then(response => {
+        msj = response.data.lista[0].cadena;
+    });
+
+    return msj;
+};
+
+
+const cargarCadenas = async() => {
+    let cartelera = await leerCartelera('/obtener-cartelera');
+    return cartelera
+}
+
+const listaCadenas = () => {
+    for (let i = 0; i < data.length; i++) {
+        option = document.createElement('option');
+        option.text = data[i].name;
+        option.value = data[i].abbreviation;
+        dropdown.add(option);
+    };
+}
+
+const imgPelicua = document.getElementById("imagen-pelicula");
+const tituloPelicula = document.getElementById("titulo-pelicula");
+const cadena = document.getElementById("cadena");
+const categoria = document.getElementById("categoria");
+const sinopsis = document.getElementById("sinopsis");
+const calificacion = document.getElementById("calificacion");
