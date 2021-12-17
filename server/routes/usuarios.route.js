@@ -16,8 +16,8 @@ router.post('/registrar-usuario', (req, res) => {
         tipoId: req.body.tipoId,
         numeroId: req.body.numeroId,
         correoUsuario: req.body.correoUsuario,
-        passwordUsuario: req.body.passwordUsuario,
         tipoUsuario: req.body.tipoUsuario,
+        passwordUsuario: req.body.passwordUsuario,
         cuentaVerificada: req.body.cuentaVerificada,
         cadena: req.body.cadena,
         metodos_pago: req.body.metodos_pago,
@@ -40,7 +40,7 @@ router.post('/registrar-usuario', (req, res) => {
 })
 
 router.get('/listar-cuenta', (req, res) => {
-    Usuarios.find({ usuarioCorreo: req.query.usuarioCorreo}, (error, lista) => {
+    Usuarios.find({ usuarioCorreo: req.query.usuarioCorreo }, (error, lista) => {
         if (error) {
             res.json({
                 msj: 'No se pudo encontrar la información en la base de datos.',
