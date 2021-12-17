@@ -28,7 +28,7 @@ let user = localStorage.getItem("usuario");
 user = JSON.parse(user);
 
 const js_checar_tipo_user = () => {
-    user.tipoUsuario = '2'; // TODO delete
+    user.tipoUsuario = '0'; // TODO delete
     switch (user.tipoUsuario) {
         case '0':
             document.getElementById("selector-filtros-dropdown").innerHTML = select_admin;
@@ -105,6 +105,7 @@ const js_crear_encabezados_tabla = (data_json) => {
     array_propiedades.forEach(propiedad => {
         fila_encabezados.insertCell().innerHTML = data_json[0][propiedad];
     })
+
     fila_encabezados.insertCell().innerHTML = 'Editar'
 }
 const js_crear_cuerpo_tabla = (data_json) => {
@@ -120,8 +121,9 @@ const js_crear_cuerpo_tabla = (data_json) => {
         let keys = Object.keys(data_json[i]);
 
         if (keys.length > 5) {
-            for (let j = 2; j < 10; j++) {
+            for (let j = 2; j < 11; j++) {
                 fila_cuerpo.insertCell().innerHTML = data_json[i][keys[j]];
+                console.log(data_json[i][keys[j]])
             };
         } else {
             for (let j = 1; j <= 1; j++) {
@@ -152,7 +154,7 @@ const js_crear_cuerpo_tabla = (data_json) => {
                 }
                 break;
             case ('user'):
-                fila_cuerpo.insertCell().innerHTML = `  <button class="btn1-fondoclaro" id="boton-editar" href="../html/configuracion-de-usuario.html" value="${data_json[i]._id}"> &#129125  </button>`
+
                 break;
             case ('sala'):
                 fila_cuerpo.insertCell().innerHTML = `  <button class="btn1-fondoclaro" id="boton-editar" href="../html/editar-salas.html" value="${data_json[i]._id}"> &#129125  </button>`
