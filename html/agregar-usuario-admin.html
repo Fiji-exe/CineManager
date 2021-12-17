@@ -1,131 +1,136 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Registrar usuario</title>
+<html lang="es">
 
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/general.css">
-    <link rel="stylesheet" href="/css/agregar-usuario-admin.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Oswald&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Nunito&family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- <div class="navbar-admin-iniciado"></div> -->
+    <!-- RESET CSS -->
+    <link rel="stylesheet" href="../css/reset.css">
 
-    <div class="contenido">
-        <main class="sct-main">
-            <div class="form">     
-                <div class="div-title">
-                    <span class="material-icons">
-                        <a href="landing-page.html">chevron_left</a>
-                    </span>
-                    <h1>Agregar o editar usuario</h1>    
-                </div>        
-                <div class="div-form-item">
-                    <h2>Nombre</h2>
-                    <div class="div-input-container">
-                        <div class="input-container input-default input-nombre">
-                            <input type="text" name="" id="txt-primer-nombre" placeholder="Nombre*">
-                        </div>
-                        <div class="input-container input-default input-segundo-nombre">
-                            <input type="text" name="" id="txt-segundo-nombre" placeholder="Segundo nombre">
-                        </div>
-                    </div>             
-                </div>
+    <!-- GENERAL CSS -->
+    <link rel="stylesheet" href="../css/crear-cuenta.css">
+    <link rel="stylesheet" href="../css/general.css">
 
-                <div class="div-form-item">
-                    <h2>Apellido</h2>
-                    <div class="div-input-container">
-                        <div class="input-container input-default input-apellido">
-                            <input type="text" name="" id="txt-primer-apellido" placeholder="Primer apellido*">
-                        </div>
-                        <div class="input-container input-default input-segundo-apellido">
-                            <input type="text" name="" id="txt-segundo-apellido" placeholder="Segundo apellido">
-                        </div>
-                    </div>
-                </div>
+    <title>Crear Cuenta</title>
+</head>
 
-                <div class="div-form-item">
-                    <h2>Identificación</h2>
-                    <div class="input-container input-default input-id">
-                        <select id="tipo-identificacion">
-                            <option value="Tipo">Tipo</option>
-                            <option value="Cedula">Cédula</option>
-                            <option value="Dimex">Dimex</option>
-                            <option value="Pasaporte">Pasaporte</option>
-                          </select>
-                        <input type="text" name="" id="txt-numero-id" placeholder="Número">
-                    </div>
-                </div>
+<body>
 
-                <div class="div-form-item">
-                    <h2>Correo electrónico</h2>
-                    <div class="input-container input-default input-correo">
-                        <input type="text" name="" id="txt-correo" placeholder="usuario@ejemplo.com">                   
-                    </div>
-                </div>
-
-                <div class="div-form-item">
-                    <h2>Fecha de nacimiento</h2>
-                    <div class="input-container input-default input-nacimiento">
-                        <input type="date" name="" id="date-nacimiento" >                   
-                    </div>
-                </div>
-
-                <div class="div-form-item">
-                    <h2>Avatar</h2>
-                    <div class="input-container input-default input-avatar">
-                        <input type="file" name="" id="file-avatar" >                   
-                    </div>
-                </div>
-
-                <div class="div-form-item">
-                    <h2>Tipo de usuario</h2>
-                    <div class="input-container input-default input-tipo">
-
-                    
-
-                        <input type="radio" id="radio-soporte" name="radio-tipo-usuario" value="Soporte" checked>
-                          <label for="radio-soporte">Soporte</label>
-
-                        <input type="radio" id="radio-cliente" name="radio-tipo-usuario" value="Cliente">
-                          <label for="radio-cliente">Cliente</label>
-
-                
-                    </div>                   
-                </div>
-
-                <div class="div-form-item" id="div-select-cadena">
-                    <h2>Cadena</h2>
-                    <div class="input-container input-default input-id">
-                        <select id="select-cadena">
-                            <option value="Tipo">Seleccionar</option>
-                            <option value="Tipo">Cinepolis</option>
-                            <option value="Cedula">Cinemark</option>
-                            <option value="Dimex">CCM</option>                   
-                          </select>
-                    </div>
-                </div>
-
-
-                <div class="div-form-item">
-                    <button class="btn1-fondoclaro" id="btn-register">Registrar</button>
-                </div>
-
-
+    <section class="sct-recover">
+        <div class="div-signup-card">
+            <div class="signup-card-top">
+                <span class="material-icons">
+                    <a href="landing-page.html">chevron_left</a>
+                </span>
             </div>
-        </main>    
-    </div>
-    <!-- <div class="footer-admin">   -->
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <div class="signup-card-body">
+                <form>
+                    <h1>Crear Cuenta</h1>
+                    <div class="input-container input-default input-name">
+                        <button class="btn1-fondoclaro" type="button" id="btn-upload-foto">Subir foto</button>
+                    </div>
+                    <div class="input-container input-default input-name">
+                        <input id="txt-nombre" type="text" placeholder="Nombre" />
+                    </div>
+
+                    <div class="input-container input-default input-name">
+                        <input id="txt-segundo-nombre" type="text" placeholder="Segundo Nombre" />
+                    </div>
+
+                    <div class="input-container input-default input-surname">
+                        <input id="txt-apellido" type="text" placeholder="Apellido" />
+                    </div>
+
+                    <div class="input-container input-default input-surname">
+                        <input id="txt-segundo-apellido" type="text" placeholder="Segundo Apellido" />
+                    </div>
+
+                    <div class="dual-inputs">
+                        <p class="form-text">Fecha de Nacimiento:</p>
+                        <div class="input-container input-short input-date">
+                            <input id="date-nacimiento" type="date" />
+                        </div>
+                    </div>
+
+                    <div class="dual-inputs">
+                        <div class="input-container input-short input-idtype">
+                            <select name="Identificacion" id="select-id">
+                                <option value="0">Cédula de Identidad</option>
+                                <option value="1">DIMEX</option>
+                            </select>
+                        </div>
+                        <div class="input-container input-short input-idnum">
+                            <input id="txt-id" type="text" placeholder="Identificación" />
+                        </div>
+                    </div>
+
+                    <div class="input-container input-default input-email">
+                        <input id="txt-correo" type="email" placeholder="user@exmaple.com" />
+                    </div>
+
+                    <div class="div-form-item">
+                        <h2>Tipo de usuario</h2>
+                        <div class="input-container input-default input-tipo">
+    
+                        
+    
+                            <input type="radio" id="radio-soporte" name="radio-tipo-usuario" value="1" checked>
+                              <label for="radio-soporte">Soporte</label>
+    
+                            <input type="radio" id="radio-cliente" name="radio-tipo-usuario" value="2">
+                              <label for="radio-cliente">Cliente</label>
+    
+                    
+                        </div>                   
+                    </div>
+    
+                    <div class="div-form-item" id="div-select-cadena">
+                        <h2>Cadena</h2>
+                        <div class="input-container input-default input-id">
+                            <select id="select-cadena">
+                                <option value="Tipo">Seleccionar</option>
+                                <option value="Tipo">Cinepolis</option>
+                                <option value="Cedula">Cinemark</option>
+                                <option value="Dimex">CCM</option>                   
+                              </select>
+                        </div>
+                    </div>
+
+                    <button class="btn1-fondoclaro" type="button" id="btn-account-form">Crear</button>
+
+                </form>
+                <div class="signup-card-links">
+                    <a href="iniciar-sesion.html">Iniciar Sesión</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--AXIOS-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!--SWEET ALERT-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!--CLOUDINARY-->
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+
+    <!--MOMENT-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--GENERAL-->
     <script src="/js/navbar-footer.js"></script>
     <script src="/js/agregar-usuario-admin.js"></script>
-  </body>
+    <script src="/js/servicio-general.js"></script>
+</body>
+
+
 </html>

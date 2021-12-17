@@ -22,7 +22,8 @@ this.enviarCodigoSignup = (pCorreo, pNombre, pCodigo) => {
             <tr>
                 <td>
                     <h1 style="color: #fff;">¡Bienvenid@, ${pNombre}!</h1>
-                    <p style="color: #fff; text-align: center">Estas a un paso de tener acceso a las películas más populares de la temporada en los cines más grandes del país. Solo ingresa tu código en tu buscador.</p>
+                    <p style="color: #fff; text-align: center">Estas a un paso de tener acceso a las películas más populares de la temporada en los cines más grandes del país. Solo ingresa tu código en la siguiente pagina.</p>
+                    <a href="http://127.0.0.1:5501/html/recuperar-validar.html">http://127.0.0.1:5501/html/recuperar-validar.html</a>
                     <h2 style="color: #fff; text-align: center">${pCodigo}</h2>
                 </td>
             </tr>
@@ -38,5 +39,8 @@ this.enviarCodigoSignup = (pCorreo, pNombre, pCodigo) => {
         }
     });
 };
+
+
+
 
 module.exports = this;

@@ -6,6 +6,8 @@ const router = express.Router();
 const mailer = require('../templates/codigo-verificacion');
 
 router.post('/registrar-usuario', (req, res) => {
+    console.log('Registrando');
+
     let nuevoUsuario = new Usuarios({
         foto: req.body.foto, // NEW 
         primerNombre: req.body.primerNombre,
@@ -29,10 +31,13 @@ router.post('/registrar-usuario', (req, res) => {
                 msj: 'ERR <Usuario> Route JS: No se pudo crear usuario.',
                 error
             });
+            console.log(error);
+
         } else {
             res.json({
                 msj: '<Usuario> Route JS: Usuario creado exitosamente.'
             })
+            console.log('creado');
 
             mailer.enviarCodigoSignup(usuario.correoUsuario, usuario.primerNombre, req.body.codigoUsuario);
         }
