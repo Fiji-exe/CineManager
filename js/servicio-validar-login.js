@@ -30,7 +30,7 @@ const validar = (correo, passw) => {
         document.querySelector('.input-email').classList.add('input-error');
     }
 
-    //Condicion para validar la contraseña (SOLO VALIDA SI EXISTE)
+    //Condicion para validar la contraseña
     if (inputPassword.value !== passw) {
         error = true;
         document.querySelector(".input-password").classList.add("input-error");
