@@ -6,7 +6,6 @@ const inputCorreo = document.querySelector('#txt-correo');
 
 let usuario;
 
-
 function validarEmail(email) {
     let resultado = false;
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -16,11 +15,12 @@ function validarEmail(email) {
 
 const buscarUsuario = async () => {
     usuario = await listarDatosUsuario('/listar-cuenta', inputCorreo.value);
-    validar(usuario[0].correoUsuario)
+    validar(usuario[0].correoUsuario, usuario[0].passwordUsuario)
 }
 
-const validar = (correo) => {
+const validar = (correo, passw) => {
     let error = false;
+
 
     // Condición que valida el correo
     if (validarEmail(inputCorreo.value) && inputCorreo.value == correo) {
@@ -43,11 +43,19 @@ const validar = (correo) => {
             'title': 'Se ha enviado un correo de recuperación.',
             'confirmButtonText': 'Entendido'
         }).then(() => {
+            let codigoGen = 0;
+        for (let i = 0; i < 10; i++) {
+            const random = Math.random();
+            const bit = (random * 16) | 0;
+            codigoGen += (bit).toString(16);
+        };
+        localStorage.setItem('codigoUsuario', codigoGen);
             usuario = {
-                passwordUsuario: inputPassword
+                passwordUsuario: inputPassword,
+                codigoUsuario: codigoGen
             }
-            actualizarUsuario(usuario, '/recuperar-cuenta', 'recuperar-validar.html')
             localStorage.setItem('usuario', JSON.stringify(usuario));
+            listarDatosUsuario(usuario, '/lsitar-cuenta-recuperar', 'recuperar-validar.html')
         });
     }
 

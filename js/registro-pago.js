@@ -124,6 +124,24 @@ const validar = () => {
         });
 
     } else {
+            let datos = {
+                id: JSON.parse(localStorage.getItem('usuario'))._id,
+                metodos_pago: {
+                    "numero": txtNumeroTarjeta.value,    
+                    "mes": txtMesVencimiento.value ,
+                    "anno": txtAnnoVencimiento.value,
+                    "cvc":txtCvc.value,
+                    "nombre_titular": txtTitular.value,
+                    "direccion": txtDireccion.value,
+                    "provincia": selectProvincia.value,
+                    "canton":  selectCanton.value,
+                    "distrito": selectDistrito.value  
+                }
+            }
+            actualizarUsuario(datos, '/annadir-tarjeta', 'homepage-usuario.html')
+
+
+
         Swal.fire({
             'icon': 'success',
             'title': 'Se ha guardado la información.',

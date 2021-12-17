@@ -45,6 +45,7 @@ router.post('/registrar-usuario', (req, res) => {
 })
 
 router.get('/listar-cuenta', (req, res) => {
+    console.log(req.query.usuarioCorreo);
     Usuarios.find({ usuarioCorreo: req.query.usuarioCorreo }, (error, lista) => {
         if (error) {
             res.json({
@@ -56,6 +57,20 @@ router.get('/listar-cuenta', (req, res) => {
                 msj: 'Usuario encontrado exitosamente.',
                 lista
             })
+            return lista
+        }
+    })
+});
+
+router.get('/listar-cuenta-recuperar', (req, res) => {
+    Usuarios.find({ usuarioCorreo: req.query.usuarioCorreo }, (error, lista) => {
+        if (error) {
+            res.json({
+                msj: 'No se pudo encontrar la información en la base de datos.',
+                error
+            })
+        } else {
+            mailer.enviarCodigoSignup(usuario.correoUsuario, usuario.primerNombre, req.body.codigoUsuario);
             return lista
         }
     })
@@ -119,13 +134,34 @@ router.put('/modificar-cuenta', (req, res) => {
                 msj: 'No se pudieron actualizar los datos.',
                 error
             });
+            console.log(error);
         } else {
             res.json({
                 msj: 'Datos actualizados exitosamente.'
             });
+            console.log('actualizado');
         }
     });
 });
+
+router.put('/annadir-tarjeta', (req, res) => {
+
+    Usuarios.updateOne({ _id: req.body.id }, { $push: { metodos_pago: req.body.metodos_pago } }, error => {
+        if (error) {
+            res.json({
+                msj: 'No se pudieron actualizar los datos.',
+                error
+            });
+            console.log(error);
+        } else {
+            res.json({
+                msj: 'Datos actualizados exitosamente.'
+            });
+            console.log('actualizado');
+        }
+    });
+});
+
 
 router.delete('/borrar-cuenta', (req, res) => {
 

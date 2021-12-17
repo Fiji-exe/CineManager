@@ -15,7 +15,7 @@ function validarEmail(email) {
 }
 
 const buscarUsuario = async () => {
-    usuario = await listarDatosUsuario('/listar-cuenta', inputCorreo.value);
+    usuario = await listarDatosUsuario('/listar-cuenta', {usuarioCorreo: inputCorreo.value});
     validar(usuario[0].correoUsuario, usuario[0].passwordUsuario)
 }
 
@@ -48,7 +48,7 @@ const validar = (correo, passw) => {
         });
 
     } else {
-        localStorage.setItem('usuario', JSON.stringify(usuario));
+        localStorage.setItem('usuario', JSON.stringify(usuario[0]));
         window.location.href = 'homepage-usuario.html';
     }
 
