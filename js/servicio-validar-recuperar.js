@@ -14,11 +14,11 @@ function validarEmail(email) {
 }
 
 const buscarUsuario = async () => {
-    usuario = await listarDatosUsuario('/listar-cuenta', inputCorreo.value);
-    validar(usuario[0].correoUsuario, usuario[0].passwordUsuario)
+    usuario = await listarDatosUsuario('/listar-cuenta', {usuarioCorreo: inputCorreo.value});
+    validar(usuario[0].correoUsuario)
 }
 
-const validar = (correo, passw) => {
+const validar = (correo) => {
     let error = false;
 
 
