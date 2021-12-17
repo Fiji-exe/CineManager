@@ -1,10 +1,10 @@
 'use strict'
 
-const tipoUsuario = JSON.parse(localStorage.getItem("tipoUsario"));
+const tipoUsuario = JSON.parse(localStorage.getItem("usuario"));
 console.log(tipoUsuario)
 
 const ocultarCards = () => {
-    if (tipoUsuario == '2') {
+    if (tipoUsuario[0].tipoUsuario == '0') {
         let bnts = document.querySelectorAll(".card-funcion-admin")
         let array = Array.prototype.slice.call(bnts);
         array.forEach(element => {
@@ -17,3 +17,5 @@ const ocultarCards = () => {
 };
 
 ocultarCards();
+
+//sacar la parte relativa a ocular los cards. Dejar aislada la funcion de validar login
