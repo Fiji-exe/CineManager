@@ -12,14 +12,7 @@ if (mes < 10) {
 }
 fechaact = anno + '-' + mes + '-' + dia;
 
-
-
-
-let dataUsuario
-
-
-dataUsuario = JSON.parse(localStorage.getItem("usuario"));
-
+let dataUsuario = JSON.parse(localStorage.getItem("usuario"));
 
 document.getElementById("date-nacimiento").setAttribute("max", fechaact)
 
@@ -40,17 +33,24 @@ const btnEliminar = document.querySelector('#btn-eliminar');
 const btnCambiarcontr = document.querySelector('#btn-cambiarcontr');
 const btnCambiarImagen = document.querySelector('#btn-cambiar-imagen');
 
-let codigoUsuario = dataUsuario.codigoUsuario;
-let foto = dataUsuario.foto;
-let primerNombre = dataUsuario.primerNombre;
-let segundoNombre = dataUsuario.segundoNombre;
-let primerApellido = dataUsuario.primerApellido;
-let segundoApellido = dataUsuario.segundoApellido;
-let fechaNacimiento = dataUsuario.fechaNacimiento;
-let numeroId = dataUsuario.numeroId;
-let correoUsuario = dataUsuario.correoUsuario;
+const codigoUsuario = dataUsuario.codigoUsuario;
+const foto = dataUsuario.foto;
+const primerNombre = dataUsuario.primerNombre;
+const segundoNombre = dataUsuario.segundoNombre;
+const primerApellido = dataUsuario.primerApellido;
+const segundoApellido = dataUsuario.segundoApellido;
+const fechaNacimiento = dataUsuario.fechaNacimiento;
+const numeroId = dataUsuario.numeroId;
+const correoUsuario = dataUsuario.correoUsuario;
 
-
+profilePicture.src = foto
+nombre1.value = primerNombre
+nombre2.value = segundoNombre
+apellido1.value = primerApellido
+apellido2.value = segundoApellido
+dateNacimiento.value = fechaNacimiento
+numCedula.value = numeroId
+txtEmail.value = correoUsuario
 
 
 let widget_cloudinary = cloudinary.createUploadWidget({
@@ -66,65 +66,6 @@ let widget_cloudinary = cloudinary.createUploadWidget({
 btnCambiarImagen.addEventListener('click', () => {
     widget_cloudinary.open();
 }, false);
-
-
-
-const obtenerUsuarioConID = async(query) => {
-    let url = `http://localhost:3000/api/listar-cuenta-con-id`;
-    let lista = [];
-
-    await axios({
-            method: 'get',
-            url: url,
-            params: { _id: query._id }
-        }).then(response => {
-            lista = response.data.lista;
-        })
-        .catch(error => {
-            Swal.fire({
-                'icon': 'warning',
-                'title': 'No se pudo obtner datos del usuario',
-                'text': `Ocurrio el siguiente error ${error}`
-            });
-        });
-
-    return lista;
-};
-
-const checar_edit = (id) => {
-    if (localStorage.getItem("_id")) {
-        let userID = localStorage.getItem("_id");
-        console.log(userID)
-        dataUsuario = edit_otro_usuario(userID)
-    } else {
-
-    }
-    id = JSON.parse(id)
-    obtenerUsuarioConID({ _id: id }).then((res) => { console.log(res) })
-}
-
-const rellenar_inputs = (dataUsuario) => {
-    codigoUsuario = dataUsuario.codigoUsuario;
-    foto = dataUsuario.foto;
-    primerNombre = dataUsuario.primerNombre;
-    segundoNombre = dataUsuario.segundoNombre;
-    primerApellido = dataUsuario.primerApellido;
-    segundoApellido = dataUsuario.segundoApellido;
-    fechaNacimiento = dataUsuario.fechaNacimiento;
-    numeroId = dataUsuario.numeroId;
-    correoUsuario = dataUsuario.correoUsuario;
-
-    profilePicture.src = foto
-    nombre1.value = primerNombre
-    nombre2.value = segundoNombre
-    apellido1.value = primerApellido
-    apellido2.value = segundoApellido
-    dateNacimiento.value = fechaNacimiento
-    numCedula.value = numeroId
-    txtEmail.value = correoUsuario
-
-}
-
 
 
 
@@ -270,5 +211,4 @@ function edad() {
     theBday.innerHTML = edadTexto;
 }
 
-edad();
-checar_edit();
+edad()

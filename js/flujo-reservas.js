@@ -100,6 +100,7 @@ const js_go_next_step = () => {
             }
             break;
         case 4:
+            compilar_factura();
             window.location = '../html/homepage-usuario.html';
             /*redirect user */
     }
@@ -153,5 +154,22 @@ const js_quant_modifier_set_onClick = function(modifier) {
 
 }
 
+const compilar_factura = () => {
+    let nodelist_inputs_requeridos = document.querySelectorAll('[required]');
+
+    let datos = {
+        usuario_id: JSON.parse(localStorage.getItem('usuario'))._id,
+        fecha: new Date().toISOString(),
+        locacion_cine: { type: String, required: true },
+        nombre_cine: { type: String, required: true },
+        nombre_peli: { type: String, required: true },
+        tipo_sala: { type: String, required: true },
+        hora_inicio: { type: String, required: true },
+        precio_total: { type: String, required: true },
+        asientos: { type: String, required: true }
+    }
+
+    registrarFactira(datos);
+}
 
 js_quant_modifier_set_onClick();

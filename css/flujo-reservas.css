@@ -28,6 +28,16 @@ section {
 *
 */
 
+.section-step-three a {
+    width: 100%;
+    margin-bottom: 1vw;
+    font-family: 'Nunito';
+    font-size: 1vw;
+    text-align: left;
+    color: #76b1c8;
+    float: right;
+}
+
 .section-left {
     height: 100%;
     display: block;
