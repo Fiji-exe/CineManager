@@ -150,16 +150,17 @@ const validar = () => {
             correoUsuario: txtEmail.value,
         }
         actualizarUsuario(datos, '/modificar-cuenta');
-
-        Swal.fire({
-            'icon': 'success',
-            'title': 'Se ha guardado la informacion.',
-            'confirmButtonText': 'Entendido'
-        }).then(() => {
-            //Redireccionamos al homepage de usuario botón del sweet alert
-            window.location.href = 'homepage-usuario.html';
-        });
     }
+
+
+    Swal.fire({
+        'icon': 'success',
+        'title': 'Se ha guardado la informacion.',
+        'confirmButtonText': 'Entendido'
+    }).then(() => {
+        //Redireccionamos al homepage de usuario botón del sweet alert
+        window.location.href = 'homepage-usuario.html';
+    });
 };
 
 const eliminar = () => {
