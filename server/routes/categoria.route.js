@@ -8,8 +8,6 @@ const router = express.Router();
 router.post('/registrar-categoria', (req, res) => {
     let nuevaCategoria = new Categoria({
         categoria: req.body.categoria,
-
-
     });
 
     nuevaCategoria.save(error => {
@@ -31,6 +29,22 @@ router.post('/registrar-categoria', (req, res) => {
 
 router.get('/obtener-categoria', (req, res) => {
     Categoria.find((error, lista) => {
+        if (error) {
+            res.json({
+                msj: 'Fallo la consulta',
+                error
+            });
+        } else {
+            res.json({
+                msj: 'Categoria listada correctamente',
+                lista
+            });
+        }
+    });
+});
+
+router.get('/obtener-categoria-editar', (req, res) => {
+    Categoria.find({_id: req.query._id},(error, lista) => {
         if (error) {
             res.json({
                 msj: 'Fallo la consulta',

@@ -20,7 +20,7 @@ const validar = () => {
 
 const cargarDatosTipoAsientoEditar = async() => {
 
-    localStorage.setItem('_id', JSON.stringify('61baee91a830575c7875198a'));
+    //localStorage.setItem('_id', JSON.stringify('61baeec4a830575c7875198d'));
 
 
     let _id = JSON.parse( localStorage.getItem('_id')) ;      

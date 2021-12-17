@@ -19,7 +19,7 @@ const validar = () => {
 
 const cargarDatosTipoSalaEditar = async() => {
 
-    localStorage.setItem('_id', JSON.stringify('61badfed8b595bb16855eb61'));
+    //localStorage.setItem('_id', JSON.stringify('61badfed8b595bb16855eb61'));
 
 
     let _id = JSON.parse( localStorage.getItem('_id')) ;      
@@ -76,7 +76,7 @@ const actualizarTipoSala = () => {
     Swal.fire({
         'icon': 'warning',
         'title': 'La información introducida es inválida',
-        'text': 'TipoSala no puede estar vacío',
+        'text': 'Tipo de sala no puede estar vacío',
         'confirmButtonText': 'Entendido'
     });
 
@@ -121,7 +121,7 @@ Swal.fire({
         eliminarDatos(JSON.parse( localStorage.getItem('_id-temp')), '/eliminar-tipo-sala');       
         Swal.fire({
             'icon': 'success',
-            'title': 'Se ha eliminado la tiposala.',
+            'title': 'Se ha eliminado tipo de sala.',
             'confirmButtonText': 'Entendido'
         }).then(() => {
             //Redireccionamos al dashboard luego de darle click al botón del sweet alert
