@@ -43,32 +43,32 @@ const validar = () => {
     //Condicion para validar Nombre
     if (inputNombre.value == '') {
         document.querySelector(".input-name").classList.add("input-error");
-    } else {
         error = true;
+    } else {
         document.querySelector(".input-name").classList.remove("input-error");
     }
 
     //Condicion para validar Apellido
     if (inputApellido.value == '') {
         document.querySelector(".input-surname").classList.add("input-error");
-    } else {
         error = true;
+    } else {
         document.querySelector(".input-surname").classList.remove("input-error");
     }
 
     //Condicion para validar Apellido
     if (inputId.value == '') {
         document.querySelector(".input-idnum").classList.add("input-error");
-    } else {
         error = true;
+    } else {
         document.querySelector(".input-idnum").classList.remove("input-error");
     }
 
     // Condición que valida el correo
     if (validarEmail(inputCorreo.value)) {
         document.querySelector('.input-email').classList.remove('input-error');
-    } else {
         error = true;
+    } else {
         document.querySelector('.input-email').classList.add('input-error');
     }
 
@@ -82,7 +82,7 @@ const validar = () => {
         document.querySelector(".input-password-confirm").classList.remove("input-error");
     }
 
-    if (error == true) {
+    if (error) {
         Swal.fire({
             'icon': 'warning',
             'title': 'La información introducida es inválida',

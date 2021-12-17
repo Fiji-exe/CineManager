@@ -1,6 +1,6 @@
 'use strict';
 let listaCartelera = {
-    'id': 'Codigo Cartelera',
+    'id': 'Cartelera ID',
     'pelicula': 'Pelicula',
     'cine': 'Cine',
     'sala': 'Tipo de Sala',
@@ -25,13 +25,16 @@ let listaCines = {
     'perfil': 'Perfil de Cadena'
 }
 let listaUsuarios = {
-    'nombre': 'Nombre de Usuario',
-    'correo': 'Correo Electronico',
+    'primerNombre': 'Primer Nombre',
+    'segundoNombre': 'Segundo Nombre',
+    'primerApellido': 'Primer Apellido',
+    'segundoApellido': 'Segundo Apellido',
     'nacimiento': 'Fecha Nacimiento',
-    'edad': 'Edad',
-    'avatar': 'Avatar',
-    'rol': 'Tipo de Usuario',
-    'estado': 'Estado de Cuenta'
+    'tipoUsuario': 'Tipo Cédula',
+    'cedula': 'Cédula',
+    'correo': 'Correo électronico',
+    'tipoU': 'Tipo Usuario',
+    'editar': 'Editar'
 }
 let listaSalas = {
     'codigo': 'Codigo de Sala',
@@ -56,7 +59,7 @@ let listaCategorias = {
 }
 
 const obtenerCartelera = async() => { // PENDING
-    let url = `http://localhost:3000/api/obtener-categoria`;
+    let url = `http://localhost:3000/api/obtener-cartelera`;
     let lista = [];
 
     await axios({
@@ -91,7 +94,7 @@ const obtenerPeliculas = async() => {
         })
         .catch(error => {
             Swal.fire({
-                'icon': 'ERROR',
+                'icon': 'warning',
                 'title': 'No se pudo listar las películas desde la base de datos',
                 'text': ` Ocurrió el siguiente error ${error}`
             });
