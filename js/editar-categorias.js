@@ -19,10 +19,11 @@ const validar = () => {
 
 const cargarDatosCategoriaEditar = async() => {
 
-    //localStorage.setItem('_id', JSON.stringify('61bac88385a537a6005446e9'));
+    //localStorage.setItem('_id', JSON.stringify('61bad9f62607e79bcf113852'));
 
 
-    let _id = localStorage.getItem('_id');
+    let _id = JSON.parse(localStorage.getItem('_id'));
+    
     localStorage.setItem('_id-temp', JSON.stringify(_id));
 
 
