@@ -12,16 +12,17 @@ if (mes < 10) {
 }
 fechaact = anno + '-' + mes + '-' + dia;
 
+let dataUsuario = JSON.parse(localStorage.getItem("usuario"));
 
 document.getElementById("date-nacimiento").setAttribute("max", fechaact)
 
-const profilePicture = document.querySelector('#foto-perfil');
+const profilePicture = document.getElementById("foto-perfil");
 const nombre1 = document.querySelector('#txt-nombre1');
 const nombre2 = document.querySelector('#txt-nombre2');
 const apellido1 = document.querySelector('#txt-apellido1');
 const apellido2 = document.querySelector('#txt-apellido2');
 const numCedula = document.querySelector('#num-cedula');
-const tipoCedula = document.querySelector('#tipo-id');
+
 const txtEmail = document.querySelector('#txt-email');
 const dateNacimiento = document.querySelector('#date-nacimiento');
 const contrasenaActual = document.querySelector('#txt-contraseña-actual');
@@ -32,23 +33,22 @@ const btnEliminar = document.querySelector('#btn-eliminar');
 const btnCambiarcontr = document.querySelector('#btn-cambiarcontr');
 const btnCambiarImagen = document.querySelector('#btn-cambiar-imagen');
 
+const codigoUsuario = dataUsuario.codigoUsuario;
+const foto = dataUsuario.foto;
+const primerNombre = dataUsuario.primerNombre;
+const segundoNombre = dataUsuario.segundoNombre;
+const primerApellido = dataUsuario.primerApellido;
+const segundoApellido = dataUsuario.segundoApellido;
+const fechaNacimiento = dataUsuario.fechaNacimiento;
+const numeroId = dataUsuario.numeroId;
+const correoUsuario = dataUsuario.correoUsuario;
 
-
-const primerNombre = localStorage.getItem("primerNombre");
-const segundoNombre = localStorage.getItem("segundoNombre");
-const primerApellido = localStorage.getItem("primerApellido");
-const segundoApellido = localStorage.getItem("segundoApellido");
-const fechaNacimiento = localStorage.getItem("fechaNacimiento");
-const numeroId = localStorage.getItem("numeroId");
-const correoUsuario = localStorage.getItem("correoUsuario");
-const tipoId = localStorage.getItem("tipoId");
-
+profilePicture.src = foto
 nombre1.value = primerNombre
 nombre2.value = segundoNombre
 apellido1.value = primerApellido
 apellido2.value = segundoApellido
 dateNacimiento.value = fechaNacimiento
-tipoCedula.value = tipoId
 numCedula.value = numeroId
 txtEmail.value = correoUsuario
 
@@ -68,26 +68,12 @@ btnCambiarImagen.addEventListener('click', () => {
 }, false);
 
 
-const actualizarUsuario = async(pDatos, pEndPoint) => {
-    let url = `http://localhost:3000/api${pEndPoint}`;
-    let msj = '';
 
-    await axios({
-        method: 'post',
-        url: url,
-        data: pDatos
-    }).then(response => {
-        msj = response.data.msj;
-    });
-
-    return msj;
-};
 
 const validarEmail = (email) => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
-
 
 
 const validar = () => {
@@ -146,29 +132,47 @@ const validar = () => {
             segundoApellido: dateNacimiento.value,
             fechaNacimiento: dateNacimiento.value,
             numeroId: numCedula.value,
-            tipoId: tipoCedula,
-            correoUsuario: txtEmail.value,
+            correoUsuario: txtEmail.value
         }
-        actualizarUsuario(datos, '/modificar-cuenta');
+        actualizarUsuario(datos, '/modificar-cuenta', 'homepage-usuario.html')
+
+
     }
+
+};
+
+const eliminarDatos = () => {
 
 
     Swal.fire({
-        'icon': 'success',
-        'title': 'Se ha guardado la informacion.',
-        'confirmButtonText': 'Entendido'
-    }).then(() => {
-        //Redireccionamos al homepage de usuario botón del sweet alert
-        window.location.href = 'homepage-usuario.html';
-    });
-};
+        title: '¿Está seguro de eliminar?',
+        text: "Una vez eliminado no hay forma de revertirlo",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Eliminar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
 
-const eliminar = () => {
-    console.log('eliminar');
+            eliminarUsuario(codigoUsuario, '/borrar-cuenta');
+            Swal.fire({
+                'icon': 'success',
+                'title': 'Se ha eliminado el usuario.',
+                'confirmButtonText': 'Entendido'
+            }).then(() => {
+                //Redireccionamos al dashboard luego de darle click al botón del sweet alert
+                window.location.href = 'homepage-usuario.html';
+            });
+        }
+    });
+
 }
+
 btnGuardar.addEventListener("click", validar);
 
-btnEliminar.addEventListener("click", eliminar);
+btnEliminar.addEventListener("click", eliminarDatos);
 
 const validarContr = () => {
     let error = false;
@@ -186,6 +190,13 @@ const validarContr = () => {
             'text': 'Por favor revise los campos en rojo',
             'confirmButtonText': 'Entendido'
         });
+    } else {
+        let datos = {
+
+            passwordUsuario: nuevaContrasena.value
+
+        }
+        actualizarUsuario(datos, '/modificar-cuenta', 'homepage-usuario.html')
     }
 }
 
@@ -199,3 +210,5 @@ function edad() {
     let theBday = document.getElementById('resultadoEdad');
     theBday.innerHTML = edadTexto;
 }
+
+edad()

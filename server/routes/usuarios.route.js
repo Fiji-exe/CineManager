@@ -77,7 +77,7 @@ router.put('/recuperar-cuenta', (req, res) => {
     let datosNuevos = {
         passwordUsuario: req.body.passwordUsuario,
     };
-    Usiario.updateOne({ usuarioCorreo: req.query.usuarioCorreo }, datosNuevos, error => {
+    Usuarios.updateOne({ usuarioCorreo: req.query.usuarioCorreo }, datosNuevos, error => {
         if (error) {
             res.json({
                 msj: 'No se pudieron actualizar los datos.',
@@ -108,7 +108,7 @@ router.put('/modificar-cuenta', (req, res) => {
         cadena: req.body.cadena,
         metodos_pago: req.body.metodos_pago,
     };
-    Usiario.updateOne({ _id: req.body.id }, datosNuevos, error => {
+    Usuarios.updateOne({ _id: req.body.id }, datosNuevos, error => {
         if (error) {
             res.json({
                 msj: 'No se pudieron actualizar los datos.',
@@ -122,6 +122,20 @@ router.put('/modificar-cuenta', (req, res) => {
     });
 });
 
-router.delete('/borrar-cuenta', (req, res) => {})
+router.delete('/borrar-cuenta', (req, res) => {
+
+    Usuarios.deleteOne({ _id: req.body._id }, error => {
+        if (error) {
+            res.json({
+                msj: 'Ocurrio un error al eliminar el usuario',
+                error
+            });
+        } else {
+            res.json({
+                msj: 'El usuario se elimino exitosamente'
+            });
+        }
+    });
+});
 
 module.exports = router;

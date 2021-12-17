@@ -1,6 +1,8 @@
 'use strict'
 
-const tipoUsuario = JSON.parse(localStorage.getItem("tipoUsuario"));
+const dataUsuario = JSON.parse(localStorage.getItem("usuario"));
+
+let tipoUsuario = dataUsuario.tipoUsuario
 
 let usuarioAdmin = false
 

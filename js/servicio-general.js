@@ -98,7 +98,7 @@ function salir() {
     console.log("salir")
 }
 
-const registrarUsuario = async (pDatos, pEndPoint, urlRedireccion) => {
+const registrarUsuario = async(pDatos, pEndPoint, urlRedireccion) => {
     let url = `http://localhost:3000/api${pEndPoint}`;
 
     await axios({
@@ -123,11 +123,11 @@ const registrarUsuario = async (pDatos, pEndPoint, urlRedireccion) => {
     })
 };
 
-const listarDatosUsuario = async (pEndPoint, query) => {
+const listarDatosUsuario = async(pEndPoint, query) => {
     let url = `http://localhost:3000/api${pEndPoint}`;
     let lista = [];
 
-    await axios ({
+    await axios({
         'method': 'get',
         'url': url,
         'params': {
@@ -146,7 +146,7 @@ const listarDatosUsuario = async (pEndPoint, query) => {
 
 }
 
-const actualizarUsuario = async (pDatos, pEndPoint, urlRedireccion) => {
+const actualizarUsuario = async(pDatos, pEndPoint, urlRedireccion) => {
     let url = `http://localhost:3000/api${pEndPoint}`;
 
     await axios({
@@ -169,3 +169,29 @@ const actualizarUsuario = async (pDatos, pEndPoint, urlRedireccion) => {
         });
     });
 }
+
+const eliminarUsuario = async(pId, pEndPoint) => {
+    let url = `http://localhost:3000/api${pEndPoint}`;
+    let msj = '';
+
+    await axios({
+            method: 'delete',
+            url: url,
+            data: {
+                _id: pId
+            }
+
+        }).then(response => {
+            msj = response.msj;
+
+        })
+        .catch(error => {
+            Swal.fire({
+                'icon': 'ERROR',
+                'title': 'No se pudo eliminar',
+                'text': `Ocurrio el siguiente error ${error}`
+            });
+        });
+
+    return msj;
+};
