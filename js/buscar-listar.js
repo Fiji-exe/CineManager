@@ -28,7 +28,6 @@ let user = localStorage.getItem("usuario");
 user = JSON.parse(user);
 
 const js_checar_tipo_user = () => {
-    user.tipoUsuario = '0'; // TODO delete
     switch (user.tipoUsuario) {
         case '0':
             document.getElementById("selector-filtros-dropdown").innerHTML = select_admin;

@@ -160,7 +160,7 @@ const compilar_factura = () => {
     let datos = {
         usuario_id: JSON.parse(localStorage.getItem('usuario'))._id,
         fecha: new Date().toISOString(),
-        locacion_cine: { type: String, required: true },
+        locacion_cine: document.getElementById(),
         nombre_cine: { type: String, required: true },
         nombre_peli: { type: String, required: true },
         tipo_sala: { type: String, required: true },
