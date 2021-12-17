@@ -20,10 +20,6 @@
     color: #fff;
 }
 
-.card-funcion-admin {
-    background-color: rgb(83, 50, 50);
-}
-
 .card-funcion i {
     font-size: 45px;
 }
@@ -45,5 +41,11 @@
 }
 
 i {
-    color: #009688;
+    color: #fff;
+}
+
+.ocultar-card {
+    display: none;
+    width: 0;
+    height: 0;
 }

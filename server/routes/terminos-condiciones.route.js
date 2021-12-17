@@ -8,7 +8,6 @@ router.post('/registrar-terminos', (req, res) => {
     let nuevosTerminos = new terminosyCondiciones({
         terminos: req.body.terminos
     });
-
     nuevosTerminos.save( (error) => {
         if(error){
             res.json({
@@ -60,6 +59,5 @@ router.put('/modificar-terminos', (req, res) => {
         }
     })
 });
-
 
 module.exports = router;

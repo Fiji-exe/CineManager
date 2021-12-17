@@ -8,7 +8,7 @@ const inputId = document.querySelector('#txt-id');
 
 const inputCorreo = document.querySelector('#txt-correo');
 const inputPassword = document.querySelector('#txt-password');
-const inputPasswordConfirm= document.querySelector('#txt-password-confirmar');
+const inputPasswordConfirm = document.querySelector('#txt-password-confirmar');
 
 const botonForm = document.querySelector('#btn-account-form');
 
@@ -27,13 +27,15 @@ const validar = () => {
     if (inputNombre.value == '') {
         document.querySelector(".input-name").classList.add("input-error");
     } else {
+        error = true;
         document.querySelector(".input-name").classList.remove("input-error");
     }
-    
+
     //Condicion para validar Apellido
     if (inputApellido.value == '') {
         document.querySelector(".input-surname").classList.add("input-error");
     } else {
+        error = true;
         document.querySelector(".input-surname").classList.remove("input-error");
     }
 
@@ -41,6 +43,7 @@ const validar = () => {
     if (inputId.value == '') {
         document.querySelector(".input-idnum").classList.add("input-error");
     } else {
+        error = true;
         document.querySelector(".input-idnum").classList.remove("input-error");
     }
 
@@ -65,7 +68,7 @@ const validar = () => {
     if (error == true) {
         Swal.fire({
             'icon': 'warning',
-            'title': 'La informacion intruducida es invalida',
+            'title': 'La información introducida es inválida',
             'text': 'Por favor complete los campos resaltados.',
             'confirmButtonText': 'Entendido'
         });

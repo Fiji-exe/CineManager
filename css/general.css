@@ -406,3 +406,7 @@ footer .col a {
     background: #070F1A;
     padding: 10%;
 }
+
+.hide{
+    display: none;
+}

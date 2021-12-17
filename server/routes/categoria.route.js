@@ -2,12 +2,13 @@
 
 const express = require('express');
 const Categoria = require('../models/categoria.model');
+
 const router = express.Router();
 
 router.post('/registrar-categoria', (req, res) => {
-
     let nuevaCategoria = new Categoria({
         categoria: req.body.categoria,
+
 
     });
 
@@ -63,7 +64,6 @@ router.put('/modificar-categoria', (req, res) => {
 });
 
 router.delete('/eliminar-categoria', (req, res) => {
-
     Categoria.deleteOne({ _id: req.body._id }, error => {
         if (error) {
             res.json({

@@ -9,9 +9,7 @@ router.post('/registrar-tipo-sala', (req, res) => {
     let nuevoTipoSala = new TipoSala({
         tipoSala: req.body.tipoSala
     });
-
-    console.log(req.body.tipoSala);
-
+  
     nuevoTipoSala.save(error => {
         if (error) {
             res.json({

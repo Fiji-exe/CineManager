@@ -40,13 +40,12 @@ const validar = () => {
         document.querySelector(".input-room-width").classList.add("input-error");
     } else {
         document.querySelector(".input-room-width").classList.remove("input-error");
-    }
-;
+    };
     if (error == true) {
 
         Swal.fire({
             'icon': 'warning',
-            'title': 'La informacion intruducida es invalida',
+            'title': 'La información introducida es inválida',
             'text': 'Por favor revise los campos resaltados.',
             'confirmButtonText': 'Entendido'
         });
