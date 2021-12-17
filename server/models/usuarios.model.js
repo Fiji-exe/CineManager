@@ -12,10 +12,10 @@ let schemaUsuarios = new mongoose.Schema({
     tipoId: { type: String, required: true },
     numeroId: { type: String, required: true, unique: true },
     correoUsuario: { type: String, required: true, unique: true },
-    passwordUsuario: { type: String, required: true },
     tipoUsuario: { type: String, required: true },
     cuentaVerificada: { type: String, required: true },
     cadena: { type: String, required: false },
+    passwordUsuario: { type: String, required: true },
     metodos_pago: [{
         numero: { type: String, required: true },
         mes: { type: Number, required: true },
