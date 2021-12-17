@@ -195,3 +195,27 @@ const eliminarUsuario = async(pId, pEndPoint) => {
 
     return msj;
 };
+
+
+const listarHistorial = async(pEndPoint, query) => {
+    let url = `http://localhost:3000/api${pEndPoint}`;
+    let lista = [];
+
+    await axios({
+        'method': 'get',
+        'url': url,
+        'params': {
+            'usuario_id': query.usuario_id
+        }
+    }).then(res => {
+        lista = res.data.lista;
+    }).catch(error => {
+        Swal.fire({
+            'icon': 'error',
+            'title': 'Ha ocurrido un error.',
+            'text': `${error}`
+        });
+    })
+    return lista;
+
+}

@@ -35,7 +35,7 @@ router.post('/agregar-factura', (req, res) => {
 });
 
 router.get('/listar-facturas', (req, res) => {
-    contacto.find((error, lista) => {
+    Factura.find((error, lista) => {
         if (error) {
             res.json({
                 msj: 'ERR <Reporte> Route JS: No se pudo listar-reportes',
@@ -44,7 +44,7 @@ router.get('/listar-facturas', (req, res) => {
         } else {
             res.json({
                 msj: 'OK <Reporte> Route JS: Exito listar-reportes',
-                reportes
+                lista
             });
         }
     });
