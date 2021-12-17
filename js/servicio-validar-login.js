@@ -5,6 +5,7 @@ const botonForm = document.querySelector('#btn-account-form');
 const inputCorreo = document.querySelector('#txt-correo');
 const inputPassword = document.querySelector('#txt-password');
 
+let usuario;
 
 function validarEmail(email) {
     let resultado = false;
@@ -13,11 +14,16 @@ function validarEmail(email) {
     return resultado;
 }
 
-const validar = () => {
+const buscarUsuario = async () => {
+    usuario = await listarDatosUsuario('/listar-cuenta', inputCorreo.value);
+    validar(usuario[0].correoUsuario, usuario[0].passwordUsuario)
+}
+
+const validar = (correo, passw) => {
     let error = false;
 
     // Condición que valida el correo
-    if (validarEmail(inputCorreo.value)) {
+    if (validarEmail(inputCorreo.value) && inputCorreo.value == correo) {
         document.querySelector('.input-email').classList.remove('input-error');
     } else {
         error = true;
@@ -25,7 +31,7 @@ const validar = () => {
     }
 
     //Condicion para validar la contraseña (SOLO VALIDA SI EXISTE)
-    if (inputPassword.value == '') {
+    if (inputPassword.value !== passw) {
         error = true;
         document.querySelector(".input-password").classList.add("input-error");
     } else {
@@ -42,10 +48,11 @@ const validar = () => {
         });
 
     } else {
+        localStorage.setItem('usuario', JSON.stringify(usuario));
         window.location.href = 'homepage-usuario.html';
     }
 
 };
 
 
-botonForm.addEventListener('click', validar);
+botonForm.addEventListener('click', buscarUsuario);

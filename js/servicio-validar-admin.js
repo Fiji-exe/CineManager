@@ -2,7 +2,7 @@
 
 let usuario = JSON.parse(localStorage.getItem('usuario'));
 
-if (usuario.tipoUsuario != '1' && usuario.tipoUsuario != '2') {
+if (usuario.tipoUsuario != '0' && usuario.tipoUsuario != '1') {
     window.location.href = 'homepage-usuario.html';
 }
 
