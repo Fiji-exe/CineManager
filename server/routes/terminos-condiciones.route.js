@@ -36,6 +36,7 @@ router.get('/obtener-terminos', (req, res) => {
                 msj: 'Fallo la consulta',
                 error
             });
+        }
         else{
 
             res.json({

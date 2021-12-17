@@ -47,6 +47,25 @@ router.get('/obtener-cadena', (req, res) => {
     });
 });
 
+router.get('/obtener-cadenas-lista', (req, res) => {
+
+    cadena.find((error, lista) =>{
+        if(error){
+            res.json({
+                msj: 'Fallo la consulta',
+                error
+            });
+        }
+        else{
+            res.json({
+                msj: 'listado correctamente',
+                lista
+            });
+        }
+    });
+});
+
+
 router.put('/modificar-cadena', (req, res) => {
     let datos = {
         foto:       req.body.foto,

@@ -63,7 +63,7 @@ app.use('/api', require('./routes/cadena.route'));
 app.use('/api', require('./routes/categoria.route'));
 app.use('/api', require('./routes/tipo-sala.route'));
 app.use('/api', require('./routes/tipo-asiento.route'));
-
+app.use('/api', require('./routes/comentarios.route'));
 
 //http://localhost:3000/api/registrar-usuario
 //comment by adriando
