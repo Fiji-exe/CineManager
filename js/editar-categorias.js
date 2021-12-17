@@ -13,37 +13,36 @@ const validar = () => {
     if (inputArea.value == '') {
         error = true;
     }
-    
+
     return error;
 }
 
 const cargarDatosCategoriaEditar = async() => {
 
-        //localStorage.setItem('_id', JSON.stringify('61bac88385a537a6005446e9'));
+    //localStorage.setItem('_id', JSON.stringify('61bac88385a537a6005446e9'));
 
 
-        let _id = JSON.parse( localStorage.getItem('_id')) ;      
-        localStorage.setItem('_id-temp', JSON.stringify(_id));
+    let _id = localStorage.getItem('_id');
+    localStorage.setItem('_id-temp', JSON.stringify(_id));
 
 
 
-        if(_id == null){
-            document.querySelector('.sobrescribir').classList.add('hide');
-            document.querySelector('.eliminar').classList.add('hide');
+    if (_id == null) {
+        document.querySelector('.sobrescribir').classList.add('hide');
+        document.querySelector('.eliminar').classList.add('hide');
 
-        }
-        else{
-            localStorage.removeItem('_id');
-            document.querySelector('.guardar').classList.add('hide');
-            let data = await obtenerCategoriaEditar('/obtener-categoria-editar', {_id: _id});        
+    } else {
+        localStorage.removeItem('_id');
+        document.querySelector('.guardar').classList.add('hide');
+        let data = await obtenerCategoriaEditar('/obtener-categoria-editar', { _id: _id });
 
-            inputArea.value = data[0].categoria;    
-        }
+        inputArea.value = data[0].categoria;
+    }
 }
 
 const registrarNuevaCategoria = () => {
 
-    
+
     if (validar() == true) {
         Swal.fire({
             'icon': 'warning',
@@ -57,7 +56,7 @@ const registrarNuevaCategoria = () => {
     } else {
 
         let datos = {
-            categoria:  inputArea.value,           
+            categoria: inputArea.value,
         }
         registrarCategoriaApi(datos, '/registrar-categoria');
 
@@ -76,7 +75,7 @@ const registrarNuevaCategoria = () => {
 
 const actualizarCategoria = () => {
 
-    
+
     if (validar() == true) {
         Swal.fire({
             'icon': 'warning',
@@ -87,12 +86,12 @@ const actualizarCategoria = () => {
 
     } else {
         let datos = {
-            categoria:  inputArea.value,
-            _id: JSON.parse( localStorage.getItem('_id-temp'))    
+            categoria: inputArea.value,
+            _id: JSON.parse(localStorage.getItem('_id-temp'))
         }
 
         actualizarCategoriaApi(datos, '/modificar-categoria');
-        
+
         Swal.fire({
             'icon': 'success',
             'title': 'Se ha guardado la información.',
@@ -103,7 +102,7 @@ const actualizarCategoria = () => {
         });
     }
 
-   
+
 
 
 
@@ -121,9 +120,9 @@ const eliminarCategoria = () => {
         cancelButtonColor: '#d33',
         confirmButtonText: 'Eliminar',
         cancelButtonText: 'Cancelar'
-      }).then((result) => {
+    }).then((result) => {
         if (result.isConfirmed) {
-            eliminarDatos(JSON.parse( localStorage.getItem('_id-temp')), '/eliminar-categoria');       
+            eliminarDatos(JSON.parse(localStorage.getItem('_id-temp')), '/eliminar-categoria');
             Swal.fire({
                 'icon': 'success',
                 'title': 'Se ha eliminado la categoria.',
@@ -133,13 +132,13 @@ const eliminarCategoria = () => {
                 window.location.href = 'buscar-listar.html';
             });
         }
-      });
+    });
 
 
 
-      
 
-   
+
+
 
 
 

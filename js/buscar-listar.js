@@ -28,7 +28,7 @@ let user = localStorage.getItem("usuario");
 user = JSON.parse(user);
 
 const js_checar_tipo_user = () => {
-    user.tipoUsuario = '0'; // TODO delete
+    user.tipoUsuario = '2'; // TODO delete
     switch (user.tipoUsuario) {
         case '0':
             document.getElementById("selector-filtros-dropdown").innerHTML = select_admin;
@@ -124,7 +124,7 @@ const js_crear_cuerpo_tabla = (data_json) => {
                 fila_cuerpo.insertCell().innerHTML = data_json[i][keys[j]];
             };
         } else {
-            for (let j = 1; j <= keys.length; j++) {
+            for (let j = 1; j <= 1; j++) {
                 fila_cuerpo.insertCell().innerHTML = data_json[i][keys[j]];
             };
         }
@@ -138,10 +138,18 @@ const js_crear_cuerpo_tabla = (data_json) => {
                 }
                 break;
             case ('peli'):
-                fila_cuerpo.insertCell().innerHTML = `  <button class="btn1-fondoclaro" id="boton-editar" href="../html/agregar-editar-pelicula.html" value="${data_json[i]._id}"> &#129125  </button>`
+                if (user.tipoUsuario != 2) {
+
+                } else {
+                    fila_cuerpo.insertCell().innerHTML = `  <button class="btn1-fondoclaro" id="boton-editar" href="../html/agregar-editar-pelicula.html" value="${data_json[i]._id}"> &#129125  </button>`
+                }
                 break;
             case ('cine'):
-                fila_cuerpo.insertCell().innerHTML = `  <button class="btn1-fondoclaro" id="boton-editar" href="../html/crear-editar-cadena.html" value="${data_json[i]._id}"> &#129125  </button>`
+                if (user.tipoUsuario != 2) {
+
+                } else {
+                    fila_cuerpo.insertCell().innerHTML = `  <button class="btn1-fondoclaro" id="boton-editar" href="../html/crear-editar-cadena.html" value="${data_json[i]._id}"> &#129125  </button>`
+                }
                 break;
             case ('user'):
                 fila_cuerpo.insertCell().innerHTML = `  <button class="btn1-fondoclaro" id="boton-editar" href="../html/configuracion-de-usuario.html" value="${data_json[i]._id}"> &#129125  </button>`
@@ -169,9 +177,8 @@ const js_crear_cuerpo_tabla = (data_json) => {
 };
 
 function js_ir_editar() {
-    localStorage.setItem("_id", this.value);
-    console.log(this)
-        //window.location = ;
+    localStorage.setItem("_id", this.getAttribute('value'));
+    window.location = this.getAttribute('href');
 
 }
 
