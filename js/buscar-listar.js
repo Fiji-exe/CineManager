@@ -1,11 +1,45 @@
 'use strict';
-
-
 const elem_fitro = document.querySelector('#selector-filtros-dropdown');
 const elem_inputtext = document.querySelector('#input-filtros-texto');
 const tabla = document.querySelector('#tabla-uno');
 let filtro_seleccionado = '';
 
+const select_admin = ` <option disabled selected>Filtros</option>
+<option value="cart">Carteleras</option>
+<option value="peli">Películas</option>
+<option value="cine">Cines</option>
+<option value="user">Usuarios</option>
+<option value="sala">Salas</option>
+<option value="tsla">Tipos de Sala</option>
+<option value="tasi">Tipos de Asiento</option>
+<option value="cate">Categoría Películas</option>`
+
+const select_client = ` <option disabled selected>Filtros</option>
+<option value="cart">Carteleras</option>
+<option value="peli">Películas</option>
+<option value="cine">Cines</option>`
+
+const select_soporte = ` <option disabled selected>Filtros</option>
+<option value="cart">Carteleras</option>
+<option value="peli">Películas</option>
+<option value="cine">Cines</option>`
+
+const js_checar_tipo_user = () => {
+    let user = localStorage.getItem("usuario");
+    user = JSON.parse(user);
+
+    switch (user.tipoUsuario) {
+        case '0':
+            document.getElementById("selector-filtros-dropdown").innerHTML = select_admin;
+            break;
+        case '1':
+            document.getElementById("selector-filtros-dropdown").innerHTML = select_soporte;
+            break;
+        case '2':
+            document.getElementById("selector-filtros-dropdown").innerHTML = select_client;
+            break;
+    }
+}
 
 const js_habilitar_input = () => {
     filtro_seleccionado = elem_fitro.value;
@@ -98,8 +132,10 @@ const js_crear_encabezados_tabla = (data_json) => {
 const js_crear_cuerpo_tabla = (data_json) => {
     // Crear el cuerpo de la tabla 
     let cuerpoTabla = tabla.createTBody();
-    console.log(JSON.stringify(data_json))
-        // Crear una fila por cada objeto en el data_json
+    console.log(data_json);
+
+
+    // Crear una fila por cada objeto en el data_json
     for (let i = 1; i < data_json.length; i++) {
         let fila_cuerpo = cuerpoTabla.insertRow();
         // Crear una celda por cada propiedad del objeto
@@ -130,3 +166,5 @@ const js_listar_en_tabla = (super_data_json) => {
 
 elem_fitro.onchange = js_habilitar_input;
 document.getElementById("boton-buscar-filtros").onclick = js_checar_inputs;
+
+js_checar_tipo_user();

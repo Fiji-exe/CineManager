@@ -4,25 +4,26 @@ let listaCartelera = {
     'pelicula': 'Pelicula',
     'cine': 'Cine',
     'sala': 'Tipo de Sala',
-    'inicia': 'Hora Inicio',
-    'finaliza': 'Hora Fin'
+    'diainicia': 'Dia Inicio',
+    'diafinaliza': 'Dia Fin',
+    'horainicia': 'Hora Inicio',
+    'horafinaliza': 'Hora Fin',
 }
 let listaPeliculas = {
-    'titulo': 'Titulo de Pelicula',
-    'imagen': 'Poster',
-    'duracion': 'Duracion (min.)',
+    'nombre': 'Titulo de Pelicula',
     'categoria': 'Categoria Pelicula',
     'sinopsis': 'Sinopsis',
+    'duracion': 'Duracion (min.)',
+    'anno': 'Año',
     'idioma': 'Idioma',
     'subtitulo': 'Subtitulos',
-    'perfil': 'Perfil'
+    'Actores': 'Actores',
 }
 let listaCines = {
     'cadena': 'Nombre de Cadena',
-    'codigo': 'Codigo de Cadena',
-    'ubicacion': 'Ubicacion',
+    'ubicacion': 'Ubicación',
+    'jefe': 'Jefe Soporte',
     'margen': 'Margen de Ganancia',
-    'perfil': 'Perfil de Cadena'
 }
 let listaUsuarios = {
     'primerNombre': 'Primer Nombre',
@@ -34,7 +35,6 @@ let listaUsuarios = {
     'cedula': 'Cédula',
     'correo': 'Correo électronico',
     'tipoU': 'Tipo Usuario',
-    'editar': 'Editar'
 }
 let listaSalas = {
     'codigo': 'Codigo de Sala',
@@ -58,8 +58,8 @@ let listaCategorias = {
     'editar': 'Ir a editar'
 }
 
-const obtenerCartelera = async() => { // PENDING
-    let url = `http://localhost:3000/api/obtener-cartelera`;
+const obtenerCartelera = async() => {
+    let url = `http://localhost:3000/api//listar-carteleras`;
     let lista = [];
 
     await axios({
@@ -190,8 +190,8 @@ const obtenerTiposSalas = async() => {
 
     return lista;
 };
-const obtenerTiposAsientos = async() => { // PENDING
-    let url = `http://localhost:3000/api/obtener-categoria`;
+const obtenerTiposAsientos = async() => {
+    let url = `http://localhost:3000/api/obtener-tipo-asiento`;
     let lista = [];
 
     await axios({

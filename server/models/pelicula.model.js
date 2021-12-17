@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 let schemaPelicula = new mongoose.Schema({
-    img_url: { type: String, required: true },
     nombre: { type: String, required: true },
+    img_url: { type: String, required: true },
     categoria: { type: String, required: true },
     descripcion: { type: String, required: true },
     duracion: { type: String, required: true },
