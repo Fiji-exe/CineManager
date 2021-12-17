@@ -94,14 +94,9 @@ function cartelera() {
 
 
 
-/* function salir() {
+function salir() {
     console.log("salir")
 }
-
-
-
-const salirCuenta */
-
 
 const registrarUsuario = async (pDatos, pEndPoint, urlRedireccion) => {
     let url = `http://localhost:3000/api${pEndPoint}`;
